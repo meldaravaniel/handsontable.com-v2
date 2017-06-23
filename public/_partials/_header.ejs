@@ -8,7 +8,7 @@
      " >
     <div class="row">
         <div class="logotype clearfix">
-            <a href="/index.html" class="<% if (current.source === 'features') { %>
+            <a href="/index.html" class="<% if (current.source === 'features' || current.source === 'index' ) { %>
              brand-logo-white <% } else { %>
              brand-logo <% } %>">
                 <svg>
@@ -43,7 +43,7 @@
             </ul>
             <script>LoginBar.update()</script>
             <ul class="clearfix
-                <% if (current.source === 'features' ) { %>
+                <% if (current.source === 'features' || current.source === 'index'  ) { %>
                      features-nav-li dropdown-f<% } else { %>
                      <% } %>">
                 <li><a href="/features.html">Features</a></li>
@@ -52,7 +52,7 @@
                 <li><a href="/customers">Customers</a></li>
                 <li><a href="/developers.html">Developers</a></li>
                 <li class="sign-in"><a href="//my.handsontable.com/sign-up.html">Sign in</a></li>
-                <li><a id="free-trial-menu" class="<% if (current.source === 'features') { %>
+                <li><a id="free-trial-menu" class="<% if (current.source === 'features' || current.source === 'index' ) { %>
                      btn small vivid-green <% } else { %>
                      btn small green
                      <% } %>" href="/download.html">Download</a></li>

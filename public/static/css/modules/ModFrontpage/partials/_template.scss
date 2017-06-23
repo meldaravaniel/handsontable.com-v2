@@ -4,15 +4,14 @@
 
 .frontpage {
 
-
   .light {
     background-color: $headerGrey;
+    margin-top: 500px;
     padding: 40px 0;
   }
 
   .headline {
     margin: 110px 0;
-
 
     @media only screen and (min-width: $mediumWidth) {
       margin: 88px 0 80px;
@@ -25,6 +24,19 @@
       text-align: left;
     }
   }
+  .header-background {
+    @include linear-gradient(-75deg, #2092ef 0%, #2092ef 50%, #1e88e5 50%, #1e88e5 100%);
+    padding-bottom: 90px;
+
+    @media only screen and (min-width: $mediumWidth) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 600px;
+    }
+  }
 
   .brands .headline {
     line-height: 1.5;
@@ -34,11 +46,5 @@
       font-size: 15px;
       border: none;
     }
-  }
-
-  .btn {
-
-    font-weight: 400;
-
   }
 }
