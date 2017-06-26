@@ -16,15 +16,14 @@
   }
 
   h4 {
-    margin: 0;
+    margin: 40px 0 0 0;
     padding: 20px 0;
     line-height: 0.7em;
     font-weight: 400;
-    text-align: center;
+    text-align: left;
 
     @media only screen and (min-width: $mediumWidth) {
       padding: 0 0 20px 20px;
-      text-align: left;
     }
   }
 
@@ -86,11 +85,10 @@
 
     ul, li {
       margin-left: 0;
-      text-align: center;
+      text-align: left;
 
       @media only screen and (min-width: $mediumWidth) {
         margin-left: 10px;
-        text-align: left;
       }
 
       a {
@@ -99,18 +97,15 @@
     }
 
     .disc {
-     padding: 0 90px;
-      text-align: center;
-      @media only screen and (min-width: $mediumWidth) {
-        padding: 0 2px;
         text-align: left;
-      }
 
       ul, li  {
         list-style-type: disc;
+        list-style-position: inside;
 
         &:last-child {
           list-style-type: none;
+          margin-left: 40px;
         }
       }
     }

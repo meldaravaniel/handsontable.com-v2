@@ -5,30 +5,31 @@
      <% } else { %>
      header
      <% } %>
-     " >
+     ">
     <div class="row">
         <div class="logotype clearfix">
-            <a href="/index.html" class="<% if (current.source === 'features' || current.source === 'index' ) { %>
+            <a href="/index.html" class="<% if (current.source === 'features' || current.path[0] === 'index' ) { %>
              brand-logo-white <% } else { %>
              brand-logo <% } %>">
                 <svg>
                     <use xlink:href="#handsontable-logo"></use>
                 </svg>
             </a>
-
-           <div id="github-star" class="github-star">
-                <a class="github-button" href="https://github.com/handsontable/handsontable"
-                   data-icon="octicon-star"
-                   data-count-href="/handsontable/handsontable/stargazers"
-                   data-count-api="/repos/handsontable/handsontable#stargazers_count"
-                   data-count-aria-label="# stargazers on GitHub"
-                   aria-label="Star handsontable/handsontable on GitHub">Star</a>
+            <div class="star-counter">
+                <svg class="svg-icon">
+                    <use xlink:href="#github-squid"></use>
+                </svg>
+                <div class="github-star">
+                    <div class="triangle"></div>
+                    10
+                </div>
             </div>
         </div>
         <label for="show_menu">
             <svg class="svg-icon">
                 <use xlink:href="#hamburger"></use>
-            </svg></label>
+            </svg>
+        </label>
         <input id="show_menu" type="checkbox"/>
         <nav class="">
             <ul id="login_menu_signed_off" class="login_menu hide">
@@ -43,7 +44,7 @@
             </ul>
             <script>LoginBar.update()</script>
             <ul class="clearfix
-                <% if (current.source === 'features' || current.source === 'index'  ) { %>
+                <% if (current.source === 'features' || current.path[0] === 'index') { %>
                      features-nav-li dropdown-f<% } else { %>
                      <% } %>">
                 <li><a href="/features.html">Features</a></li>
@@ -52,7 +53,8 @@
                 <li><a href="/customers">Customers</a></li>
                 <li><a href="/developers.html">Developers</a></li>
                 <li class="sign-in"><a href="//my.handsontable.com/sign-up.html">Sign in</a></li>
-                <li><a id="free-trial-menu" class="<% if (current.source === 'features' || current.source === 'index' ) { %>
+                <li><a id="free-trial-menu"
+                       class="<% if (current.source === 'features' || current.path[0] === 'index' ) { %>
                      btn small vivid-green <% } else { %>
                      btn small green
                      <% } %>" href="/download.html">Download</a></li>

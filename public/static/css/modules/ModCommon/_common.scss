@@ -3,26 +3,27 @@
  */
  
  /* [ components ]*/
+@import 'button';
+@import 'dropdown';
 @import 'fontface';
-@import 'normalize';
+@import 'form';
 @import 'grid';
+@import 'headline';
+@import 'listbox';
+@import 'modals';
+@import 'normalize';
+@import 'notification';
+@import 'square_loader';
 @import 'tooltip';
 @import 'typography';
-@import 'button';
-@import 'form';
 @import 'table';
-@import 'dropdown';
-@import 'listbox';
-@import 'headline';
-@import 'notification';
-@import 'user_menu';
-@import 'modals';
 @import 'tab';
-@import 'square_loader';
+@import 'user_menu';
+@import 'github-star';
 
 /* [ web partials ] */
-@import 'template';
-@import 'header';
-@import 'logotype';
 @import 'brands';
 @import 'footer';
+@import 'header';
+@import 'logotype';
+@import 'template';

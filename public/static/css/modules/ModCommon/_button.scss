@@ -5,7 +5,7 @@
 .btn {
   @include vertical-align(52px);
 
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
   white-space: nowrap;
   display: inline-block;
@@ -14,7 +14,7 @@
   padding: 0 25px;
   border: none;
 
-  @media only screen and (min-width: $mediumWidth) {
+  @media only screen and (min-width: $largeWidth) {
     @include vertical-align(35px);
     width: auto;
   }
@@ -80,9 +80,16 @@
 
   &.shadow-white {
     border-radius: 4px;
+    background-color: $darkWhite;
+    color: $brandBlue;
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.13);
     width: 147px;
     height: 45px;
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.20);
+    }
   }
 
   &.white-red {
@@ -146,7 +153,7 @@
 
     &.small {
       line-height: 42px;
-      @media only screen and (min-width: $mediumWidth) {
+      @media only screen and (min-width: $largeWidth) {
         line-height: 30px;
       }
   }
@@ -240,12 +247,11 @@
   }
 
   &.large {
-
     @include vertical-align(48px);
     font-size: 0.938em; /* 15px */
     padding: 0 33px;
 
-    @media only screen and (min-width: $mediumWidth) {
+    @media only screen and (min-width: $largeWidth) {
       @include vertical-align(48px);
     }
   }

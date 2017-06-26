@@ -45,11 +45,11 @@
 }
 
 header.features-nav {
-  background: #1ca7e4;
+  background: none;
 }
 
 header.white-head {
-  background: $headerGrey;
+  background: none;
 }
 
 header {
@@ -57,8 +57,15 @@ header {
 
   /* [ styles only for desktop ] */
   @media only screen and (min-width: $largeWidth) {
-    position: relative;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
     padding: 32px 0 20px;
+    left:0;
+    right: 0;
+    display: inline-block;
+
+
   }
 
   /* [ burger icon triger show menu ] */

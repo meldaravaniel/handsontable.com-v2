@@ -68,38 +68,39 @@ h2 {
   a {
     font-size: 0.938em; /* 15px */
   }
-}
 
-h2.divider:before {
-  height: 1px;
-  width: 40px;
-  padding-top: 0;
-  top: 70%;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  content: "";
-  border-bottom: 2px solid $brandBlue;
+  &.divider {
+    margin: 0 0 20px 20px;
+    padding: 40px 10px 40px 0;
+    position: relative;
+    z-index: 1;
+    line-height: 1.1em;
+    font-weight: 400;
 
-  @media only screen and (min-width: $mediumWidth) {
-    padding-top: 60px;
-    top: 50px;
-    left: 49%;
+    @media only screen and (min-width: $mediumWidth) {
+      padding: 60px 10px 40px 10px;
+      margin: 0 0 50px;
+    }
+
+    &:before {
+      height: 1px;
+      width: 40px;
+      padding-top: 0;
+      top: 70%;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      content: "";
+      border-bottom: 2px solid $brandBlue;
+
+      @media only screen and (min-width: $mediumWidth) {
+        padding-top: 60px;
+        top: 50px;
+        left: 49%;
+      }
+    }
   }
-}
 
-h2.divider {
-  margin: 0 0 20px 20px;
-  padding: 40px 10px 40px 0;
-  position: relative;
-  z-index: 1;
-  line-height: 1.1em;
-  font-weight: 400;
-
-  @media only screen and (min-width: $mediumWidth) {
-    padding: 60px 10px 40px 10px;
-    margin: 0 0 50px;
-  }
 }
 
 h1 {

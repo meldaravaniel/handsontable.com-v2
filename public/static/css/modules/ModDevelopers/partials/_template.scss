@@ -8,8 +8,8 @@
     padding: 40px 10px 40px 10px;
     text-align: left;
 
-    @media only screen and (min-width: $mediumWidth) {
-      padding: 60px 10px 40px 10px;
+    @media only screen and (min-width: $largeWidth) {
+      padding: 140px 10px 40px 10px;
       text-align: center;
     }
 

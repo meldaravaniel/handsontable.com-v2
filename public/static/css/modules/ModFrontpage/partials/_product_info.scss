@@ -5,7 +5,8 @@
 .frontpage .product-info {
 
   @media only screen and (min-width: $mediumWidth) {
-    padding: 15vh 0 7vh;
+    padding: 20vh 0 7vh;
+    white-space: nowrap;
     > div {
       margin-bottom: 40px;
     }
@@ -47,7 +48,6 @@
   }
   .btn {
     padding: 0;
-    font-weight: 400;
 
     @media only screen and (min-width: $mediumWidth) {
       width: auto;
