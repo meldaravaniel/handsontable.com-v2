@@ -5,7 +5,7 @@
 .btn {
   @include vertical-align(52px);
 
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
   white-space: nowrap;
   display: inline-block;
@@ -78,13 +78,12 @@
     }
   }
 
-  &.shadow-white {
+  &.blue-shadow-white {
     border-radius: 4px;
     background-color: $darkWhite;
     color: $brandBlue;
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.13);
     width: 147px;
-    height: 45px;
     &:hover,
     &:focus,
     &:active {

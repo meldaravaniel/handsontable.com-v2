@@ -4,15 +4,17 @@
 
 .developers .love {
    margin: 90px 0 0 0;
-   padding: 40px 0;
-   background-color: $brandRed;
+   padding: 20px 0;
+   background-color: $brandBlue;
    color: $darkWhite;
 
  p {
     margin-bottom: 20px;
     text-align: center;
+    font-size: 0.7em;
 
    @media only screen and (min-width: $mediumWidth) {
+     font-size: 1em;
      margin-bottom: 0;
     }
   }

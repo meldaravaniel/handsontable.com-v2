@@ -54,7 +54,7 @@ h2 {
   }
 
   strong {
-    font-weight: 400;
+    font-weight: 600;
   }
 
   small {
@@ -78,7 +78,7 @@ h2 {
     font-weight: 400;
 
     @media only screen and (min-width: $mediumWidth) {
-      padding: 60px 10px 40px 10px;
+      padding: 90px 10px 40px 10px;
       margin: 0 0 50px;
     }
 
@@ -95,13 +95,14 @@ h2 {
 
       @media only screen and (min-width: $mediumWidth) {
         padding-top: 60px;
-        top: 50px;
+        top: 80px;
         left: 49%;
       }
     }
   }
 
 }
+
 
 h1 {
   margin: 0;
@@ -167,6 +168,14 @@ h5 {
   }
 }
 
+.header-distance {
+  padding-top: 40px;
+
+  @media only screen and (min-width: $mediumWidth) {
+    padding-top: 120px;
+  }
+}
+
 .sub-header {
   padding: 0;
   text-align: left;
@@ -211,11 +220,6 @@ a {
     text-decoration: underline;
   }
 }
-
-strong {
-  font-weight: 400;
-}
-
 code {
   @include border;
   font-family: $regularFont;
