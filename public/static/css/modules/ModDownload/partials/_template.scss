@@ -4,27 +4,6 @@
 
 .download {
 
-  .header-download {
-    padding: 40px 10px 40px 20px;
-
-    @media only screen and (min-width: $mediumWidth) {
-      padding: 60px 10px 60px 10px;
-    }
-
-    h4.download {
-      margin: 0;
-      padding: 0;
-    }
-  }
-
-  .headline {
-    margin: 97px 0 21px;
-
-    &.centered {
-      margin: 64px 0 68px;
-    }
-  }
-
   h1 {
     padding: 0;
     text-align: left;
@@ -41,7 +20,7 @@
      top: 80%;
 
     @media only screen and (min-width: $mediumWidth) {
-      top: 40%;
+      top: 50%;
       left: 49%;
     }
   }

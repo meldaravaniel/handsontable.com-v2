@@ -1,75 +1,76 @@
 <section class="contact">
-    <h2 class="divider">
-        Get in touch with us
-        <div class="border-bottom"></div>
-    </h2>
     <div class="row">
-        <div class="small-12 large-6 columns">
+        <div class="header-distance">
+            <h2 class="divider">Get in touch with us</h2>
+        </div>
+        <div class="small-12 medium-6 large-6 large-centered columns">
             <div class="row">
-                <div class="small-12 large-3 columns">
+                <div class="small-6 medium-4  large-4 columns">
                     <img src="/static/images/contact/aleksandra-budnik.png">
                 </div>
-                <div class="small-12 large-9 columns">
+                <div class="small-6 medium-4  large-4 columns">
                     <p>contact person:</p>
                     <h3>Aleksandra Budnik</h3>
                     <span>Customer Success Manager</span>
                 </div>
+                <div class="small-12 medium-4 large-4 columns">
+                    <p>email:</p>
+                    <a href="mailto:support@handsontable.com?subject=General Question">support@handsontable.com</a>
+                </div>
             </div>
-        </div>
-        <div class="small-12 large-6 columns">
-            <p>email:</p>
-            <a href="mailto:support@handsontable.com?subject=General Question">support@handsontable.com</a>
         </div>
     </div>
     <div class="row">
-        <div class="small-12 large-6 columns">
+        <div class="small-12 medium-6 large-6 large-centered columns">
             <div class="row">
-                <div class="small-12 large-3 columns">
+                <div class="small-6 medium-4 large-4 columns">
                     <img src="/static/images/contact/natalia-syryca.png">
                 </div>
-                <div class="small-12 large-9 columns">
+                <div class="small-6 medium-4 large-4 columns">
                     <p>contact person:</p>
                     <h3>Natalia Syryca</h3>
                     <span>Senior Account Executive</span>
                 </div>
+                <div class="small-12 medium-4 large-4 columns">
+                    <p>email:</p>
+                    <a href="mailto:sales@handsontable.com?subject=Sales inquiry">sales@handsontable.com</a>
+                </div>
             </div>
-        </div>
-        <div class="small-12 large-6 columns">
-            <p>email:</p>
-            <a href="mailto:sales@handsontable.com?subject=Sales inquiry">sales@handsontable.com</a>
         </div>
     </div>
     <div class="row">
-        <div class="large-12 columns">
-            <div class="tabs tabs-download form">
+        <div class="large-8 large-centered columns">
+            <div class="tabs form">
                     <div class="tab">
-                        <button>
+                        <ul>
+                            <li>
                             <svg class="svg">
                                 <use xlink:href="#fa-info"></use>
                             </svg>
                             General
-                        </button>
-                        <button>
-                            <svg class="svg">
-                                <use xlink:href="#enterprise"></use>
-                            </svg>
+                            </li>
+                            <li>
+                                <svg class="svg">
+                                    <use xlink:href="#enterprise"></use>
+                                </svg>
                             Enterprise
-                        </button>
-                        <button>
-                            <svg class="svg">
-                                <use xlink:href="#discounts"></use>
-                            </svg>
-                            Discounts
-                        </button>
-                        <button>
-                            <svg class="svg">
-                                <use xlink:href="#handshake"></use>
-                            </svg>
-                            Resselers
-                        </button>
+                            </li>
+                            <li>
+                                <svg class="svg">
+                                    <use xlink:href="#discounts"></use>
+                                </svg>
+                                Discounts
+                            </li>
+                            <li>
+                                <svg class="svg">
+                                    <use xlink:href="#handshake"></use>
+                                </svg>
+                                Resselers
+                            </li>
+                        </ul>
                     </div>
-                <div class="tabcontent">
                     <div class="row">
+                        <div id="General">
                         <div class="large-12 columns">
                             <div id="form-sent" class="notification success">Thanks for contacting us.
                                 We'll get back to you very soon.
@@ -77,16 +78,19 @@
                             <div id="form-error" class="notification error">Oops! We were unable to send the form.
                                 Please check the invalid fields and try again.
                             </div>
-                            <form id="contact-form" class="clearfix form"
-                                  action="https://my.handsontable.com/api/contact" method="post">
+                            <form id="contact-form" class="clearfix form" action="https://my.handsontable.com/api/contact" method="post">
                                 <div class="row">
-                                    <div class="large-6 columns">
+                                    <div class="large-12 columns">
                                         <p class="label">Full name<sup class="asterisk">*</sup></p>
                                         <input type="text" required name="name"/>
                                     </div>
-                                    <div class="large-6 columns">
-                                        <p class="label">Email adress<sup class="asterisk">*</sup></p>
-                                        <input type="email" required name="email"/>
+                                </div>
+                                <div>
+                                    <div class="row">
+                                        <div class="large-6 columns">
+                                            <p class="label">Email adress<sup class="asterisk">*</sup></p>
+                                            <input type="email" required name="email"/>
+                                        </div>
                                     </div>
                                 </div>
                                 <p class="label">Company name</p>
@@ -365,10 +369,10 @@
                                 <input type="submit" id="send" class="btn large blue right" value="Send mail"/>
                             </form>
                         </div>
+                        </div>
                     </div>
-                </div>
-                <div id="Enterprise" class="tabcontent">
                     <div class="row">
+                        <div id="Enterprise">
                         <div class=" large-12 columns">
                             <div id="form-sent" class="notification success">Thanks for contacting us. We'll get back to
                                 you very soon.
@@ -378,10 +382,12 @@
                             </div>
                             <form id="contact-form" class="clearfix form" action="https://my.handsontable.com/api/contact" method="post">
                                 <div class="row">
-                                    <div class="large-6 columns">
+                                    <div class="large-12 columns">
                                         <p class="label">Full name<sup class="asterisk">*</sup></p>
                                         <input type="text" required name="name"/>
                                     </div>
+                                </div>
+                                <div class="row">
                                     <div class="large-6 columns">
                                         <p class="label">Email adress<sup class="asterisk">*</sup></p>
                                         <input type="email" required name="email"/>
@@ -405,6 +411,8 @@
                                             </svg>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="row">
                                     <div class="large-6 columns">
                                         <p class="label">Phone number</p>
                                         <input type="tel" name="phoneNumber"/>
@@ -436,8 +444,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="Discounts" class="tabcontent">
                     <div class="row">
+                        <div id="Discounts">
                         <div class=" large-12 columns">
                             <div id="form-sent" class="notification success">Thanks for contacting us. We'll get back toyou very soon.
                             </div>
@@ -447,10 +455,12 @@
                             <form id="contact-form" class="clearfix form"
                                   action="https://my.handsontable.com/api/contact" method="post">
                                 <div class="row">
-                                    <div class="large-6 columns">
+                                    <div class="large-12 columns">
                                         <p class="label">Full name<sup class="asterisk">*</sup></p>
                                         <input type="text" required name="name"/>
                                     </div>
+                                </div>
+                                <div class="row">
                                     <div class="large-6 columns">
                                         <p class="label">Email adress<sup class="asterisk">*</sup></p>
                                         <input type="email" required name="email"/>
@@ -474,6 +484,8 @@
                                             </svg>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="row">
                                     <div class="large-6 columns">
                                         <p class="label">Phone number</p>
                                         <input type="tel" name="phoneNumber"/>
@@ -504,8 +516,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="Resselers" class="tabcontent">
                     <div class="row">
+                        <div id="Resselers">
                         <div class=" large-12 columns">
                             <div id="form-sent" class="notification success">Thanks for contacting us. We'll get back to
                                 you very soon.
@@ -516,10 +528,12 @@
                             <form id="contact-form" class="clearfix form"
                                   action="https://my.handsontable.com/api/contact" method="post">
                                 <div class="row">
-                                    <div class="large-6 columns">
+                                    <div class="large-12 columns">
                                         <p class="label">Full name<sup class="asterisk">*</sup></p>
                                         <input type="text" required name="name"/>
                                     </div>
+                                </div>
+                                <div class="row">
                                     <div class="large-6 columns">
                                         <p class="label">Phone number</p>
                                         <input type="tel" name="phoneNumber"/>

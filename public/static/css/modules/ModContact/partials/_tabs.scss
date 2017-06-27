@@ -14,46 +14,15 @@
     margin: 10px 0 15px 0;
   }
 
-  div.tab {
+  .tab {
     margin-bottom: -3px;
     overflow: auto;
-    display: inline-flex;
-    width: 100%;
 
     @media only screen and (min-width: $mediumWidth) {
       background: none;
     }
-  }
-
-  div.tab button {
-    width: 100%;
-    float: left;
-    border: none;
-    border-bottom: 3px solid transparent;
-  }
-
-  div.tab button:hover {
-    border-bottom: 3px solid $brandBlue;
-    fill: $brandBlue;
-  }
-
-  div.tab button:active {
-    border-bottom: 3px solid $brandBlue;
-    fill: $brandBlue;
-  }
-
-  div.tab button:focus {
-    border-bottom: 3px solid $brandBlue;
-    fill: $brandBlue;
-  }
-
-  .tabcontent {
-    margin-top: 3px;
-    padding: 20px 20px 0 20px;
-    background-color: $headerGrey;
-
-    @media only screen and (min-width: $largeWidth) {
-      padding: 20px 40px 0 40px;
+    li {
+      margin: 0 25px;
     }
   }
 }

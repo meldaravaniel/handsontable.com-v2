@@ -4,30 +4,6 @@
 
 .downloads {
 
-  .header-downloads {
-    margin: 40px 0 40px 20px;
-    text-align: left;
-
-    @media only screen and (min-width: $mediumWidth) {
-      margin: 40px 0 60px;
-      text-align: center;
-    }
-  }
-
-  span {
-    font-size: 0.9em;
-    color: $darkGray;
-
-    @media only screen and (min-width: $mediumWidth) {
-      text-align: center;
-    }
-  }
-
-  h4.download {
-    margin: 0;
-    padding: 0;
-  }
-
   h1 {
     padding: 0;
     line-height: 1.1em;
@@ -48,6 +24,20 @@
     @media only screen and (min-width: $mediumWidth) {
       margin: 0 0 10px 0;
     }
+  }
+
+  .download {
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    text-align: left;
+    @media only screen and (min-width: $mediumWidth) {
+      text-align: center;
+    }
+  }
+
+  span.version {
+      font-size: 0.9em;
+      color: $darkGray;
   }
 
   .svg-icon {

@@ -3,8 +3,22 @@
  */
 
 .contact {
-  @media only screen and (min-width: $largeWidth) {
-    padding-top: 30px;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+
+    @media only screen and (min-width: $mediumWidth) {
+      padding-bottom: 30px;
+    }
+
+    &:before {
+      top: 110%;
+
+      @media only screen and (min-width: $mediumWidth) {
+        top: 1px;
+      }
+    }
   }
 
   h3 {
