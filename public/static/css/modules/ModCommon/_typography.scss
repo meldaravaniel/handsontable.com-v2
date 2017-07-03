@@ -2,230 +2,63 @@
  * @author: Handsoncode
  */
 
-html,
-body {
-  text-align: left;
+html, body {
   font-family: $regularFont;
-  font-size: 108%;
   font-weight: 400;
   color: $textColor;
-
-  @media only screen and (min-width: $mediumWidth) {
-    font-size: 100%;
-  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-code,
-blockquote {
-  font-weight: 300;
-  letter-spacing: -0.011em;
-}
-
-h1 {
-
-  margin: 0;
-  padding: 0 20px 0 20px;
-  text-align: left;
-  line-height: 1em;
-
-  @media only screen and (min-width: $mediumWidth) {
-    margin: 60px 0 0 0;
-    text-align: center;
-  }
-}
-
-h1,
-h2 {
-  margin: 40px 0 0 0;
-  padding: 0 20px 0 20px;
+h1,h2,h3,h4,h5 {
+  line-height: 1;
+  font-weight: 400;
   font-family: $optionalFont;
-  text-align: left;
-  line-height: 1em;
+  letter-spacing: -0.3px;
 
-  @media only screen and (min-width: $mediumWidth) {
-    margin: 40px 0 0 0;
-    padding: 0;
-    text-align: center;
+  &.weight {
+    &-light {font-weight: 300}
+    &-normal {font-weight: 400}
+    &-bold {font-weight: 600}
   }
 
-  strong {
-    font-weight: 600;
+  &.text {
+    &-black {color: $baseGray}
+    &-blue {color: $brandBlue}
+    &-gray {color: $lightGray}
+    &-green {color: $brandGreen}
+    &-red {color: $brandRed}
+    &-white {color: #fff}
   }
 
-  small {
-    width: 100%;
-    margin-top: 16px;
-    font-family: $regularFont;
-    line-height: 1.5;
+  & > span {
     display: inline-block;
+    font-size: .6em;
+    font-weight: 300;
   }
 
-  a {
-    font-size: 0.938em; /* 15px */
-  }
-
-  &.divider {
-    margin: 0 0 20px 20px;
-    padding: 40px 10px 40px 0;
-    position: relative;
-    z-index: 1;
-    line-height: 1.1em;
-    font-weight: 400;
-
-    @media only screen and (min-width: $mediumWidth) {
-      padding: 60px 10px 40px 10px;
-      margin: 0 0 50px;
-    }
-
-    &:before {
-      height: 1px;
-      width: 40px;
-      padding-top: 0;
-      top: 70%;
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      content: "";
-      border-bottom: 2px solid $brandBlue;
-
-      @media only screen and (min-width: $mediumWidth) {
-        padding-top: 60px;
-        top: 80px;
-        left: 49%;
-      }
-    }
-  }
-
-}
-
-
-h1 {
-  margin: 0;
-  padding: 0 20px 0 20px;
-  font-family: $optionalFont;
-  text-align: left;
-  line-height: 1em;
-
-  @media only screen and (min-width: $mediumWidth) {
-    margin: 60px 0 0 0;
-    text-align: center;
-  }
-
-  small {
-    font-size: 0.361em; /* 13px */
-  }
-}
-
-h2 {
-  padding: 0;
-  font-size: 2em; /* 32px */
-  text-align: left;
-
-  @media only screen and (min-width: $mediumWidth) {
-    text-align: center;
-  }
-  small {
-    font-size: 0.455em; /* 15px */
-  }
-}
-
-h3 {
-  line-height: 1em;
-  font-family: $optionalFont;
-
-  @media only screen and (min-width: $mediumWidth) {
-    margin: 20px 0 0 0;
-    font-size: 1.5em; /* 24px */
-  }
-}
-
-h4 {
-  padding: 0 20px 0 20px;
-  margin: 0;
-  font-family: $optionalFont;
-  font-size: 1.063em; /* 17px */
-  text-align: left;
-
-  @media only screen and (min-width: $mediumWidth) {
-    padding-bottom: 40px;
-    text-align: center;
+  & > hr {
+    width: 38px;
+    padding: 0;
     margin: 0;
+    position: relative;
+    top: -16px;
+    border: 2px solid $brandBlue;
   }
-}
 
-h5 {
-  font-size: 0.938em; /* 15px */
-  text-align: left;
-  line-height: 1.2em;
-
-  @media only screen and (min-width: $mediumWidth) {
-    padding-bottom: 20px;
-  }
-}
-
-.header-distance {
-  padding: 40px 20px;
-  text-align: left;
-
-
-  @media only screen and (min-width: $mediumWidth) {
-    padding: 150px 0 60px 0;
-    text-align: center;
-  }
-}
-
-.sub-header {
-  padding: 0;
-  text-align: left;
-  font-family: $regularFont;
-  font-weight: 300;
-
-  @media only screen and (min-width: $mediumWidth) {
-    text-align: center;
-  }
-}
-
-blockquote {
-  margin: 0;
-  font-size: 1.80em; /* 24px */
-  text-align: center;
-  font-family: $optionalFont;
-
-  @media only screen and (min-width: $mediumWidth) {
-    text-align: left;
-  }
-}
-
-a,
-p,
-li {
-  font-size: 0.938em;
-}
-
-p a {
-  color: $linkColor;
 }
 
 a {
   text-decoration: none;
   color: $linkColor;
 
-  &:hover,
-  &:focus,
-  &:active {
-    @include transition(color .3s ease, background-color .3s ease, border-color .3s ease);
+  &:hover, &:active, &:visited {
     color: $linkActiveColor;
-    text-decoration: underline;
   }
 }
+
+
 code {
   @include border($darkWhite);
-  font-family: $regularFont;
+  font-family: $codeFont;
   font-size: 0.938em;
   word-break: break-all;
   display: block;

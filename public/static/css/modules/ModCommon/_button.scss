@@ -16,16 +16,16 @@
   &.hover {
 
     &-moveup {
-      @include transition (transform .3s ease-out);
+      @include transition (transform .2s ease-out);
       &:hover {
-        @include translateY(-3px);
+        @include translateY(-2px);
       }
     }
 
     &-movedown {
       @include transition (transform .2s ease-out);
       &:hover {
-        @include translateY(3px);
+        @include translateY(2px);
       }
     }
   }
@@ -48,7 +48,9 @@
     }
   }
 
-  &.shadow {box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.10)}
+  &.shadow {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.10)
+  }
 
   &.weight {
     &-light {font-weight: 300}
@@ -74,11 +76,46 @@
   }
 
   &.bg {
-    &-black {background-color: $baseGray}
-    &-blue {background-color: $brandBlue}
-    &-gray {background-color: $lightGray}
-    &-green {background-color: $brandGreen}
-    &-red {background-color: $brandRed}
+    &-blue {background-color: $brandBlue;
+      @include transition (background-color .2s ease-out);
+      &.bg-lighten {
+        &:hover {
+          background-color: $brandBlueActiveLight;
+        }
+      }
+    }
+    &-gray {background-color: $lightGray;
+      @include transition (background-color .2s ease-out);
+      &.bg-lighten {
+        &:hover {
+          background-color: $lightGrayActiveLight;
+        }
+      }
+    }
+    &-green {background-color: $brandGreen;
+      @include transition (background-color .2s ease-out);
+      &.bg-lighten {
+        &:hover {
+          background-color: $brandGreenActiveLight;
+        }
+      }
+    }
+    &-green-light {background-color: $brandVibrantGreenActive;
+      @include transition (background-color .2s ease-out);
+      &.bg-lighten {
+        &:hover {
+          background-color: $brandVibrantGreenActiveLight;
+        }
+      }
+    }
+    &-red {background-color: $brandRed;
+      @include transition (background-color .2s ease-out);
+      &.bg-lighten {
+        &:hover {
+          background-color: $brandRedActiveLight;
+        }
+      }
+    }
     &-white {background-color: #fff}
   }
 }

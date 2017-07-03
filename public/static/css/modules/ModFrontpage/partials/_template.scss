@@ -6,8 +6,12 @@
 
   .header-background {
     @include linear-gradient(-65deg, #2092ef 0%, #2092ef 50%, #1e88e5 50%, #1e88e5 100%);
-    height: 80vh;
+    height: 50vh;
     min-height: 500px;
     position: relative;
+
+    @media only screen and (min-width: $largeWidth) {
+      height: 80vh;
+    }
   }
 }

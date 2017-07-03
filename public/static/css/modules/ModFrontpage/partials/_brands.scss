@@ -2,22 +2,27 @@
  * @author: Handsoncode
  */
 
-.stripe-brands {
-  height: 10vh;
-  position: relative;
-  overflow: hidden;
+.brands-frontpage {
 
-  .brands-frontpage {
-    @include set-pseudo-element(50%, auto, auto, 50%);
-    @include translate(-50%,-18%);
+  @media only screen and (min-width: $largeWidth) {
+    padding: 24px 0 4px;
+  }
 
-    h4 {
-      padding: 0;
-      text-align: left;
-    }
+  h4 {
+    margin: 30px 0 60px;
+    padding: 0;
+    text-align: left;
+    font-weight: 300;
 
-    ul li {
-      line-height: 50%;
+    @media only screen and (min-width: $largeWidth) {
+      margin: 7px 0 0;
     }
   }
+
+  ul li {
+    padding: 0;
+    text-align: center;
+    line-height: 50%;
+  }
 }
+

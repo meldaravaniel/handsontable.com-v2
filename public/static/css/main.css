@@ -17,12 +17,12 @@
  * @author: Handsoncode
  */
 /* [ brand colors ] */
-/* [ shades of grays] */
-/* [ active colors ] */
-/* [active colors from colors] */
-/* [ functional color ] */
 /* [ occasional colors ] */
-/* [ active occasional colors ] */
+/* [active colors from colors] */
+/* [ shades of grays] */
+/* [ active darker colors ] */
+/* [ active lighter colors ] */
+/* [ functional color ] */
 /**
  * @author: Handsoncode
  */
@@ -73,21 +73,21 @@ Convert angle
   .btn:hover, .btn:focus, .btn:active {
     text-decoration: none; }
   .btn.hover-moveup {
-    -webkit-transition: transform 0.3s ease-out;
-    -moz-transition: transform 0.3s ease-out;
-    transition: transform 0.3s ease-out; }
+    -webkit-transition: transform 0.2s ease-out;
+    -moz-transition: transform 0.2s ease-out;
+    transition: transform 0.2s ease-out; }
     .btn.hover-moveup:hover {
-      -webkit-transform: translateY(-3px);
-      -ms-transform: translateY(-3px);
-      transform: translateY(-3px); }
+      -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+      transform: translateY(-2px); }
   .btn.hover-movedown {
     -webkit-transition: transform 0.2s ease-out;
     -moz-transition: transform 0.2s ease-out;
     transition: transform 0.2s ease-out; }
     .btn.hover-movedown:hover {
-      -webkit-transform: translateY(3px);
-      -ms-transform: translateY(3px);
-      transform: translateY(3px); }
+      -webkit-transform: translateY(2px);
+      -ms-transform: translateY(2px);
+      transform: translateY(2px); }
   .btn.size-small {
     padding: 6px 14px;
     font-size: 13px; }
@@ -127,16 +127,41 @@ Convert angle
     border: 1px solid #E87677; }
   .btn.border-white {
     border: 1px solid #fff; }
-  .btn.bg-black {
-    background-color: #363636; }
   .btn.bg-blue {
-    background-color: #34A9DC; }
+    background-color: #34A9DC;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .btn.bg-blue.bg-lighten:hover {
+      background-color: #3dadde; }
   .btn.bg-gray {
-    background-color: #E3E3E3; }
+    background-color: #E3E3E3;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .btn.bg-gray.bg-lighten:hover {
+      background-color: #e8e8e8; }
   .btn.bg-green {
-    background-color: #43a047; }
+    background-color: #43a047;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .btn.bg-green.bg-lighten:hover {
+      background-color: #46a74a; }
+  .btn.bg-green-light {
+    background-color: #48cc4d;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .btn.bg-green-light.bg-lighten:hover {
+      background-color: #58d05d; }
   .btn.bg-red {
-    background-color: #E87677; }
+    background-color: #E87677;
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
+    .btn.bg-red.bg-lighten:hover {
+      background-color: #e97f80; }
   .btn.bg-white {
     background-color: #fff; }
 
@@ -2744,201 +2769,55 @@ select {
 /**
  * @author: Handsoncode
  */
-html,
-body {
-  text-align: left;
+html, body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-size: 108%;
   font-weight: 400;
   color: #363636; }
-  @media only screen and (min-width: 40.0625em) {
-    html,
-    body {
-      font-size: 100%; } }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-code,
-blockquote {
-  font-weight: 300;
-  letter-spacing: -0.011em; }
-
-h1 {
-  margin: 0;
-  padding: 0 20px 0 20px;
-  text-align: left;
-  line-height: 1em; }
-  @media only screen and (min-width: 40.0625em) {
-    h1 {
-      margin: 60px 0 0 0;
-      text-align: center; } }
-
-h1,
-h2 {
-  margin: 40px 0 0 0;
-  padding: 0 20px 0 20px;
+h1, h2, h3, h4, h5 {
+  line-height: 1;
+  font-weight: 400;
   font-family: "nimbus-sans", Helvetica, Arial, sans-serif;
-  text-align: left;
-  line-height: 1em; }
-  @media only screen and (min-width: 40.0625em) {
-    h1,
-    h2 {
-      margin: 40px 0 0 0;
-      padding: 0;
-      text-align: center; } }
-  h1 strong,
-  h2 strong {
-    font-weight: 600; }
-  h1 small,
-  h2 small {
-    width: 100%;
-    margin-top: 16px;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    display: inline-block; }
-  h1 a,
-  h2 a {
-    font-size: 0.938em;
-    /* 15px */ }
-  h1.divider,
-  h2.divider {
-    margin: 0 0 20px 20px;
-    padding: 40px 10px 40px 0;
-    position: relative;
-    z-index: 1;
-    line-height: 1.1em;
+  letter-spacing: -0.3px; }
+  h1.weight-light, h2.weight-light, h3.weight-light, h4.weight-light, h5.weight-light {
+    font-weight: 300; }
+  h1.weight-normal, h2.weight-normal, h3.weight-normal, h4.weight-normal, h5.weight-normal {
     font-weight: 400; }
-    @media only screen and (min-width: 40.0625em) {
-      h1.divider,
-      h2.divider {
-        padding: 60px 10px 40px 10px;
-        margin: 0 0 50px; } }
-    h1.divider:before,
-    h2.divider:before {
-      height: 1px;
-      width: 40px;
-      padding-top: 0;
-      top: 70%;
-      bottom: 0;
-      left: 0;
-      position: absolute;
-      content: "";
-      border-bottom: 2px solid #34A9DC; }
-      @media only screen and (min-width: 40.0625em) {
-        h1.divider:before,
-        h2.divider:before {
-          padding-top: 60px;
-          top: 80px;
-          left: 49%; } }
-
-h1 {
-  margin: 0;
-  padding: 0 20px 0 20px;
-  font-family: "nimbus-sans", Helvetica, Arial, sans-serif;
-  text-align: left;
-  line-height: 1em; }
-  @media only screen and (min-width: 40.0625em) {
-    h1 {
-      margin: 60px 0 0 0;
-      text-align: center; } }
-  h1 small {
-    font-size: 0.361em;
-    /* 13px */ }
-
-h2 {
-  padding: 0;
-  font-size: 2em;
-  /* 32px */
-  text-align: left; }
-  @media only screen and (min-width: 40.0625em) {
-    h2 {
-      text-align: center; } }
-  h2 small {
-    font-size: 0.455em;
-    /* 15px */ }
-
-h3 {
-  line-height: 1em;
-  font-family: "nimbus-sans", Helvetica, Arial, sans-serif; }
-  @media only screen and (min-width: 40.0625em) {
-    h3 {
-      margin: 20px 0 0 0;
-      font-size: 1.5em;
-      /* 24px */ } }
-
-h4 {
-  padding: 0 20px 0 20px;
-  margin: 0;
-  font-family: "nimbus-sans", Helvetica, Arial, sans-serif;
-  font-size: 1.063em;
-  /* 17px */
-  text-align: left; }
-  @media only screen and (min-width: 40.0625em) {
-    h4 {
-      padding-bottom: 40px;
-      text-align: center;
-      margin: 0; } }
-
-h5 {
-  font-size: 0.938em;
-  /* 15px */
-  text-align: left;
-  line-height: 1.2em; }
-  @media only screen and (min-width: 40.0625em) {
-    h5 {
-      padding-bottom: 20px; } }
-
-.header-distance {
-  padding: 40px 20px;
-  text-align: left; }
-  @media only screen and (min-width: 40.0625em) {
-    .header-distance {
-      padding: 150px 0 60px 0;
-      text-align: center; } }
-
-.sub-header {
-  padding: 0;
-  text-align: left;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 300; }
-  @media only screen and (min-width: 40.0625em) {
-    .sub-header {
-      text-align: center; } }
-
-blockquote {
-  margin: 0;
-  font-size: 1.80em;
-  /* 24px */
-  text-align: center;
-  font-family: "nimbus-sans", Helvetica, Arial, sans-serif; }
-  @media only screen and (min-width: 40.0625em) {
-    blockquote {
-      text-align: left; } }
-
-a,
-p,
-li {
-  font-size: 0.938em; }
-
-p a {
-  color: #34A9DC; }
+  h1.weight-bold, h2.weight-bold, h3.weight-bold, h4.weight-bold, h5.weight-bold {
+    font-weight: 600; }
+  h1.text-black, h2.text-black, h3.text-black, h4.text-black, h5.text-black {
+    color: #363636; }
+  h1.text-blue, h2.text-blue, h3.text-blue, h4.text-blue, h5.text-blue {
+    color: #34A9DC; }
+  h1.text-gray, h2.text-gray, h3.text-gray, h4.text-gray, h5.text-gray {
+    color: #E3E3E3; }
+  h1.text-green, h2.text-green, h3.text-green, h4.text-green, h5.text-green {
+    color: #43a047; }
+  h1.text-red, h2.text-red, h3.text-red, h4.text-red, h5.text-red {
+    color: #E87677; }
+  h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white {
+    color: #fff; }
+  h1 > span, h2 > span, h3 > span, h4 > span, h5 > span {
+    display: inline-block;
+    font-size: .6em;
+    font-weight: 300; }
+  h1 > hr, h2 > hr, h3 > hr, h4 > hr, h5 > hr {
+    width: 38px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -16px;
+    border: 2px solid #34A9DC; }
 
 a {
   text-decoration: none;
   color: #34A9DC; }
-  a:hover, a:focus, a:active {
-    -webkit-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-    -moz-transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-    color: #2294c5;
-    text-decoration: underline; }
+  a:hover, a:active, a:visited {
+    color: #2294c5; }
 
 code {
   border: 1px solid #f7f7f7;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-size: 0.938em;
   word-break: break-all;
   display: block;
@@ -3100,7 +2979,7 @@ code {
       display: block; }
       .star-counter .github-star {
         position: relative;
-        top: 7px;
+        top: 8px;
         left: 8px;
         padding: 1px 5px;
         display: inline-block;
@@ -3363,7 +3242,6 @@ header {
         padding: 20px;
         display: inline-block;
         font-size: 14px;
-        font-weight: 500;
         /* [ styles only for desktop ] */ }
         @media only screen and (min-width: 64.0625em) {
           header nav li a,
@@ -5661,26 +5539,21 @@ body {
 /**
  * @author: Handsoncode
  */
-.stripe-brands {
-  height: 10vh;
-  position: relative;
-  overflow: hidden; }
-  .stripe-brands .brands-frontpage {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: auto;
-    bottom: auto;
-    left: 50%;
-    -webkit-transform: translate(-50%, -18%);
-    -ms-transform: translate(-50%, -18%);
-    transform: translate(-50%, -18%); }
-    .stripe-brands .brands-frontpage h4 {
-      padding: 0;
-      text-align: left; }
-    .stripe-brands .brands-frontpage ul li {
-      line-height: 50%; }
+@media only screen and (min-width: 64.0625em) {
+  .brands-frontpage {
+    padding: 24px 0 4px; } }
+.brands-frontpage h4 {
+  margin: 30px 0 60px;
+  padding: 0;
+  text-align: left;
+  font-weight: 300; }
+  @media only screen and (min-width: 64.0625em) {
+    .brands-frontpage h4 {
+      margin: 7px 0 0; } }
+.brands-frontpage ul li {
+  padding: 0;
+  text-align: center;
+  line-height: 50%; }
 
 /**
  * @author: Handsoncode
@@ -5688,6 +5561,9 @@ body {
 /**
  * @author: Handsoncode
  */
+.highlights {
+  margin-top: 140px; }
+
 /**
  * @author: Handsoncode
  */
@@ -5695,9 +5571,12 @@ body {
   background: #2092ef;
   background: -webkit-linear-gradient(155deg, #2092ef 0%, #2092ef 50%, #1e88e5 50%, #1e88e5 100%);
   background: linear-gradient(-65deg, #2092ef 0%, #2092ef 50%, #1e88e5 50%, #1e88e5 100%);
-  height: 80vh;
+  height: 50vh;
   min-height: 500px;
   position: relative; }
+  @media only screen and (min-width: 64.0625em) {
+    .frontpage .header-background {
+      height: 80vh; } }
 
 /**
  * @author: Handsoncode
@@ -5710,33 +5589,46 @@ body {
   display: block;
   position: absolute;
   top: 50%;
-  right: auto;
-  bottom: auto;
-  left: 50%;
-  -webkit-transform: translate(-50%, -55%);
-  -ms-transform: translate(-50%, -55%);
-  transform: translate(-50%, -55%);
-  padding: 0;
-  color: #fff; }
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: -210px;
+  color: #fff;
+  /* Hide artwork for mobile devices */ }
+  @media only screen and (min-width: 64.0625em) {
+    .top-banner {
+      margin-top: -162px; } }
   .top-banner h1 {
     padding: 0;
     font-weight: 600;
-    font-size: 2.750em;
+    font-size: 44px;
     text-align: left; }
     @media only screen and (min-width: 64.0625em) {
       .top-banner h1 {
-        white-space: nowrap; } }
+        white-space: nowrap;
+        line-height: .86; } }
     .top-banner h1 span {
+      margin-top: 16px;
+      display: inline-block;
+      line-height: 1em;
       font-weight: 400;
-      font-size: 0.684em; }
+      font-size: 26px; }
+      @media only screen and (min-width: 64.0625em) {
+        .top-banner h1 span {
+          margin-top: 0; } }
   .top-banner h2 {
-    margin-top: 20px;
+    margin-top: 30px;
     font-weight: 400;
-    font-size: 1.125em;
+    font-size: 18px;
     text-align: left;
     line-height: 1.3; }
   .top-banner .btn {
     margin-top: 60px; }
+  .top-banner > div:nth-child(2) {
+    display: none; }
+    @media only screen and (min-width: 64.0625em) {
+      .top-banner > div:nth-child(2) {
+        display: block; } }
 
 /**
  * @author: Handsoncode
@@ -5942,7 +5834,7 @@ body {
 .pricing .sub-header {
   margin: 0  0 60px 0; }
 .pricing h1 {
-  padding: 0; }
+  padding-bottom: 40px; }
 .pricing h2 {
   text-align: left;
   line-height: 1.1em;

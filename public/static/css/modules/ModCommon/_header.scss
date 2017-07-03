@@ -64,8 +64,6 @@ header {
     left:0;
     right: 0;
     display: inline-block;
-
-
   }
 
   /* [ burger icon triger show menu ] */
@@ -176,7 +174,6 @@ header {
         padding: 20px;
         display: inline-block;
         font-size: 14px;
-        font-weight: 500;
 
         /* [ styles only for desktop ] */
         @media only screen and (min-width: $largeWidth) {

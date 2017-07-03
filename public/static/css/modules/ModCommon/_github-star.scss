@@ -10,7 +10,7 @@
     display: block;
 
     .github-star {
-      @include relative-top-left (7px, 8px);
+      @include relative-top-left (8px, 8px);
       padding: 1px 5px;
       display: inline-block;
       color: $darkWhite;

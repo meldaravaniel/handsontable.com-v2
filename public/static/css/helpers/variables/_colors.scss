@@ -16,6 +16,17 @@ $brandVibrantBlue: #00e5ff;
 $brandVibrantGreen: #2fd069;
 $brandLightBlue: #b5dafd;
 
+/* [ occasional colors ] */
+$vividGreen: darken($brandVibrantGreen, 5%);
+
+/* [active colors from colors] */
+$brandVibrantGreenActive: #48cc4d;
+$vividGreenActive: darken($vividGreen, 20%);
+$errorColor: $brandRed;
+$infoColor: $brandBlue;
+$successColor: $brandGreen;
+$warningColor: $brandYellow;
+
 /* [ shades of grays] */
 $baseGray: #363636;
 $darkGray: #8D8D8D;
@@ -25,7 +36,7 @@ $lightGray: #E3E3E3;
 $ultraLightGray: #edeef0;
 $darkWhite: #f7f7f7;
 
-/* [ active colors ] */
+/* [ active darker colors ] */
 $brandBlueActive: darken($brandBlue, 8%);
 $brandRedActive: darken($brandRed, 8%);
 $brandGreenActive: darken($brandGreen, 8%);
@@ -34,9 +45,15 @@ $lightGrayActive: darken($lightGray, 8%);
 $darkWhiteActive: darken($darkWhite, 8%);
 $brandYellowActive: darken($brandYellow, 8%);
 
-/* [active colors from colors] */
-
-$brandVibrantGreenActive: #00eb55;
+/* [ active lighter colors ] */
+$brandBlueActiveLight: lighten($brandBlue, 2%);
+$brandRedActiveLight: lighten($brandRed, 2%);
+$brandGreenActiveLight: lighten($brandGreen, 2%);
+$brandVibrantGreenActiveLight: lighten($brandVibrantGreenActive, 4%);
+$darkGrayActiveLight: lighten($darkGray, 2%);
+$lightGrayActiveLight: lighten($lightGray, 2%);
+$darkWhiteActiveLight: lighten($darkWhite, 2%);
+$brandYellowActiveLight: lighten($brandYellow, 2%);
 
 /* [ functional color ] */
 $textColor: $baseGray;
@@ -50,16 +67,3 @@ $inputFocusBorder: $brandBlue;
 $tableBackground: $lightGray;
 $iconColor: $brandDeepNavy;
 $backgroundTextColor: $darkWhite;
-
-/* [ occasional colors ] */
-$vividGreen: darken($brandVibrantGreen, 5%);
-
-/* [ active occasional colors ] */
-$vividGreenActive: darken($vividGreen, 20%);
-
-$errorColor: $brandRed;
-$infoColor: $brandBlue;
-$successColor: $brandGreen;
-$warningColor: $brandYellow;
-
-
