@@ -62,7 +62,7 @@
 
   .module-container {
     padding: 40px 15px 40px 15px;
-    background-color: $headerGrey;
+    background-color: $lightGray;
     color: $baseGray;
 
     @media only screen and (min-width: $largeWidth) {
@@ -103,7 +103,7 @@
 
   .whats-new-module {
     padding: 40px 15px;
-    background-color: $headerGrey;
+    background-color: $lightGray;
     color: $baseGray;
 
     @media only screen and (min-width: $largeWidth) {

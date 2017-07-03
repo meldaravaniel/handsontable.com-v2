@@ -19,7 +19,7 @@ footer {
       @include rectangle(150px, 30px);
       position: inherit;
       margin-top: 20px;
-      fill: $brandBlack;
+      fill: #000;
     }
 
     a {
@@ -51,10 +51,5 @@ footer {
       display: block;
       content: "";
     }
-  }
-
-  .gray-stripe {
-    padding: 36px 0 40px;
-    background: $headerGrey;
   }
 }

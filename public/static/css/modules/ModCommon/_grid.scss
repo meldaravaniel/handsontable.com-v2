@@ -96,7 +96,12 @@ img {
 
 .right {
   float: right !important; }
-
+.text-center {
+  text-align: center; }
+.text-left {
+  text-align: left; }
+.text-right {
+  text-align: right; }
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table; }

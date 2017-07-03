@@ -17,7 +17,7 @@
 }
 
 /* [ borders ] */
-@mixin border ($color: $borderColor) {
+@mixin border ($color) {
     border: 1px solid $color;
 }
 

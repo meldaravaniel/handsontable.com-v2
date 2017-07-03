@@ -60,7 +60,7 @@
     & > div {
       padding-left: 20px;
       display: block;
-      border-left: 10px solid $headerGrey;
+      border-left: 10px solid $lightGray;
 
       &.opened {
         @include transition (all .8s ease-in-out);

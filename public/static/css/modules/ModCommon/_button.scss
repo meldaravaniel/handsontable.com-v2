@@ -3,260 +3,82 @@
  */
 
 .btn {
-  @include vertical-align(52px);
-
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
   display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
   border-radius: 4px;
-  width: 100%;
-  padding: 0 25px;
-  border: none;
+  background: transparent;
 
-  @media only screen and (min-width: $largeWidth) {
-    @include vertical-align(35px);
-    width: auto;
-  }
-
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover, &:focus, &:active {
     text-decoration: none;
   }
 
-  &.blue {
-    color: #FFF;
-    background: $linkColor;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $brandBlueActive;
-    }
-  }
+  &.hover {
 
-  &.red {
-    color: #FFF;
-    background: $brandRed;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $brandRedActive;
-    }
-  }
-
-  &.navy {
-    color: #FFF;
-    background: $brandDeepNavy;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $brandDarkNavy;
-    }
-  }
-
-  &.green {
-    color: #FFF;
-    background: $brandGreen;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $brandGreenActive;
-    }
-  }
-
-  &.white {
-    color: $brandGreen;
-    background: $darkWhite;
-    border: 2px solid transparent;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: transparent;
-      color: $darkWhite;
-      border: 2px solid $darkWhite;
-    }
-  }
-
-  &.blue-shadow-white {
-    border-radius: 4px;
-    background-color: $darkWhite;
-    color: $brandBlue;
-    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.13);
-    width: 147px;
-    &:hover,
-    &:focus,
-    &:active {
-      box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.20);
-    }
-  }
-
-  &.white-red {
-    color: $brandRed;
-    background: $darkWhite;
-    border: 2px solid transparent;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: transparent;
-      color: $darkWhite;
-      border: 2px solid $darkWhite;
-    }
-  }
-
-  &.white-blue {
-    color: $brandBlue;
-    background: $darkWhite;
-    border: 2px solid transparent;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: transparent;
-      color: $darkWhite;
-      border: 2px solid $darkWhite;
-    }
-  }
-
-  &.vivid-green {
-    color: #FFF;
-    background: $brandVibrantGreen;
-    &:hover,
-    &:focus,
-    &:active {
-      color: #FFFFFF;
-      background-color: $brandVibrantGreenActive;
-    }
-  }
-
-  &.gray {
-    color: #FFF;
-    background: $darkGray;
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $darkGrayActive;
-    }
-  }
-
-  &.ghost-blue,
-  &.ghost-red,
-  &.ghost-green,
-  &.ghost-white,
-  &.ghost-white-red {
-    border: 2px solid currentColor;
-    background: #FFF;
-
-    &.large {
-      line-height: 42px;
-    }
-
-    &.small {
-      line-height: 42px;
-      @media only screen and (min-width: $largeWidth) {
-        line-height: 30px;
+    &-moveup {
+      @include transition (transform .3s ease-out);
+      &:hover {
+        @include translateY(-3px);
       }
-  }
-
-  &.ghost-blue {
-    color: $linkColor;
     }
 
-    &:hover,
-    &:focus,
-    &:active {
-      color: $brandBlueActive;
-      border-color: currentColor;
+    &-movedown {
+      @include transition (transform .2s ease-out);
+      &:hover {
+        @include translateY(3px);
+      }
     }
   }
 
-  &.ghost-white {
-    color: $darkWhite;
+  &.size {
 
-    &:hover,
-    &:focus,
-    &:active {
-      color: $brandLightBlue;
-      border-color: currentColor;
+    &-small {
+      padding: 6px 14px;
+      font-size: 13px;
+    }
+
+    &-medium {
+      padding: 7px 18px;
+      font-size: 14px;
+    }
+
+    &-large {
+      padding: 10px 24px;
+      font-size: 18px;
     }
   }
 
-  &.ghost-white-cta  {
-    border: 2px solid currentColor;
-    background: transparent;
+  &.shadow {box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.10)}
 
-    &.large {
-      line-height: 42px;
-    }
+  &.weight {
+    &-light {font-weight: 300}
+    &-normal {font-weight: 400}
+    &-bold {font-weight: 600}
   }
 
-  &.ghost-white-cta {
-    color: $darkWhite;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $brandLightBlue;
-      border-color: currentColor;
-    }
+  &.text {
+    &-black {color: $baseGray}
+    &-blue {color: $brandBlue}
+    &-gray {color: $lightGray}
+    &-green {color: $brandGreen}
+    &-red {color: $brandRed}
+    &-white {color: #fff}
   }
 
-  &.ghost-white-red  {
-    border: 2px solid currentColor;
-    background: transparent;
+  &.border {
+    &-blue {@include border($brandBlue)}
+    &-gray {@include border($lightGray)}
+    &-green {@include border($brandGreen)}
+    &-red {@include border($brandRed)}
+    &-white {border: 1px solid #fff}
   }
 
-  &.ghost-white-red {
-    color: $darkWhite;
-
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $brandRedActive;
-      border-color: currentColor;
-    }
-  }
-
-  &.ghost-red {
-    color: $brandRed;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $brandRedActive;
-      border-color: currentColor;
-    }
-  }
-
-  &.ghost-green {
-    color: $brandGreen;
-
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $brandGreenActive;
-      border-color: currentColor;
-    }
-  }
-
-  &.large,
-  &.small {
-    text-transform: none;
-  }
-
-  &.large {
-    @include vertical-align(48px);
-    font-size: 0.938em; /* 15px */
-    padding: 0 33px;
-
-    @media only screen and (min-width: $largeWidth) {
-      @include vertical-align(48px);
-    }
-  }
-
-  &.small {
-    font-size: 0.813em; /* 13px */
-    margin: 0;
+  &.bg {
+    &-black {background-color: $baseGray}
+    &-blue {background-color: $brandBlue}
+    &-gray {background-color: $lightGray}
+    &-green {background-color: $brandGreen}
+    &-red {background-color: $brandRed}
+    &-white {background-color: #fff}
   }
 }

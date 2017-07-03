@@ -173,13 +173,14 @@ header {
 
       a,
       label {
-        font-size: 0.923em; /* 12px */
-        display: inline-block;
         padding: 20px;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
 
         /* [ styles only for desktop ] */
         @media only screen and (min-width: $largeWidth) {
-          padding: 12px 0 1px;
+          padding: 7px 0 0;
         }
       }
 
@@ -198,6 +199,10 @@ header {
 
         &.active {
           cursor: default;
+        }
+
+        &.btn:hover {
+          color: #fff;
         }
       }
     }
@@ -252,7 +257,7 @@ header {
           }
 
           a:hover {
-            color: $headerGrey;
+            color: $lightGray;
           }
         }
       }

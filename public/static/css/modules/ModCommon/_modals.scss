@@ -36,7 +36,7 @@
     width: 90%;
     margin: 40px auto 60px auto;
     padding: 20px 20px 10px 20px;
-    background-color: $headerGrey;
+    background-color: $lightGray;
     border: 1px dashed $lightGray;
     border-radius: 10px;
 
@@ -68,7 +68,7 @@
   }
 
   .code-box {
-    @include border;
+    @include border($darkWhite);
     margin-top: 40px;
     margin-bottom: 40px;
     background-color: #FFF;
@@ -203,7 +203,7 @@
     width: 300px;
     margin: 40px auto 60px auto;
     padding: 20px 10px 10px 10px;
-    background-color: $headerGrey;
+    background-color: $lightGray;
     border: 1px dashed $lightGray;
     border-radius: 10px;
 

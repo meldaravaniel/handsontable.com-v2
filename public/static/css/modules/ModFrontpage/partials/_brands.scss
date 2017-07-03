@@ -1,0 +1,23 @@
+/**
+ * @author: Handsoncode
+ */
+
+.stripe-brands {
+  height: 10vh;
+  position: relative;
+  overflow: hidden;
+
+  .brands-frontpage {
+    @include set-pseudo-element(50%, auto, auto, 50%);
+    @include translate(-50%,-18%);
+
+    h4 {
+      padding: 0;
+      text-align: left;
+    }
+
+    ul li {
+      line-height: 50%;
+    }
+  }
+}

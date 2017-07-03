@@ -122,7 +122,7 @@ form.light {
   input[type="email"] {
     margin: 0;
     padding: 20px;
-    background: $headerGrey;
+    background: $lightGray;
     height: 47px;
 
     @media only screen and (min-width: $largeWidth) {
@@ -227,7 +227,7 @@ div.mce_inline_error {
   input[type="text"] {
     margin: 0;
     padding: 20px;
-    background: $headerGrey;
+    background: $lightGray;
     height: 47px;
 
     @media only screen and (min-width: $largeWidth) {

@@ -224,7 +224,7 @@ a {
   }
 }
 code {
-  @include border;
+  @include border($darkWhite);
   font-family: $regularFont;
   font-size: 0.938em;
   word-break: break-all;

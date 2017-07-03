@@ -3,7 +3,6 @@
  */
 
 /* [ brand colors ] */
-$brandBlack: #000000;
 $brandBlue: #34A9DC;
 $brandRed: #E87677;
 $brandVibrantGreen: #59a500;
@@ -13,7 +12,6 @@ $brandDeepGreen: #598e6a;
 $brandDeepNavy: #404B5B;
 $brandDarkNavy: #15202f;
 $brandYellow: #FAD97F;
-$headerGrey: #f7f8fa;
 $brandVibrantBlue: #00e5ff;
 $brandVibrantGreen: #2fd069;
 $brandLightBlue: #b5dafd;
@@ -26,7 +24,6 @@ $middleGray: #C5C5C5;
 $lightGray: #E3E3E3;
 $ultraLightGray: #edeef0;
 $darkWhite: #f7f7f7;
-$headerGrey: #f7f8fa;
 
 /* [ active colors ] */
 $brandBlueActive: darken($brandBlue, 8%);
@@ -50,7 +47,7 @@ $borderColor: $darkWhite;
 $accentBorderColor: $ultraLightGray;
 $inputBorder: $gray;
 $inputFocusBorder: $brandBlue;
-$tableBackground: $headerGrey;
+$tableBackground: $lightGray;
 $iconColor: $brandDeepNavy;
 $backgroundTextColor: $darkWhite;
 
