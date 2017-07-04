@@ -1,0 +1,22 @@
+/**
+ * @author: Handsoncode
+ */
+
+.get-started {
+  padding: 40px 0 60px;
+
+  @media only screen and (min-width: $largeWidth) {
+    padding: 60px 0 120px;
+  }
+
+  h2 {
+
+    span {
+      margin: 20px 0 80px;
+
+      @media only screen and (min-width: $largeWidth) {
+        width: 30%;
+      }
+    }
+  }
+}

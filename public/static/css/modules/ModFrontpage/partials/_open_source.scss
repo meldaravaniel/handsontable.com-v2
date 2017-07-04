@@ -2,6 +2,58 @@
  * @author: Handsoncode
  */
  
- .open-source {
+.open-source {
+  padding: 40px 0 60px;
 
+  @media only screen and (min-width: $largeWidth) {
+    padding: 60px 0 120px;
+  }
+
+  h2 {
+
+    span {
+      margin: 20px 0 80px;
+
+      @media only screen and (min-width: $largeWidth) {
+        width: 30%;
+      }
+    }
+  }
+
+  .chart {
+    position: relative;
+
+    .cloud {
+      width: 108px;
+      padding: 14px 0 9px;
+      line-height: .7;
+      color: #fff;
+      border-radius: 6px;
+
+      strong {
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      span {
+        display: block;
+        font-size: 13px;
+      }
+
+      &.issues {
+        @include absolute-top-left (0, 0);
+        background-color: $brandBlue;
+      }
+
+      &.commits {
+        @include absolute-top-left (80px, 180px);
+        background-color: $brandVibrantGreen;
+      }
+
+      &.stars {
+        @include absolute-top-left (160px, 0);
+        background-color: $brandDeepNavy;
+      }
+    }
+  }
 }

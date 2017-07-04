@@ -3,6 +3,48 @@
  */
 
 .highlights {
-  margin-top: 140px;
+  padding-bottom: 60px;
 
+  @media only screen and (min-width: $largeWidth) {
+    padding-bottom: 160px;
+  }
+
+  & > div.row {
+    margin-top: 40px;
+
+    @media only screen and (min-width: $largeWidth) {
+      margin-top: 140px;
+    }
+
+    .artwork {
+      display: none;
+
+      @media only screen and (min-width: $largeWidth) {
+        display: block;
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  .benefits-testimonial {
+    margin-top: 30px;
+
+    img {
+      margin-top: 3px;
+    }
+
+    p {
+      margin-top: 5px;
+      font-size: 13px;
+      font-weight: 400;
+
+      &:first-child {
+        margin: 0;
+        font-weight: 300;
+      }
+    }
+  }
 }

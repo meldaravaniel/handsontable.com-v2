@@ -3,5 +3,60 @@
  */
 
 .testimony {
+  padding: 40px 0 60px;
 
+  @media only screen and (min-width: $largeWidth) {
+    padding: 60px 0 120px;
+  }
+
+  h2 {
+
+    span {
+      margin: 20px 0 0;
+
+      @media only screen and (min-width: $largeWidth) {
+        width: 30%;
+      }
+    }
+  }
+
+  .bubble {
+    width: 80%;
+    margin: 40px auto 0;
+
+    .quote {
+      padding: 18px 30px 22px;
+      position: relative;
+      display: block;
+      font-weight: 300;
+      font-size: 15px;
+      border-radius: 6px;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.04), 0 4px 14px rgba(0, 0, 0, 0.04);
+      background-color: #fff;
+
+      .triangle {
+        @include arrow-down (14px, 10px, #fff);
+        @include absolute-bottom-left (-9px, 20px);
+      }
+    }
+
+    .benefits-testimonial {
+      margin-top: 30px;
+
+      img {
+        max-width: 42px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 13px;
+        font-weight: 400;
+
+        &:first-child {
+          margin-top: 2px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
 }
