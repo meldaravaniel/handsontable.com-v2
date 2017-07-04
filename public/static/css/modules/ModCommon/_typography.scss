@@ -64,13 +64,13 @@ p, span, a, ul li, ol li, label {
   line-height: 1.6;
 }
 
-a {
+a, a:hover, a:active, a:visited {
   text-decoration: none;
   color: $linkColor;
+}
 
-  &:hover, &:active, &:visited {
-    color: $linkActiveColor;
-  }
+a:hover {
+  color: $linkActiveColor;
 }
 
 code {

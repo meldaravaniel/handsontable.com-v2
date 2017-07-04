@@ -2,54 +2,34 @@
  * @author: Handsoncode
  */
 
-/* [ local variables ] */
-
 footer {
+  padding: 40px 0 60px;
 
-  @media only screen and (min-width: $largeWidth) {
-    text-align: left;
+  h4, p, a, a:active, a:visited {
+    font-size: 14px;
+    color: $baseGray;
   }
 
-  .handsontable-paragraph {
-    font-size: 12px;
+  h4, a:hover {
+    margin-top: 40px;
     color: $darkGray;
-    padding-right: 20px;
 
-    svg {
-      @include rectangle(150px, 30px);
-      position: inherit;
-      margin-top: 20px;
-      fill: #000;
+    @media only screen and (min-width: $largeWidth) {
+      margin-top: 0;
     }
+  }
+  .row > div:first-child {
 
-    a {
-      font-size: 11px;
+    p, a, a:hover, a:active, a:visited {
+      font-size: 13px;
       color: $darkGray;
     }
   }
 
-  p {
-    margin-bottom: 21px;
-  }
-
-  a {
-    margin: 0;
-    color: $baseGray;
-    font-size: 13px;
-
-    @media only screen and (min-width: $largeWidth) {
-      margin: 6px 0;
-      text-align: left;
-    }
-
-    &:hover {
-      color: $gray;
-      text-decoration: none;
-    }
-
-    &:after {
-      display: block;
-      content: "";
-    }
+  svg {
+    @include rectangle(150px, 30px);
+    position: inherit;
+    margin-top: 20px;
+    fill: #000;
   }
 }
