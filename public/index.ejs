@@ -1,21 +1,22 @@
 <section class="frontpage">
-    <div class="header-background">
+    <div class="header-background ">
         <div class="row top-banner">
             <div class="small-12 large-5 columns">
-                <h1>
-                    <strong>JavaScript Spreadsheet</strong>
-                    <br/>
-                    <span>Most popular UI component for web apps</span>
-                </h1>
-                <h2>Fast, secure and reliable solution <br/>for critical business processes.</h2>
-                <a href="/features.html" class="btn size-large bg-white text-blue shadow hover-moveup">Learn more</a>
+                <div class="background-header-pattern">
+                    <h1>
+                        <strong>JavaScript Spreadsheet</strong>
+                        <br/>
+                        <span>Most popular UI component for web apps</span>
+                    </h1>
+                    <h2>Fast, secure and reliable solution <br/>for critical business processes.</h2>
+                    <a href="/features.html" class="btn size-large bg-white text-blue shadow hover-moveup">Learn more</a>
+                </div>
             </div>
-            <div class="small-12 large-5 columns text-center">
-                [artwork]
+            <div class="small-12 large-5 columns">
+                <img src="/static/images/svg/header-laptop.svg" class="header-laptop">
             </div>
+         </div>
         </div>
-    </div>
-
     <div class="stripe-gray">
         <%- partial("_partials/_brands_frontpage") %>
     </div>
@@ -29,7 +30,6 @@
                 </h2>
                 <p>Handsontable is a JavaScript component providing a familiar spreadsheet experience
                     in a browser.</p>
-                </h2>
                 <div class="benefits-testimonial">
                     <div class="row">
                         <div class="small-2 columns">
@@ -43,13 +43,17 @@
                 </div>
             </div>
             <div class="small-12 medium-6 columns text-center artwork">
-                [artwork]
+                <svg class="svg">
+                    <use xlink:href="#spreadsheet-experience"></use>
+                </svg>
             </div>
         </div>
 
         <div class="row">
             <div class="small-12 medium-6 columns text-center artwork">
-                [artwork]
+                <svg class="svg">
+                    <use xlink:href="#powerful-features"></use>
+                </svg>
             </div>
             <div class="small-12 medium-4 columns">
                 <h2>
@@ -73,7 +77,9 @@
                     are easy to learn and use.</p>
             </div>
             <div class="small-12 medium-6 columns text-center artwork">
-                [artwork]
+                <svg class="svg">
+                    <use xlink:href="#powerful-experience"></use>
+                </svg>
             </div>
         </div>
     </div>
@@ -166,6 +172,9 @@
                     <div class="cloud stars">
                         <strong>8890</strong>
                         <span>stars</span>
+                    </div>
+                    <div>
+                        <img src="/static/images/svg/social-diagram.svg" class="social-diagram">
                     </div>
                 </div>
             </div>
