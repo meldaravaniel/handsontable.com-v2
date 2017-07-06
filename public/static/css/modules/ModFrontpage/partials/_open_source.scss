@@ -1,7 +1,7 @@
 /**
  * @author: Handsoncode
  */
- 
+
 .open-source {
   padding: 40px 0 60px;
 
@@ -20,15 +20,25 @@
     }
   }
 
+  .handsontable-about {
+
+    @media only screen and (min-width: $mediumWidth) {
+      margin-top: 120px;
+    }
+  }
+
   .chart {
     position: relative;
 
     .cloud {
-      width: 108px;
+      @include rectangle(108px, 60px);
+      @include set-pseudo-element(0, 0, 0, 0);
+
+      margin: auto;
       padding: 14px 0 9px;
+      border-radius: 6px;
       line-height: .7;
       color: #fff;
-      border-radius: 6px;
 
       strong {
         font-size: 20px;
@@ -41,19 +51,36 @@
       }
 
       &.issues {
-        @include absolute-top-left (0, 0);
+        @include absolute-top-left (-120px, -170px);
         background-color: $brandBlue;
+
+        @media only screen and (min-width: $largeWidth) {
+          @include absolute-top-left (-190px, -320px);
+        }
       }
 
       &.commits {
-        @include absolute-top-left (80px, 180px);
+        @include absolute-top-left (50px, 160px);
         background-color: $brandVibrantGreen;
+
+        @media only screen and (min-width: $largeWidth) {
+          @include absolute-top-left (-190px, 450px);
+        }
       }
 
       &.stars {
-        @include absolute-top-left (160px, 0);
+        @include absolute-top-left (170px, -170px);
         background-color: $brandDeepNavy;
+
+        @media only screen and (min-width: $largeWidth) {
+          @include absolute-top-left (200px, -50px);
+        }
       }
+    }
+
+    img {
+      height: 420px;
+      min-height: 300px;
     }
   }
 }

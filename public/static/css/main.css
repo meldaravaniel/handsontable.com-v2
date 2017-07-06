@@ -5585,14 +5585,26 @@ body {
     @media only screen and (min-width: 64.0625em) {
       .open-source h2 span {
         width: 30%; } }
+  @media only screen and (min-width: 40.0625em) {
+    .open-source .handsontable-about {
+      margin-top: 120px; } }
   .open-source .chart {
     position: relative; }
     .open-source .chart .cloud {
       width: 108px;
+      height: 60px;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
       padding: 14px 0 9px;
+      border-radius: 6px;
       line-height: .7;
-      color: #fff;
-      border-radius: 6px; }
+      color: #fff; }
       .open-source .chart .cloud strong {
         font-size: 20px;
         font-weight: 400; }
@@ -5601,19 +5613,37 @@ body {
         font-size: 13px; }
       .open-source .chart .cloud.issues {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -120px;
+        left: -170px;
         background-color: #039be5; }
+        @media only screen and (min-width: 64.0625em) {
+          .open-source .chart .cloud.issues {
+            position: absolute;
+            top: -190px;
+            left: -320px; } }
       .open-source .chart .cloud.commits {
         position: absolute;
-        top: 80px;
-        left: 180px;
+        top: 50px;
+        left: 160px;
         background-color: #2fd069; }
+        @media only screen and (min-width: 64.0625em) {
+          .open-source .chart .cloud.commits {
+            position: absolute;
+            top: -190px;
+            left: 450px; } }
       .open-source .chart .cloud.stars {
         position: absolute;
-        top: 160px;
-        left: 0;
+        top: 170px;
+        left: -170px;
         background-color: #404B5B; }
+        @media only screen and (min-width: 64.0625em) {
+          .open-source .chart .cloud.stars {
+            position: absolute;
+            top: 200px;
+            left: -50px; } }
+    .open-source .chart img {
+      height: 420px;
+      min-height: 300px; }
 
 /**
  * @author: Handsoncode
@@ -5677,9 +5707,6 @@ body {
   @media only screen and (min-width: 64.0625em) {
     .frontpage .header-background {
       height: 80vh; } }
-.frontpage .social-diagram {
-  margin-top: -80px;
-  margin-left: -100px; }
 .frontpage .svg {
   width: 500px;
   height: 320px;
