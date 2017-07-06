@@ -4,7 +4,7 @@
 
 .top-banner {
   @include set-pseudo-element (50%, 0, 0, 0);
-  margin-top: -210px;
+  margin-top: -190px;
   color: #fff;
 
   @media only screen and (min-width: $largeWidth) {

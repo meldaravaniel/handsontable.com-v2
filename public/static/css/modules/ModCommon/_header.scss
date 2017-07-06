@@ -1,268 +1,101 @@
 /**
  * @author: Handsoncode
+ *
+ * This
  */
 
-.features-nav-li {
-  color: $baseGray;
-  @media only screen and (min-width: $largeWidth) {
-    color: $darkWhite;
-  }
-
-  a {
-    width: 100%;
-    color: inherit;
-
-    &.active,
-    &:hover,
-    &:focus {
-      color: $darkGray;
-      text-decoration: none;
-    }
-
-    &.active {
-      cursor: default;
-    }
-  }
-
-  @media only screen and (min-width: $largeWidth) {
-
-    a {
-      @include border-bottom(transparent);
-      width: 100%;
-      color: inherit;
-
-      &.active,
-      &:hover,
-      &:focus {
-        color: #b5dafd;
-        text-decoration: none;
-      }
-      &.active {
-        cursor: default;
-      }
-    }
-  }
-}
-
-header.features-nav {
-  background: none;
-}
-
-header.white-head {
-  background: none;
-}
-
 header {
-  z-index: 10000;
+  @include absolute-top-left(0, 0);
+  width: 100%;
+  padding: 24px 0;
+  z-index: 1;
 
-  /* [ styles only for desktop ] */
-  @media only screen and (min-width: $largeWidth) {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 32px 0 20px;
-    left:0;
-    right: 0;
-    display: inline-block;
-  }
+  .logo {
+    @include relative-top-left(10px, 0);
 
-  /* [ burger icon triger show menu ] */
-  label[for="show_menu"] {
-    @include absolute-top-right(30px, 16px);
-    text-indent: -100%;
-    display: inline-block;
-    cursor: pointer;
-    z-index: 100;
-    text-align: right;
-    font-size: 15px;
+    svg {
+      fill: $baseGray;
 
-    &:hover {
-      &::after {
-        @include transform(rotate(45deg) translate(7px, 7px));
+      &.handsontable-logo {
+        @include rectangle(130px, 25px);
       }
-
-      &::before {
-        @include transform(rotate(-45deg) translate(5px, -5px));
-      }
-    }
-
-    &::after,
-    &::before {
-      @include transition(all .3s ease);
-      @include rectangle (100%, 1px);
-      background: $linkColor;
-    }
-
-    &::after {
-      @include set-pseudo-element(0, auto, auto, 0);
-    }
-
-    &::before {
-      @include set-pseudo-element(auto, auto, 0, 0);
-    }
-
-    /* [ hide mobile menu trigger on desktop ] */
-    @media only screen and (min-width: $largeWidth) {
-      display: none;
-    }
-  }
-
-  #show_menu {
-    @include absolute-top-left(-10000px, 0);
-
-    &:checked + nav {
-      @include transition(all .3s ease);
-      @include transform(translateY(0));
-      opacity: 1;
-      display: block;
     }
   }
 
   nav {
-    @include transform(translateY(-100%));
-    opacity: 0;
-    display: none;
 
-    /* [ styles only for desktop ] */
-    @media only screen and (min-width: $largeWidth) {
-      @include transform(translateY(0));
-      position: relative;
-      width: auto;
-      top: 3px;
-      float: right;
-      opacity: 1;
-      display: block;
-    }
+    & > a {
+      @include absolute-top-right (24px, 25px);
+      display: none;
+      z-index: 1;
 
-    .sign-in {
-      margin:0;
-      @media only screen and (min-width: $largeWidth) {
-        margin-right: 30px;
+      @media only screen and (max-width: $largeWidth) {
+        display: block;
+      }
+
+      svg {
+        @include square (24px);
       }
     }
 
-    li {
-      border-top: 1px solid $lightGray;
-      position: relative;
-      display: block;
-      float: left;
-      width: 100%;
+    ul {
 
-      &:first-child {
-        border: none;
-      }
-      &:last-child {
-        padding: 15px;
-        @media only screen and (min-width: $largeWidth) {
-          padding: 0;
-        }
+      @media only screen and (max-width: $largeWidth) {
+        background: #fff;
+        border-radius: 4px;
+        position: absolute;
+        left: 3%;
+        width: 94%;
+        padding: 56px 0px 16px;
+        text-align: center;
+        top: 24px;
+        box-shadow: 0 3px 18px rgba(0, 0, 0, 0.1), 0 3px 18px rgba(0, 0, 0, 0.1);
       }
 
-      /* [ styles only for desktop ] */
-      @media only screen and (min-width: $largeWidth) {
-        padding: 0 15px;
-        border: none;
-        width: auto;
-      }
-
-      strong {
-        font-weight: 600;
-      }
-
-      a,
-      label {
-        padding: 20px;
+      li {
+        padding: 0 16px;
         display: inline-block;
-        font-size: 14px;
 
-        /* [ styles only for desktop ] */
-        @media only screen and (min-width: $largeWidth) {
-          padding: 7px 0 0;
-        }
-      }
-
-      a {
-        @include border-bottom(transparent);
-        width: 100%;
-        color: inherit;
-
-        &.active,
-        &:hover,
-        &:focus {
-
-          color: $darkGray;
-          text-decoration: none;
-        }
-
-        &.active {
-          cursor: default;
-        }
-
-        &.btn:hover {
-          color: #fff;
-        }
-      }
-    }
-
-    > ul {
-
-      margin: 0;
-      overflow: auto;
-
-      /* [ styles only for desktop ] */
-      @media only screen and (min-width: $largeWidth) {
-        max-height: auto;
-        overflow: inherit;
-      }
-
-      > li {
-        /* [ styles only for desktop ] */
-        @media only screen and (min-width: $largeWidth) {
-          margin-left: 10px;
-        }
-      }
-
-      &.login_menu {
-        text-transform: uppercase;
-        @media only screen and (min-width: $largeWidth) {
-          @include absolute-top-right (-40px, 0);
-          text-transform: none;
-        }
-
-        li {
-          margin: 0;
-          padding: 0;
-          @media only screen and (min-width: $largeWidth) {
-            padding: 0 6px 0;
-          }
+        @media only screen and (max-width: $largeWidth) {
+          width: 48%;
 
           &:last-child {
-            margin-right: 8px;
+            width: 90%;
           }
+        }
 
-          a, p {
-            width: auto;
-            border-bottom: none;
-            @media only screen and (min-width: $largeWidth) {
-              margin: 0;
-              padding: 15px 0;
+        &.sign-in {
+          padding-right: 32px;
+        }
+
+        a {
+          font-size: 14px;
+
+          @media only screen and (max-width: $largeWidth) {
+            width: 48%;
+            font-size: 16px;
+
+            .btn {
+              margin-top: 30px;
             }
           }
 
-          > p {
-            margin-left: 10px;
-          }
-
-          a:hover {
-            color: $lightGray;
+          &:hover {
+            color: $brandFeatherBlue;
           }
         }
       }
     }
   }
 
-  .svg-icon {
-    @include square(20px);
-    fill: $lightGray;
+  &.header-white {
+
+    a {
+      color: #fff;
+    }
+
+    svg {
+      fill: #fff;
+    }
   }
 }

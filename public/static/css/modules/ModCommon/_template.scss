@@ -2,14 +2,6 @@
   @author: Handsoncode
  */
 
-body {
-    padding-top: $topMenuHeight;
-
-    @media only screen and (min-width: $largeWidth) {
-        padding: 0;
-    }    
-}
-
 [aria-hidden="true"] {
     display: none;
 }

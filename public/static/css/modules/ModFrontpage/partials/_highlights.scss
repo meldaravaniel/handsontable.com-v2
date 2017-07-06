@@ -4,6 +4,7 @@
 
 .highlights {
   padding-bottom: 60px;
+  position: relative;
 
   @media only screen and (min-width: $largeWidth) {
     padding-bottom: 160px;
@@ -45,6 +46,19 @@
         margin: 0;
         font-weight: 300;
       }
+    }
+  }
+
+  &:before {
+    @include arrow-left (460px, 460px, $brandFeatherBlue);
+    @include absolute-top-right (50%, 0);
+    margin-top: -280px;
+    display: none;
+    z-index: -1;
+    content: '';
+
+    @media only screen and (min-width: $largeWidth) {
+      display: block;
     }
   }
 }

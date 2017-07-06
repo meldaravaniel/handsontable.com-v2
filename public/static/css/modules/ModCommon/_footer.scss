@@ -3,6 +3,7 @@
  */
 
 footer {
+  margin-top: 80px;
   padding: 40px 0 60px;
 
   h4, p, a, a:active, a:visited {
@@ -11,11 +12,14 @@ footer {
   }
 
   h4, a:hover {
-    margin-top: 40px;
     color: $darkGray;
+  }
+
+  h4 {
+    margin-top: 40px;
 
     @media only screen and (min-width: $largeWidth) {
-      margin-top: 0;
+      margin-top: 24px;
     }
   }
   .row > div:first-child {

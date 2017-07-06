@@ -1,60 +1,47 @@
-<header class="<% if (current.source === 'features') { %>
-     features-nav
-     <% } else if (current.source === 'pricing' || current.source === 'branding' || current.source === 'labs-upload' || current.source === 'random-hash' ) { %>
-     white-head
-     <% } else { %>
-     header
-     <% } %>
-     ">
+<header<% if (current.source === 'features' || current.source === 'index') { %> class="header-white"<% } %>>
     <div class="row">
-        <div class="logotype clearfix">
-            <a href="/index.html" class="<% if (current.source === 'features' || current.path[0] === 'index' ) { %>
-             brand-logo-white <% } else { %>
-             brand-logo <% } %>">
-                <svg>
-                    <use xlink:href="#handsontable-logo"></use>
-                </svg>
-            </a>
-            <a href="//github.com/handsontable/handsontable" class="star-counter" target="_blank">
-                <svg class="svg-icon">
-                    <use xlink:href="#github-squid"></use>
-                </svg>
-                <div class="github-star">
-                    <div class="triangle"></div>
-                    8560
-                </div>
-            </a>
+        <div class="small-3 columns">
+            <div class="logo">
+                <a href="/">
+                    <svg class="handsontable-logo">
+                        <use xlink:href="#handsontable-logo"></use>
+                    </svg>
+                </a>
+                <a href="//github.com/handsontable/handsontable" class="star-counter" target="_blank">
+                    <svg>
+                        <use xlink:href="#github-squid"></use>
+                    </svg>
+                    <div class="github-star">
+                        <div class="triangle"></div>
+                        8560
+                    </div>
+                </a>
+            </div>
         </div>
-        <label for="show_menu">
-            <svg class="svg-icon">
-                <use xlink:href="#hamburger"></use>
-            </svg>
-        </label>
-        <input id="show_menu" type="checkbox"/>
-        <nav class="">
-            <ul id="login_menu_signed_off" class="login_menu hide">
-                <li><a href="//my.handsontable.com/sign-up.html">Sign up</a></li>
-                <li><a href="//my.handsontable.com/">My account</a></li>
-            </ul>
 
-            <ul id="login_menu_signed_on" class="login_menu hide">
-                <li><p>Nice to see you, <strong id="login_menu_name"></strong></p></li>
-                <li><a href="//my.handsontable.com">My account</a></li>
-                <li><a id="logout" href="#">Logout</a></li>
-            </ul>
-            <script>LoginBar.update()</script>
-            <ul class="clearfix
-                <% if (current.source === 'features' || current.path[0] === 'index') { %>
-                     features-nav-li dropdown-f<% } else { %>
-                     <% } %>">
-                <li><a href="/features.html">Features</a></li>
-                <li><a href="/examples.html">Examples</a></li>
-                <li><a href="/pricing.html">Pricing</a></li>
-                <li><a href="/customers">Customers</a></li>
-                <li><a href="/developers.html">Developers</a></li>
-                <li class="sign-in"><a href="//my.handsontable.com/sign-up.html">Sign in</a></li>
-                <li><a href="/download.html" class="btn size-medium bg-green-light bg-lighten text-white">Download</a></li>
-            </ul>
-        </nav>
+        <div class="small-9 columns text-right">
+            <nav>
+                <a href="#" class="menu-open">
+                    <svg>
+                        <use xlink:href="#hamburger"></use>
+                    </svg>
+                    <svg>
+                        <use xlink:href="#hamburger"></use>
+                    </svg>
+                </a>
+                <ul>
+                    <li><a href="/features.html">Features</a></li>
+                    <li><a href="/examples.html">Examples</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                    <li><a href="/customers">Customers</a></li>
+                    <li><a href="/developers.html">Developers</a></li>
+                    <li class="sign-in"><a href="//my.handsontable.com/sign-up.html">Sign in</a></li>
+                    <li><a href="/download.html" class="btn size-medium bg-green-light bg-lighten text-white">
+                            Download
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>

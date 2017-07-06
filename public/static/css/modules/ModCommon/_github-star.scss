@@ -6,11 +6,11 @@
   display: none;
 
   @media only screen and (min-width: $largeWidth) {
-    margin-left: 20px;
+    @include absolute-top-left (-2px, 150px);
     display: block;
 
     .github-star {
-      @include relative-top-left (8px, 8px);
+      @include relative-top-left (-5px, 8px);
       padding: 1px 5px;
       display: inline-block;
       color: $darkWhite;
@@ -26,7 +26,7 @@
       }
     }
 
-    .svg-icon {
+    svg {
       @include square (25px);
       fill: $darkWhite;
       margin-bottom: -5px;
@@ -34,7 +34,6 @@
       @media only screen and (min-width: $mediumWidth) {
         @include square (18px);
         float: left;
-        margin: 12px 0 0 0;
       }
     }
   }
