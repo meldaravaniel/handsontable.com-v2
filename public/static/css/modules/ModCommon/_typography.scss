@@ -2,6 +2,20 @@
  * @author: Handsoncode
  */
 
+/* Begin: Workaround for TypeKit */
+.wf-loading {
+  visibility: hidden;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $optionalFont;
+  }
+}
+
+.wf-active {
+  visibility: visible;
+}
+/* End */
+
 html, body {
   font-family: $regularFont;
   font-weight: 400;

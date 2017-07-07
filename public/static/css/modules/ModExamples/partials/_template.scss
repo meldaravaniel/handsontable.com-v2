@@ -4,32 +4,15 @@
 
  .examples  {
 
-   .headline {
-     margin: 97px 0 23px;
+    h4 {
+      text-align: left;
+      margin:0;
+      padding: 0;
+    }
 
-     &.centered {
-       margin: 20px 0 18px;
-     }
-   }
-
-   h2 {
-     font-weight: 400;
-     text-align: left;
-     margin:40px 0 0 0;
-     padding: 0;
-
-   }
-
-   h4 {
-     text-align: left;
-     margin:0;
-     padding: 0;
-   }
-
-   .sub-header {
-     text-align: left;
-     margin-top: 5px;
-   }
+    .composer {
+      padding-top: 20px;
+    }
 
     .plugin-preview {
         @media only screen and (min-width: $largeWidth) {

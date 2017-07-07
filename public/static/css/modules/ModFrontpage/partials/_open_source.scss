@@ -6,23 +6,25 @@
   padding: 40px 0 60px;
 
   @media only screen and (min-width: $largeWidth) {
-    padding: 60px 0 120px;
+    padding: 60px 0 40px;
   }
 
   h2 {
 
     span {
-      margin: 20px 0 80px;
+      margin: 20px 0;
 
       @media only screen and (min-width: $largeWidth) {
         width: 30%;
+        margin-bottom: 80px;
       }
     }
   }
 
-  .handsontable-about {
+  p:first-child {
+    margin-top: 30px;
 
-    @media only screen and (min-width: $mediumWidth) {
+    @media only screen and (min-width: $largeWidth) {
       margin-top: 120px;
     }
   }
@@ -32,7 +34,12 @@
 
     .cloud {
       @include rectangle(108px, 60px);
-      @include set-pseudo-element(0, 0, 0, 0);
+      display: none;
+
+      @media only screen and (min-width: $largeWidth) {
+        margin-top: 120px;
+        display: block;
+      }
 
       margin: auto;
       padding: 14px 0 9px;
@@ -51,36 +58,23 @@
       }
 
       &.issues {
-        @include absolute-top-left (-120px, -170px);
+        @include absolute-top-left (-50px, 60px);
         background-color: $brandBlue;
-
-        @media only screen and (min-width: $largeWidth) {
-          @include absolute-top-left (-190px, -320px);
-        }
       }
 
       &.commits {
-        @include absolute-top-left (50px, 160px);
+        @include absolute-top-right (50px, 30px);
         background-color: $brandVibrantGreen;
-
-        @media only screen and (min-width: $largeWidth) {
-          @include absolute-top-left (-190px, 450px);
-        }
       }
 
       &.stars {
-        @include absolute-top-left (170px, -170px);
+        @include absolute-bottom-left (60px, 200px);
         background-color: $brandDeepNavy;
-
-        @media only screen and (min-width: $largeWidth) {
-          @include absolute-top-left (200px, -50px);
-        }
       }
     }
 
     img {
-      height: 420px;
-      min-height: 300px;
+      max-height: 420px;
     }
   }
 }

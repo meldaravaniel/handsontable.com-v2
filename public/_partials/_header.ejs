@@ -1,4 +1,4 @@
-<header<% if (current.source === 'features' || current.source === 'index') { %> class="header-white"<% } %>>
+<header<% if (current.source === 'features' || current.path[0] === 'index') { %> class="header-white"<% } %>>
     <div class="row">
         <div class="small-3 columns">
             <div class="logo">
@@ -20,21 +20,22 @@
         </div>
 
         <div class="small-9 columns text-right">
-            <nav>
-                <a href="#" class="menu-open">
-                    <svg>
-                        <use xlink:href="#hamburger"></use>
-                    </svg>
+            <nav class="mobile-inactive">
+                <a href="#">
                     <svg>
                         <use xlink:href="#hamburger"></use>
                     </svg>
                 </a>
                 <ul>
+                    <li class="mobile-only"><a href="/">Home</a></li>
                     <li><a href="/features.html">Features</a></li>
                     <li><a href="/examples.html">Examples</a></li>
                     <li><a href="/pricing.html">Pricing</a></li>
                     <li><a href="/customers">Customers</a></li>
                     <li><a href="/developers.html">Developers</a></li>
+                    <li class="mobile-only"><a href="/resellers.html">Resellers</a></li>
+                    <li class="mobile-only"><a href="/blog/">Blog</a></li>
+                    <li class="mobile-only"><a href="/contact.html">Contact</a></li>
                     <li class="sign-in"><a href="//my.handsontable.com/sign-up.html">Sign in</a></li>
                     <li><a href="/download.html" class="btn size-medium bg-green-light bg-lighten text-white">
                             Download

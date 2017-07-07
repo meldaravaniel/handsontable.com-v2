@@ -1,88 +1,131 @@
 /**
  * @author: Handsoncode
- *
- * This
  */
 
 header {
-  @include absolute-top-left(0, 0);
+  @include absolute-top-left (0, 0);
   width: 100%;
-  padding: 24px 0;
+  padding: 34px 0 0;
   z-index: 1;
 
   .logo {
-    @include relative-top-left(10px, 0);
+    @include relative-top-left (10px, 0);
 
     svg {
-      fill: $baseGray;
 
       &.handsontable-logo {
-        @include rectangle(130px, 25px);
+        @include rectangle (130px, 25px);
+        fill: $baseGray;
       }
     }
   }
+
+  /* Begin: This allows to stretch the mobile menu to 100% of width of the viewport */
+  & > .row > .columns:last-child {
+    position: static;
+  }
+  /* End */
 
   nav {
 
     & > a {
       @include absolute-top-right (24px, 25px);
-      display: none;
-      z-index: 1;
+      display: block;
+      z-index: 11;
 
-      @media only screen and (max-width: $largeWidth) {
-        display: block;
+      @media only screen and (min-width: $largeWidth) {
+        display: none;
       }
 
       svg {
-        @include square (24px);
+        @include square (28px);
+        fill: $baseGray;
       }
     }
 
     ul {
+      display: none;
 
-      @media only screen and (max-width: $largeWidth) {
-        background: #fff;
-        border-radius: 4px;
-        position: absolute;
-        left: 3%;
-        width: 94%;
-        padding: 56px 0px 16px;
-        text-align: center;
-        top: 24px;
-        box-shadow: 0 3px 18px rgba(0, 0, 0, 0.1), 0 3px 18px rgba(0, 0, 0, 0.1);
+      @media only screen and (min-width: $largeWidth) {
+        display: block;
       }
 
       li {
         padding: 0 16px;
         display: inline-block;
 
-        @media only screen and (max-width: $largeWidth) {
-          width: 48%;
-
-          &:last-child {
-            width: 90%;
-          }
+        &.mobile-only {
+          display: none;
         }
 
         &.sign-in {
           padding-right: 32px;
         }
 
-        a {
-          font-size: 14px;
+        a, a:hover, a:active, a:visited {
+          font-size: 13px;
+          color: $baseGray;
+        }
 
-          @media only screen and (max-width: $largeWidth) {
-            width: 48%;
-            font-size: 16px;
+        a:hover {
+          color: $darkGray;
+        }
 
-            .btn {
-              margin-top: 30px;
-            }
+      }
+    }
+  }
+
+  /* Menu visible only on mobile devices */
+  nav.mobile-active {
+
+    @media only screen and (min-width: $largeWidth) {
+      display: none;
+    }
+
+    & > a {
+
+      svg {
+        fill: $darkGray;
+      }
+    }
+
+    ul {
+      @include absolute-top-left (12px, 2%);
+      width: 96%;
+      padding: 66px 0 8px;
+      display: block;
+      text-align: center;
+      border-radius: 4px;
+      z-index: 10;
+      box-shadow: 0 3px 18px rgba(0, 0, 0, 0.15), 0 3px 18px rgba(0, 0, 0, 0.15);
+      background: #fff;
+
+      li {
+        width: 49%;
+        padding: 10px 0;
+
+        &.mobile-only {
+          display: inline-block;
+        }
+
+        a, a:hover, a:active, a:visited {
+          font-size: 18px;
+          color: $brandBlue;
+
+          &.btn {
+            width: 100%;
+            color: #fff;
+            font-size: 18px;
           }
+        }
 
-          &:hover {
-            color: $brandFeatherBlue;
-          }
+        &:last-child {
+          width: 90%;
+          padding-top: 40px;
+        }
+
+        .sign-in {
+          padding-right: 0;
         }
       }
     }
@@ -90,8 +133,29 @@ header {
 
   &.header-white {
 
-    a {
+    .logo {
+
+      .github-star {
+        border: 1px solid $darkWhite;
+        color: $darkWhite;
+        font-weight: 600;
+
+        .triangle {
+          border-right-color: $darkWhite;
+        }
+      }
+
+      svg {
+        fill: $darkWhite;
+      }
+    }
+
+    a, a:hover, a:active, a:visited {
       color: #fff;
+    }
+
+    a:hover {
+      color: $brandFeatherBlue;
     }
 
     svg {

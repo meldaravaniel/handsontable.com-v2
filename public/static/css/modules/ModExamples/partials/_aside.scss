@@ -17,7 +17,8 @@
 
   h5 {
     position: relative;
-    margin: 30px 0 26px;
+    margin: 30px 0 31px;
+    font-size: 18px;
 
     .checkbox {
       @include square(10px);
@@ -31,8 +32,12 @@
     font-weight: 400;
   }
 
+  form#basic_features {
+    min-height: 344px;
+  }
+
   p {
-    @include border-bottom;
+    @include border-bottom ($lightGray);
     position: relative;
     margin: 10px 0;
 
@@ -41,15 +46,11 @@
     }
   }
 
-  label,
-  a {
-    font-size: inherit;
-  }
-
   label {
     @include user-select;
     padding-right: 30px;
     cursor: pointer;
+    font-size: 14px;
 
     &:hover,
     &:focus,
@@ -65,7 +66,6 @@
       @include square(20px);
       margin-top: -16px;
       fill: $middleGray;
-      z-index: 10;
 
       @media only screen and (min-width: $mediumWidth) {
         @include square(16px);
@@ -106,5 +106,4 @@
   label[for='feature_'] {
     display: none;
   }
-
 }

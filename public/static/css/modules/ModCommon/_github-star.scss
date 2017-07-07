@@ -13,22 +13,21 @@
       @include relative-top-left (-5px, 8px);
       padding: 1px 5px;
       display: inline-block;
-      color: $darkWhite;
+      color: $baseGray;
       cursor: pointer;
       font-size: 10px;
-      font-weight: 600;
       border-radius: 3px;
-      border: 1px solid $darkWhite;
+      border: 1px solid $baseGray;
 
       .triangle {
-        @include arrow-left (6px, 4px, #fff);
+        @include arrow-left (6px, 4px, $baseGray);
         @include absolute-top-left (5px, -5px);
       }
     }
 
     svg {
       @include square (25px);
-      fill: $darkWhite;
+      fill: $baseGray;
       margin-bottom: -5px;
 
       @media only screen and (min-width: $mediumWidth) {

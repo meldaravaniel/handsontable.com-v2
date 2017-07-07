@@ -275,7 +275,4 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }();
 
-  // Highlight.js
-  // hljs.initHighlightingOnLoad();
-
 });

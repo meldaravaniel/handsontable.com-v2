@@ -3,51 +3,71 @@
         "layout": false
     },
 
-    "index": {
-        "title": "JavaScript Spreadsheet Library for Developers"
+    "branding": {
+        "title": "Branding"
     },
 
-    "examples": {
-        "title": "Choose Your Components"
+    "community-download": {
+        "title": "Download Handsontable Community Edition"
+    },
+
+    "developers": {
+        "title": "Developers Hub"
+    },
+
+    "download": {
+        "title": "Download"
     },
 
     "knowledge-base": {
-        "title": "Frequently Asked Questions"
+        "title": "Knowledge base"
     },
 
-    "pricing": {
-        "title": "Pricing Plans"
+    "pro-download": {
+        "title": "Download Handsontable Pro"
     },
 
-    "pricing-maintenance": {
-        "title": "Hold tight, we're right back"
+    "terms-of-use": {
+        "title": "Terms of use"
+    },
+
+    "examples": {
+        "title": "Examples"
     },
 
     "features": {
-        "title": "Discover More Features"
+        "title": "Features"
     },
 
-    "directory": {
-        "title": "A Marketplace For Spreadsheet Components"
+    "index": {
+        "title": "JavaScript Spreadsheet Library For Web Apps"
+    },
+
+    "pricing": {
+        "title": "Pricing plans"
     },
 
     "support": {
-        "title": "Priority Support And Consulting Services"
+        "title": "Priority support and consulting services"
     },
 
     "team": {
-        "title": "Meet Our Team"
+        "title": "Our team"
     },
 
     "contact": {
-        "title": "Get In Touch"
+        "title": "Get nn touch"
     },
 
     "privacy": {
-        "title": "Privacy Policy"
+        "title": "Privacy policy"
     },
 
     "resellers": {
-        "title": "Our Resellers"
+        "title": "Resellers"
+    },
+
+    "404": {
+        "title": "Page not found"
     }
 }
