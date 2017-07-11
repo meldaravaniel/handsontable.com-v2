@@ -9,7 +9,11 @@ header {
   z-index: 1;
 
   .logo {
-    @include relative-top-left (10px, 0);
+    @include relative-top-left (-3px, 0);
+
+    @media only screen and (min-width: $largeWidth) {
+      @include relative-top-left (10px, 0);
+    }
 
     svg {
 

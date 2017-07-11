@@ -1,0 +1,78 @@
+/**
+ * @author: Handsoncode
+ */
+
+.pricing-plans {
+  border-radius: 4px;
+  border: 1px solid $accentBorderColor;
+  background-color: #fff;
+
+  .plan {
+    padding: 32px 0 98px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+
+    @media only screen and (min-width: $largeWidth) {
+      min-height: 490px;
+      padding-bottom: 0;
+    }
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+
+      &.price {
+        font-size: 24px;
+      }
+    }
+
+    ul {
+      width: 60%;
+      margin: 0 auto;
+
+      li {
+        padding: 5px 0;
+
+        svg {
+          @include relative-top-left (3px, -5px);
+        }
+      }
+    }
+
+    .btn {
+      @include absolute-bottom-left (30px, 50%);
+      width: 60%;
+      margin-left: -30%;
+    }
+
+    &.developer-plus {
+      width: 100%;
+      color: #fff;
+      border-radius: 4px;
+      box-shadow: 0 5px 20px 0 rgba(160, 160, 160, 0.9);
+      background: $brandDarkNavy;
+
+      @media only screen and (min-width: $largeWidth) {
+        @include absolute-top-left (-10px, 0);
+        min-height: 510px;
+      }
+
+      h3 {
+        margin-top: 10px;
+
+        span {
+          font-size: inherit;
+          font-weight: inherit;
+          color: $brandVibrantBlue;
+        }
+      }
+
+      .btn {
+        bottom: 40px;
+      }
+    }
+  }
+}

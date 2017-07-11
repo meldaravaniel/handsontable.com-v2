@@ -3,7 +3,13 @@
  */
 
 .pricing .license-renewal {
-  padding: 40px 0 40px;
+
+  h3 {
+
+    span {
+      margin: 20px 0 0;
+    }
+  }
 
   .left {
     text-align: left;
@@ -13,20 +19,9 @@
     padding-top: 20px;
 
     @media only screen and (min-width: $mediumWidth) {
-      padding: 20px 0 0 0;
+      padding: 20px 0 0;
     }
   }
-
-  h3 {
-    margin: 0 20px 10px 20px;
-    font-weight: 300;
-
-    @media only screen and (min-width: $mediumWidth) {
-      margin: 0 0 20px;
-      line-height: 1.5;
-    }
-  }
-
   h4 {
     margin-bottom: 30px;
     line-height: 1.4em;
@@ -42,7 +37,7 @@
       text-align: center;
 
       @media only screen and (min-width: $mediumWidth) {
-        margin: 0 20px 20px 20px;
+        margin: 0 20px 20px;
         text-align: left;
       }
 
@@ -56,13 +51,13 @@
 
   .renew-license {
     margin: 10px auto 0 auto;
-    padding-top: 60px;
+    padding-top: 40px;
     display: block;
     text-align: center;
     clear: both;
 
     @media only screen and (max-width: $mediumWidth) {
-      padding: 60px 20px 20px 20px;
+      padding: 60px 20px 20px;
     }
   }
 }

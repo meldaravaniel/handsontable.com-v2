@@ -2,22 +2,14 @@
  * @author: Handsoncode
  */
 
-.pricing .q-and-a {
+.q-and-a {
 
   .question-item {
     padding-top: 20px;
 
-    h5 {
-      margin: 0 33px 0 0;
+    h4 {
+      font-size: 16px;
       font-weight: 600;
-    }
-
-    h5.slip {
-      margin-top: 0;
-
-      @media only screen and (min-width: $largeWidth) {
-        margin-top: -20px;
-      }
     }
 
     p {

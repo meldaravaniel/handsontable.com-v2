@@ -22,6 +22,11 @@ html, body {
   color: $textColor;
 }
 
+p, span, a, ul li, ol li, label {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 h1,h2,h3,h4,h5 {
   line-height: 1;
   font-weight: 400;
@@ -61,6 +66,10 @@ h1,h2,h3,h4,h5 {
     font-size: 18px;
     font-weight: 300;
     line-height: 1.3;
+
+    a {
+      font-size: inherit;
+    }
   }
 
   & > hr {
@@ -71,11 +80,6 @@ h1,h2,h3,h4,h5 {
     top: -16px;
     border: 2px solid $brandBlue;
   }
-}
-
-p, span, a, ul li, ol li, label {
-  font-size: 15px;
-  line-height: 1.6;
 }
 
 a, a:hover, a:active, a:visited {

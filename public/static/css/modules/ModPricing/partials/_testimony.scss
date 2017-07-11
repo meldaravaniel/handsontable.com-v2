@@ -3,27 +3,22 @@
  */
 
 .pricing .testimony {
-  padding: 40px 0 19px;
+  padding: 40px 0 22px;
   margin: 42px auto 42px;
 
   h5 {
-    text-align: center;
-    font-size: 1em;
-    font-family: $regularFont;
+    margin-top: 10px;
+    font-size: 16px;
     font-weight: 400;
-
-    @media only screen and (min-width: $mediumWidth) {
-      text-align: left;
-    }
   }
 
-  .img-center {
-    margin-left: 40%;
+  img {
+    border-radius: 100%;
   }
 
   blockquote {
-    margin-top: 10px;
+    margin: 6px 0 0;
     font-weight: 300;
-    font-size: 30px;
+    font-size: 26px;
   }
 }

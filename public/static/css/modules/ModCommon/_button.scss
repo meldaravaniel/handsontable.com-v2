@@ -105,11 +105,11 @@
         }
       }
     }
-    &-red {background-color: $brandRed;
+    &-navy {background-color: $brandDarkNavy;
       @include transition (background-color .2s ease-out);
       &.bg-lighten {
         &:hover {
-          background-color: $brandRedActiveLight;
+          background-color: $brandDarkNavyActiveLight;
         }
       }
     }

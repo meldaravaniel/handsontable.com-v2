@@ -4,80 +4,8 @@
 
 .pricing {
 
-  .sub-header {
-    margin: 0  0 60px 0;
-  }
-
-  h1 {
-    padding-bottom: 40px;
-  }
-
-  h2 {
-    text-align: left;
-    line-height: 1.1em;
-    font-weight: 500;
-
-    @media only screen and (min-width: $mediumWidth) {
-      margin-top: 0;
-      text-align: center;
-      font-weight: 500;
-    }
-  }
-
-  h3 {
-    font-weight: 400;
-  }
-
-  h5 {
-    font-size: 1.1em;
-  }
-
-  .row-pricing-plans {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-
-    @media only screen and (min-width: $mediumWidth) {
-      display: flex;
-      flex-direction: row;
-    }
-  }
-
-  .table-header {
-    margin-bottom: -20px;
-    text-align: left;
-    padding-top: 60px;
-  }
-
-  .table {
-    width: 100%;
-
-    td {
-      height: auto;
-      font-weight: 300;
-
-      span {
-        font-size: 24px;
-      }
-    }
-
-    .under {
-      @include border-bottom;
-    }
-
-    .left {
-      text-align: left;
-      display: flex;
-    }
-
-    .bg {
-      background-color: $lightGray;
-    }
-  }
-
   svg {
     @include square(15px);
     fill: $brandLightGreen;
   }
 }
-
