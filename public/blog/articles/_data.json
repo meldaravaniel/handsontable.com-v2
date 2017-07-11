@@ -1,4 +1,13 @@
 {
+  "1.12.0-0.33.0": {
+    "directory": "2017/7/",
+    "title": "Handsontable Pro 1.12.0 (CE 0.33.0) released",
+    "category": "Release",
+    "date": "July 11, 2017",
+    "pubDate": "Tue, 11 Jul 2017 13:00:00 EST",
+    "image_file": "1.12.0-0.33.0/new-release.png",
+    "description": "Today we are happy to announce that Handsontable Pro 1.12.0 (Community Edition 0.33.0) is finally released. In this version we have (...)"
+  },
   "1.11.0-0.32.0": {
     "directory": "2017/5/",
     "title": "Handsontable Pro 1.11.0 (CE 0.32.0) released",
