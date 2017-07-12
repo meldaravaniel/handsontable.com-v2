@@ -79,6 +79,12 @@ h1,h2,h3,h4,h5 {
     position: relative;
     top: -16px;
     border: 2px solid $brandBlue;
+
+    &.centered {
+      left: 50%;
+      margin-left: -19px;
+
+    }
   }
 }
 

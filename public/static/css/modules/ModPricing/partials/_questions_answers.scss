@@ -2,10 +2,9 @@
  * @author: Handsoncode
  */
 
-.q-and-a {
+.pricing .q-and-a {
 
   .question-item {
-    padding-top: 20px;
 
     h4 {
       font-size: 16px;
@@ -34,11 +33,11 @@
     text-align: center;
     clear: both;
     display: block;
-    margin: 60px auto 0 auto;
+    margin: 60px auto 0;
 
     @media only screen and (min-width: $mediumWidth) {
       padding: 0;
-      margin: 60px auto 90px auto;
+      margin: 60px auto 90px;
 
     }
   }

@@ -14,10 +14,6 @@
     }
   }
 
-  .columns {
-    padding: 0;
-  }
-
   h2.divider:before {
     top: 85%;
 
@@ -28,21 +24,11 @@
   }
 
   .code-box {
-    background-color: #4f4f4f;
+    background-color: $baseGray;
     overflow: auto;
-    color: $darkWhite;
+    color: #fff;
     padding: 20px;
     height: 440px;
-  }
-
-  .plugin-preview {
-    padding-top: 23px;
-  }
-
-  .code-holder {
-    float: right;
-    padding: 0;
-    margin: 0;
   }
 
   ol {

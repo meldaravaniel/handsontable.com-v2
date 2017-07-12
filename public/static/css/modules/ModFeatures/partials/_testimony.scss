@@ -2,45 +2,23 @@
  * @author: Handsoncode
  */
 
-.features .testimony-s {
-  padding: 60px 0 90px;
-
-  blockquote {
-    width: auto;
-    line-height: 1.4em;
-
-    @media only screen and (min-width: $mediumWidth) {
-      width: 790px;
-    }
-  }
-
-  .quotation {
-    margin: 20px -5px 0 0;
-    padding: 0;
-    color: $ultraLightGray;
-    font-size: 4em;
-    font-family: $optionalFont;
-    transform: rotate(180deg);
-    float: left;
-
-  }
-
-  .centered {
-    margin: 0 auto 0 auto;
-    display:inline-block;
-    text-align: center;
-  }
+.features .testimony {
+  padding: 40px 0 22px;
+  margin: 62px auto 72px;
 
   h5 {
-    padding: 20px 0 10px 0;
-    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
   }
 
   img {
-    padding: 20px 0 10px 0;
+    border-radius: 100%;
   }
 
-  .header-space {
-    padding-top: 40px;
+  blockquote {
+    margin: 6px 0 0;
+    font-weight: 300;
+    font-size: 26px;
   }
 }

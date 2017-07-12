@@ -4,109 +4,84 @@
 
 .customers {
 
-  h2 {
-    font-weight: 400;
-    text-align: left;
-    margin: 40px 0 0 0;
-    padding: 0;
+  .customer-excerpt {
+    @include square(340px, true);
+    margin: 0 auto 50px;
+    padding: 20px;
+    position: relative;
+    color: #fff;
+    background-color: $brandDarkNavy;
 
-    @media only screen and (min-width: $largeWidth) {
-      margin: 160px 0 0 0;
+    &:hover:after {
+      opacity: .55;
+    }
+
+    &:after {
+      @include set-pseudo-element(0, 0, auto, auto);
+      @include square(100%);
+      @include transition(opacity .3s ease);
+      opacity: .30;
+      z-index: 2;
+      background-size: cover;
+    }
+
+    &.akindi:after {
+      background-image: url($images + 'template/ModCustomers/akindi/akindi-el.png');
+    }
+
+    &.bittitan:after {
+      background-image: url($images + 'template/ModCustomers/bittitan/bittitan-el.png');
+    }
+
+    &.infogram:after {
+      background-image: url($images + 'template/ModCustomers/infogram/infogram-el.png');
+    }
+
+    &.nuxeo:after {
+      background-image: url($images + 'template/ModCustomers/nuxeo/nuxeo-el.png');
+    }
+
+    &.trackingfirst:after {
+      background-image: url($images + 'template/ModCustomers/trackingfirst/trackingfirst-el.png');
+    }
+
+    &.datawrapper:after {
+      background-image: url($images + 'template/ModCustomers/datawrapper/datawrapper-el.png');
+    }
+
+    &.socialpoint:after {
+      background-image: url($images + 'template/ModCustomers/socialpoint/socialpoint-el.png');
+    }
+
+     &.omnidb:after {
+      background-image: url($images + 'template/ModCustomers/omnidb/omnidb-el.png');
+    }
+
+    &.visible:after {
+      background-image: url($images + 'template/ModCustomers/visible/visible-el.png');
+    }
+
+    &.amcharts:after {
+      background-image: url($images + 'template/ModCustomers/amcharts/amcharts-el.png');
+    }
+
+    &.coming-soon {
+      cursor: default;
+      background-color: $lightGray;
+    }
+
+    img, h3 {
+      z-index: 3;
+    }
+
+    img {
+      @include absolute-top-right(40px, 40px);
+    }
+
+    h3 {
+      @include absolute-bottom-left(20px, 30px);
+      padding-right: 20px;
+      line-height: 1.2em;
     }
   }
-
-  .subhead {
-    padding: 0;
-    margin: 0 0 60px 0;
-    text-align: left;
-    font-family: $regularFont;
-    font-weight: 300;
-  }
-
-    .headline {
-      margin: 97px 0 23px;
-    }
-
-    .customer-excerpt {
-      @include square(340px, true);
-      margin: 0 auto 50px;
-      padding: 20px;
-      position: relative;
-      color: #fff;
-      background-color: $brandDarkNavy;
-      &:hover:after {
-        opacity: .55;
-      }
-
-      &:after {
-        @include set-pseudo-element(0, 0, auto, auto);
-        @include square(100%);
-        @include transition(opacity .3s ease);
-        opacity: .30;
-        z-index: 2;
-        background-size: cover;
-      }
-
-      &.akindi:after {
-        background-image: url($images + 'template/ModCustomers/akindi/akindi-el.png');
-      }
-
-      &.bittitan:after {
-        background-image: url($images + 'template/ModCustomers/bittitan/bittitan-el.png');
-      }
-
-      &.infogram:after {
-        background-image: url($images + 'template/ModCustomers/infogram/infogram-el.png');
-      }
-
-      &.nuxeo:after {
-        background-image: url($images + 'template/ModCustomers/nuxeo/nuxeo-el.png');
-      }
-
-      &.trackingfirst:after {
-        background-image: url($images + 'template/ModCustomers/trackingfirst/trackingfirst-el.png');
-      }
-
-      &.datawrapper:after {
-        background-image: url($images + 'template/ModCustomers/datawrapper/datawrapper-el.png');
-      }
-
-      &.socialpoint:after {
-        background-image: url($images + 'template/ModCustomers/socialpoint/socialpoint-el.png');
-      }
-      
-       &.omnidb:after {
-        background-image: url($images + 'template/ModCustomers/omnidb/omnidb-el.png');
-      }
-      
-      &.visible:after {
-        background-image: url($images + 'template/ModCustomers/visible/visible-el.png');
-      }
-      
-      &.amcharts:after {
-        background-image: url($images + 'template/ModCustomers/amcharts/amcharts-el.png');
-      }
-
-      &.coming-soon {
-        cursor: default;
-        background-color: $lightGray;
-      }
-
-      img, h3 {
-        z-index: 3;
-      }
-
-      img {
-        @include absolute-top-right(40px, 40px);
-      }
-
-      h3 {
-        @include absolute-bottom-left(40px, 40px);
-        padding-right: 20px;
-        font-size: 1.692em;
-        font-weight: 400;
-        line-height: 1.2em;
-      }
-    }
-
 }

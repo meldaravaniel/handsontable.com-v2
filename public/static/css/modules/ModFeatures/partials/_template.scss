@@ -5,7 +5,7 @@
  .features  {
 
    .main-background {
-     @include linear-gradient( #1ca7e4 0%, #a4e3ff 100%);
+     @include linear-gradient(-55deg, #1addef 0%, #2443fe 60%, #2443fe 40%, #4508c1 100%);
    }
 
    .header-features {
@@ -14,50 +14,6 @@
 
      @media only screen and (min-width: $mediumWidth) {
        padding: 140px 10px 0 10px;
-     }
-   }
-
-   .headline {
-     margin: 80px 10px 60px 10px;
-     color: $middleGray;
-     font-size: 1em;
-     letter-spacing: -0.02em;
-
-     @media only screen and (min-width: $largeWidth) {
-       margin: 160px 0 5px;
-     }
-
-     &.centered {
-       margin: 60px 0 18px;
-
-       @media only screen and (min-width: $largeWidth) {
-         margin-top: 20px;
-       }
-     }
-   }
-
-   h1 {
-     text-align: left;
-     line-height: 1.1em;
-     font-weight: 500;
-
-     @media only screen and (min-width: $mediumWidth) {
-       margin-top: 0;
-       text-align: center;
-       font-weight: 500;
-     }
-   }
-
-   h2 {
-     margin: 20px 0 60px 30px;
-     text-align: left;
-     line-height: 1.1em;
-     font-weight: 500;
-
-     @media only screen and (min-width: $mediumWidth) {
-       margin-top: 40px;
-       text-align: center;
-       font-weight: 500;
      }
    }
 
@@ -71,12 +27,8 @@
      }
    }
 
-   .brands-module {
-     margin-top: 20px;
-
-     @media only screen and (min-width: $mediumWidth) {
-       margin-top: 80px;
-     }
+   .brands {
+     margin-top: 170px;
    }
 
    .border-bottom {
@@ -89,7 +41,6 @@
        display: block;
      }
    }
-
 
    .table-pad {
      margin: 0 auto -50px auto;
@@ -125,11 +76,6 @@
         padding: 0;
       }
     }
-
-   blockquote {
-     text-align: center;
-     font-weight: 400;
-   }
 
    .p-icon {
     margin-left:0;

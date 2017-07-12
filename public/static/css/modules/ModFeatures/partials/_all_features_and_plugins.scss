@@ -3,43 +3,7 @@
  */
 
 .features .all-features {
-
-  padding-bottom: 90px;
-  background-color: $lightGray;
-
-  h1 {
-    padding-bottom: 40px;
-    text-align: center;
-  }
-
-  h2.divider:before {
-    top: 83%;
-    @media only screen and (min-width: $mediumWidth) {
-      top: 50px;
-    }
-  }
-
-  h4 {
-    margin:10px 0 20px 0;
-    padding: 0;
-    font-family: $regularFont;
-    font-weight: 400;
-    text-align: center;
-
-
-    @media only screen and (min-width: $largeWidth) {
-      text-align: left;
-    }
-  }
-
-  ul, li {
-    line-height: 1.9em;
-    text-align: center;
-
-    @media only screen and (min-width: $largeWidth) {
-      text-align: left;
-    }
-  }
+  padding: 60px 0 120px;
 }
 
 

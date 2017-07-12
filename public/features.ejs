@@ -1,24 +1,26 @@
 <section class="features">
     <div class="main-background">
         <div class="row">
-            <div class="large-12 large-centered columns">
-                <h1 class="header-features background-pattern">Spreadsheet data management<br>
-                    for your web applications.
+            <div class="large-12 large-centered columns text-center">
+                <h1 class="text-white size-large gap-top-medium">
+                    Spreadsheet data management<br>
+                    for your business web apps
                 </h1>
-                <div class="cta">
-                    <a class="btn large ghost-white-cta" href="/pricing.html">Get started</a>
-                </div>
-                <img class="table-pad" src="/static/resources/ModFeatures/features-spreadsheet-demo.png" alt="Handsontable - Java Script spreadsheet library for developers">
+                <a class="btn size-medium bg-white text-blue hover-moveup shadow gap-top-xsmall"
+                   href="/download.html">Get started</a>
+                <img class="table-pad gap-top-small" src="<%= static_path %>/resources/ModFeatures/features-spreadsheet-demo.png"
+                     alt="Handsontable - Java Script spreadsheet library for developers">
             </div>
         </div>
     </div>
-    <!--BRAND PROOF-->
-    <div class="row brands-f">
-        <%- partial("_partials/_brands") %>
-    </div>
-    <!--FAST AND EASY DEPLOYMENT-->
+
+    <%- partial("_partials/_brands") %>
+
     <div class="row fast">
-        <h2 class="divider">Fast and easy development</h2>
+        <h2 class="text-center size-large gap-top-xsmall gap-bottom-xsmall">
+            Fast and easy development
+        </h2>
+
         <div class="small-12 medium-4 columns">
             <svg class="svg-icon">
                 <use xlink:href="#easy-to-learn"></use>
@@ -47,7 +49,7 @@
                 Polymer, Vue and as a pure JavaScript code.</p>
         </div>
     </div>
-    <!-- F&E ROW 2 -->
+
     <div class="row fast">
         <div class="small-12 medium-4 columns">
             <svg class="svg-icon">
@@ -77,111 +79,48 @@
                 Also, large community is supporting us.</p>
         </div>
     </div>
-    <!--SIMPLE UI-->
+
     <div class="row simple">
-        <h2 class="divider">Simple and familiar UI</h2>
+        <h2 class="text-center size-large gap-top-small gap-bottom-xsmall">
+            Simple and familiar UI
+        </h2>
         <div class="large-9 columns">
+            <p>Result</p>
             <div class="plugin-preview">
                 <div id="hot"></div>
-                <div id="export-buttons">
-                    <button id="export-csv" class="btn small ghost-blue">Export to a .csv file</button>
-                    <button id="export-string" class="btn small ghost-blue">Export to string (displayed in the browser
-                        console)
-                    </button>
-                </div>
             </div>
         </div>
         <div class="large-3 columns">
             <div class="code-holder">
-                <h5>Live Editor</h5>
+                <p>Live Editor</p>
                 <div class="code-box">
-                    <ol>
-                        <li data-enabled-placeholder>
-                            var hotSettings = {
-                            data: dataObject,
-                            columns: [
-                            {
-                            data: 'id',
-                            type: 'numeric',
-                            width: 40
-                            },
-                            {
-                            data: 'flag',
-                            renderer: flagRenderer
-                            },
-                            {
-                            data: 'currencyCode',
-                            type: 'text'
-                            },
-                            {
-                            data: 'currency',
-                            type: 'text'
-                            },
-                            {
-                            data: 'level',
-                            type: 'numeric',
-                            format: '0.0000'
-                            },
-                            {
-                            data: 'units',
-                            type: 'text'
-                            },
-                            {
-                            data: 'asOf',
-                            type: 'date',
-                            dateFormat: 'MM/DD/YYYY'
-                            },
-                            {
-                            data: 'onedChng',
-                            type: 'numeric',
-                        </li>
-                        <li data-enabled-feature="hidden"></li>
-                    </ol>
-                    <section id="code-tab" role="tabpanel" aria-hidden="true" class="content active">
-                    </section>
-                </div>
-                <ul>
-                    <li class="left"><a>Enabled features</a>
-                    <li class="left"><a>Code</a></li>
-                    <li class="action-link right">
-                        <a href="#" id="jsfiddle-link">
-                            <svg class="svg-icon-fiddle">
-                                <use xlink:href="#edit_icon"></use>
-                            </svg>
-                            Edit
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        </div>
-        <!-- TESTIMONY -->
-        <div class="row testimony testimony-s">
-            <div class="large-12 large-centered columns centered">
-                <div>
-                    <blockquote>
-                        <div class="quotation">„</div>
-                        Handsontable was a perfect fit because it looks and feels just like Excel,
-                        a tool teachers are already familiar with.
-                    </blockquote>
-                </div>
-                <div>
-                    <img src="<%= img_path %>testimony/david_wolever.jpg" alt="David Wolever"/>
-                </div>
-                <div>
-                    <h5>David Wolever, CTO at Akindi</h5>
-                </div>
-                <div class="cta">
-                    <a class="btn large ghost-blue" href="/customers/akindi/">Learn more</a>
+                    Code goes here
                 </div>
             </div>
         </div>
-        <!-- ALL FEATURES -->
-        <div class="all-features">
-            <div class="row">
-                <h2 class="divider">All features and plugins</h2>
-                <div class="small-12 medium-12 medium-offset-0 large-2 large-offset-1 columns">
-                    <h4>Most popular</h4>
+    </div>
+
+    <div class="row testimony">
+        <div class="medium-2 columns text-center">
+            <img src="<%= img_path %>testimony/david_wolever.jpg" alt="David Wolever"/>
+        </div>
+        <div class="medium-10 columns">
+            <blockquote>
+                "Handsontable was a perfect fit because it looks and feels just like Excel,
+                a tool teachers are already familiar with."
+            </blockquote>
+            <h5>David Wolever, CTO at <a href="//akindi.com" target="_blank">Akindi</a></h5>
+        </div>
+    </div>
+
+    <div class="all-features stripe-gray">
+        <div class="row">
+            <h2 class="text-center size-large gap-bottom-xsmall">
+                Simple and familiar UI
+            </h2>
+            <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-5">
+                <li>
+                    <h4 class="size-small">Most popular</h4>
                     <ul>
                         <li><a href="//docs.handsontable.com/demo-drag-down.html">Drag-down</a></li>
                         <li><a href="//docs.handsontable.com/CopyPaste.html">Copy-paste</a></li>
@@ -191,9 +130,9 @@
                         <li><a href="//docs.handsontable.com/demo-conditional-formatting.html">Conditional formatting</a></li>
                         <li><a href="//docs.handsontable.com/tutorial-keyboard-navigation.html">Keyboard shortcuts</a></li>
                     </ul>
-                </div>
-                <div class="small-12 large-2 columns">
-                    <h4>Community edition</h4>
+                </li>
+                <li>
+                    <h4 class="size-small">Community Edition</h4>
                     <ul>
                         <li><a href="//docs.handsontable.com/demo-fixing.html">Fixed rows / columns</a></li>
                         <li><a href="//docs.handsontable.com/tutorial-cell-types.html">Various cell types</a></li>
@@ -205,9 +144,9 @@
                         <li><a href="//docs.handsontable.com/demo-comments_.html">Comments</a></li>
                         <li><a href="//docs.handsontable.com/demo-stretching.html">Stretching</a></li>
                     </ul>
-                </div>
-                <div class="small-12 large-2 columns">
-                    <h4>Handsontable Pro</h4>
+                </li>
+                <li>
+                    <h4 class="size-small">Handsontable Pro</h4>
                     <ul>
                         <li><a href="//docs.handsontable.com/pro/demo-filtering.html">Filtering</a></li>
                         <li><a href="//docs.handsontable.com/pro/demo-export-file.html">Export to file</a></li>
@@ -223,9 +162,9 @@
                         <li><a href="//docs.handsontable.com/pro/demo-formula-support.html">Formulas</a> <sup>alpha</sup></li>
                         <li><a href="//docs.handsontable.com/pro/demo-gantt-chart.html">Gantt Chart</a> <sup>beta</sup></li>
                     </ul>
-                </div>
-                <div class="small-12 large-2 columns">
-                    <h4>Advanced options</h4>
+                </li>
+                <li>
+                    <h4 class="size-small">Advanced options</h4>
                     <ul>
                         <li><a href="//docs.handsontable.com/tutorial-performance-tips.html">Handling big data</a></li>
                         <li><a href="//docs.handsontable.com/demo-custom-renderers.html">Custom renderers</a></li>
@@ -233,9 +172,9 @@
                         <li><a href="//docs.handsontable.com/demo-customizing-borders.html">Custom borders</a></li>
                         <li><a href="//docs.handsontable.com/tutorial-custom-plugin.html">Custom plugins</a></li>
                     </ul>
-                </div>
-                <div class="large-2 small-12 end columns">
-                    <h4>Technologies</h4>
+                </li>
+                <li>
+                    <h4 class="size-small">Wrappers</h4>
                     <ul>
                         <li><a href="//github.com/handsontable/react-handsontable" target="_blank">ReactJS</a></li>
                         <li><a href="//github.com/handsontable/vue-handsontable-official" target="_blank">VueJS</a></li>
@@ -244,34 +183,36 @@
                         <li><a href="//github.com/handsontable/hot-table" target="_blank">Polymer</a></li>
                         <li><a href="//www.npmjs.com/package/ts-handsontable" target="_blank">Typescript</a></li>
                     </ul>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
-        <!-- PLANS -->
-        <div class="plans float-left">
-            <div class="ce-background-green">
-                <div class="holder">
-                    <h1>Handsontable CE</h1>
-                    <h4>Open Source</h4>
-                </div>
-                <div class="product-button-ce">
-                    <a href="/community-download.html" class="btn large white">Download</a>
-                </div>
-            </div>
-            <div class="pro-background-blue">
-                <div class="holder">
-                    <h1>Handsontable Pro</h1>
-                    <h4>Get a free trial</h4>
-                </div>
-                <div class="product-button-pro">
-                    <a href="/pro-download.html" class="btn large white-blue">Try it now</a>
-                </div>
+    </div>
 
+    <div class="plans gap-top-xsmall">
+        <div class="ce-background-green">
+            <div class="holder">
+                <h1>Handsontable CE</h1>
+                <h4>Open Source</h4>
+            </div>
+            <div class="product-button-ce">
+                <a href="/community-download.html"
+                   class="btn size-medium bg-white text-blue hover-moveup shadow gap-top-xsmall">Download</a>
             </div>
         </div>
+        <div class="pro-background-blue">
+            <div class="holder">
+                <h1>Handsontable Pro</h1>
+                <h4>Get a free trial</h4>
+            </div>
+            <div class="product-button-pro">
+                <a href="/pro-download.html"
+                   class="btn size-medium bg-white text-blue hover-moveup shadow gap-top-xsmall">Try it now</a>
+            </div>
+
+        </div>
+    </div>
 </section>
-<script src="/static/js/examples/feature.js"></script>
-<script src="/static/js/examples/examples.js"></script>
+
 <script data-jsfiddle>
     var dataObject = [
         {
@@ -496,27 +437,7 @@
         }
     ];
 
-    var currencyCodes = ['EUR', 'JPY', 'GBP', 'CHF', 'CAD', 'AUD', 'NZD', 'SEK', 'NOK', 'BRL', 'CNY', 'RUB', 'INR', 'TRY', 'THB', 'IDR', 'MYR', 'MXN', 'ARS', 'DKK', 'ILS', 'PHP'];
-
-    var flagRenderer = function (instance, td, row, col, prop, value, cellProperties) {
-        var currencyCode = value;
-
-        while (td.firstChild) {
-            td.removeChild(td.firstChild);
-        }
-
-        if (currencyCodes.indexOf(currencyCode) > -1) {
-            var flagElement = document.createElement('DIV');
-            flagElement.className = 'flag ' + currencyCode.toLowerCase();
-            td.appendChild(flagElement);
-
-        } else {
-            var textNode = document.createTextNode(value === null ? '' : value);
-            td.appendChild(textNode);
-        }
-    };
-
-    var hotElement = document.querySelector('#hot');
+      var hotElement = document.querySelector('#hot');
     var hotElementContainer = hotElement.parentNode;
     var hotSettings = {
         data: dataObject,
@@ -527,8 +448,7 @@
                 width: 40
             },
             {
-                data: 'flag',
-                renderer: flagRenderer
+                data: 'flag'
             },
             {
                 data: 'currencyCode',
@@ -562,14 +482,10 @@
         width: parseInt(hotElementContainer.offsetWidth, 10),
         autoWrapRow: true,
         height: 441,
-        maxRows: 22
+        maxRows: 22,
+        rowHeaders: true,
+        colHeaders: true
     };
 
     var hot = new Handsontable(hotElement, hotSettings);
 </script>
-
-<script src="/static/js/examples/examples_init.js"></script>
-<script src="/static/js/examples/example_code_generator.js"></script>
-<script src="/static/js/examples/jsfiddleExporter.js"></script>
-
-<script src="/static/bower_components/prism/prism.js"></script>

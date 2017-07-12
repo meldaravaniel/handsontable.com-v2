@@ -4,222 +4,37 @@
 
 .download .products {
 
-  h3 {
-    font-weight: 600;
-    border-bottom: 1px solid white;
-    padding-bottom: 10px
-  }
+  a {
+    min-height: 310px;
+    padding: 24px 30px;
+    display: block;
+    position: relative;
 
+    p.btn {
+      width: 100%;
+      position: relative;
+      padding-right: 50px;
 
-  .handsontable-ce {
-    margin: 0 0 20px 0;
-    padding: 20px 30px 20px 30px;
-    border-top: 10px solid $brandGreenActive;
-    background-color: $brandGreen;
-    color: $darkWhite;
-    transition: all .25s ease-in-out;
-    -moz-transition: all .25s ease-in-out;
-    -webkit-transition: all .25s;
-
-    @media only screen and (min-width: $largeWidth) {
-      height: 365px;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-
-      .link-ce {
-        color: $darkWhite;
-      }
-
-      .svg-icon {
-        fill: $darkWhite;
-      }
-
-      @media only screen and (min-width: $largeWidth) {
-
-        .link-ce {
-          color: $darkWhite;
-        }
-        color: $darkWhite;
-        background-color: $brandGreenActive;
-        border-color: $brandGreen;
+      svg {
+        @include square (20px);
+        @include absolute-top-right (16px, 10px);
+        fill: $brandGreen;
       }
     }
 
-    a.link-ce {
-      color: $darkWhite;
-      font-size: 1em;
-      float: right;
+    &.handsontable-pro {
 
-      &:hover,
-      &:focus,
-      &:active {
-        text-decoration: underline;
-        font-size: 1em;
+      p.btn svg {
+        fill: $brandBlue;
       }
-    }
-
-    .link {
-      display: flex;
-      justify-content: flex-start;
-      align-content: space-around;
-
-      @media only screen and (min-width: $largeWidth) {
-        margin-top: 26px;
-        justify-content: flex-end;
-      }
-    }
-
-    .svg-icon {
-      @include square(15px);
-      margin: 12px 10px 0 0;
-      float: left;
-      fill: $darkWhite;
-
-      @media only screen and (min-width: $largeWidth) {
-        margin: 10px;
-      }
-    }
-
-    p {
-      padding: 20px 0 40px 0;
     }
   }
 
-  .handsontable-pro {
-    margin: 0 0 20px 0;
-    padding: 20px 30px 20px 30px;
-    border-top: 10px solid $brandBlueActive;
-    background-color: $brandBlue;
-    color: $darkWhite;
-    transition: all .25s ease-in-out;
-    -moz-transition: all .25s ease-in-out;
-    -webkit-transition: all .25s;
+  &.coming-soon {
 
-    @media only screen and (min-width: $largeWidth) {
-      height: 365px;
+    a {
+      min-height: initial;
+      cursor: default;
     }
-
-    ul li {
-      margin: 0 0 0 20px;
-      padding: 0;
-      list-style-type: disc;
-
-      a {
-        float: none;
-        line-height: 0.5em;
-        color: $darkWhite;
-
-        &:hover,
-        &:focus,
-        &:active {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-
-      .divider {
-        border-top: 1px solid $darkWhite;
-      }
-
-      .link-pro {
-        color: $darkWhite;
-      }
-
-      .svg-icon {
-        fill: $darkWhite;
-      }
-
-      @media only screen and (min-width: $largeWidth) {
-        color: $darkWhite;
-        background-color: $brandBlueActive;
-        border-color: $brandBlue;
-      }
-    }
-
-    a.link-pro {
-      color: $darkWhite;
-      font-size: 1em;
-      float: right;
-
-      &:hover,
-      &:focus,
-      &:active {
-        text-decoration: underline;
-        font-size: 1em;
-      }
-    }
-
-    .link {
-      margin-top: 20px;
-      display: flex;
-      justify-content: flex-start;
-      align-content: space-around;
-
-      @media only screen and (min-width: $largeWidth) {
-        justify-content: flex-end;
-      }
-    }
-
-    .svg-icon {
-
-      @include square(15px);
-      margin: 12px 10px 0 0;
-      float: left;
-      fill: $darkWhite;
-
-      @media only screen and (min-width: $largeWidth) {
-        margin: 10px;
-      }
-    }
-
-    .second-paragraph {
-      margin: 0;
-      padding: 10px 0 0 0;
-    }
-  }
-
-  .download-builder {
-    margin: 0 0 20px 0;
-    padding: 20px 40px 20px 40px;
-    border-top: 10px solid $middleGray;
-    background-color: $lightGray;
-    color: $darkWhite;
-
-    @media only screen and (min-width: $largeWidth) {
-      margin-top: 40px;
-      height: 140px;
-    }
-  }
-
-  .subscribe-form {
-
-    h3 {
-      font-weight: 300;
-      padding-bottom: 10px
-    }
-
-  }
-
-  button {
-    @include badge( $color: $brandDarkNavy, $width: 20px, $height: 15px);
-
-    display: inline-block;
-    margin-right: -50px;
-    width: 190px;
-    height: 35px;
-    font-size: 14px;
-    font-weight: 700;
-    font-family: $optionalFont;
-    background: $brandDeepNavy;
-    border: 0;
-    color: #fff;
-    float: right;;
   }
 }

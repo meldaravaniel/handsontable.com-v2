@@ -3,19 +3,6 @@
  */
 
 .features .fast {
-  padding: 0 0 60px;
-
-  h2.divider:before {
-    top: 85%;
-
-    @media only screen and (min-width: $mediumWidth) {
-      top: 50px;
-    }
-  }
-
-  .align {
-    text-align: left;
-  }
 
 }
 

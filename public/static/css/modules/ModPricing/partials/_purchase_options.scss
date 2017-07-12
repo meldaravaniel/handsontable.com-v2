@@ -11,14 +11,10 @@
       font-weight: 400;
       margin: 0 0 10px 0;
       text-align: center;
-
-      @media only screen and (min-width: $mediumWidth) {
-        margin: 0 0 20px;
-      }
     }
 
     .top {
-      padding-top: 30px;
+      padding-top: 20px;
     }
 
     p {
@@ -39,11 +35,12 @@
   .svg-icon {
 
     @include square(140px);
-    margin: 60px auto 0;
+    margin: 60px auto 30px;
     display: block;
 
     @media only screen and (min-width: $mediumWidth) {
-      @include square(120px);
+      @include square(90px);
+      margin-bottom: 30px;
     }
   }
 }

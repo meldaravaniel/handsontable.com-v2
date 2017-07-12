@@ -3,6 +3,7 @@
  */
 
 .customer-story {
+  padding-top: 70px;
 
   .breadcrumbs {
     margin: 97px 0 10px;
@@ -21,7 +22,7 @@
   .banner {
     @include rectangle(100%, 490px);
     margin: 0 auto 30px;
-    padding: 102px 20px 20px;
+    padding: 92px 20px 20px;
     position: relative;
     color: #fff;
     text-align: center;
@@ -86,8 +87,9 @@
     }
 
     h1 {
-      margin: 20px 0 10px;
+      margin: 40px 0 20px;
       font-weight: 400;
+      font-size: 30px;
     }
   }
 

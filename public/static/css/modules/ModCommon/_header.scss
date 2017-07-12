@@ -62,8 +62,29 @@ header {
           display: none;
         }
 
-        &.sign-in {
+        &.news {
           padding-right: 32px;
+          position: relative;
+
+          svg {
+            @include square (18px);
+            @include relative-top-left (4px, 0);
+            fill: $baseGray;
+          }
+
+          #HW_badge_cont {
+            @include absolute-top-left (0, 11px);
+
+            #HW_badge {
+              @include square (12px);
+              @include relative-top-left (0, 0);
+              background-color: $brandVibrantGreenActive;
+
+              &.HW_softHidden {
+                opacity: .4;
+              }
+            }
+          }
         }
 
         a, a:hover, a:active, a:visited {
@@ -128,8 +149,8 @@ header {
           padding-top: 40px;
         }
 
-        .sign-in {
-          padding-right: 0;
+        &.news {
+          display: none;
         }
       }
     }
@@ -162,7 +183,7 @@ header {
       color: $brandFeatherBlue;
     }
 
-    svg {
+    svg, .news svg {
       fill: #fff;
     }
   }
