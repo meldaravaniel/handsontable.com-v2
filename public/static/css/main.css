@@ -5807,28 +5807,26 @@ header {
 /**
  * @author: Handsoncode
  */
-.team {
-  margin-top: 69px; }
-  .team h2 {
-    font-weight: 400;
-    text-align: left;
-    margin: 0;
-    padding: 0; }
-    @media only screen and (min-width: 64.0625em) {
-      .team h2 {
-        text-align: center; } }
-  .team .subhead {
-    padding: 0;
-    margin: 0 0 40px 0;
-    text-align: left;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-    font-weight: 300; }
-    @media only screen and (min-width: 64.0625em) {
-      .team .subhead {
-        text-align: center; } }
+.team h2 {
+  font-weight: 400;
+  text-align: left;
+  margin: 0;
+  padding: 0; }
   @media only screen and (min-width: 64.0625em) {
-    .team .headline {
-      margin-bottom: 10px; } }
+    .team h2 {
+      text-align: center; } }
+.team .subhead {
+  padding: 0;
+  margin: 0 0 40px 0;
+  text-align: left;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 300; }
+  @media only screen and (min-width: 64.0625em) {
+    .team .subhead {
+      text-align: center; } }
+@media only screen and (min-width: 64.0625em) {
+  .team .headline {
+    margin-bottom: 10px; } }
 
 /**
  * @author: Handsoncode
@@ -5837,7 +5835,6 @@ header {
   text-align: center; }
   .team-member h4 {
     font-size: 20px;
-    font-weight: 600;
     line-height: 1.3;
     text-align: center;
     margin-bottom: 0;
