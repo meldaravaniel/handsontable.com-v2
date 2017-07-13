@@ -80,7 +80,7 @@
         </div>
     </div>
 
-    <div class="row simple">
+    <div class="row simple large-collapse">
         <h2 class="text-center size-large gap-top-small gap-bottom-xsmall">
             Simple and familiar UI
         </h2>
@@ -217,6 +217,7 @@
     var dataObject = [
         {
             id: 1,
+            something: 'ABC',
             flag: 'EUR',
             currencyCode: 'EUR',
             currency: 'Euro',
@@ -444,6 +445,11 @@
         columns: [
             {
                 data: 'id',
+                type: 'numeric',
+                width: 40
+            },
+            {
+                data: 'something',
                 type: 'numeric',
                 width: 40
             },

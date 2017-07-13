@@ -8,14 +8,9 @@
     width: 100%;
     overflow: auto;
     white-space: nowrap;
-    background-color: none;
-
-    @media only screen and (min-width: $mediumWidth) {
-      background: none;
-    }
 
     ul li {
-      padding: 14px 16px;
+      padding: 14px 16px 7px;
       display: inline-block;
       border-bottom: 3px solid transparent;
       outline: none;
@@ -24,17 +19,25 @@
       font-size: 14px;
       background-color: inherit;
 
-        &:hover,
-        &:active,
-        &:focus {
-          border-bottom: 3px solid $brandBlue;
+      &:hover {
+        color: $darkGray;
+      }
+
+      &.active {
+        font-weight: 600;
+        cursor: default;
+        border-bottom: 3px solid $brandBlue;
+
+        &:hover {
+          color: inherit;
         }
       }
     }
+  }
 
  & > div:not(.tab) {
-    padding: 20px 20px 30px;
-    background-color: $lightGray;
+    padding: 14px 20px 16px;
+    background-color: $darkWhite;
   }
 }
 

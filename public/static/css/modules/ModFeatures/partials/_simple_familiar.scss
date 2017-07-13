@@ -24,11 +24,12 @@
   }
 
   .code-box {
-    background-color: $baseGray;
+    height: 440px;
+    padding: 20px;
     overflow: auto;
     color: #fff;
-    padding: 20px;
-    height: 440px;
+    border: 2px solid $darkGray;
+    background-color: $baseGray;
   }
 
   ol {

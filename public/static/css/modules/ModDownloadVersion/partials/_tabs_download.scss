@@ -2,30 +2,24 @@
  * @author: Handsoncode
  */
 
-.downloads .tabs-download {
+.download-version .tabs-download {
 
-  a {
-    font-size: inherit;
+  & > div {
+    display: none;
+
+    &:first-child, &.active {
+      display: block;
+    }
   }
 
   code {
-    padding: 8px 5px 8px 10px;
-    margin-top: 10px;
+    padding: 11px 15px;
+    margin-top: 20px;
     overflow: auto;
     white-space: nowrap;
     background-color: #fff;
-    font-size: 0.9em;
     font-family: $codeFont;
-    border: 1px solid $gray;
-
-    @media only screen and (min-width: $mediumWidth) {
-      font-size: 1em;
-    }
-
-    .color-red {
-      color: $brandRed;
-      font-size: 0.9em;
-    }
+    border: 2px solid $gray;
   }
 
   .cdn-tab-border {

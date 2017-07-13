@@ -2,19 +2,15 @@
  * @author: Handsoncode
  */
 
-.downloads .resources {
-  margin-bottom: 60px;
+.download-version .resources {
 
-  .header-dist {
-    padding: 40px 10px 40px 20px;
+  .list {
+    width: 90%;
+    margin: 0 auto;
 
-    @media only screen and (min-width: $mediumWidth) {
-      padding: 60px 10px 40px 10px;
+    @media only screen and (min-width: $largeWidth) {
+      width: 50%;
+
     }
-  }
-
-  a {
-    font-weight: 400;
-    line-height: 2em;
   }
 }

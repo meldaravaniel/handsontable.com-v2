@@ -2,47 +2,23 @@
  * @author: Handsoncode
  */
 
-.downloads .repositories {
+.download-version .repositories {
 
-  .header-module {
-    padding: 40px 0;
-    text-align: left;
-
-    @media only screen and (min-width: $mediumWidth) {
-      padding: 40px 0 0 0;
-    }
-  }
-
-  p {
-    margin: 0 0 15px;
-    padding: 0;
+  h3 {
+    margin: 44px 0 18px;
   }
 
   .top-modules {
-    height: inherit;
-
-    @media only screen and (min-width: $largeWidth) {
-      height: 180px;
-    }
+    height: 230px;
   }
 
   .bottom-modules {
-    height: inherit;
-
-    @media only screen and (min-width: $largeWidth) {
-      height: 320px;
-    }
+    height: 280px;
   }
 
   .repositories-module {
-    padding: 40px 15px;
-    background-color: $lightGray;
-    color: $baseGray;
-
-    @media only screen and (min-width: $largeWidth) {
-      margin: 5px 0 0;
-      padding: 40px 30px;
-    }
+    padding: 14px 20px 16px;
+    background-color: $darkWhite;
   }
 
   .svg-icon {
@@ -56,6 +32,22 @@
       @include square(20px);
       margin: 10px 5px 0 0;
       float: left;
+    }
+  }
+
+  .tabs-download {
+    code {
+      padding: 11px 15px;
+      margin-top: 6px;
+      overflow: auto;
+      white-space: nowrap;
+      background-color: #fff;
+      font-family: $codeFont;
+      border: 2px solid $gray;
+    }
+
+    & > div:not(.tab) {
+      padding: 0;
     }
   }
 }

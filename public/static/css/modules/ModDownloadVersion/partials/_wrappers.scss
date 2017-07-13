@@ -2,28 +2,26 @@
  * @author: Handsoncode
  */
 
-.downloads .wrappers-holder {
-  margin: 0 auto 0 auto;
-  font-size: 1.175em;
-  text-align: center;
+.download-version .wrappers {
+  margin-top: 20px;
 
-  @media only screen and (min-width: $largeWidth) {
-    height: 200px;
-    margin-top: 40px;
+  p {
+    margin: 0;
   }
 
-  .svg-wrappers {
+  svg {
+
     @include square(60px);
-    margin: 30px 0 0 0;
+    margin: 8px;
+    padding: 5px;
+    fill: $darkWhite;
 
     @media only screen and (min-width: $largeWidth) {
-      @include square(50px);
-      margin: 20px 20px 0 20px;
+      margin: 6px;
     }
-  }
 
-  .in-progress {
-    filter: grayscale(100%) brightness(140%) opacity(40%);
-    -webkit-filter: grayscale(100%) brightness(140%) opacity(40%);
+    &.in-progress {
+      filter: grayscale(100%) brightness(140%) opacity(40%) blur(0);
+    }
   }
 }

@@ -2913,13 +2913,9 @@ code {
 .tabs .tab {
   width: 100%;
   overflow: auto;
-  white-space: nowrap;
-  background-color: none; }
-  @media only screen and (min-width: 40.0625em) {
-    .tabs .tab {
-      background: none; } }
+  white-space: nowrap; }
   .tabs .tab ul li {
-    padding: 14px 16px;
+    padding: 14px 16px 7px;
     display: inline-block;
     border-bottom: 3px solid transparent;
     outline: none;
@@ -2927,11 +2923,17 @@ code {
     transition: 0.3s;
     font-size: 14px;
     background-color: inherit; }
-    .tabs .tab ul li:hover, .tabs .tab ul li:active, .tabs .tab ul li:focus {
+    .tabs .tab ul li:hover {
+      color: #8D8D8D; }
+    .tabs .tab ul li.active {
+      font-weight: 600;
+      cursor: default;
       border-bottom: 3px solid #039be5; }
+      .tabs .tab ul li.active:hover {
+        color: inherit; }
 .tabs > div:not(.tab) {
-  padding: 20px 20px 30px;
-  background-color: #E3E3E3; }
+  padding: 14px 20px 16px;
+  background-color: #f7f7f7; }
 
 /**
  * @author: Handsoncode
@@ -3182,6 +3184,7 @@ header {
             position: relative;
             top: 0;
             left: 0;
+            line-height: 13px;
             background-color: #48cc4d; }
             header nav ul li.news #HW_badge_cont #HW_badge.HW_softHidden {
               opacity: .4; }
@@ -3953,83 +3956,66 @@ header {
 /**
  * @author: Handsoncode
  */
-.downloads .repositories .header-module {
-  padding: 40px 0;
-  text-align: left; }
-  @media only screen and (min-width: 40.0625em) {
-    .downloads .repositories .header-module {
-      padding: 40px 0 0 0; } }
-.downloads .repositories p {
-  margin: 0 0 15px;
-  padding: 0; }
-.downloads .repositories .top-modules {
-  height: inherit; }
-  @media only screen and (min-width: 64.0625em) {
-    .downloads .repositories .top-modules {
-      height: 180px; } }
-.downloads .repositories .bottom-modules {
-  height: inherit; }
-  @media only screen and (min-width: 64.0625em) {
-    .downloads .repositories .bottom-modules {
-      height: 320px; } }
-.downloads .repositories .repositories-module {
-  padding: 40px 15px;
-  background-color: #E3E3E3;
-  color: #363636; }
-  @media only screen and (min-width: 64.0625em) {
-    .downloads .repositories .repositories-module {
-      margin: 5px 0 0;
-      padding: 40px 30px; } }
-.downloads .repositories .svg-icon {
+.download-version .repositories h3 {
+  margin: 44px 0 18px; }
+.download-version .repositories .top-modules {
+  height: 230px; }
+.download-version .repositories .bottom-modules {
+  height: 280px; }
+.download-version .repositories .repositories-module {
+  padding: 14px 20px 16px;
+  background-color: #f7f7f7; }
+.download-version .repositories .svg-icon {
   width: 25px;
   height: 25px;
   margin: 0 5px -5px 0;
   float: inherit;
   fill: #039be5; }
   @media only screen and (min-width: 64.0625em) {
-    .downloads .repositories .svg-icon {
+    .download-version .repositories .svg-icon {
       width: 20px;
       height: 20px;
       margin: 10px 5px 0 0;
       float: left; } }
-
-/**
- * @author: Handsoncode
- */
-.downloads .resources {
-  margin-bottom: 60px; }
-  .downloads .resources .header-dist {
-    padding: 40px 10px 40px 20px; }
-    @media only screen and (min-width: 40.0625em) {
-      .downloads .resources .header-dist {
-        padding: 60px 10px 40px 10px; } }
-  .downloads .resources a {
-    font-weight: 400;
-    line-height: 2em; }
-
-/**
- * @author: Handsoncode
- */
-.downloads .tabs-download a {
-  font-size: inherit; }
-.downloads .tabs-download code {
-  padding: 8px 5px 8px 10px;
-  margin-top: 10px;
+.download-version .repositories .tabs-download code {
+  padding: 11px 15px;
+  margin-top: 6px;
   overflow: auto;
   white-space: nowrap;
   background-color: #fff;
-  font-size: 0.9em;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
-  border: 1px solid #CFCFCF; }
-  @media only screen and (min-width: 40.0625em) {
-    .downloads .tabs-download code {
-      font-size: 1em; } }
-  .downloads .tabs-download code .color-red {
-    color: #E87677;
-    font-size: 0.9em; }
-.downloads .tabs-download .cdn-tab-border {
+  border: 2px solid #CFCFCF; }
+.download-version .repositories .tabs-download > div:not(.tab) {
+  padding: 0; }
+
+/**
+ * @author: Handsoncode
+ */
+.download-version .resources .list {
+  width: 90%;
+  margin: 0 auto; }
+  @media only screen and (min-width: 64.0625em) {
+    .download-version .resources .list {
+      width: 50%; } }
+
+/**
+ * @author: Handsoncode
+ */
+.download-version .tabs-download > div {
+  display: none; }
+  .download-version .tabs-download > div:first-child, .download-version .tabs-download > div.active {
+    display: block; }
+.download-version .tabs-download code {
+  padding: 11px 15px;
+  margin-top: 20px;
+  overflow: auto;
+  white-space: nowrap;
+  background-color: #fff;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  border: 2px solid #CFCFCF; }
+.download-version .tabs-download .cdn-tab-border {
   border-bottom: 1px solid #E3E3E3; }
-.downloads .tabs-download .extra {
+.download-version .tabs-download .extra {
   margin: 10px 0 15px 0; }
 
 /**
@@ -4038,26 +4024,21 @@ header {
 /**
  * @author: Handsoncode
  */
-.downloads .wrappers-holder {
-  margin: 0 auto 0 auto;
-  font-size: 1.175em;
-  text-align: center; }
-  @media only screen and (min-width: 64.0625em) {
-    .downloads .wrappers-holder {
-      height: 200px;
-      margin-top: 40px; } }
-  .downloads .wrappers-holder .svg-wrappers {
+.download-version .wrappers {
+  margin-top: 20px; }
+  .download-version .wrappers p {
+    margin: 0; }
+  .download-version .wrappers svg {
     width: 60px;
     height: 60px;
-    margin: 30px 0 0 0; }
+    margin: 8px;
+    padding: 5px;
+    fill: #f7f7f7; }
     @media only screen and (min-width: 64.0625em) {
-      .downloads .wrappers-holder .svg-wrappers {
-        width: 50px;
-        height: 50px;
-        margin: 20px 20px 0 20px; } }
-  .downloads .wrappers-holder .in-progress {
-    filter: grayscale(100%) brightness(140%) opacity(40%);
-    -webkit-filter: grayscale(100%) brightness(140%) opacity(40%); }
+      .download-version .wrappers svg {
+        margin: 6px; } }
+    .download-version .wrappers svg.in-progress {
+      filter: grayscale(100%) brightness(140%) opacity(40%) blur(0); }
 
 /**
  * @author: Handsoncode
@@ -4090,11 +4071,11 @@ header {
 /**
  * @author: Handsoncode
  */
-.download .resources .list {
+.download .resources li {
   width: 90%;
   margin: 0 auto; }
   @media only screen and (min-width: 64.0625em) {
-    .download .resources .list {
+    .download .resources li {
       width: 50%; } }
 
 /**
@@ -4108,15 +4089,25 @@ header {
   .download .wrappers p {
     margin: 0;
     font-size: 1em; }
-  .download .wrappers .svg-wrappers {
+  .download .wrappers svg {
     width: 80px;
     height: 80px;
     margin: 8px;
     padding: 5px;
     fill: #f7f7f7; }
     @media only screen and (min-width: 64.0625em) {
-      .download .wrappers .svg-wrappers {
+      .download .wrappers svg {
         margin: 6px; } }
+    .download .wrappers svg.in-progress {
+      filter: grayscale(100%) brightness(140%) opacity(40%) blur(0);
+      width: 80px;
+      height: 80px;
+      margin: 13px;
+      fill: #f7f7f7;
+      padding: 10px; }
+      @media only screen and (min-width: 64.0625em) {
+        .download .wrappers svg.in-progress {
+          margin: 9px; } }
   .download .wrappers .progress {
     filter: grayscale(100%) brightness(140%) opacity(40%) blur(0);
     -webkit-filter: grayscale(100%) brightness(140%) opacity(40%) blur(0); }
@@ -4124,16 +4115,6 @@ header {
       margin-top: 8px; }
     .download .wrappers .progress:active, .download .wrappers .progress:hover, .download .wrappers .progress:focus {
       filter: grayscale(100%) brightness(140%) opacity(40%) blur(0); }
-  .download .wrappers .in-progress {
-    filter: grayscale(100%) brightness(140%) opacity(40%) blur(0);
-    width: 80px;
-    height: 80px;
-    margin: 13px;
-    fill: #f7f7f7;
-    padding: 10px; }
-    @media only screen and (min-width: 64.0625em) {
-      .download .wrappers .in-progress {
-        margin: 9px; } }
   .download .wrappers a {
     font-size: 1em; }
 
@@ -4987,11 +4968,12 @@ header {
       top: 50px;
       left: 49%; } }
 .features .simple .code-box {
-  background-color: #363636;
+  height: 440px;
+  padding: 20px;
   overflow: auto;
   color: #fff;
-  padding: 20px;
-  height: 440px; }
+  border: 2px solid #8D8D8D;
+  background-color: #363636; }
 .features .simple ol {
   margin: 0;
   padding: 0; }
