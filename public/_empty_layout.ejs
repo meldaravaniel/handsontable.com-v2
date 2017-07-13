@@ -4,20 +4,26 @@
     <%- partial("_partials/_head") %>
 </head>
 <body>
-    <%- partial("_partials/_tagmanager") %>
-    <%- partial("_partials/_svg_sprite") %>
-    <header class="row">
-        <div class="logotype clearfix">
-            <a href="/index.html" class="brand-logo">
-                <svg><use xlink:href="#handsontable_logo"></use></svg>
-            </a>
-            <div id="github-star" class="github-star">
-                <a class="github-button" href="https://github.com/handsontable/handsontable" data-icon="octicon-star" data-count-href="/handsontable/handsontable/stargazers" data-count-api="/repos/handsontable/handsontable#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star handsontable/handsontable on GitHub">Star</a>
-            </div>
+<%- partial("_partials/_tagmanager") %>
+<%- partial("_partials/_svg_sprite") %>
+<header class="row">
+    <div class="logotype clearfix">
+        <a href="/index.html" class="brand-logo">
+            <svg>
+                <use xlink:href="#handsontable_logo"></use>
+            </svg>
+        </a>
+        <div id="github-star" class="github-star">
+            <a class="github-button" href="https://github.com/handsontable/handsontable" data-icon="octicon-star"
+               data-count-href="/handsontable/handsontable/stargazers"
+               data-count-api="/repos/handsontable/handsontable#stargazers_count"
+               data-count-aria-label="# stargazers on GitHub"
+               aria-label="Star handsontable/handsontable on GitHub">Star</a>
         </div>
-    </header>
-    <%- yield %>
-    <%- partial("_partials/_footer") %>
-    <%- partial("_partials/_scripts") %>
+    </div>
+</header>
+<%- yield %>
+<%- partial("_partials/_footer") %>
+<%- partial("_partials/_scripts") %>
 </body>
 </html>

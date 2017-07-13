@@ -48,36 +48,36 @@
     <div class="row">
         <div class="large-8 large-centered columns">
             <div class="tabs form">
-                    <div class="tab">
-                        <ul>
-                            <li>
+                <div class="tab">
+                    <ul>
+                        <li>
                             <svg class="svg">
                                 <use xlink:href="#fa-info"></use>
                             </svg>
                             General
-                            </li>
-                            <li>
-                                <svg class="svg">
-                                    <use xlink:href="#enterprise"></use>
-                                </svg>
+                        </li>
+                        <li>
+                            <svg class="svg">
+                                <use xlink:href="#enterprise"></use>
+                            </svg>
                             Enterprise
-                            </li>
-                            <li>
-                                <svg class="svg">
-                                    <use xlink:href="#discounts"></use>
-                                </svg>
-                                Discounts
-                            </li>
-                            <li>
-                                <svg class="svg">
-                                    <use xlink:href="#handshake"></use>
-                                </svg>
-                                Resselers
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="row">
-                        <div id="General">
+                        </li>
+                        <li>
+                            <svg class="svg">
+                                <use xlink:href="#discounts"></use>
+                            </svg>
+                            Discounts
+                        </li>
+                        <li>
+                            <svg class="svg">
+                                <use xlink:href="#handshake"></use>
+                            </svg>
+                            Resselers
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div id="General">
                         <div class="large-12 columns">
                             <div id="form-sent" class="notification success">Thanks for contacting us.
                                 We'll get back to you very soon.
@@ -85,7 +85,8 @@
                             <div id="form-error" class="notification error">Oops! We were unable to send the form.
                                 Please check the invalid fields and try again.
                             </div>
-                            <form id="contact-form" class="clearfix form" action="https://my.handsontable.com/api/contact" method="post">
+                            <form id="contact-form" class="clearfix form"
+                                  action="https://my.handsontable.com/api/contact" method="post">
                                 <div class="row">
                                     <div class="large-12 columns">
                                         <p class="label">Full name<sup class="asterisk">*</sup></p>
@@ -376,10 +377,10 @@
                                 <input type="submit" id="send" class="btn large blue right" value="Send mail"/>
                             </form>
                         </div>
-                        </div>
                     </div>
-                    <div class="row">
-                        <div id="Enterprise">
+                </div>
+                <div class="row">
+                    <div id="Enterprise">
                         <div class=" large-12 columns">
                             <div id="form-sent" class="notification success">Thanks for contacting us. We'll get back to
                                 you very soon.
@@ -387,7 +388,8 @@
                             <div id="form-error" class="notification error">Oops! We were unable to send the form.
                                 Please check the invalid fields and try again.
                             </div>
-                            <form id="contact-form" class="clearfix form" action="https://my.handsontable.com/api/contact" method="post">
+                            <form id="contact-form" class="clearfix form"
+                                  action="https://my.handsontable.com/api/contact" method="post">
                                 <div class="row">
                                     <div class="large-12 columns">
                                         <p class="label">Full name<sup class="asterisk">*</sup></p>
@@ -401,7 +403,7 @@
                                     </div>
                                 </div>
                                 <p class="label">Company name</p>
-                                 <input type="text" name="companyName"/>
+                                <input type="text" name="companyName"/>
                                 <div class="row">
                                     <div class="large-6 columns">
                                         <p class="label">What is your inquiry</p>
@@ -425,13 +427,13 @@
                                         <input type="tel" name="phoneNumber"/>
                                     </div>
                                 </div>
-                                    <input type="hidden" placeholder="License ID" name="orderId"/>
-                                        <p class="label">Subject<sup class="asterisk">*</sup></p>
-                                    <input type="text" required name="subject"/>
-                                        <p class="label">Your message<sup class="asterisk">*</sup></p>
-                                    <textarea required name="body"></textarea>
-                                        <input type="hidden" name="returnTo" value="/contact-work.html"/>
-                                        <input type="submit" class="btn large blue right" value="Send mail"/>
+                                <input type="hidden" placeholder="License ID" name="orderId"/>
+                                <p class="label">Subject<sup class="asterisk">*</sup></p>
+                                <input type="text" required name="subject"/>
+                                <p class="label">Your message<sup class="asterisk">*</sup></p>
+                                <textarea required name="body"></textarea>
+                                <input type="hidden" name="returnTo" value="/contact-work.html"/>
+                                <input type="submit" class="btn large blue right" value="Send mail"/>
                                 <div class="phone">
                                     <input id="callBackEnterprise" type="checkbox" class="callBack">
                                     <label for="callBackEnterprise">
@@ -451,10 +453,11 @@
                         </div>
                     </div>
                 </div>
-                    <div class="row">
-                        <div id="Discounts">
+                <div class="row">
+                    <div id="Discounts">
                         <div class=" large-12 columns">
-                            <div id="form-sent" class="notification success">Thanks for contacting us. We'll get back toyou very soon.
+                            <div id="form-sent" class="notification success">Thanks for contacting us. We'll get back
+                                toyou very soon.
                             </div>
                             <div id="form-error" class="notification error">Oops! We were unable to send the form.
                                 Please check the invalid fields and try again.
@@ -498,33 +501,34 @@
                                         <input type="tel" name="phoneNumber"/>
                                     </div>
                                 </div>
-                                    <input type="hidden" placeholder="License ID" name="orderId"/>
-                                         <p class="label">Subject<sup class="asterisk">*</sup></p>
-                                    <input type="text" required name="subject"/>
-                                         <p class="label">Your message<sup class="asterisk">*</sup></p>
-                                     <textarea required name="body"></textarea>
-                                        <input type="hidden" name="returnTo" value="/contact-work.html"/>
-                                        <input type="submit" class="btn large blue right" value="Send mail"/>
-                                    <div class="phone">
-                                        <input id="callBackDiscounts" type="checkbox" class="callBack">
-                                        <label for="callBackDiscounts">
-                                            <svg class="checkbox">
-                                                <use xlink:href="#checkbox_icon"></use>
-                                            </svg>
-                                            <svg class="checkbox checked">
-                                             <use xlink:href="#checkbox_checked_icon"></use>
-                                         </svg>
-                                        </label>
-                                        <svg>
-                                            <use xlink:href="#phone"></use>
-                                        </svg>Request a call back.
-                                    </div>
+                                <input type="hidden" placeholder="License ID" name="orderId"/>
+                                <p class="label">Subject<sup class="asterisk">*</sup></p>
+                                <input type="text" required name="subject"/>
+                                <p class="label">Your message<sup class="asterisk">*</sup></p>
+                                <textarea required name="body"></textarea>
+                                <input type="hidden" name="returnTo" value="/contact-work.html"/>
+                                <input type="submit" class="btn large blue right" value="Send mail"/>
+                                <div class="phone">
+                                    <input id="callBackDiscounts" type="checkbox" class="callBack">
+                                    <label for="callBackDiscounts">
+                                        <svg class="checkbox">
+                                            <use xlink:href="#checkbox_icon"></use>
+                                        </svg>
+                                        <svg class="checkbox checked">
+                                            <use xlink:href="#checkbox_checked_icon"></use>
+                                        </svg>
+                                    </label>
+                                    <svg>
+                                        <use xlink:href="#phone"></use>
+                                    </svg>
+                                    Request a call back.
+                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                    <div class="row">
-                        <div id="Resselers">
+                <div class="row">
+                    <div id="Resselers">
                         <div class=" large-12 columns">
                             <div id="form-sent" class="notification success">Thanks for contacting us. We'll get back to
                                 you very soon.
@@ -546,28 +550,28 @@
                                         <input type="tel" name="phoneNumber"/>
                                     </div>
                                 </div>
-                                    <input type="hidden" placeholder="License ID" name="orderId"/>
-                                         <p class="label">Subject<sup class="asterisk">*</sup></p>
-                                    <input type="text" required name="subject"/>
-                                        <p class="label">Your message<sup class="asterisk">*</sup></p>
-                                    <textarea required name="body"></textarea>
-                                        <input type="hidden" name="returnTo" value="/contact-work.html"/>
-                                        <input type="submit" class="btn large blue right" value="Send mail"/>
-                                    <div class="phone">
-                                        <input id="callBackResselers" type="checkbox" class="callBack">
-                                        <label for="callBackResselers">
-                                            <svg class="checkbox">
-                                                <use xlink:href="#checkbox_icon"></use>
-                                            </svg>
-                                            <svg class="checkbox checked">
-                                                <use xlink:href="#checkbox_checked_icon"></use>
-                                            </svg>
-                                        </label>
-                                        <svg>
-                                            <use xlink:href="#phone"></use>
+                                <input type="hidden" placeholder="License ID" name="orderId"/>
+                                <p class="label">Subject<sup class="asterisk">*</sup></p>
+                                <input type="text" required name="subject"/>
+                                <p class="label">Your message<sup class="asterisk">*</sup></p>
+                                <textarea required name="body"></textarea>
+                                <input type="hidden" name="returnTo" value="/contact-work.html"/>
+                                <input type="submit" class="btn large blue right" value="Send mail"/>
+                                <div class="phone">
+                                    <input id="callBackResselers" type="checkbox" class="callBack">
+                                    <label for="callBackResselers">
+                                        <svg class="checkbox">
+                                            <use xlink:href="#checkbox_icon"></use>
                                         </svg>
-                                        Request a call back.
-                                    </div>
+                                        <svg class="checkbox checked">
+                                            <use xlink:href="#checkbox_checked_icon"></use>
+                                        </svg>
+                                    </label>
+                                    <svg>
+                                        <use xlink:href="#phone"></use>
+                                    </svg>
+                                    Request a call back.
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -575,12 +579,12 @@
             </div>
         </div>
     </div>
-        <div class="row">
-            <div class="large-12 columns">
-                <p class="contact-footer">
-                    You might also look for an answer in our <a href="/knowledge-base.html">knowledge base</a>.<br/>
-                    If there is an emergency get in touch with <a href="/support.html">our support</a>.
-                </p>
-            </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <p class="contact-footer">
+                You might also look for an answer in our <a href="/knowledge-base.html">knowledge base</a>.<br/>
+                If there is an emergency get in touch with <a href="/contact.html">our support</a>.
+            </p>
         </div>
+    </div>
 </section>
