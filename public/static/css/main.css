@@ -3958,10 +3958,12 @@ header {
  */
 .download-version .repositories h3 {
   margin: 44px 0 18px; }
-.download-version .repositories .top-modules {
-  height: 230px; }
-.download-version .repositories .bottom-modules {
-  height: 280px; }
+@media only screen and (min-width: 64.0625em) {
+  .download-version .repositories .top-modules {
+    height: 230px; } }
+@media only screen and (min-width: 64.0625em) {
+  .download-version .repositories .bottom-modules {
+    height: 280px; } }
 .download-version .repositories .repositories-module {
   padding: 14px 20px 16px;
   background-color: #f7f7f7; }
@@ -4026,6 +4028,8 @@ header {
  */
 .download-version .wrappers {
   margin-top: 20px; }
+  .download-version .wrappers ul li {
+    text-align: center; }
   .download-version .wrappers p {
     margin: 0; }
   .download-version .wrappers svg {
@@ -4071,11 +4075,11 @@ header {
 /**
  * @author: Handsoncode
  */
-.download .resources li {
+.download .resources .list {
   width: 90%;
   margin: 0 auto; }
   @media only screen and (min-width: 64.0625em) {
-    .download .resources li {
+    .download .resources .list {
       width: 50%; } }
 
 /**
@@ -4085,13 +4089,18 @@ header {
  * @author: Handsoncode
  */
 .download .wrappers {
-  text-align: center; }
+  margin-top: 20px; }
+  @media only screen and (min-width: 64.0625em) {
+    .download .wrappers ul {
+      width: 60%;
+      margin: 0 auto; } }
+  .download .wrappers ul li {
+    text-align: center; }
   .download .wrappers p {
-    margin: 0;
-    font-size: 1em; }
+    margin: 0; }
   .download .wrappers svg {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     margin: 8px;
     padding: 5px;
     fill: #f7f7f7; }
@@ -4099,24 +4108,7 @@ header {
       .download .wrappers svg {
         margin: 6px; } }
     .download .wrappers svg.in-progress {
-      filter: grayscale(100%) brightness(140%) opacity(40%) blur(0);
-      width: 80px;
-      height: 80px;
-      margin: 13px;
-      fill: #f7f7f7;
-      padding: 10px; }
-      @media only screen and (min-width: 64.0625em) {
-        .download .wrappers svg.in-progress {
-          margin: 9px; } }
-  .download .wrappers .progress {
-    filter: grayscale(100%) brightness(140%) opacity(40%) blur(0);
-    -webkit-filter: grayscale(100%) brightness(140%) opacity(40%) blur(0); }
-    .download .wrappers .progress p {
-      margin-top: 8px; }
-    .download .wrappers .progress:active, .download .wrappers .progress:hover, .download .wrappers .progress:focus {
       filter: grayscale(100%) brightness(140%) opacity(40%) blur(0); }
-  .download .wrappers a {
-    font-size: 1em; }
 
 /**
  * @author: Handsoncode
@@ -5587,34 +5579,9 @@ header {
 /**
  * @author: Handsoncode
  */
-.resellers h2 {
-  font-weight: 400;
-  text-align: left;
-  margin: 40px 0 0 0;
-  padding: 0; }
-  @media only screen and (min-width: 64.0625em) {
-    .resellers h2 {
-      text-align: center;
-      margin-top: 60px; } }
-.resellers .subhead {
-  padding: 0;
-  margin: 0 0 40px 0;
-  text-align: left;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 300; }
-  @media only screen and (min-width: 64.0625em) {
-    .resellers .subhead {
-      text-align: center; } }
-.resellers .resellers-list {
-  margin-bottom: 60px; }
-  .resellers .resellers-list .columns {
-    margin-bottom: 10px; }
-    .resellers .resellers-list .columns h3 {
-      font-size: 1.3em; }
-    .resellers .resellers-list .columns p {
-      margin: 5px 0; }
-      .resellers .resellers-list .columns p a {
-        font-size: 1em; }
+.resellers p {
+  margin: 0;
+  line-height: 2; }
 
 /**
  * @author: Handsoncode

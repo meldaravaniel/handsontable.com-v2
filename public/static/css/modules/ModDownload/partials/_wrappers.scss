@@ -2,10 +2,15 @@
  * @author: Handsoncode
  */
 
-.download-version .wrappers {
+.download .wrappers {
   margin-top: 20px;
 
   ul {
+
+    @media only screen and (min-width: $largeWidth) {
+      width: 60%;
+      margin: 0 auto;
+    }
 
     li {
       text-align: center;

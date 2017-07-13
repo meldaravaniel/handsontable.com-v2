@@ -4,46 +4,8 @@
 
 .resellers {
 
-    h2 {
-        font-weight: 400;
-        text-align: left;
-        margin:40px 0 0 0;
-        padding: 0;
-
-        @media only screen and (min-width: $largeWidth) {
-            text-align: center;
-            margin-top: 60px;
-        }
-    }
-
-    .subhead {
-        padding: 0;
-        margin: 0 0 40px 0;
-        text-align: left;
-        font-family: $regularFont;
-        font-weight: 300;
-
-        @media only screen and (min-width: $largeWidth) {
-            text-align: center;
-        }
-    }
-
-    .resellers-list {
-        margin-bottom: 60px;
-
-        .columns {
-            margin-bottom: 10px;
-
-            h3 {
-                font-size: 1.3em;
-            }
-
-            p {
-                margin: 5px 0;
-                a {
-                    font-size: 1em;
-                }
-            }
-        }
+    p {
+        margin: 0;
+        line-height: 2;
     }
 }

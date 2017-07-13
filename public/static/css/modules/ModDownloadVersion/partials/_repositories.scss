@@ -9,11 +9,17 @@
   }
 
   .top-modules {
-    height: 230px;
+
+    @media only screen and (min-width: $largeWidth) {
+      height: 230px;
+    }
   }
 
   .bottom-modules {
-    height: 280px;
+
+    @media only screen and (min-width: $largeWidth) {
+      height: 280px;
+    }
   }
 
   .repositories-module {
