@@ -5,17 +5,13 @@
         %>
         <% for(var slug in public.blog.articles._data) { %>
             <div class="large-4 columns post-element left">
-                <h3>
-                    <a href="/blog/articles/<%= public.blog.articles._data[slug].directory %><%= slug %>"><%= public.blog.articles._data[slug].title %></a>
-                </h3>
-                <p><img src="/blog/attachments/images/<%= public.blog.articles._data[slug].image_file %>">
-                <p>
-                    <small>
-                        <%= public.blog.articles._data[slug].category %> / <%= public.blog.articles._data[slug].date %>
-                    </small>
-                </p>
-                <p><%= public.blog.articles._data[slug].description %></p>
-                <p><a href="/blog/articles/<%= public.blog.articles._data[slug].directory %><%= slug %>">Read more</a></p>
+                <div class="excerpt">
+                    <a href="/blog/articles/<%= public.blog.articles._data[slug].directory %>">
+                        <img src="/blog/attachments/images/<%= public.blog.articles._data[slug].image_file %>">
+                        <h3><%= public.blog.articles._data[slug].title %></h3>
+                        <p><%= public.blog.articles._data[slug].description %></p>
+                    </a>
+                </div>
             </div>
         <% i++; }; %>
     </div>

@@ -130,41 +130,41 @@ Convert angle
   .btn.bg-blue {
     background-color: #039be5; }
     .btn.bg-blue.bg-lighten {
-      -webkit-transition: background-color 0.3s ease-out;
-      -moz-transition: background-color 0.3s ease-out;
-      transition: background-color 0.3s ease-out; }
+      -webkit-transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+      -moz-transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+      transition: background-color 0.3s ease-out, transform 0.3s ease-out; }
       .btn.bg-blue.bg-lighten:hover {
         background-color: #03a2ef; }
   .btn.bg-gray {
     background-color: #E3E3E3; }
     .btn.bg-gray.bg-lighten {
-      -webkit-transition: background-color 0.3s ease-out;
-      -moz-transition: background-color 0.3s ease-out;
-      transition: background-color 0.3s ease-out; }
+      -webkit-transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+      -moz-transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+      transition: background-color 0.3s ease-out, transform 0.3s ease-out; }
       .btn.bg-gray.bg-lighten:hover {
         background-color: #e8e8e8; }
   .btn.bg-green {
     background-color: #43a047; }
     .btn.bg-green.bg-lighten {
-      -webkit-transition: background-color 0.3s ease-out;
-      -moz-transition: background-color 0.3s ease-out;
-      transition: background-color 0.3s ease-out; }
+      -webkit-transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+      -moz-transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+      transition: background-color 0.3s ease-out, transform 0.3s ease-out; }
       .btn.bg-green.bg-lighten:hover {
         background-color: #46a74a; }
   .btn.bg-green-light {
     background-color: #48cc4d; }
     .btn.bg-green-light.bg-lighten {
-      -webkit-transition: background-color 0.3s ease-out;
-      -moz-transition: background-color 0.3s ease-out;
-      transition: background-color 0.3s ease-out; }
+      -webkit-transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+      -moz-transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+      transition: background-color 0.3s ease-out, transform 0.3s ease-out; }
       .btn.bg-green-light.bg-lighten:hover {
         background-color: #58d05d; }
   .btn.bg-navy {
     background-color: #15202f; }
     .btn.bg-navy.bg-lighten {
-      -webkit-transition: background-color 0.3s ease-out;
-      -moz-transition: background-color 0.3s ease-out;
-      transition: background-color 0.3s ease-out; }
+      -webkit-transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+      -moz-transition: background-color 0.3s ease-out, transform 0.3s ease-out;
+      transition: background-color 0.3s ease-out, transform 0.3s ease-out; }
       .btn.bg-navy.bg-lighten:hover {
         background-color: #182536; }
   .btn.bg-white {
@@ -3272,9 +3272,23 @@ header {
  * @author: Handsoncode
  */
 .blog {
-  padding-top: 67px; }
-  .blog h2 {
-    margin-left: 25px; }
+  padding-top: 200px; }
+  .blog .excerpt {
+    padding-bottom: 40px; }
+    .blog .excerpt a {
+      -webkit-transition: opacity 0.3s ease-out;
+      -moz-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out;
+      height: 450px;
+      margin: 14px;
+      display: block;
+      color: #363636;
+      box-shadow: 0 0 1px 0 rgba(18, 32, 73, 0.08), 0 8px 32px 0 rgba(55, 92, 192, 0.08);
+      border-radius: 4px;
+      overflow: hidden;
+      background-color: #f7f7f7; }
+      .blog .excerpt a:hover {
+        opacity: .85; }
   .blog h2.category-title {
     text-transform: capitalize; }
     .blog h2.category-title span {
@@ -3282,7 +3296,7 @@ header {
   .blog h3, .blog p, .blog li {
     padding: 0 8%; }
   .blog h3 {
-    margin: 40px 0 0;
+    margin: 20px 0 0;
     line-height: 1.2; }
     .blog h3 a {
       font-family: "nimbus-sans", Helvetica, Arial, sans-serif;
@@ -3314,12 +3328,6 @@ header {
   .blog .post-element {
     overflow: hidden;
     height: 100%; }
-    .blog .post-element img {
-      height: 190px;
-      width: 300px; }
-    @media only screen and (min-width: 40.0625em) {
-      .blog .post-element {
-        height: 550px; } }
   .blog .categories h3 {
     margin: 46px 0 20px;
     font-size: 1em;
@@ -4116,170 +4124,65 @@ header {
 /**
  * @author: Handsoncode
  */
-.developers .developer-section h3 {
-  padding: 0 0 20px 0;
-  text-align: left;
-  line-height: 1.1em;
-  font-weight: 400; }
-  @media only screen and (min-width: 40.0625em) {
-    .developers .developer-section h3 {
-      margin: 0 0 15px 0; } }
-.developers .developer-section h4 {
-  margin: 10px 0 0 0;
-  padding: 20px 0;
-  line-height: 0.7em;
-  font-weight: 400;
-  text-align: left; }
-  @media only screen and (min-width: 40.0625em) {
-    .developers .developer-section h4 {
-      padding: 0 0 20px 20px; } }
-.developers .developer-section h5 {
-  padding: 0;
-  text-align: left;
-  font-weight: 600; }
-  @media only screen and (min-width: 40.0625em) {
-    .developers .developer-section h5 {
-      margin: 10px 0; } }
-.developers .developer-section p a {
-  font-size: inherit; }
-.developers .developer-section .btn {
-  margin: 5px 0 10px 0; }
-  @media only screen and (min-width: 64.0625em) {
-    .developers .developer-section .btn {
-      margin: 10px 10px 0 0; } }
-.developers .developer-section .module-header-section {
-  padding: 40px 0 10px 10px;
-  text-align: left; }
-  @media only screen and (min-width: 40.0625em) {
-    .developers .developer-section .module-header-section {
-      padding: 40px 0 0 0; } }
-.developers .developer-section .module-container {
-  padding: 40px 15px 40px 15px;
-  background-color: #E3E3E3;
-  color: #363636; }
-  @media only screen and (min-width: 64.0625em) {
-    .developers .developer-section .module-container {
-      height: 260px;
-      margin: 5px 0 0 0;
-      padding: 25px 30px 40px 30px; } }
-.developers .developer-section .light-module-container {
-  width: 100%;
-  padding: 30px 0 0 0;
-  color: #363636; }
-  @media only screen and (min-width: 64.0625em) {
-    .developers .developer-section .light-module-container {
-      margin: 0;
-      padding: 80px 0 0 0; } }
-  .developers .developer-section .light-module-container .contact {
-    line-height: 4em; }
-  .developers .developer-section .light-module-container ul, .developers .developer-section .light-module-container li {
-    margin-left: 0;
-    text-align: left;
-    line-height: 2em; }
-    @media only screen and (min-width: 40.0625em) {
-      .developers .developer-section .light-module-container ul, .developers .developer-section .light-module-container li {
-        margin-left: 10px; } }
-    .developers .developer-section .light-module-container ul a, .developers .developer-section .light-module-container li a {
-      font-size: inherit; }
-.developers .developer-section .whats-new-module {
-  padding: 40px 15px;
-  background-color: #E3E3E3;
-  color: #363636; }
-  @media only screen and (min-width: 64.0625em) {
-    .developers .developer-section .whats-new-module {
-      margin: 5px 0 0 0;
-      padding: 20px 30px; } }
-  .developers .developer-section .whats-new-module > div {
-    border-bottom: 1px solid #E3E3E3; }
-    .developers .developer-section .whats-new-module > div:last-child {
-      border-bottom: none; }
-    .developers .developer-section .whats-new-module > div h4 {
-      margin: 20px 0 10px 0;
-      padding: 0;
-      text-align: left;
-      line-height: 1em;
-      font-weight: 600;
-      font-size: 0.915em; }
-      @media only screen and (min-width: 40.0625em) {
-        .developers .developer-section .whats-new-module > div h4 {
-          margin: 20px 0 0 0; } }
-.developers .developer-section a.more-articles {
-  width: 100%;
-  padding: 20px 0 20px 0;
-  font-weight: 400;
-  background-color: #edeef0;
-  text-align: center;
-  display: inline-block;
-  transition: all .25s ease-in-out;
-  -moz-transition: all .25s ease-in-out;
-  -webkit-transition: all .25s; }
-  .developers .developer-section a.more-articles:hover, .developers .developer-section a.more-articles:active, .developers .developer-section a.more-articles:focus {
-    background-color: #CFCFCF;
-    text-decoration: none; }
+.developers .module h3 {
+  margin: 14px 0; }
+.developers .module h4 {
+  margin: 0 0 30px;
+  font-size: 15px;
+  font-family: "Roboto", Helvetica, Arial, sans-serif; }
+.developers .module .content {
+  padding: 30px 35px;
+  border-radius: 4px;
+  background-color: #f7f7f7; }
+  .developers .module .content > p:first-child {
+    margin-top: 0; }
+  .developers .module .content.news-blog h4 {
+    margin: 0; }
+  .developers .module .content ul.list-numbered li {
+    list-style: square;
+    margin-left: 20px; }
+  .developers .module .content a.more-articles {
+    margin-top: 34px;
+    padding: 14px;
+    display: block;
+    background-color: #edeef0; }
+  .developers .module .content.height-xsmall {
+    min-height: 180px; }
+  .developers .module .content.height-small {
+    min-height: 230px; }
+  .developers .module .content.height-medium {
+    min-height: 270px; }
+  .developers .module .content.height-large {
+    min-height: 330px; }
 
 /**
  * @author: Handsoncode
  */
-.developers .love {
-  margin: 90px 0 0 0;
+.developers .simple-stats {
+  margin: 110px 0 0;
   padding: 20px 0;
-  background-color: #039be5;
-  color: #f7f7f7; }
-  .developers .love p {
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 0.7em; }
-    @media only screen and (min-width: 40.0625em) {
-      .developers .love p {
-        font-size: 1em;
-        margin-bottom: 0; } }
-  .developers .love span {
-    color: #f7f7f7;
+  color: #fff;
+  background-color: #039be5; }
+  .developers .simple-stats p {
+    margin: 13px 0 11px;
+    text-align: center; }
+  .developers .simple-stats span {
     font-weight: 600;
     font-size: 1.5em;
     line-height: 1em; }
-  .developers .love h4 {
-    margin: 25px 0 10px 0;
+  .developers .simple-stats h4 {
+    margin: 25px 0 10px;
     padding: 0;
     text-align: center;
     font-size: 1.4em;
     font-weight: 400; }
     @media only screen and (min-width: 40.0625em) {
-      .developers .love h4 {
+      .developers .simple-stats h4 {
         text-align: left; } }
 
 /**
  * @author: Handsoncode
  */
-.developers h1 {
-  padding: 0;
-  margin: 0;
-  line-height: 1.1em;
-  font-weight: 400; }
-  @media only screen and (min-width: 40.0625em) {
-    .developers h1 {
-      margin-top: 0; } }
-.developers .handsontable-sub-heading {
-  margin-bottom: 0;
-  padding-bottom: 5px;
-  text-align: left; }
-  @media only screen and (min-width: 40.0625em) {
-    .developers .handsontable-sub-heading {
-      text-align: center; } }
-.developers span {
-  font-size: 1em;
-  font-weight: 600;
-  color: #43a047; }
-.developers .svg-icon {
-  width: 25px;
-  height: 25px;
-  fill: #f7f7f7;
-  margin-bottom: -5px; }
-  @media only screen and (min-width: 64.0625em) {
-    .developers .svg-icon {
-      width: 30px;
-      height: 30px; } }
-
 /**
  * @author: Handsoncode
  */

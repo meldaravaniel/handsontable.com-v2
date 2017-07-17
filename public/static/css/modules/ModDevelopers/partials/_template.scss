@@ -4,40 +4,5 @@
 
 .developers {
 
-  h1 {
-    padding: 0;
-    margin: 0;
-    line-height: 1.1em;
-    font-weight: 400;
-
-    @media only screen and (min-width: $mediumWidth) {
-      margin-top: 0;
-    }
-  }
-
-  .handsontable-sub-heading {
-    margin-bottom: 0;
-    padding-bottom: 5px;
-    text-align: left;
-    @media only screen and (min-width: $mediumWidth) {
-      text-align: center;
-    }
-  }
-
-  span {
-    font-size: 1em;
-    font-weight: 600;
-    color: $brandGreen;
-  }
-
-  .svg-icon {
-    @include square(25px);
-    fill: $darkWhite;
-    margin-bottom: -5px;
-
-    @media only screen and (min-width: $largeWidth) {
-      @include square(30px);
-    }
-  }
 }
 

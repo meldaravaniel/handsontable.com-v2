@@ -2,77 +2,83 @@
  * @author: Handsoncode
  */
 
+.blog  {
+  padding-top: 200px;
 
- .blog  {
-    padding-top: 67px;
+  .excerpt {
+    padding-bottom: 40px;
 
-    h2 {
-        margin-left: 25px;
-    }
+    a {
+      @include transition (opacity .3s ease-out);
+      height: 450px;
+      margin: 14px;
+      display: block;
+      color: $baseGray;
+      box-shadow: 0 0 1px 0 rgba(18,32,73,.08), 0 8px 32px 0 rgba(55,92,192,.08);
+      border-radius: 4px;
+      overflow: hidden;
+      background-color: $darkWhite;
 
-    h2.category-title {
-      text-transform: capitalize;
-      span {
-        color: $gray;
+      &:hover {
+        opacity: .85;
       }
     }
-    h3, p, li {
-        padding: 0 8%;
+  }
+
+  h2.category-title {
+    text-transform: capitalize;
+    span {
+      color: $gray;
     }
-    h3 {
-        margin: 40px 0 0;
-        line-height: 1.2;
-        a {
-            font-family: $optionalFont;
-            color: inherit;
-            font-weight: 600;
-            font-size: 1em;
-            line-height: 1.3;
-            text-decoration: none;
-        }
-    }
-    p {
-      font-size: 0.938em;
+  }
+  h3, p, li {
+      padding: 0 8%;
+  }
+  h3 {
+      margin: 20px 0 0;
+      line-height: 1.2;
       a {
-        font-size: 1em;
+          font-family: $optionalFont;
+          color: inherit;
+          font-weight: 600;
+          font-size: 1em;
+          line-height: 1.3;
+          text-decoration: none;
       }
+  }
+  p {
+    font-size: 0.938em;
+    a {
+      font-size: 1em;
     }
-    small {
-        font-size: 13px;
-        position: relative;
-        display: block;
-        padding-bottom: 15px;
-        &::after {
-            @include set-pseudo-element(auto, auto, 0, 0);
-            @include rectangle(33px, 1px);
-            background-color: $gray;
-        }
-    }
+  }
+  small {
+      font-size: 13px;
+      position: relative;
+      display: block;
+      padding-bottom: 15px;
+      &::after {
+          @include set-pseudo-element(auto, auto, 0, 0);
+          @include rectangle(33px, 1px);
+          background-color: $gray;
+      }
+  }
 
-   .post-element {
-     overflow: hidden;
-     height: 100%;
+ .post-element {
+   overflow: hidden;
+   height: 100%;
+ }
 
-     img {
-       height: 190px;
-       width: 300px;
-     }
-
-     @media only screen and (min-width: $mediumWidth) {
-       height: 550px;
+ .categories {
+   h3 {
+     margin: 46px 0 20px;
+     font-size: 1em;
+     font-weight: 400;
+   }
+   li {
+     a {
+       font-size: 1.231em;
      }
    }
-
-   .categories {
-     h3 {
-       margin: 46px 0 20px;
-       font-size: 1em;
-       font-weight: 400;
-     }
-     li {
-       a {
-         font-size: 1.231em;
-       }
-     }
-   }
+ }
 }

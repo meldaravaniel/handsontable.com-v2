@@ -75,7 +75,7 @@
   &.bg {
     &-blue {background-color: $brandBlue;
       &.bg-lighten {
-        @include transition (background-color .3s ease-out);
+        @include transition (background-color .3s ease-out, transform .3s ease-out);
         &:hover {
           background-color: $brandBlueActiveLight;
         }
@@ -83,7 +83,7 @@
     }
     &-gray {background-color: $lightGray;
       &.bg-lighten {
-        @include transition (background-color .3s ease-out);
+        @include transition (background-color .3s ease-out, transform .3s ease-out);
         &:hover {
           background-color: $lightGrayActiveLight;
         }
@@ -91,7 +91,7 @@
     }
     &-green {background-color: $brandGreen;
       &.bg-lighten {
-        @include transition (background-color .3s ease-out);
+        @include transition (background-color .3s ease-out, transform .3s ease-out);
         &:hover {
           background-color: $brandGreenActiveLight;
         }
@@ -99,7 +99,7 @@
     }
     &-green-light {background-color: $brandVibrantGreenActive;
       &.bg-lighten {
-        @include transition (background-color .3s ease-out);
+        @include transition (background-color .3s ease-out, transform .3s ease-out);
         &:hover {
           background-color: $brandVibrantGreenActiveLight;
         }
@@ -107,7 +107,7 @@
     }
     &-navy {background-color: $brandDarkNavy;
       &.bg-lighten {
-        @include transition (background-color .3s ease-out);
+        @include transition (background-color .3s ease-out, transform .3s ease-out);
         &:hover {
           background-color: $brandDarkNavyActiveLight;
         }
