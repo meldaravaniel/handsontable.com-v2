@@ -1,0 +1,221 @@
+<section class="post" itemid="https://handsontable.com/2017/5/<%= current.source %>" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+        <div class="large-6 large-centered columns">
+            <h2 class="headline" itemprop="headline">
+                New compiler and enhancements for IE - Handsontable Pro 1.11.0-beta1 (CE 0.32.0-beta1)
+            </h2>
+            <div class="meta-details">
+                <span>
+                    <img src="../../../attachments/authors/aleksandra-budnik.png" alt="Aleksandra Budnik" />
+                    <label>Aleksandra Budnik</label>
+                </span>
+                <span><a href="/blog/categories/release">Release</a> / May 17, 2017</span>
+                <meta itemprop="datePublished" content="2017-05-17T12:00:00+01:00"/>
+                <meta itemprop="dateModified" content="2017-05-17T12:00:00+01:00"/>
+                <span><a href="#disqus_thread"></a></span>
+            </div>
+        </div>
+    </div>
+    <article class="row body">
+        <div class="large-8 medium-12 large-centered columns">
+            <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <img src="../../../attachments/images/2017/5/1.11.0-beta1-0.32.0-beta1/new-release.png"
+                     alt="New compiler and enhancements for IE - Handsontable Pro 1.11.0-beta1 (CE 0.32.0-beta1)" />
+                <meta itemprop="url"
+                      content="https://handsontable.com/blog/attachments/images/2017/5/1.11.0-beta1-0.32.0-beta1/new-release.png">
+                <meta itemprop="width" content="757">
+                <meta itemprop="height" content="504">
+            </p>
+
+            <p>
+                We are happy to announce that today we have released Handsontable PRO 1.11.0-beta1 (Community Edition:
+                0.32.0-beta1). Learn more about what we have delivered within this version.
+            </p>
+            <h3>
+                A new JavaScript compiler: Babel
+            </h3>
+            <p>
+                This change was expected for a long time as we reached a dead end with Traceur, our previous transpiler.
+                It seriously limited our development of Handsontable by not letting us to use the latest features of
+                ES2015. We could have worked around this of course, but in the end Handsontable would have been much
+                heavier than it is now. However, the size of the output file wasn’t the only thing that made us switch
+                to Babel:
+            </p>
+            <ul>
+                <li>
+                    Traceur is not actively maintained anymore.
+                </li>
+                <li>
+                    We couldn't use Webpack.
+                </li>
+                <li>
+                    We had to create workarounds in order to make our wrappers working.
+                </li>
+            </ul>
+            <p>
+                We spent 8 straight weeks upgrading Handsontable Pro/CE and the hot-builder engine to work with the new
+                transpiler. The output code is now 47KB larger but the performance and readability remained intact.
+            </p>
+            <p>
+                What’s most important, we can now use all the ES2015 features except Generators. We can debug the code
+                faster thanks to sourceMaps (yep, we didn’t have that comfort before in our version of Traceur!) and
+                get a better standardized code.
+            </p>
+            <p>
+                We expect to be able to easily implement new features of ES2015+ in the future. Also, our wrappers for
+                ReactJS, VueJS and Angular will be better integrated with commonJS, therefore building a new app for
+                Node using Handsontable should now be a smooth experience.
+            </p>
+            <h3>
+                Breaking changes:
+            </h3>
+            <ul>
+                <li>
+                    The Bootstrap CSS files were merged with the default CSS file.
+                </li>
+                <li>
+                    The /plugins directory was deleted (including the ‘removeRow’ plugin)
+                </li>
+                <li>
+                    Some global variables were reorganized and/or removed.
+                </li>
+            </ul>
+            <h3>
+                Changes in Handsontable Community Edition (CE):
+            </h3>
+            <ul>
+                <li>
+                    Fixed documentation for the cells config option
+                    (<a href="https://github.com/handsontable/handsontable/issues/4185" target="_blank">#4185</a>).
+                </li>
+                <li>
+                    Fixed a problem with the maxRows functionality
+                    (<a href="https://github.com/handsontable/handsontable/issues/4180" target="_blank">#4180</a>).
+                </li>
+                <li>
+                    Fixed a problem with the maxCols functionality
+                    (<a href="https://github.com/handsontable/handsontable/issues/4156" target="_blank">#4156</a>).
+                </li>
+                <li>
+                    Fixed a bug, where entering integer values to a dropdown caused the cell to be marked as invalid
+                    (<a href="https://github.com/handsontable/handsontable/issues/4143" target="_blank">#4143</a>).
+                </li>
+                <li>
+                    Added the TypeScript definitions to the repository
+                    (<a href="https://github.com/handsontable/handsontable/issues/4112" target="_blank">#4112</a>).
+                </li>
+                <li>
+                    Fixed a bug with getCoords throwing an error when used on non-cell elements
+                    (<a href="https://github.com/handsontable/handsontable/issues/4074" target="_blank">#4074</a>).
+                </li>
+                <li>
+                    Data copied from the table will no longer have a newline at the end
+                    (<a href="https://github.com/handsontable/handsontable/issues/3801" target="_blank">#3801</a>).
+                </li>
+                <li>
+                    Fixed a problem with scrolling on IE9+
+                    (<a href="https://github.com/handsontable/handsontable/issues/2350" target="_blank">#2350</a>).
+                </li>
+            </ul>
+            <h3>
+                Changes in Handsontable Pro:
+            </h3>
+            <ul>
+                <li>
+                    Fixed a problem, where the ESC key did not work for the filtering menu.
+                </li>
+            </ul>
+            <h3>
+                Upgrade guide
+            </h3>
+            <p>
+                In addition to the switch from Traceur to Babel, we adjusted the naming convention of global variables
+                in validators, renderers, cell types, plugins and helpers. Make sure that your code is up to date with
+                these changes.
+            </p>
+            <h3>
+                Validators
+            </h3>
+            <iframe width="100%" height="280" src="//jsfiddle.net/handsoncode/96b0nykw/embedded/result/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>
+                Renderers
+            </h3>
+            <iframe width="100%" height="440" src="//jsfiddle.net/handsoncode/n9anfs4t/embedded/result/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>
+                Cell types
+            </h3>
+            <iframe width="100%" height="530" src="//jsfiddle.net/handsoncode/4zt4dekj/embedded/result/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>
+                Plugins
+            </h3>
+            <iframe width="100%" height="280" src="//jsfiddle.net/handsoncode/99phvdwh/embedded/result/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+            <h3>
+                Helpers
+            </h3>
+            <iframe width="100%" height="130" src="//jsfiddle.net/handsoncode/tvkchtw4/embedded/result/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>
+                Other
+            </h3>
+            <iframe width="100%" height="440" src="//jsfiddle.net/handsoncode/mtxdmbnw/embedded/result/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>
+                We will keep you posted!
+            </h3>
+            <p>
+                Sometimes you need a punch in the face to start doing things properly. For us, the hit came from
+                <a href="https://www.groovehq.com/blog/product-update-email-rhythm" target="_blank">
+                    Alex from GrooveHQ
+                </a>
+                ,who wrote a story about his angry customer who complained about the slow development of the app. The
+                thing is that the development wasn’t slow at all. It was the lack of information about the progress
+                that caused this situation.
+            </p>
+            <p>
+                I think that it is high time to admit that we neglected that part of Handsontable development. We
+                focused too much on the technical part of the business while doing nothing to communicate changes to
+                users.
+            </p>
+            <h3>
+                Our plan to improve
+            </h3>
+            <p>
+                From now on we will publish a new blog post after each release of Handsontable, regardless of whether
+                it is a major, minor or a patch change. Also, starting from the end of June, we will send the updates
+                via email to all existing customers of Handsontable Pro. Apart from that, you will always find fresh
+                updates on our
+                <a href="https://twitter.com/handsontable" target="_blank">
+                    Twitter account.
+                </a>
+            </p>
+            <p>
+                We appreciate all Github issues and emails which helped us fix issues in the current release. Leave a
+                comment or
+                <a href="https://handsontable.com/contact.html" target="_blank">
+                    contact us
+                </a>
+                to help us make Handsontable even better.
+            </p>
+
+
+
+           <div class="addthis_native_toolbox toolbox"></div>
+        </div>
+    </article>
+
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://handsoncode.net/images/logos/logo.png">
+            <meta itemprop="width" content="175">
+            <meta itemprop="height" content="25">
+        </div>
+        <meta itemprop="name" content="Handsoncode">
+    </div>
+
+    <%- partial("../../../authors/_abudnik") %>
+</section>

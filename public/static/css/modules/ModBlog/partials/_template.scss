@@ -10,7 +10,6 @@
 
     a {
       @include transition (opacity .3s ease-out);
-      height: 450px;
       margin: 14px;
       display: block;
       color: $baseGray;
@@ -19,66 +18,22 @@
       overflow: hidden;
       background-color: $darkWhite;
 
+      @media only screen and (min-width: $largeWidth) {
+        height: 470px;
+      }
+
       &:hover {
         opacity: .85;
+      }
+
+      h3, p {
+        padding: 0 8%;
+        line-height: 1.4;
       }
     }
   }
 
   h2.category-title {
     text-transform: capitalize;
-    span {
-      color: $gray;
-    }
   }
-  h3, p, li {
-      padding: 0 8%;
-  }
-  h3 {
-      margin: 20px 0 0;
-      line-height: 1.2;
-      a {
-          font-family: $optionalFont;
-          color: inherit;
-          font-weight: 600;
-          font-size: 1em;
-          line-height: 1.3;
-          text-decoration: none;
-      }
-  }
-  p {
-    font-size: 0.938em;
-    a {
-      font-size: 1em;
-    }
-  }
-  small {
-      font-size: 13px;
-      position: relative;
-      display: block;
-      padding-bottom: 15px;
-      &::after {
-          @include set-pseudo-element(auto, auto, 0, 0);
-          @include rectangle(33px, 1px);
-          background-color: $gray;
-      }
-  }
-
- .post-element {
-   overflow: hidden;
-   height: 100%;
- }
-
- .categories {
-   h3 {
-     margin: 46px 0 20px;
-     font-size: 1em;
-     font-weight: 400;
-   }
-   li {
-     a {
-       font-size: 1.231em;
-     }
-   }
- }
 }

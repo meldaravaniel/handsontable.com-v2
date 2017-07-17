@@ -1,11 +1,65 @@
 {
+  "1.12.0-0.33.0": {
+    "directory": "2017/7/",
+    "title": "Handsontable Pro 1.12.0 (CE 0.33.0) released",
+    "category": "Release",
+    "date": "July 11, 2017",
+    "pubDate": "Tue, 11 Jul 2017 13:00:00 EST",
+    "image_file": "1.12.0-0.33.0/new-release.png",
+    "description": "Today we are happy to announce that Handsontable Pro 1.12.0 (Community Edition 0.33.0) is finally released. In this version we have (...)"
+  },
+  "1.11.0-0.32.0": {
+    "directory": "2017/5/",
+    "title": "Handsontable Pro 1.11.0 (CE 0.32.0) released",
+    "category": "Release",
+    "date": "May 31, 2017",
+    "pubDate": "Wed, 31 May 2017 13:00:00 EST",
+    "image_file": "1.11.0-0.32.0/new-release.png",
+    "description": "We initially released this version of Handsontable on May 17 in a form of a public beta. We wanted to make sure that after we replaced (...)"
+  },
+  "what-you-should-know-about-cell-types": {
+    "directory": "2017/5/",
+    "title": "What You Should Know About Cell Types",
+    "category": "Recipes",
+    "date": "May 30, 2017",
+    "pubDate": "Tue, 30 May 2017 13:00:00 EST",
+    "image_file": "what-you-should-know-about-cell-types/what-you-should-know-about-cell-types.png",
+    "description": "Handsontable easily handles several types of data that can be applied to particular cells, rows, columns, or the entire grid at once (...)"
+  },
+  "1.11.0-beta2-0.32.0-beta2": {
+    "directory": "2017/5/",
+    "title": "Improvements to API and important bug fixes - Handsontable Pro 1.11.0-beta2 (CE 0.32.0-beta2)",
+    "category": "Release",
+    "date": "May 24, 2017",
+    "pubDate": "Wed, 24 May 2017 13:00:00 EST",
+    "image_file": "1.11.0-beta2-0.32.0-beta2/new-release.png",
+    "description": "Today we have released Handsontable PRO 1.11.0-beta2 (CE 0.32.0-beta2) (...)"
+  },
+  "1.11.0-beta1-0.32.0-beta1": {
+    "directory": "2017/5/",
+    "title": "New compiler and enhancements for IE - Handsontable Pro 1.11.0-beta1 (CE 0.32.0-beta1)",
+    "category": "Release",
+    "date": "May 17, 2017",
+    "pubDate": "Wed, 17 May 2017 13:00:00 EST",
+    "image_file": "1.11.0-beta1-0.32.0-beta1/new-release.png",
+    "description": "We are happy to announce that today we have released Handsontable (...)"
+  },
+  "an-interview-with-mirko-lorenz-from-datawrapper": {
+    "directory": "2017/4/",
+    "title": "An Interview with Mirko Lorenz from Datawrapper",
+    "category": "Resources",
+    "date": "April 13, 2017",
+    "pubDate": "Thu, 13 Apr 2017 13:00:00 EST",
+    "image_file": "an-interview-with-mirko-lorenz-from-datawrapper/an-interview-with-mirko-lorenz-from-datawrapper.png",
+    "description": "Have you ever heard about Datawrapper? If you are a journalist working in a fast-paced environment I am sure you have. Datawrapper (...)"
+  },
   "open-source-slack-alternatives": {
     "directory": "2017/3/",
     "title": "Open Source Slack Alternatives",
     "category": "Resources",
     "date": "March 30, 2017",
     "pubDate": "Thu, 30 Mar 2017 13:00:00 EST",
-    "image_file": "open-source-slack-alternatives.png",
+    "image_file": "open-source-slack-alternatives/open-source-slack-alternatives.png",
     "description": "Whether you are a small business or a thriving company you definitely need a good and effective communication channel that will bring (...)"
   },
   "best-resources-to-learn-javascript": {
@@ -37,7 +91,7 @@
    "category": "Tools",
    "date": "February 14, 2017",
    "pubDate": "Tue, 14 Feb 2017 13:00:00 EST",
-   "image_file": "best-online-spreadsheets-for-2017.png",
+   "image_file": "best-online-spreadsheets-for-2017.jpg",
    "description": "The internet has brought many benefits to most industries, with the most striking for businesses being online collaboration. Various (...)"
   },
   "how-to-build-a-custom-version-of-handsontable": {

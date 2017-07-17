@@ -1,0 +1,213 @@
+<section class="post" itemid="https://handsontable.com/2017/5/<%= current.source %>" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+        <div class="large-6 large-centered columns">
+            <h2 class="headline" itemprop="headline">
+                Handsontable Pro 1.11.0 (CE 0.32.0) released
+            </h2>
+            <div class="meta-details">
+                <span>
+                    <img src="../../../attachments/authors/aleksandra-budnik.png" alt="Aleksandra Budnik" />
+                    <label>Aleksandra Budnik</label>
+                </span>
+                <span><a href="/blog/categories/release">Release</a> / May 31, 2017</span>
+                <meta itemprop="datePublished" content="2017-05-31T12:00:00+01:00"/>
+                <meta itemprop="dateModified" content="2017-05-31T12:00:00+01:00"/>
+                <span><a href="#disqus_thread"></a></span>
+            </div>
+        </div>
+    </div>
+    <article class="row body">
+        <div class="large-8 medium-12 large-centered columns">
+            <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <img src="../../../attachments/images/2017/5/1.11.0-0.32.0/new-release.png"
+                     alt="Handsontable Pro 1.11.0 (CE 0.32.0) released" />
+                <meta itemprop="url"
+                      content="https://handsontable.com/blog/attachments/images/2017/5/1.11.0-0.32.0/new-release.png">
+                <meta itemprop="width" content="757">
+                <meta itemprop="height" content="504">
+            </p>
+
+            <p>
+                We initially released this version of Handsontable on May 17 in a form of a public beta. We wanted to
+                make sure that after we replaced Traceur with Babel, everything still works properly. We found and
+                fixed some severe issues and released another beta version on May 24. Today we are happy to announce
+                that Handsontable Pro 1.11.0 (Community Edition 0.32.0) is finally out the door. Apart from an important
+                change under the hood, we improved the experience of scrolling the table with fixed columns (and rows)
+                on Internet Explorer. See the complete list of changes below:
+            </p>
+
+            <h3>
+                Breaking changes:
+            </h3>
+            <ul>
+                <li>
+                    Migration from Traceur to Babel.
+                    (<a href="https://github.com/handsontable/handsontable/issues/4070" target="_blank">#4070</a>)
+                </li>
+            </ul>
+            <p>
+                We're now using Babel to transpile our code. That means that we had to make breaking changes, please
+                take a look if you have to make some adjustments in your implementation before moving to this version.
+            </p>
+            <ul>
+                <li>
+                    The Bootstrap CSS files were merged to Handsontable's default CSS.
+                </li>
+                <li>
+                    The /plugins directory was deleted (with the "removeRow plugin" included)
+                </li>
+                <li>
+                    Some global variables were reorganized and/or removed. Please take a look.
+                </li>
+            </ul>
+            <h3>
+                Validators
+            </h3>
+            <iframe width="100%" height="280" src="//jsfiddle.net/handsoncode/96b0nykw/embedded/result/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>
+                Renderers
+            </h3>
+            <iframe width="100%" height="440" src="//jsfiddle.net/handsoncode/n9anfs4t/embedded/result/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>
+                Cell types
+            </h3>
+            <iframe width="100%" height="530" src="//jsfiddle.net/handsoncode/4zt4dekj/embedded/result/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>
+                Plugins
+            </h3>
+            <iframe width="100%" height="280" src="//jsfiddle.net/handsoncode/99phvdwh/embedded/result/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+            <h3>
+                Helpers
+            </h3>
+            <iframe width="100%" height="130" src="//jsfiddle.net/handsoncode/tvkchtw4/embedded/result/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>
+                Other
+            </h3>
+            <iframe width="100%" height="440" src="//jsfiddle.net/handsoncode/mtxdmbnw/embedded/result/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <ul>
+                <li>
+                    Changed the way in which custom cell types are being registered. <br>(<a
+                            href="https://github.com/handsontable/handsontable/issues/4254"
+                    target="_blank">#4254</a>)
+                </li>
+            </ul>
+            <p>
+                We improved the public API to give developers an ability to register cell behaviors and types separately.
+                We strongly recommend to use a registered alias in Handsontable settings to increase the code
+                maintainability.
+            </p>
+            <p>An example on how to add a custom editor/renderer/validator:</p>
+<pre>
+<code lang="js">
+Handsontable.cellTypes.registerCellType('my-custom-select', {
+    editor: MyCustomSelectEditor,
+    renderer: MyCustomSelectRenderer,
+    validator: MyCustomSelectValidator,
+});
+
+Handsontable.validators.registerValidator('credit-card', function(query, callback) {
+    callback(/* passed `true` or `false` depending on a query value */);
+});
+
+new Handsontable(document.getElementById('element'), {
+    data: data,
+    columns: [{
+        data: 'id',
+        type: 'my-custom-select'
+    }, {
+        data: 'name',
+        renderer: 'my-custom-select'
+    }, {
+        data: 'cardNumber',
+        validator: 'credit-card'
+    }]
+})
+</code>
+</pre>
+            <h3>
+                Other changes:
+            </h3>
+            <ul>
+                <li>
+                    Fixed documentation for the autoRowSize config option.
+                    (<a href="https://github.com/handsontable/handsontable/issues/4267" target="_blank">#4267</a>)
+                </li>
+                <li>
+                    Fixed documentation for the cells config option
+                    (<a href="https://github.com/handsontable/handsontable/issues/4185" target="_blank">#4185</a>).
+                </li>
+                <li>
+                    Fixed a problem with the maxRows functionality
+                    (<a href="https://github.com/handsontable/handsontable/issues/4180" target="_blank">#4180</a>).
+                </li>
+                <li>
+                    Fixed a problem with the maxCols functionality
+                    (<a href="https://github.com/handsontable/handsontable/issues/4156" target="_blank">#4156</a>).
+                </li>
+                <li>
+                    Fixed a bug, where entering integer values to a dropdown caused the cell to be marked as invalid
+                    (<a href="https://github.com/handsontable/handsontable/issues/4143" target="_blank">#4143</a>).
+                </li>
+                <li>
+                    Added the TypeScript definitions to the repository
+                    (<a href="https://github.com/handsontable/handsontable/issues/4112" target="_blank">#4112</a>).
+                </li>
+                <li>
+                    Fixed a bug with getCoords throwing an error when used on non-cell elements
+                    (<a href="https://github.com/handsontable/handsontable/issues/4074" target="_blank">#4074</a>).
+                </li>
+                <li>
+                    Data copied from the table will no longer have a newline at the end
+                    (<a href="https://github.com/handsontable/handsontable/issues/3801" target="_blank">#3801</a>).
+                </li>
+                <li>
+                    Fixed a problem with scrolling on IE9+
+                    (<a href="https://github.com/handsontable/handsontable/issues/2350" target="_blank">#2350</a>).
+                </li>
+                <li>
+                    Fixed a wrong variable in a listener of the mouse wheel event
+                    (<a href="https://github.com/handsontable/handsontable/issues/4255" target="_blank">#4255</a>).
+                </li>
+                <li>
+                    Fixed an issue related to defining a cell metadata for non-existing cells
+                    (<a href="https://github.com/handsontable/handsontable/issues/4024" target="_blank">#4024</a>).
+                </li>
+            </ul>
+            <p>
+                The corresponding Handsontable Pro version is 1.11.0.
+            </p>
+
+            <p>
+                You want to be up-to-date with all our updates? You will always find fresh updates on
+                our <a href="https://twitter.com/handsontable" target="_blank">Twitter profile</a>.
+            </p>
+            <p>
+                We appreciate all Github issues and emails which helped us fix issues in the current release. Leave a
+                comment or
+                <a href="https://handsontable.com/contact.html" target="_blank">
+                    contact us
+                </a>
+                to help us make Handsontable even better.
+            </p>
+           <div class="addthis_native_toolbox toolbox"></div>
+        </div>
+    </article>
+
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://handsoncode.net/images/logos/logo.png">
+            <meta itemprop="width" content="175">
+            <meta itemprop="height" content="25">
+        </div>
+        <meta itemprop="name" content="Handsoncode">
+    </div>
+
+    <%- partial("../../../authors/_abudnik") %>
+</section>

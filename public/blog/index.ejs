@@ -1,15 +1,15 @@
 <section class="blog">
-
     <div class="row">
-        <% var i = 0;
-        %>
+        <% var i = 0; %>
         <% for(var slug in public.blog.articles._data) { %>
             <div class="large-4 columns post-element left">
                 <div class="excerpt">
-                    <a href="/blog/articles/<%= public.blog.articles._data[slug].directory %>">
-                        <img src="/blog/attachments/images/<%= public.blog.articles._data[slug].image_file %>">
+                    <a href="/blog/articles/<%= public.blog.articles._data[slug].directory %><%= slug %>">
+
+                        <img src="/blog/attachments/images/<%= public.blog.articles._data[slug].directory %><%= public.blog.articles._data[slug].image_file %>">
                         <h3><%= public.blog.articles._data[slug].title %></h3>
                         <p><%= public.blog.articles._data[slug].description %></p>
+
                     </a>
                 </div>
             </div>

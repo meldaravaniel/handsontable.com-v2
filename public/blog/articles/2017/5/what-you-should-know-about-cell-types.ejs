@@ -1,0 +1,202 @@
+<section class="post" itemid="https://handsontable.com/2017/5/<%= current.source %>" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+        <div class="large-6 large-centered columns">
+            <h2 class="headline" itemprop="headline">
+                What You Should Know About Cell Types
+            </h2>
+            <div class="meta-details">
+                <span>
+                    <img src="../../../attachments/authors/aleksandra-budnik.png" alt="Aleksandra Budnik" />
+                    <label>Aleksandra Budnik</label>
+                </span>
+                <span><a href="/blog/categories/recipes">Recipes</a> / May 30, 2017</span>
+                <meta itemprop="datePublished" content="2017-05-30T12:00:00+01:00"/>
+                <meta itemprop="dateModified" content="2017-05-30T12:00:00+01:00"/>
+                <span><a href="#disqus_thread"></a></span>
+            </div>
+        </div>
+    </div>
+    <article class="row body">
+        <div class="large-8 medium-12 large-centered columns">
+            <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <img src="../../../attachments/images/2017/5/what-you-should-know-about-cell-types/what-you-should-know-about-cell-types.png"
+                     alt="What You Should Know About Cell Types" />
+                <meta itemprop="url"
+                      content="https://handsontable.com/blog/attachments/images/2017/5/what-you-should-know-about-cell-types/what-you-should-know-about-cell-types.png">
+                <meta itemprop="width" content="757">
+                <meta itemprop="height" content="504">
+            </p>
+
+            <p>
+                Handsontable easily handles several types of data that can be applied to particular cells, rows,
+                columns, or the entire grid at once.
+            </p>
+            <p>
+                Regardless of the type of application you have built, cell types will always come in handy and are true
+                value add for your end users. Read further to learn more about one of the most important
+                features of Handsontable.
+            </p>
+            <h3>
+                What is a cell type?
+            </h3>
+            <p>
+                A cell type is a combined shortcut for an editor and a
+                <a href="https://handsontable.com/blog/articles/getting-started-with-cell-renderers"
+                target="_blank">
+                    renderer</a>.
+                For example, a <code class="inline">date</code> cell type will
+                use a datepicker as a visual editor, and the output will be a properly formatted date.
+            </p>
+            <!-- [Screenshot - date editor and renderer - side by side] -->
+            <p>
+                The cell type defines which editor and renderer will be used for a cell. In other words, writing:
+            </p>
+<pre>
+<code lang="js">
+    columns: [{
+        type: 'text'
+    }]
+</code>
+</pre>
+            <p>
+                achieves exactly the same as:
+            </p>
+<pre>
+<code lang="js">
+    columns: [{
+        renderer: Handsontable.renderers.TextRenderer,
+        editor: Handsontable.editors.TextEditor
+    }]
+</code>
+</pre>
+            <p>
+                Handsontable includes nine built-in cell types, and these are all defined in
+                <a href="https://github.com/handsontable/handsontable/tree/master/src/cellTypes"
+                target="_blank">
+                    cellTypes catalog
+                </a>
+            </p>
+
+            <ul>
+                <li>
+                    Autocomplete
+                </li>
+                <li>
+                    Checkbox
+                </li>
+                <li>
+                    Date
+                </li>
+                <li>
+                    Dropdown
+                </li>
+                <li>
+                    Handsontable in Handsontable
+                </li>
+                <li>
+                    Numeric
+                </li>
+                <li>
+                    Password
+                </li>
+                <li>
+                    Text
+                </li>
+                <li>
+                    Time
+                </li>
+            </ul>
+            <p>
+                But you aren’t limited to only using the existing cell types as
+                <a href="https://docs.handsontable.com/pro/tutorial-cell-types.html" target="_blank">
+                    creating a new cell type</a> is
+                relatively painless.
+            </p>
+            <h3>
+                Defining a column, row or a cell
+            </h3>
+            <p>
+                To define a column type you will use the columns option. The columns option takes an array of objects
+                as a source for the table settings, where each object is a new column.  In the following
+                example, we want the cells in the first column to accept numbers as an input, and then render
+                them as formatted currency.
+            </p>
+            <iframe width="100%" height="180" src="//jsfiddle.net/handsoncode/d9w0g8u1/2/embedded/result,js,html/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <p>
+                Defining a row type is a bit trickier as it requires us to first find its index. To do that we add two
+                conditions to a
+                <a href="https://docs.handsontable.com/pro/Options.html#cells" target="_blank">cell</a>
+                , which will provide coordinates that we will use later to set the type
+                of cells inside that row. Let's say we want the first row to be a date type and the third to
+                use text as an editor and password as a renderer. Take a look at how it might be done:
+            </p>
+            <iframe width="100%" height="270" src="//jsfiddle.net/handsoncode/c2mzfrwo/2/embedded/result,js,html/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <p>
+                To turn a single cell into a useful dropdown editor with a numeric renderer we need to pass the
+                correct coordinates of the target cell. Remember Handsontable requires x and y coordinates, so
+                cell <code class="inline">A1</code> would be defined as <code class="inline">0,0</code>.
+            </p>
+            <iframe width="100%" height="180" src="//jsfiddle.net/handsoncode/ru43m9an/embedded/result,js,html/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>
+                Defining a merged cell
+            </h3>
+            <p>
+                A merged cell is no different than a regular cell in terms of defining the types, but it does require
+                clarifying that the first cell in the set of merged cells defines the cell type. For instance, if
+                you merge 4 cells ranging from
+                <code class="inline">A1</code> to <code class="inline">B2</code>,
+                you should set the cell type only for cell
+                <code class="inline">A1</code> <code class="inline">(0,0)</code>, as shown
+                in the following example:
+            </p>
+            <iframe width="100%" height="270" src="//jsfiddle.net/handsoncode/s7jvwyfo/embedded/result,js,html/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>
+                Using a context menu to change the type
+            </h3>
+            <p>
+                The cell type can be changed by the end-user using a context menu. As you already know, a context menu
+                can easily be adjusted to your needs, so we will use it to add some additional settings there.
+                In the following example, we add an option to switch between a
+                <code class="inline">password</code> and <code class="inline">text</code> type column.
+            </p>
+            <iframe width="100%" height="280" src="//jsfiddle.net/handsoncode/q9713vxf/1/embedded/result,js,html/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>
+                Using a dropdown menu to change the type
+            </h3>
+            <p>
+                If you are using the Pro version of Handsontable, you can add a dropdown menu to your column header. It
+                is based on a context menu plugin, so the configuration of both is nearly identical. Use the dropdown
+                menu below to change the type from <code class="inline">text</code> to <code class="inline">password</code>.
+            </p>
+            <iframe width="100%" height="280" src="//jsfiddle.net/handsoncode/p2wh8phk/2/embedded/result,js,html/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>
+                Conclusion
+            </h3>
+            <p>
+                Defining a cell type allows you to enrich your app in minutes. However, the current pre-defined types
+                won't cover every user case. And although creating your own is relatively simple, we would still love
+                to hear your ideas for new types of editors and renderers in the comments below.
+            </p>
+
+
+           <div class="addthis_native_toolbox toolbox"></div>
+        </div>
+    </article>
+
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://handsoncode.net/images/logos/logo.png">
+            <meta itemprop="width" content="175">
+            <meta itemprop="height" content="25">
+        </div>
+        <meta itemprop="name" content="Handsoncode">
+    </div>
+
+    <%- partial("../../../authors/_abudnik") %>
+</section>

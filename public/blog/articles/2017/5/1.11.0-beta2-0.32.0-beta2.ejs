@@ -1,0 +1,122 @@
+<section class="post" itemid="https://handsontable.com/2017/5/<%= current.source %>" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+        <div class="large-6 large-centered columns">
+            <h2 class="headline" itemprop="headline">
+                Improvements to API and important bug fixes - Handsontable Pro 1.11.0-beta2 (CE 0.32.0-beta2)
+            </h2>
+            <div class="meta-details">
+                <span>
+                    <img src="../../../attachments/authors/aleksandra-budnik.png" alt="Aleksandra Budnik" />
+                    <label>Aleksandra Budnik</label>
+                </span>
+                <span><a href="/blog/categories/release">Release</a> / May 24, 2017</span>
+                <meta itemprop="datePublished" content="2017-05-24T12:00:00+01:00"/>
+                <meta itemprop="dateModified" content="2017-05-24T12:00:00+01:00"/>
+                <span><a href="#disqus_thread"></a></span>
+            </div>
+        </div>
+    </div>
+    <article class="row body">
+        <div class="large-8 medium-12 large-centered columns">
+            <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <img src="../../../attachments/images/2017/5/1.11.0-beta2-0.32.0-beta2/new-release.png"
+                     alt="Improvements to API and important bug fixes - Handsontable Pro 1.11.0-beta2 (CE 0.32.0-beta2)" />
+                <meta itemprop="url"
+                      content="https://handsontable.com/blog/attachments/images/2017/5/1.11.0-beta2-0.32.0-beta2/new-release.png">
+                <meta itemprop="width" content="757">
+                <meta itemprop="height" content="504">
+            </p>
+
+            <p>
+                Today we have released Handsontable PRO 1.11.0-beta2 (Community Edition:
+                0.32.0-beta2). This version comes with one backward-incompatible change so make sure your code
+                is adjusted before updating the spreadsheet.
+            </p>
+            <h3>
+                Breaking changes:
+            </h3>
+            <ul>
+                <li>
+                    Changed the way in which custom cell types are being registered
+                    (<a href="https://github.com/handsontable/handsontable/issues/4254" target="_blank">#4254</a>).
+                </li>
+            </ul>
+            <p>
+                As you already know from
+                <a href="https://handsontable.com/blog/articles/2017/5/1.11.0-beta1-0.32.0-beta1" target="_blank">beta1 release</a>,
+                we have migrated from Traceur to Babel. That required from us to standarize the code, namely
+                to stop using a Handsontable global variable. But that changed the way
+                of adding custom editors, validators, renderers and their combinations like 'cell types'. In this beta2
+                release we improve the public API to give developers an ability to register cell behaviors and types
+                separately. We strongly recommend to use a registered alias in Handsontable settings to
+                increase the code maintainability.
+            </p>
+            <p>An example on how to add a custom editor/renderer/validator:</p>
+<pre>
+<code lang="js">
+Handsontable.cellTypes.registerCellType('my-custom-select', {
+  editor: MyCustomSelectEditor,
+  renderer: MyCustomSelectRenderer,
+  validator: MyCustomSelectValidator,
+});
+
+Handsontable.validators.registerValidator('credit-card', function(query, callback) {
+  callback(/* passed `true` or `false` depending on a query value */);
+});
+
+new Handsontable(document.getElementById('element'), {
+  data: data,
+  columns: [{
+    data: 'id',
+    type: 'my-custom-select'
+  }, {
+    data: 'name',
+    renderer: 'my-custom-select'
+  }, {
+    data: 'cardNumber',
+    validator: 'credit-card'
+  }]
+})
+
+</code>
+</pre>
+            <h3>Changes:</h3>
+            <ul>
+                <li>
+                    Fixed a wrong variable in a listener of the mouse wheel event
+                    (<a href="https://github.com/handsontable/handsontable/issues/4255" target="_blank">#4255</a>).
+                </li>
+                <li>
+                    Fixed an issue related to defining a cell metadata for non-existing cells
+                    (<a href="https://github.com/handsontable/handsontable/issues/4024" target="_blank">#4024</a>).
+                </li>
+            </ul>
+
+            <p>
+                You want to be up-to-date with all our updates? You will always find fresh updates on
+                our <a href="https://twitter.com/handsontable" target="_blank">Twitter profile</a>.
+            </p>
+            <p>
+                We appreciate all Github issues and emails which helped us fix issues in the current release. Leave a
+                comment or
+                <a href="https://handsontable.com/contact.html" target="_blank">
+                    contact us
+                </a>
+                to help us make Handsontable even better.
+            </p>
+
+           <div class="addthis_native_toolbox toolbox"></div>
+        </div>
+    </article>
+
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://handsoncode.net/images/logos/logo.png">
+            <meta itemprop="width" content="175">
+            <meta itemprop="height" content="25">
+        </div>
+        <meta itemprop="name" content="Handsoncode">
+    </div>
+
+    <%- partial("../../../authors/_abudnik") %>
+</section>
