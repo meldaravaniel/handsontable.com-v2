@@ -3497,27 +3497,8 @@ header {
 /**
  * @author: Handsoncode
  */
-.branding h1 {
-  padding: 0;
-  text-align: left;
-  line-height: 1.1em; }
-  @media only screen and (min-width: 40.0625em) {
-    .branding h1 {
-      margin-top: 0;
-      text-align: center; } }
-.branding .sub-header {
-  margin-bottom: 5px; }
 .branding .header-branding {
-  background-color: #E3E3E3;
-  padding-bottom: 40px; }
-  @media only screen and (min-width: 40.0625em) {
-    .branding .header-branding {
-      padding-bottom: 90px; } }
-  .branding .header-branding .header-dist {
-    padding: 40px 0 0 0; }
-    @media only screen and (min-width: 40.0625em) {
-      .branding .header-branding .header-dist {
-        padding: 100px 30px 0 30px; } }
+  background-color: #f7f7f7; }
 .branding img {
   width: 80%;
   margin-left: auto;
@@ -3547,217 +3528,103 @@ header {
 /**
  * @author: Handsoncode
  */
-.branding .brand-guides {
-  margin-bottom: 40px; }
-  .branding .brand-guides h2 {
-    padding: 0;
-    text-align: left; }
-  .branding .brand-guides .large-logo {
-    width: 100%; }
-    @media only screen and (min-width: 40.0625em) {
-      .branding .brand-guides .large-logo {
-        width: 90%;
-        padding-top: 40px; } }
-  .branding .brand-guides .style-guidelines {
-    margin-top: 70px;
-    padding-right: 40px; }
-  .branding .brand-guides .download {
-    margin-top: 30px;
-    padding: 40px;
-    background-color: #43a047;
-    color: #fff; }
-    .branding .brand-guides .download h2 {
-      margin-top: 0; }
-  .branding .brand-guides .btn {
-    margin: 20px 20px 0 0; }
+.branding .brand-guides svg {
+  width: 90%; }
+.branding .brand-guides .style-guidelines {
+  padding-top: 14px; }
+.branding .brand-guides .download {
+  padding: 14px 30px 30px;
+  color: #fff;
+  background-color: #43a047; }
 
 /**
  * @author: Handsoncode
  */
-.branding .logo-inversions {
-  padding-bottom: 40px; }
+.branding .logo-inversions .logo-holder {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0;
+  display: block;
+  background-color: #f7f7f7; }
+.branding .logo-inversions .logo-holder-black {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0;
+  display: block;
+  background-color: #000; }
+.branding .logo-inversions .logo {
+  margin-top: 5%;
+  width: 250px; }
   @media only screen and (min-width: 40.0625em) {
-    .branding .logo-inversions {
-      padding: 0 0 40px 0; } }
-  .branding .logo-inversions .logo-holder {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px 0;
-    display: block;
-    background-color: #f7f7f7; }
-  .branding .logo-inversions .logo-holder-black {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px 0;
-    display: block;
-    background-color: #000; }
-  .branding .logo-inversions .logo {
-    margin-top: 5%;
-    width: 250px; }
-    @media only screen and (min-width: 40.0625em) {
-      .branding .logo-inversions .logo {
-        margin-top: 5%;
-        width: 450px; } }
+    .branding .logo-inversions .logo {
+      margin-top: 5%;
+      width: 450px; } }
 
 /**
  * @author: Handsoncode
  */
-.branding .logo-versions {
-  padding-bottom: 40px; }
+.branding .logo-versions .logo-holder {
+  padding: 20px 0;
+  height: 200px;
+  background-color: #f7f7f7; }
   @media only screen and (min-width: 40.0625em) {
-    .branding .logo-versions {
-      padding: 0 0 40px 0; } }
-  .branding .logo-versions .logo-holder {
-    padding: 20px 0 20px 0;
-    height: 200px;
-    background-color: #f7f7f7; }
-    @media only screen and (min-width: 40.0625em) {
-      .branding .logo-versions .logo-holder {
-        height: 250px; } }
-  .branding .logo-versions .logo {
-    margin-top: 5%;
-    width: 220px; }
-    @media only screen and (min-width: 40.0625em) {
-      .branding .logo-versions .logo {
-        margin-top: 10%;
-        width: 280px; } }
-  .branding .logo-versions .logo-two {
-    margin-top: 5%; }
-    @media only screen and (min-width: 40.0625em) {
-      .branding .logo-versions .logo-two {
-        margin-top: 10%; } }
-  .branding .logo-versions .logo-three {
-    margin-top: 2%;
-    width: 90%; }
-    @media only screen and (min-width: 40.0625em) {
-      .branding .logo-versions .logo-three {
-        margin-top: 7%; } }
+    .branding .logo-versions .logo-holder {
+      height: 250px; } }
+.branding .logo-versions .logo {
+  margin-top: 5%;
+  width: 220px; }
+  @media only screen and (min-width: 40.0625em) {
+    .branding .logo-versions .logo {
+      margin-top: 10%;
+      width: 280px; } }
+.branding .logo-versions .logo-two {
+  margin-top: 5%; }
+  @media only screen and (min-width: 40.0625em) {
+    .branding .logo-versions .logo-two {
+      margin-top: 10%; } }
+.branding .logo-versions .logo-three {
+  margin-top: 2%;
+  width: 90%; }
+  @media only screen and (min-width: 40.0625em) {
+    .branding .logo-versions .logo-three {
+      margin-top: 7%; } }
 
 /**
  * @author: Handsoncode
  */
-.branding .logo-colour {
-  padding-bottom: 40px; }
-  @media only screen and (min-width: 40.0625em) {
-    .branding .logo-colour {
-      padding: 0 0 40px 0; } }
-  .branding .logo-colour h4 {
-    margin: 0;
-    padding: 5px 0 0 0;
-    text-align: left;
-    font-weight: 500; }
-  .branding .logo-colour p {
-    padding: 0 0 10px 0;
-    font-size: 0.700em; }
-  .branding .logo-colour .brand-blue {
-    background-color: #039be5;
-    height: 130px; }
-  .branding .logo-colour .brand-red {
-    background-color: #E87677;
-    height: 130px; }
-  .branding .logo-colour .brand-green {
-    background-color: #43a047;
-    height: 130px; }
-  .branding .logo-colour .brand-navy {
-    background-color: #404B5B;
-    height: 130px; }
-  .branding .logo-colour .brand-blue,
-  .branding .logo-colour .brand-red,
-  .branding .logo-colour .brand-green,
-  .branding .logo-colour .brand-navy {
-    padding: 15px;
-    color: #f7f7f7; }
-  .branding .logo-colour .brand-yellow {
-    padding: 15px;
+.branding .logo-colors h4 {
+  margin: 0;
+  padding: 5px 0 10px;
+  font-size: 20px; }
+.branding .logo-colors .color {
+  padding: 15px;
+  color: #fff; }
+  .branding .logo-colors .color.brand-blue {
+    background-color: #039be5; }
+  .branding .logo-colors .color.brand-red {
+    background-color: #E87677; }
+  .branding .logo-colors .color.brand-green {
+    background-color: #43a047; }
+  .branding .logo-colors .color.brand-navy {
+    background-color: #404B5B; }
+  .branding .logo-colors .color.brand-yellow {
     background-color: #FAD97F;
-    color: #8D8D8D;
-    height: 130px; }
+    color: #363636; }
 
 /**
  * @author: Handsoncode
  */
-.branding .logo-spacing {
-  padding-bottom: 40px; }
-  @media only screen and (min-width: 40.0625em) {
-    .branding .logo-spacing {
-      padding: 0 0 40px 0; } }
-  .branding .logo-spacing .logo-holder {
-    padding: 40px 0 40px 0;
-    background-color: #f7f7f7; }
-  .branding .logo-spacing .logo {
-    width: 250px; }
-    @media only screen and (min-width: 40.0625em) {
-      .branding .logo-spacing .logo {
-        margin-top: 10%;
-        width: 280px; } }
-  .branding .logo-spacing .logo-two {
-    width: 250px; }
-    @media only screen and (min-width: 40.0625em) {
-      .branding .logo-spacing .logo-two {
-        width: 400px; } }
-  .branding .logo-spacing .logo-three {
-    width: 100px; }
-    @media only screen and (min-width: 40.0625em) {
-      .branding .logo-spacing .logo-three {
-        width: 90px; } }
+.branding .logo-spacing .logo-holder {
+  padding: 40px 0;
+  background-color: #f7f7f7; }
+  .branding .logo-spacing .logo-holder svg {
+    width: 100%; }
 
 /**
  * @author: Handsoncode
  */
-.branding .logo-writing h3 {
-  padding-top: 20px; }
-  @media only screen and (min-width: 40.0625em) {
-    .branding .logo-writing h3 {
-      margin: 0;
-      text-align: left;
-      line-height: 1em; } }
 .branding .logo-writing .logo-holder {
-  padding: 0 40px 0 0; }
-.branding .logo-writing .crossedout {
-  font-size: 1em;
-  font-weight: 700;
-  text-decoration: line-through; }
-.branding .logo-writing .heavy {
-  font-weight: 700; }
-.branding .logo-writing .extraBottomCrossed {
-  padding: 0 0 1.9em 0; }
-.branding .logo-writing .extraBottomSpell {
-  padding: 0 0 1.2em 0; }
-.branding .logo-writing .extraBottom {
-  padding: 0 0 3.2em 0; }
-
-/**
- * @author: Handsoncode
- */
-.branding .logo-artworks {
-  padding-top: 60px; }
-  .branding .logo-artworks h2.divider:before {
-    top: 85%; }
-    @media only screen and (min-width: 40.0625em) {
-      .branding .logo-artworks h2.divider:before {
-        top: 50px;
-        left: 49%; } }
-  .branding .logo-artworks a {
-    font-size: inherit; }
-  .branding .logo-artworks .extraBottom {
-    padding: 0 0 3.2em 0; }
-  .branding .logo-artworks h4 {
-    text-align: left;
-    padding: 20px 0 2px 0; }
-
-/**
- * @author: Handsoncode
- */
-.branding .logo-final {
-  padding: 60px 0; }
-  .branding .logo-final h3 {
-    margin: 0;
-    text-align: left; }
-  .branding .logo-final .svg {
-    width: 30px;
-    height: 30px;
-    margin: 0;
-    fill: #363636; }
+  width: 80%; }
 
 /**
  * @author: Handsoncode

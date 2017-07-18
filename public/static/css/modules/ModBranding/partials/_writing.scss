@@ -4,41 +4,7 @@
 
 .branding .logo-writing {
 
-  h3 {
-    padding-top: 20px;
-
-    @media only screen and (min-width: $mediumWidth) {
-    margin: 0;
-    text-align: left;
-    line-height: 1em;
-    }
-  }
-
   .logo-holder {
-    padding: 0 40px 0 0;
-
+    width: 80%;
   }
-  .crossedout {
-    font-size: 1em;
-    font-weight: 700;
-    text-decoration: line-through;
-  }
-
-  .heavy {
-    font-weight: 700;
-  }
-
-  .extraBottomCrossed {
-    padding: 0 0 1.9em 0;
-  }
-
-  .extraBottomSpell {
-    padding: 0 0 1.2em 0;
-  }
-
-  .extraBottom {
-    padding: 0 0 3.2em 0;
-  }
-
-
 }

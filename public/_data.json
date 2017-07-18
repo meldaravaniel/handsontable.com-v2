@@ -1,10 +1,10 @@
 {
-    "sitemap": {
+    "sitemap.xml": {
         "layout": false
     },
 
     "branding": {
-        "title": "Branding"
+        "title": "Brand guidelines"
     },
 
     "community-download": {
@@ -16,7 +16,7 @@
     },
 
     "download": {
-        "title": "Download"
+        "title": "Download Handsontable Spreadsheet"
     },
 
     "knowledge-base": {
@@ -40,15 +40,11 @@
     },
 
     "index": {
-        "title": "JavaScript Spreadsheet Library For Web Apps"
+        "title": "JavaScript Spreadsheet Component For Web Apps"
     },
 
     "pricing": {
         "title": "Pricing plans"
-    },
-
-    "support": {
-        "title": "Priority support and consulting services"
     },
 
     "team": {

@@ -4,14 +4,8 @@
 
 .branding .logo-versions {
 
-  padding-bottom: 40px;
-
-  @media only screen and (min-width: $mediumWidth) {
-    padding: 0 0 40px 0;
-  }
-
   .logo-holder {
-    padding: 20px 0 20px 0;
+    padding: 20px 0;
     height: 200px;
     background-color: $darkWhite;
 

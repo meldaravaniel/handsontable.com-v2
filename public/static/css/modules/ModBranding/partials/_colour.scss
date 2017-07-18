@@ -2,58 +2,36 @@
  * @author: Handsoncode
  */
 
-.branding .logo-colour {
-  padding-bottom: 40px;
-
-  @media only screen and (min-width: $mediumWidth) {
-    padding: 0 0 40px 0;
-  }
+.branding .logo-colors {
 
   h4 {
     margin: 0;
-    padding: 5px 0 0 0;
-    text-align: left;
-    font-weight: 500;
+    padding: 5px 0 10px;
+    font-size: 20px;
   }
 
-  p {
-    padding: 0 0 10px 0;
-    font-size: 0.700em;
-  }
-
-
-  .brand-blue {
-    background-color: $brandBlue;
-    height: 130px;
-  }
-
-  .brand-red {
-    background-color: $brandRed;
-    height: 130px;
-  }
-
-  .brand-green {
-    background-color: $brandGreen;
-    height: 130px;
-  }
-
-  .brand-navy {
-    background-color: $brandDeepNavy;
-    height: 130px;
-  }
-
-  .brand-blue,
-  .brand-red,
-  .brand-green,
-  .brand-navy {
-    padding: 15px ;
-    color: $backgroundTextColor;
-  }
-
-  .brand-yellow {
+  .color {
     padding: 15px;
-    background-color: $brandYellow;
-    color: $darkGray;
-    height: 130px;
+    color: #fff;
+
+    &.brand-blue {
+      background-color: $brandBlue;
+    }
+
+    &.brand-red {
+      background-color: $brandRed;
+    }
+
+    &.brand-green {
+      background-color: $brandGreen;
+    }
+
+    &.brand-navy {
+      background-color: $brandDeepNavy;
+    }
+    &.brand-yellow {
+      background-color: $brandYellow;
+      color: $baseGray;
+    }
   }
 }
