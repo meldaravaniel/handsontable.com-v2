@@ -4524,13 +4524,15 @@ header {
       margin-top: 0;
       text-align: center; } }
 .knowledge-base h3 {
-  margin: 30px 0 30px;
+  margin: 30px 0;
   font-weight: 500; }
 .knowledge-base h4 {
-  margin: 10px 0 0 0;
+  margin: 10px 0 0;
   padding: 0;
   font-weight: 400;
   text-align: left; }
+  .knowledge-base h4 a {
+    font-size: 16px; }
 .knowledge-base h5 {
   margin: 0;
   padding: 0;
@@ -4538,8 +4540,8 @@ header {
   line-height: 2em;
   font-weight: 400; }
 .knowledge-base .bottom-section {
-  margin: 60px 0 0 0;
-  padding: 0 0 90px 0;
+  margin: 60px 0 0;
+  padding: 0 0 90px;
   background: #039be5;
   text-align: center; }
   .knowledge-base .bottom-section h2 {
@@ -4550,28 +4552,21 @@ header {
   list-style-type: disc;
   list-style-position: inside; }
 .knowledge-base .answers > div {
+  -webkit-transition: all 1.5s ease-in-out;
+  -moz-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+  height: auto;
+  margin: 5px 0;
+  max-height: 0;
   padding-left: 20px;
-  display: block;
+  overflow: hidden;
   border-left: 10px solid #E3E3E3; }
+  .knowledge-base .answers > div p {
+    padding: 10px 0; }
   .knowledge-base .answers > div.opened {
-    -webkit-transition: all 0.8s ease-in-out;
-    -moz-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
-    height: 100%;
-    display: block; }
-  .knowledge-base .answers > div.closed {
-    -webkit-transition: all 0.8s ease-in-out;
-    -moz-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
-    height: 0;
-    display: none; }
-.knowledge-base .answers a {
-  font-size: inherit;
-  text-decoration: none; }
+    max-height: 1010px; }
 .knowledge-base .answers img {
   margin: 10px 0; }
-.knowledge-base .bottom-headline {
-  margin: 97px 0 23px; }
 
 /**
  * @author: Handsoncode
