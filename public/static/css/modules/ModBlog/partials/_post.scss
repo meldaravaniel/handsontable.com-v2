@@ -9,7 +9,7 @@
   }
 
   .headline {
-    margin-bottom: 0;
+    margin-bottom: 20px;
     padding-bottom: 10px;
     font-size: 2.313em;
     text-align: center;
@@ -42,10 +42,9 @@
 
   .body {
     margin-top: 50px;
-    font-family: $readFont;
 
     p {
-      margin: 45px 0;
+      margin: 25px 0;
       font-size: 1em;
       line-height: 1.68;
       letter-spacing: -0.003em;
@@ -173,9 +172,12 @@
     }
 
     h5 {
-      margin: 12px 0;
-      font-weight: 600;
+      margin: 0;
       text-align: left;
+    }
+
+    p {
+      margin-top: 5px;
     }
 
     a {

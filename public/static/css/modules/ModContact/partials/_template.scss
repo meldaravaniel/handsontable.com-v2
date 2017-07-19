@@ -1,99 +1,40 @@
 /**
  * @author: Handsoncode
  */
-
-.contact {
-
-  h2 {
-    margin: 0;
-    padding: 0;
-
-    @media only screen and (min-width: $mediumWidth) {
-      padding-bottom: 30px;
-    }
-
-    &:before {
-      top: 110%;
-
-      @media only screen and (min-width: $mediumWidth) {
-        top: 1px;
-      }
-    }
-  }
+.contact  {
 
   h3 {
-    margin: 0;
-    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+    margin: 0 0 14px;
   }
 
-  p {
-    margin: 0;
-  }
-
-  h4 {
-    margin: 40px 0 0 0;
-    padding: 0;
-    font-weight: 400;
+  .partner,
+  .office {
     text-align: left;
+    margin-top: 31px;
+  }
+
+  #form-sent,
+  #form-error {
+    display: none;
+  }
+
+  .notification {
+    margin: 0 0 20px;
+  }
+
+  form {
+    padding-bottom: 55px;
 
     @media only screen and (min-width: $largeWidth) {
-      margin:0;
+      padding-bottom: 0;
+    }
+
+    textarea {
+      min-height: 175px;
+      margin-bottom: 6px;
     }
   }
 
-  span {
-    margin-bottom: 10px;
-    font-size: 0.875em;
-    font-style: italic;
-    color: $darkGray;
-    float: left;
-
-    @media only screen and (min-width: $largeWidth) {
-      margin:0;
-    }
-  }
-
-  .subhead {
-    margin: 0 0 60px 0;
-    padding: 0;
-    text-align: left;
-    font-family: $regularFont;
-    font-weight: 300;
-
-    @media only screen and (min-width: $largeWidth) {
-      text-align: center;
-    }
-  }
-
-  img {
-    margin-bottom: 10px;
-    width: 80px;
-
-    @media only screen and (min-width: $largeWidth) {
-    margin-left: 30px;
-    }
-  }
-
-  .btn {
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-
-  svg {
-    @include square(24px);
-    margin: 0 5px -8px 5px;
-    padding: 0;
-    fill: $darkGray;
-  }
-
-  .contact-footer {
-    margin: 0 0 60px 0;
-    padding: 0;
-    text-align: center;
-    line-height: 1.8em;
-
-    a {
-      font-size: inherit;
-    }
-  }
 }

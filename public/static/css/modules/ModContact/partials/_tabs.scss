@@ -3,26 +3,30 @@
  */
 
 .contact .tabs {
-    padding-left: 0;
-    padding-right: 0;
 
-  a {
-    font-size: inherit;
+  & > div {
+    display: none;
+
+    &:first-child, &.active {
+      display: block;
+    }
+  }
+
+  code {
+    padding: 11px 15px;
+    margin-top: 20px;
+    overflow: auto;
+    white-space: nowrap;
+    background-color: #fff;
+    font-family: $codeFont;
+    border: 2px solid $gray;
+  }
+
+  .cdn-tab-border {
+    border-bottom: 1px solid $lightGray;
   }
 
   .extra {
     margin: 10px 0 15px 0;
-  }
-
-  .tab {
-    margin-bottom: -3px;
-    overflow: auto;
-
-    @media only screen and (min-width: $mediumWidth) {
-      background: none;
-    }
-    li {
-      margin: 0 25px;
-    }
   }
 }
