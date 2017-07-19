@@ -180,7 +180,7 @@ header {
       color: #fff;
     }
 
-    a:hover {
+    a:hover:not(.btn) {
       color: $brandFeatherBlue;
     }
 
