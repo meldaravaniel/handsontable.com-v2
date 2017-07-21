@@ -37,4 +37,24 @@
       padding: 10px 24px;
     }
   }
+  .actions {
+    padding-top: 5px;
+
+    a {
+      margin: 0 6px;
+      font-size: 13px;
+
+      &:first-child {
+        margin-right: 30px;
+      }
+
+      &.new {
+        color: $brandGreen;
+      }
+
+      &.remove {
+        color: $brandRed;
+      }
+    }
+  }
 }

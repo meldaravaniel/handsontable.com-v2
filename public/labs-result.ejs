@@ -39,13 +39,25 @@
                     </div>
                 </div>
             </div>
-            <div class="actions gap-top-xsmall">
-                <p><a href="#" target="_blank">Create new spreadsheet</a></p>
-                <p><a href="#" target="_blank">Remove</a></p>
+            <div class="actions right">
+                <a href="#" target="_blank">Copy HTML</a>
+                <a href="#" target="_blank" class="remove">Remove</a>
+                <a href="/labs-upload.html" target="_blank" class="new">Create new</a>
             </div>
         </div>
         <div class="small-12 large-3 columns gap-top-xxsmall">
-            <div class="share">
+            <div class="stats">
+                <h3>Stats</h3>
+                <p>Created at: <strong>May 16, 2017</strong></p>
+                <p>Worksheets: <strong>4</strong></p>
+                <p>Non-blank cells: <strong>25</strong></p>
+                <p>Formulas: <strong>25</strong></p>
+            </div>
+            <div class="report gap-top-xxsmall">
+                <h3>Help us improve</h3>
+                <a href="#" target="_blank">Give feedback</a>
+            </div>
+            <div class="share gap-top-xxsmall">
                 <h3>Share it</h3>
                 <input type="text" id="share-url" value="https://labs.handsontable.com/convert/013081380180"
                        onclick="this.select();" readonly />
@@ -61,22 +73,25 @@
                         </svg>
                     </a>
                 </p>
-
-            </div>
-            <div class="report gap-top-xxsmall">
-                <h3>Help us improve</h3>
-                <a href="#" target="_blank">Give feedback</a>
             </div>
         </div>
     </div>
 
     <div class="row">
         <div class="large-5 columns project-description">
-            <h3 class="gap-top-small">Statistics</h3>
-            <p>Created at: <strong>May 16, 2017</strong></p>
-            <p>Worksheets: <strong>4</strong></p>
-            <p>Non-blank cells: <strong>25</strong></p>
-            <p>Formulas: <strong>25</strong></p>
+            <h3 class="gap-top-small">About this project</h3>
+            <p>This is an experimental playground which we created to better develop Excel-like features in Handsontable.
+                However, it turned out that some of you found this project useful so we decided to make it available for
+                a wider audience.
+                Now, how it works - we use a microservice on the back-end side based on
+                <a href="https://github.com/PHPOffice/PHPExcel" target="_blank">PHP Excel</a> to parse and serialize the
+                binary file and then save it to the database. The saved data is then bind with Handsontable
+                which has a built-in parser to extract the configuration entries such as colors, sizes etc.
+            </p>
+            <p>At this stage this app can only handle formulas, values, and styles. Unfortunately, all
+                cross-sheet formulas will be calculated and turned into static values. Also, after the file is
+                uploaded you can modify the content, but all changes will be lost after the page reloads.</p>
+            <p>By using this app you agree to be bound by our <a href="/terms-of-use.html">terms of use</a>.</p>
         </div>
 
         <div class="large-6 columns">

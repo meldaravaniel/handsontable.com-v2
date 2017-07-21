@@ -4,6 +4,13 @@
 
 .labs {
 
+  .stats, .report, .share {
+
+    h3 {
+      font-size: 22px;
+    }
+  }
+
   .share {
 
     input[type="text"] {
@@ -28,11 +35,10 @@
     }
   }
 
-  .report {
+  .stats {
 
-  }
-
-  .actions {
-
+    p {
+      line-height: 0.6;
+    }
   }
 }

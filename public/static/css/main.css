@@ -466,7 +466,7 @@ form.light {
   font-size: 0.7em;
   float: right;
   margin: 0;
-  padding: 5px 0 0 0;
+  padding: 5px 0 0;
   color: #C5C5C5; }
   @media only screen and (min-width: 64.0625em) {
     .subscribe-form span {
@@ -496,7 +496,7 @@ form.light {
       position: relative;
       left: 20px;
       float: left;
-      border-radius: 4px 4px 4px 4px; } }
+      border-radius: 4px; } }
 .subscribe-form #mc_embed_signup_scroll {
   position: relative; }
 .subscribe-form #mce-responses {
@@ -504,13 +504,11 @@ form.light {
   font-size: 13px;
   min-height: 10px;
   padding: 5px;
-  top: 156px;
+  top: 69px;
   background: #fff;
   text-align: center; }
   @media only screen and (min-width: 64.0625em) {
     .subscribe-form #mce-responses {
-      top: 153px;
-      min-height: auto;
       text-align: left;
       width: 65%; } }
   .subscribe-form #mce-responses #mce-error-response {
@@ -5091,6 +5089,8 @@ header {
 /**
  * @author: Handsoncode
  */
+.labs .stats h3, .labs .report h3, .labs .share h3 {
+  font-size: 22px; }
 .labs .share input[type="text"] {
   width: 100%;
   padding: 4px 14px;
@@ -5109,6 +5109,8 @@ header {
   margin: 0 10px 0 2px; }
   .labs .share svg:hover {
     opacity: .9; }
+.labs .stats p {
+  line-height: 0.6; }
 
 /**
  * @author: Handsoncode
@@ -5145,6 +5147,17 @@ header {
   text-align: justify; }
 .labs .subscribe-form .btn {
   padding: 10px 24px; }
+.labs .actions {
+  padding-top: 5px; }
+  .labs .actions a {
+    margin: 0 6px;
+    font-size: 13px; }
+    .labs .actions a:first-child {
+      margin-right: 30px; }
+    .labs .actions a.new {
+      color: #43a047; }
+    .labs .actions a.remove {
+      color: #E87677; }
 
 /**
  * @author: Handsoncode
