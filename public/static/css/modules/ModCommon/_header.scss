@@ -73,7 +73,7 @@ header {
           }
 
           #HW_badge_cont {
-            @include absolute-top-left (0, 11px);
+            @include absolute-top-left (0, 13px);
 
             #HW_badge {
               @include square (12px);

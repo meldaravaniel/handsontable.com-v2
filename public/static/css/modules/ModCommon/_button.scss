@@ -114,6 +114,30 @@
         }
       }
     }
+    &-red {background-color: $brandRed;
+      &.bg-lighten {
+        @include transition (background-color .3s ease-out, transform .3s ease-out);
+        &:hover {
+          background-color: $brandRedActiveLight;
+        }
+      }
+    }
+    &-yellow {background-color: $brandYellow;
+      &.bg-lighten {
+        @include transition (background-color .3s ease-out, transform .3s ease-out);
+        &:hover {
+          background-color: $brandYellowActiveLight;
+        }
+      }
+    }
+    &-purple {background-color: $brandPurple;
+      &.bg-lighten {
+        @include transition (background-color .3s ease-out, transform .3s ease-out);
+        &:hover {
+          background-color: $brandPurpleActiveLight;
+        }
+      }
+    }
     &-white {background-color: #fff}
   }
 }

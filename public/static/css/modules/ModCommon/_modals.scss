@@ -2,353 +2,53 @@
  * @author: Handsoncode
  */
 
-.code-modal {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 100000;
-
-  .cancel {
-    @include square(24px);
-    float: right;
-    fill: $brandRed;
-  }
-
-  small {
-    color: $gray;
-  }
-
-  h3 {
-    text-align: center;
-    font-weight: 400;
-  }
-
-  p {
-    margin: 0;
-    color: $middleGray;
-    text-align: center;
-  }
-
-  .code {
-    width: 90%;
-    margin: 40px auto 60px auto;
-    padding: 20px 20px 10px 20px;
-    background-color: $lightGray;
-    border: 1px dashed $lightGray;
-    border-radius: 10px;
-
-    @media only screen and (min-width: $largeWidth) {
-      width: 70%;
-      height: 60%;
-      margin: 90px auto 90px auto;
-    }
-
-    .svg {
-      margin-top: 50px;
-      height: 100px;
-      fill: $brandBlue;
-
-      @media only screen and (min-width: $largeWidth) {
-        margin-top: 100px;
-      }
-    }
-
-    .btn {
-      margin-top: 10px;
-    }
-  }
-
-  .buttons {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: inherit;
-  }
-
-  .code-box {
-    @include border($darkWhite);
-    margin-top: 40px;
-    margin-bottom: 40px;
-    background-color: #FFF;
-
-    @media only screen and (min-width: $largeWidth) {
-      margin: 25px 20px 20px 20px;
-    }
-
-    .tabs {
-      @include border-bottom;
-      padding: 6px;
-
-      a {
-        font-size: 0.803em;
-        display: block;
-        padding: 3px 6px;
-
-        @media only screen and (min-width: $largeWidth) {
-          font-size: inherit;
-          padding: 3px 13px;
-        }
-      }
-
-      .action-link a {
-        color: $secondTextColor;
-      }
-
-      svg {
-        @include square (15px);
-        position: relative;
-        top: 2px;
-        margin-right: 4px;
-        fill: currentColor;
-      }
-
-      [aria-selected="true"] {
-        text-decoration: none;
-        color: $darkGray;
-        cursor: default;
-      }
-    }
-
-    .tabs-content {
-      max-height: 350px;
-      overflow-y: auto;
-      padding: 10px 27px;
-
-      ol {
-        padding: 0;
-      }
-
-      code {
-        background: #FFF;
-        border: 0;
-        padding: 0;
-        font-size: 0.7em;
-        font-weight: 400;
-        font-family: Consolas, "Liberation Mono", Courier, monospace;
-      }
-
-      #js-tab {
-        div[id^="js_feature"] {
-          font-weight: bold;
-          margin-left: 26px;
-          color: #E87677;
-        }
-      }
-
-      #data-tab {
-        p {
-          overflow: auto;
-        }
-      }
-
-      #enabled-features-tab {
-        li[data-enabled-feature="visible"] ~ li[data-enabled-placeholder] {
-          display: none;
-        }
-
-        li[data-enabled-feature="hidden"] {
-          display: none;
-        }
-
-        li[data-enabled-feature="visible"] {
-          display: block;
-
-          h4, p {
-            margin: 6px 0 24px;
-            font-size: 1em;
-          }
-
-          h4 {
-            margin: 0;
-            font-weight: bold;
-          }
-        }
-      }
-
-      code {
-        margin: 0;
-      }
-    }
-  }
+/* Remove the scroll on the body */
+body.modal-open {
+  overflow: hidden;
 }
 
-.confirmation {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.9);
-  z-index: 100000;
+.modal {
 
-  h3 {
-    text-align: center;
-    font-weight: 400;
-  }
-
-  p {
-    color: $middleGray;
-    text-align: center;
-  }
-
-  .cancel {
-    @include square(24px);
-    float: right;
-    fill: $brandRedActive;
-  }
-
-  .uploaded {
-    width: 300px;
-    margin: 40px auto 60px auto;
-    padding: 20px 10px 10px 10px;
-    background-color: $lightGray;
-    border: 1px dashed $lightGray;
+  .modal-container {
+    @include fixed-top-left (50%, 50%);
+    @include translate(-50%, -50%);
+    @include rectangle (480px, 440px);
+    padding: 40px 0 0;
+    z-index: 400;
     border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 26px rgba(0, 0, 0, 0.1), 0 3px 26px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 
-    @media only screen and (min-width: $largeWidth) {
-      height: 380px;
-      width: 400px;
-      margin: 90px auto 90px auto;
-      padding: 20px;
+    .modal-content {
+      backface-visibility: hidden;
     }
+  }
 
-    .svg {
-      margin-top: 50px;
-      height: 100px;
-      fill: $brandBlue;
-      @media only screen and (min-width: $largeWidth) {
-        margin-top: 50px;
+  .modal-backdrop {
+    @include fixed-top-right (0, 0);
+    bottom: 0;
+    left: 0;
+    z-index: 300;
+    overflow: hidden;
+
+    &.bg {
+      &-light {
+        background: rgba(255, 255, 255, 1);
+      }
+      &-light-transparent {
+        background: rgba(255, 255, 255, 0.9);
+      }
+      &-dark {
+        background: rgba(0, 0, 0, 1);
+      }
+      &-dark-transparent {
+        background: rgba(0, 0, 0, 0.9);
       }
     }
-
-    .btn {
-      margin-top: 10px;
-    }
   }
 
-  .uploaded-error {
-    width: 300px;
-    margin: 40px auto 60px auto;
-    padding: 20px 20px 10px 10px;
-    border-radius: 10px;
-    background-color: $brandRed;
-
-    @media only screen and (min-width: $largeWidth) {
-      height: 400px;
-      width: 450px;
-      margin: 90px auto;
-    }
-
-    p {
-      color: $darkWhite;
-    }
-
-    .svg {
-      height: 100px;
-      margin-top: 50px;
-      fill: $darkWhite;
-
-      @media only screen and (min-width: $largeWidth) {
-        margin: 80px 20px 20px 70px;
-
-      }
-    }
-
-    .btn {
-      margin-top: 10px;
-    }
-  }
-
-  .buttons {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: inherit;
+  &.hidden, .hidden {
+    display: none;
   }
 }
-
-.success {
-  background-color: rgba(255, 255, 255, 0.96);
-  z-index: 100000;
-  transition: all .25s ease-in-out;
-  -moz-transition: all .25s ease-in-out;
-  -webkit-transition: all .25s;
-
-  &:hover,
-  &:active,
-  &:focus {
-    opacity: 1;
-  }
-
-  .mail-message {
-    margin: 200px auto 200px auto;
-    text-align: center;
-
-    h1 {
-      font-weight: 600;
-
-      span {
-        float: inherit;
-        font-style: normal;
-        color: $brandBlue;
-      }
-    }
-
-    h2 {
-      margin: 10px 0 10px 0;
-      font-size: 1.4em;
-      padding: 0;
-    }
-
-    p {
-      color: $darkGray;
-      font-size: 1em;
-      margin: 20px;
-    }
-
-    svg {
-      @include square(150px);
-      fill: $darkGray;
-      margin: 40px 10px 0 10px;
-      padding: 0;
-
-    }
-  }
-
-  .phone-message {
-    margin: 200px auto 200px auto;
-    text-align: center;
-
-    h1 {
-      font-weight: 600;
-
-      span {
-        float: inherit;
-        font-style: normal;
-        color: $brandBlue;
-      }
-    }
-
-    h2 {
-      margin: 10px 0 10px 0;
-      font-size: 1.4em;
-      padding: 0;
-    }
-
-    p {
-      color: $darkGray;
-      font-size: 1em;
-      margin: 20px;
-    }
-
-    svg {
-      @include square(150px);
-      fill: $darkGray;
-      margin: 30px 10px 30px 10px;
-      padding: 0;
-
-    }
-  }
-}
-

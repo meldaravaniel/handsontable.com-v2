@@ -5,6 +5,7 @@
 /* [ brand colors ] */
 $brandBlue: #039be5;
 $brandRed: #E87677;
+$brandPurple: #880e4f;
 $brandVibrantGreen: #59a500;
 $brandGreen: #43a047;
 $brandLightGreen: #7ec896;
@@ -45,6 +46,7 @@ $darkGrayActive: darken($darkGray, 8%);
 $lightGrayActive: darken($lightGray, 8%);
 $darkWhiteActive: darken($darkWhite, 8%);
 $brandYellowActive: darken($brandYellow, 8%);
+$brandPurpleActive: darken($brandPurple, 8%);
 
 /* [ active lighter colors ] */
 $brandBlueActiveLight: lighten($brandBlue, 2%);
@@ -56,6 +58,7 @@ $lightGrayActiveLight: lighten($lightGray, 2%);
 $darkWhiteActiveLight: lighten($darkWhite, 2%);
 $brandDarkNavyActiveLight: lighten($brandDarkNavy, 2%);
 $brandYellowActiveLight: lighten($brandYellow, 2%);
+$brandPurpleActiveLight: lighten($brandPurple, 2%);
 
 /* [ functional color ] */
 $textColor: $baseGray;

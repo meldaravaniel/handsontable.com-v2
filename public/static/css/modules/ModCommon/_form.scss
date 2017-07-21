@@ -88,13 +88,6 @@ form.light {
 }
 
 .subscribe-form {
-  margin: 0 0 20px 0;
-  padding: 20px 0;
-
-  @media only screen and (min-width: $largeWidth) {
-    padding: 20px 0;
-    margin-top: 30px;
-  }
 
   span {
     font-size: 0.7em;
@@ -109,11 +102,6 @@ form.light {
     }
   }
 
-  h3 {
-    font-weight: 300;
-    padding-bottom: 10px
-  }
-
   input[type="email"],
   input[type="submit"] {
     border-radius: 2px;
@@ -121,9 +109,9 @@ form.light {
 
   input[type="email"] {
     margin: 0;
-    padding: 20px;
-    background: $lightGray;
-    height: 47px;
+    padding: 19px;
+    background: $darkWhite;
+    height: 38px;
 
     @media only screen and (min-width: $largeWidth) {
       float: left;
@@ -147,18 +135,20 @@ form.light {
     }
   }
 
+  #mc_embed_signup_scroll {
+    position: relative;
+  }
+
   #mce-responses {
     position: absolute;
-    font-size: 0.715em;
+    font-size: 13px;
     min-height: 10px;
-    padding: 0;
-    top: 180px;
+    padding: 5px;
+    top: 156px;
     background: #fff;
     text-align: center;
     @media only screen and (min-width: $largeWidth) {
-      font-size: 0.5em;
-      top: 145px;
-      padding: 0;
+      top: 153px;
       min-height: auto;
       text-align: left;
       width: 65%;

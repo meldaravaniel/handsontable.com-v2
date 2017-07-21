@@ -1,99 +1,87 @@
-<section class="labs">
-    <!-- BRANDING HEADER -->
-    <div class="header-labs">
-        <div class="row excel-upload">
-            <div class="large-12 element-center columns">
-                <p>Handsontable for</p>
-                <h1>schedule_something.xlsx</h1>
-                <a href="" class="btn large ghost-green">Create new</a>
-                <a href="" class="btn large ghost-red">Remove</a>
-            </div>
+<section class="labs gap-bottom-xsmall">
+
+    <div class="row headline">
+        <div class="columns">
+            <h1 class="text-center size-large gap-top-medium gap-bottom-small">
+                timesheet.xlsx<br/>
+                <span>Your Handsontable spreadsheet from an Excel file</span>
+            </h1>
         </div>
     </div>
-    <!-- UPLOAD TABS -->
+
     <div class="row">
-        <div class="large-12  columns ">
-            <div class="tabs tabs-labs">
+        <div class="small-12 large-9 columns">
+            <div class="tabs tabs-sheets">
                 <div class="tab">
-                    <button>Sheet 1</button>
-                    <button>Sheet 2</button>
-                    <button>Sheet 3</button>
+                    <ul>
+                        <li id="tab-sheet1" class="active">Sheet1</li>
+                        <li id="tab-sheet2">Sheet2</li>
+                        <li id="tab-sheet3">Sheet3</li>
+                    </ul>
                 </div>
-
-                <div class="tabcontent">
+                <div id="sheet1" class="active">
+                    <div class="plugin-preview">
+                        <div id="hot"></div>
+                    </div>
+                </div>
+                <div id="sheet2">
                     <div class="row">
-                        <div class="large-9 columns">
-                            <div class="plugin-preview">
-                                <div id="hot"></div>
-                            </div>
-                            <div class="code-links">
-                                <a href="">Code</a>
-                                <a href="">Data</a>
-                                <a href="">Save HTML</a>
-                            </div>
+                        <div class="small-12 columns">
+                            Handsontable Sheet 2
                         </div>
-                        <div class="large-3 columns">
-                            <div class="result-rate">
-                                <h3>Rate it</h3>
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
-                                <p>or Please go ahead and</p>
-                                <a href="" class="btn large ghost-blue">
-                                    <svg class="svg">
-                                        <use xlink:href="#bug"></use>
-                                    </svg>
-                                    Report a bug</a>
-                            </div>
-
-                            <div class="social-share">
-                                <h3>Share it</h3>
-                                <p>With this unique link</p>
-                                <form>
-                                    <input placeholder="generated-spreadsheet-link" type="Text" value="" name="Link"
-                                           class="generated link" id="mce-EMAIL">
-                                </form>
-                                <p>Or via social media</p>
-                                <a href="#">
-                                    <svg class="svg">
-                                        <use xlink:href="#facebook"></use>
-                                    </svg>
-                                </a>
-                                <a href="#">
-                                    <svg class="svg">
-                                        <use xlink:href="#twitter"></use>
-                                    </svg>
-                                </a>
-                            </div>
+                    </div>
+                </div>
+                <div id="sheet3">
+                    <div class="row">
+                        <div class="small-12 columns">
+                            Handsontable Sheet 3
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="actions gap-top-xsmall">
+                <p><a href="#" target="_blank">Create new spreadsheet</a></p>
+                <p><a href="#" target="_blank">Remove</a></p>
+            </div>
+        </div>
+        <div class="small-12 large-3 columns gap-top-xxsmall">
+            <div class="share">
+                <h3>Share it</h3>
+                <input type="text" id="share-url" value="https://labs.handsontable.com/convert/013081380180"
+                       onclick="this.select();" readonly />
+                <p>
+                    <a href="#" target="_blank" title="Share on Facebook">
+                        <svg class="svg">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" title="Share on Twitter">
+                        <svg class="svg">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+                </p>
+
+            </div>
+            <div class="report gap-top-xxsmall">
+                <h3>Help us improve</h3>
+                <a href="#" target="_blank">Give feedback</a>
+            </div>
         </div>
     </div>
-    <!-- ABOUT AND NEWSLETTER SIGN UP -->
-    <div class="row sub-section">
-        <div class="large-4 columns">
-            <h3>About this app</h3>
-            <p>This is Handsontable with configuration created from an existing XLSX/CSV file.
-                It is not an internal plugin of Handsontable. We use a microservice on the back-end side
-                to parse your file and then turn it into a working instance of Handsontable.</p>
+
+    <div class="row">
+        <div class="large-5 columns project-description">
+            <h3 class="gap-top-small">Statistics</h3>
+            <p>Created at: <strong>May 16, 2017</strong></p>
+            <p>Worksheets: <strong>4</strong></p>
+            <p>Non-blank cells: <strong>25</strong></p>
+            <p>Formulas: <strong>25</strong></p>
         </div>
 
-        <div class="large-3 columns">
-            <h3>Statistics</h3>
-            <p>
-                Created at: <b>May 16, 2017</b><br/>
-                Worksheets: <b>4</b><br/>
-                Cells: <b>160</b><br/>
-                Non-blank cells: <b>25</b><br/>
-                Formulas: <b>25</b><br/>
-            </p>
-        </div>
-        <div class="large-5 columns">
+        <div class="large-6 columns">
             <div class="subscribe-form">
-                <h3>Subscribe to updates</h3>
-                <!-- BEGIN MAIL CHIMP SIGN UP FORM -->
+                <h3 class="gap-top-small">Subscribe to updates</h3>
                 <div id="mc_embed_signup">
                     <form action="//handsontable.us9.list-manage.com/subscribe/post?u=47073b08d03ebee16188c1687&amp;id=0a640d7654"
                           method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
@@ -103,16 +91,17 @@
                                 <input placeholder="Email Address" type="email" value="" name="EMAIL"
                                        class="required email" id="mce-EMAIL">
                                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                                       class="button btn large ghost-blue">
+                                       class="btn bg-blue text-white bg-ligthen">
                             </div>
                             <div id="mce-responses">
                                 <div class="response" id="mce-error-response" style="display:none"></div>
                                 <div class="response" id="mce-success-response" style="display:none"></div>
                             </div>
                             <span>We never spam. Opt-out any time.</span>
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                <input type="text" name="b_47073b08d03ebee16188c1687_0a640d7654" tabindex="-1" value="">
-                            </div>
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                              name="b_47073b08d03ebee16188c1687_0a640d7654"
+                              tabindex="-1"
+                              value=""></div>
                         </div>
                     </form>
                 </div>
@@ -125,17 +114,17 @@
                         ftypes[0] = 'email';
                     }(jQuery));
                     var $mcj = jQuery.noConflict(true);</script>
-                <!--END MAIL CHIMP SIGN UP FORM -->
             </div>
         </div>
     </div>
-    <div class="row comments" id="comments">
+    <div class="row comments gap-top-small" id="comments">
         <div class="large-8 medium-12 large-centered columns">
+            <!-- START EMBED CODE -->
             <div id="disqus_thread"></div>
             <script>
                 var disqus_config = function () {
                     this.page.url = handsontable.com;
-                    this.page.identifier = handsontable;
+                    this.page.identifier = handsontable-labs;
                 };
                 (function () { // DON'T EDIT BELOW THIS LINE
                     var d = document, s = d.createElement('script');
@@ -146,20 +135,35 @@
                     (d.head || d.body).appendChild(s);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
-                    powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                    comments powered by Disqus.</a></noscript>
+            <!-- END EMBED CODE -->
         </div>
     </div>
 </section>
-
-<script src="/static/js/examples/feature.js"></script>
-<script src="/static/js/examples/examples.js"></script>
-
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56b33be61739fd7f"
         async="async"></script>
 <script id="dsq-count-scr" src="//handsontable.disqus.com/count.js" async></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
+<!-- Confirm  modal -->
+<div class="modal hidden">
+    <div class="modal-container">
+        <div class="modal-content text-center">
+            <div class="loading">
+                <svg class="svg" class="loader">
+                    <use xlink:href="#lab-bottles"></use>
+                </svg>
+            </div>
+            <p><strong>"Scientist believe in things, not in person"</strong></p>
+            <p>~Marie Curie</p>
+            <br/>
+            <p>Uploading <span class="filename">timesheet.xlsx</span></p>
+            <p class="hidden">Nothing happens? <a href="#" class="filename">Refresh the page</a></p>
+        </div>
+    </div>
+    <div class="modal-backdrop bg-light-transparent"></div>
+</div>
 
 <script data-jsfiddle>
     var dataObject = [
@@ -385,80 +389,16 @@
         }
     ];
 
-    var currencyCodes = ['EUR', 'JPY', 'GBP', 'CHF', 'CAD', 'AUD', 'NZD', 'SEK', 'NOK', 'BRL', 'CNY', 'RUB', 'INR', 'TRY', 'THB', 'IDR', 'MYR', 'MXN', 'ARS', 'DKK', 'ILS', 'PHP'];
-
-    var flagRenderer = function (instance, td, row, col, prop, value, cellProperties) {
-        var currencyCode = value;
-
-        while (td.firstChild) {
-            td.removeChild(td.firstChild);
-        }
-
-        if (currencyCodes.indexOf(currencyCode) > -1) {
-            var flagElement = document.createElement('DIV');
-            flagElement.className = 'flag ' + currencyCode.toLowerCase();
-            td.appendChild(flagElement);
-
-        } else {
-            var textNode = document.createTextNode(value === null ? '' : value);
-            td.appendChild(textNode);
-        }
-    };
-
     var hotElement = document.querySelector('#hot');
-    var hotElementContainer = hotElement.parentNode;
     var hotSettings = {
         data: dataObject,
-        columns: [
-            {
-                data: 'id',
-                type: 'numeric',
-                width: 40
-            },
-            {
-                data: 'flag',
-                renderer: flagRenderer
-            },
-            {
-                data: 'currencyCode',
-                type: 'text'
-            },
-            {
-                data: 'currency',
-                type: 'text'
-            },
-            {
-                data: 'level',
-                type: 'numeric',
-                format: '0.0000'
-            },
-            {
-                data: 'units',
-                type: 'text'
-            },
-            {
-                data: 'asOf',
-                type: 'date',
-                dateFormat: 'MM/DD/YYYY'
-            },
-            {
-                data: 'onedChng',
-                type: 'numeric',
-                format: '0.00%'
-            }
-        ],
         stretchH: 'all',
-        width: parseInt(hotElementContainer.offsetWidth, 10),
         autoWrapRow: true,
-        height: 441,
-        maxRows: 22
+        height: 455,
+        maxRows: 22,
+        rowHeaders: true,
+        colHeaders: true
     };
 
     var hot = new Handsontable(hotElement, hotSettings);
 </script>
-
-<script src="/static/js/examples/examples_init.js"></script>
-<script src="/static/js/examples/example_code_generator.js"></script>
-<script src="/static/js/examples/jsfiddleExporter.js"></script>
-
-<script src="/static/bower_components/prism/prism.js"></script>

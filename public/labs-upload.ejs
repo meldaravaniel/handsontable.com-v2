@@ -1,98 +1,65 @@
-<section class="labs">
-    <!-- BRANDING HEADER -->
-    <div class="header-labs">
-        <div class="row">
-            <div class="large-12 element-center columns">
-                <p class="experimental">Experimental</p>
-                <h1><strong>Excel to handsontable</strong></h1>
-                <span>Create a JavaScript spreadsheet from a file</span>
+<section class="labs gap-bottom-xsmall">
+
+    <div class="row headline">
+        <div class="columns">
+            <h1 class="text-center size-large gap-top-medium gap-bottom-small">
+                <span class="experimental">Experimental</span>
+                Excel to Handsontable<br/>
+                <span>Create Handsontable from an Excel file</span>
+            </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-9 large-centered columns">
+            <div class="uploader text-center">
+
+                <svg class="svg">
+                    <use xlink:href="#upload"></use>
+                </svg>
+
+                <p><strong>Drop your file here</strong></p>
+                <p>or</p>
+                <a href="#" class="btn size-medium bg-blue bg-lighten text-white shadow hover-moveup">Select a file</a>
+                <p>XLSX, XLS, CSV. Max. 2MB</p>
             </div>
         </div>
     </div>
-    <!-- UPLOAD -->
-    <div class="row uploader">
-        <div class="large-12 element-center columns">
-            <form class="box">
-                <div class="upload">
-                    <svg class="svg">
-                        <use xlink:href="#upload"></use>
-                    </svg>
-                    <h3>Drop your File here</h3>
-                    <p>or</p>
-                    <a href="" class="btn large blue">Select a file</a>
-                    <p>XLSX, XLS, CSV. <b>Max. 2MB</b></p>
-                </div>
-            </form>
+
+    <div class="row spreadsheet-samples gap-top-small">
+        <div class="columns">
+            <h2 class="gap-bottom-xxsmall">Try sample spreadsheets</h2>
+            <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-6">
+                <li><a href="/labs-result.html" class="btn bg-purple bg-lighten text-white">Simple timesheet</a></li>
+                <li><a href="/labs-result.html" class="btn bg-blue bg-lighten text-white">Simple timesheet</a>
+                <li><a href="/labs-result.html" class="btn bg-navy bg-lighten text-white">Simple timesheet</a>
+                <li><a href="/labs-result.html" class="btn bg-green bg-lighten text-white">Simple timesheet</a>
+                <li><a href="/labs-result.html" class="btn bg-red bg-lighten text-white">Simple timesheet</a>
+                <li><a href="/labs-result.html" class="btn bg-yellow bg-lighten text-white">Simple timesheet</a>
+            </ul>
         </div>
     </div>
-    <!-- SAMPLE SPREADSHEETS-->
-    <div class="row spreadsheet-sample">
-        <h2 class="divider">
-            Try sample spreadsheets
-        </h2>
-        <div class="large-2 columns">
-            <a href="">
-                <div class="gray">
-                    <h5>Simple timesheet</h5>
-                </div>
-            </a>
-        </div>
-        <div class="large-2 columns">
-            <a href="">
-                <div class="blue">
-                    <h5>Student budget</h5>
-                </div>
-            </a>
-        </div>
-        <div class="large-2 columns">
-            <a href="">
-                <div class="navy">
-                    <h5>Brand launch</h5>
-                </div>
-            </a>
-        </div>
-        <div class="large-2 columns">
-            <a href="">
-                <div class="green">
-                    <h5>Simple timesheet</h5>
-                </div>
-            </a>
-        </div>
-        <div class="large-2 columns">
-            <a href="">
-                <div class="yellow">
-                    <h5>Simple timesheet</h5>
-                </div>
-            </a>
-        </div>
-        <div class="large-2 columns">
-            <a href="">
-                <div class="red">
-                    <h5>Simple timesheet</h5>
-                </div>
-            </a>
-        </div>
-    </div>
-    <!-- BOTTOM SECTION SIGN UP  -->
-    <div class="row sub-section">
-        <div class="large-6 columns">
-            <h3>About this app</h3>
-            <p>This service allows you to create a Handsontable instance and its configuration just by uploading an
-                XLSX/CSV file.
-                Note that this parser is not included in Handsontable itself. We use a small microservice on the
-                back-end side to parse and serialize
-                your file and then turn it into a working instance of Handsontable. Note that at this stage
-                we can display only formulas, values, and styles of your XLSX file.</p>
 
-            <p>We treat it as an experimental playground
-                for developers and some curious end-users. Leave a comment and let us know what you think!</p>
-
-            <p><a href="/blog">Read a blog post</a> about it to learn more.</p>
+    <div class="row">
+        <div class="large-5 columns project-description">
+            <h3 class="gap-top-xsmall">About this project</h3>
+            <p>This is an experimental playground which we created to better develop Excel-like features in Handsontable.
+                However, it turned out that some of you found this project useful so we decided to make it available for
+                a wider audience.
+                Now, how it works - we use a microservice on the back-end side based on
+                <a href="https://github.com/PHPOffice/PHPExcel" target="_blank">PHP Excel</a> to parse and serialize the
+                binary file and then save it to the database. The saved data is then bind with Handsontable
+                which has a built-in parser to extract the configuration entries such as colors, sizes etc.
+            </p>
+            <p>Note that at this stage this app can only handle formulas, values, and styles. Unfortunately, all
+                cross-sheet formulas will be calculated and turned into static values. Also, after the file is
+                uploaded you can modify the content, but all changes will be lost after the page reloads.</p>
+            <p>By using this app you agree to be bound by our <a href="/terms-of-use.html">terms of use</a>.</p>
         </div>
+
         <div class="large-6 columns">
             <div class="subscribe-form">
-                <h3>Subscribe to updates</h3>
-                <!-- BEGIN MAIL CHIMP SIGN UP FORM -->
+                <h3 class="gap-top-xsmall">Subscribe to updates</h3>
                 <div id="mc_embed_signup">
                     <form action="//handsontable.us9.list-manage.com/subscribe/post?u=47073b08d03ebee16188c1687&amp;id=0a640d7654"
                           method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
@@ -102,7 +69,7 @@
                                 <input placeholder="Email Address" type="email" value="" name="EMAIL"
                                        class="required email" id="mce-EMAIL">
                                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                                       class="button btn large ghost-blue">
+                                       class="btn bg-blue text-white bg-ligthen">
                             </div>
                             <div id="mce-responses">
                                 <div class="response" id="mce-error-response" style="display:none"></div>
@@ -110,9 +77,9 @@
                             </div>
                             <span>We never spam. Opt-out any time.</span>
                             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                                                                                      name="b_47073b08d03ebee16188c1687_0a640d7654"
-                                                                                                      tabindex="-1"
-                                                                                                      value=""></div>
+                              name="b_47073b08d03ebee16188c1687_0a640d7654"
+                              tabindex="-1"
+                              value=""></div>
                         </div>
                     </form>
                 </div>
@@ -125,17 +92,17 @@
                         ftypes[0] = 'email';
                     }(jQuery));
                     var $mcj = jQuery.noConflict(true);</script>
-                <!--END SIGN UP-->
             </div>
         </div>
     </div>
-    <div class="row comments" id="comments">
+    <div class="row comments gap-top-small" id="comments">
         <div class="large-8 medium-12 large-centered columns">
+            <!-- START EMBED CODE -->
             <div id="disqus_thread"></div>
             <script>
                 var disqus_config = function () {
                     this.page.url = handsontable.com;
-                    this.page.identifier = handsontable;
+                    this.page.identifier = handsontable-labs;
                 };
                 (function () { // DON'T EDIT BELOW THIS LINE
                     var d = document, s = d.createElement('script');
@@ -148,6 +115,7 @@
             </script>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">
                     comments powered by Disqus.</a></noscript>
+            <!-- END EMBED CODE -->
         </div>
     </div>
 </section>
@@ -156,125 +124,21 @@
 <script id="dsq-count-scr" src="//handsontable.disqus.com/count.js" async></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-
-<!-- LABS LOADER
-   <div class="loading">
-       <span class="loader"><span class="loader-inner"></span></span>
-   </div>
--->
-
-<!-- LABS CONFIRMATION MODAL
-    <div class="confirmation">
-        <div class="uploaded">
-            <a href="#close">
-                <svg class="cancel">
-                    <use xlink:href="#cancel"></use>
+<!-- Loader -->
+<div class="modal hidden">
+    <div class="modal-container">
+        <div class="modal-content text-center">
+            <div class="loading">
+                <svg class="svg" class="loader">
+                    <use xlink:href="#lab-bottles"></use>
                 </svg>
-            </a>
-            <svg class="svg">
-                <use xlink:href="#check"></use>
-            </svg>
-            <h3>my_file.xlsx</h3>
-            <p>Uploaded sucessfully</p>
-            <p class="buttons">
-                <a href="" class="btn large blue">Generate</a>
-                <a href="" class="btn large red">Delete</a>
-            </p>
-        </div>
-    </div>
--->
-
-<!-- CONFIRMATION MODAL
-    <div class="confirmation">
-        <div class=" uploaded-error">
-            <a href="#close">
-                <svg class="cancel">
-                    <use xlink:href="#cancel"></use>
-                </svg>
-            </a>
-            <svg class="svg">
-                <use xlink:href="#exclamation"></use>
-            </svg>
-            <p class="error"><b>Ups!</b> Somethning went wrong!</p>
-            <p class="buttons">
-                <a href="" class="btn large white-red">Upload again</a>
-                <a href="" class="btn large ghost-white-red">Close</a>
-            </p>
-        </div>
-    </div>
--->
-
-<!-- CODE BOX MODAL
-    <div class="code-modal">
-        <div class="code">
-            <a href="#close">
-                <svg class="cancel">
-                    <use xlink:href="#cancel"></use>
-                </svg>
-            </a>
-            <h3>my_file.xlsx
-            </h3>
-            <p>
-                <small>Go ahead and copy data for your table.</small>
-            </p>
-
-            <div class="code-box">
-                <ul class="tabs clearfix" data-tab role="tablist">
-                    <li class="left"><a>Code</a></li>
-                    <li class="action-link right">
-                        <a href="#">
-                            <svg class="left">
-                                <use xlink:href="#edit_icon"></use>
-                            </svg>
-                            Edit
-                        </a>
-                    </li>
-                </ul>
-                <div class="tabs-content">
-                    <section class="content"></section>
-                </div>
             </div>
-            <p class="buttons">
-                <a href="" class="btn large blue">Copy</a>
-            </p>
+            <p><strong>"Scientist believe in things, not in person"</strong></p>
+            <p>~Marie Curie</p>
+            <br/>
+            <p>Uploading <span class="filename">timesheet.xlsx</span></p>
+            <p class="hidden">Nothing happens? <a href="#" class="filename">Refresh the page</a></p>
         </div>
     </div>
--->
-
-<!-- SUCCESS MODAL FOR SENT MESSAGE WITHOUT PHONE NUMBER
-    <div class="success">
-        <div class="row">
-            <div class="large-12 columns">
-                <div class="mail-message">
-                    <h1>Thanks <span>Marcin Kordacki</span></h1>
-                    <p>Your message has been sent<br/>
-                        We'll get back to you soon</p>
-                    <svg class="svg">
-                        <use xlink:href="#envelope"></use>
-                    </svg>
-                    <h2><a href="/team.html">Handsontable</a> team.</h2>
-                    <a href="/contact-work.html" class="btn medium blue">Return to the form</a>
-                </div>
-            </div>
-        </div>
-    </div>
--->
-
-<!-- SUCCESS MODAL FOR SENT MESSAGE WITH PHONE NUMBER
-    <div class="success">
-        <div class="row">
-            <div class="large-12 columns">
-                <div class="phone-message">
-                    <h1>Thanks <span>Marcin Kordacki</span></h1>
-                    <p>We will call you back on this number</p>
-                    <h2>+48 606 229 937</h2>
-                    <svg class="svg">
-                        <use xlink:href="#call"></use>
-                    </svg>
-                    <h2><a href="/team.html">Handsontable</a> team.</h2>
-                    <a href="/contact-work.html" class="btn medium blue">Return to the form</a>
-                </div>
-            </div>
-        </div>
-    </div>
--->
+    <div class="modal-backdrop bg-light-transparent"></div>
+</div>

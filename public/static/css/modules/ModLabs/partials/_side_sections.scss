@@ -1,0 +1,38 @@
+/**
+ * @author: Handsoncode
+ */
+
+.labs {
+
+  .share {
+
+    input[type="text"] {
+      width: 100%;
+      padding: 4px 14px;
+      overflow: auto;
+      font-size: 12px;
+      white-space: nowrap;
+      font-family: $codeFont;
+      border: none;
+      background-color: $darkWhite;
+    }
+
+    svg {
+      @include square (30px);
+      @include transition (opacity .15s ease-in-out);
+      margin: 0 10px 0 2px;
+
+      &:hover {
+        opacity: .9;
+      }
+    }
+  }
+
+  .report {
+
+  }
+
+  .actions {
+
+  }
+}
