@@ -5101,8 +5101,8 @@ header {
   border: none;
   background-color: #f7f7f7; }
 .labs .share svg {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   -webkit-transition: opacity 0.15s ease-in-out;
   -moz-transition: opacity 0.15s ease-in-out;
   transition: opacity 0.15s ease-in-out;
@@ -5148,7 +5148,7 @@ header {
 .labs .subscribe-form .btn {
   padding: 10px 24px; }
 .labs .actions {
-  padding-top: 5px; }
+  padding-top: 10px; }
   .labs .actions a {
     margin: 0 6px;
     font-size: 13px; }
