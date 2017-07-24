@@ -100,10 +100,11 @@ a:hover {
 code {
   @include border($darkWhite);
   font-family: $codeFont;
-  font-size: 0.938em;
+  font-size: 12px;
   word-break: break-all;
   display: block;
   line-height: 1.6;
+  text-align: left;
   padding: 14px 18px;
   margin: 16px 0 27px;
   background: $tableBackground;

@@ -2217,8 +2217,21 @@ body.modal-open {
   overflow: hidden;
   box-shadow: 0 3px 26px rgba(0, 0, 0, 0.1), 0 3px 26px rgba(0, 0, 0, 0.1);
   background-color: #fff; }
+  .modal .modal-container .modal-header, .modal .modal-container .modal-footer {
+    padding: 24px 10px 18px; }
+  .modal .modal-container .modal-header a svg {
+    width: 12px;
+    height: 12px;
+    -webkit-transition: fill 0.2s ease-in-out;
+    -moz-transition: fill 0.2s ease-in-out;
+    transition: fill 0.2s ease-in-out;
+    fill: #8D8D8D; }
+  .modal .modal-container .modal-header a:hover svg {
+    fill: #363636; }
   .modal .modal-container .modal-content {
     backface-visibility: hidden; }
+  .modal .modal-container .modal-footer a {
+    margin-left: 10px; }
 .modal .modal-backdrop {
   position: fixed;
   top: 0;
@@ -2619,10 +2632,11 @@ a:hover {
 code {
   border: 1px solid #f7f7f7;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
-  font-size: 0.938em;
+  font-size: 12px;
   word-break: break-all;
   display: block;
   line-height: 1.6;
+  text-align: left;
   padding: 14px 18px;
   margin: 16px 0 27px;
   background: #f7f7f7; }
@@ -5079,6 +5093,21 @@ header {
 /**
  * @author: Handsoncode
 */
+.modal-html .modal-container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 0;
+  height: auto; }
+  @media only screen and (min-width: 64.0625em) {
+    .modal-html .modal-container {
+      width: 600px; } }
+  .modal-html .modal-container code {
+    height: 300px;
+    margin: 0;
+    overflow: auto;
+    border-top: 1px solid #E3E3E3;
+    border-bottom: 1px solid #E3E3E3; }
+
 /**
  * @author: Handsoncode
  */

@@ -161,20 +161,35 @@
 <script id="dsq-count-scr" src="//handsontable.disqus.com/count.js" async></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<!-- Confirm  modal -->
-<div class="modal hidden-x">
+<!-- Copy HTML  modal -->
+<div class="modal modal-html hidden-x">
     <div class="modal-container">
-        <div class="modal-content text-center">
-            <div class="loading">
-                <svg class="svg" class="loader">
-                    <use xlink:href="#lab-bottles"></use>
-                </svg>
+        <div class="modal-header">
+            <div class="row">
+                <div class="small-6 columns">
+                    Copy HTML
+                </div>
+                <div class="small-6 columns text-right">
+                    <a href="#">
+                        <svg class="svg">
+                            <use xlink:href="#close-mobile-nav"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <p><strong>"Scientist believe in things, not in person"</strong></p>
-            <p>~Marie Curie</p>
-            <br/>
-            <p>Uploading <span class="filename">timesheet.xlsx</span></p>
-            <p class="hidden">Nothing happens? <a href="#" class="filename">Refresh the page</a></p>
+        </div>
+        <div class="modal-content text-center">
+            <code>
+                Kod
+            </code>
+        </div>
+        <div class="modal-footer">
+            <div class="row">
+                <div class="columns text-right">
+                    <a href="#" class="btn size-medium bg-green bg-lighten text-white">Save to clipboard</a>
+                    <a href="#" class="btn size-medium bg-blue bg-lighten text-white">Save to file</a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="modal-backdrop bg-light-transparent"></div>
