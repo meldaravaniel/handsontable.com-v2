@@ -1,22 +1,23 @@
 {
   "name": "Handsontable",
-  "version": "3.0.90",
+  "version": "3.0.91",
   "scripts": {
     "start": "harp server",
-    "build": "harp build",
+    "build": "grunt build && harp build",
     "release": "generate-release",
     "deploy": "shipit production deploy"
   },
   "dependencies": {
     "grunt": "^0.4.5",
+    "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^0.7.0",
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-nodeunit": "^0.3.3",
-    "grunt-unused": "^0.2.0"
+    "grunt-unused": "^0.2.0",
+    "harp": "^0.24.0"
   },
   "devDependencies": {
     "generate-release": "^0.10.2",
-    "harp": "^0.23.0",
     "shipit-deploy": "^2.1.2"
   }
 }
