@@ -66,6 +66,10 @@ form {
       box-shadow: none;
     }
 
+    select::-ms-expand{
+      display:none;
+    }
+
     svg {
       @include absolute-top-right (50%, 18px);
       @include square (11px);

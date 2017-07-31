@@ -446,6 +446,8 @@ form .selectbox {
     background-color: transparent;
     border: none;
     box-shadow: none; }
+  form .selectbox select::-ms-expand {
+    display: none; }
   form .selectbox svg {
     position: absolute;
     top: 50%;
