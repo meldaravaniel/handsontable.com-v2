@@ -4,8 +4,12 @@
 
 .resellers {
 
-    p {
-        margin: 0;
-        line-height: 2;
+    li {
+        padding-bottom: 30px;
+
+        p {
+            margin: 0;
+            line-height: 2;
+        }
     }
 }

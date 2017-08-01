@@ -79,10 +79,11 @@ header {
               @include square (12px);
               @include relative-top-left (0, 0);
               line-height: 13px;
-              background-color: $brandVibrantGreenActive;
+              background-color: $brandRedActive;
 
               &.HW_softHidden {
                 opacity: .4;
+                background-color: $brandVibrantGreenActive;
               }
             }
           }

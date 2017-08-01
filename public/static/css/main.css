@@ -2801,6 +2801,9 @@ code {
       left: 150px;
       display: block; }
       .star-counter .github-star {
+        -webkit-transition: opacity 0.2s ease-out;
+        -moz-transition: opacity 0.2s ease-out;
+        transition: opacity 0.2s ease-out;
         position: relative;
         top: -5px;
         left: 8px;
@@ -2811,6 +2814,8 @@ code {
         font-size: 10px;
         border-radius: 3px;
         border: 1px solid #363636; }
+        .star-counter .github-star:hover {
+          opacity: .7; }
         .star-counter .github-star .triangle {
           border-top: 3px solid transparent;
           border-bottom: 3px solid transparent;
@@ -2971,9 +2976,10 @@ header {
             top: 0;
             left: 0;
             line-height: 13px;
-            background-color: #48cc4d; }
+            background-color: #e25354; }
             header nav ul li.news #HW_badge_cont #HW_badge.HW_softHidden {
-              opacity: .4; }
+              opacity: .4;
+              background-color: #48cc4d; }
       header nav ul li a, header nav ul li a:hover, header nav ul li a:active, header nav ul li a:visited {
         font-size: 13px;
         color: #363636; }
@@ -4402,7 +4408,7 @@ header {
       padding: 140px 10px 0 10px; } }
 .features h3 {
   padding: 0 10px 0 10px;
-  margin: 40px 0 2px 0;
+  margin: 50px 0 2px 0;
   font-weight: 500; }
   @media only screen and (min-width: 40.0625em) {
     .features h3 {
@@ -4464,7 +4470,7 @@ header {
     .features .svg-icon {
       width: 75px;
       height: 75px;
-      margin: 20px 10px 50px 0;
+      margin: 36px 10px 50px 0;
       float: left; } }
 
 /**
@@ -4602,6 +4608,8 @@ header {
           display: block; } }
   .highlights h2 {
     margin-bottom: 30px; }
+  .highlights p {
+    font-size: 16px; }
   .highlights .benefits-testimonial {
     margin-top: 30px; }
     .highlights .benefits-testimonial img {
@@ -4659,9 +4667,9 @@ header {
     .frontpage .header-background {
       height: 86vh; } }
 .frontpage .svg {
-  width: 500px;
-  height: 320px;
-  margin-top: -20px; }
+  width: 550px;
+  height: 370px;
+  margin-top: -60px; }
 
 /**
  * @author: Handsoncode
@@ -4966,9 +4974,11 @@ header {
 /**
  * @author: Handsoncode
  */
-.resellers p {
-  margin: 0;
-  line-height: 2; }
+.resellers li {
+  padding-bottom: 30px; }
+  .resellers li p {
+    margin: 0;
+    line-height: 2; }
 
 /**
  * @author: Handsoncode
