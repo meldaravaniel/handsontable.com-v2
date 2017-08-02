@@ -7,6 +7,10 @@
         "static_path": "/static",
         "img_path": "/static/images/",
         "tag_manager": "GTM-55L5D3",
-        "heap_analytics": "3675945729"
+        "heap_analytics": "3675945729",
+        "hot_ce_version": "0.33.0",
+        "hot_ce_date": "May 18, 2017",
+        "hot_pro_version": "1.12.0",
+        "hot_pro_date": "May 18, 2017"
     }
 }

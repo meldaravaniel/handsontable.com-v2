@@ -140,6 +140,33 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   ], [
     {
+      name: 'filters',
+      label: 'Filters',
+      description: 'Allows to define the criteria to display only specific rows while hiding the others. ' +
+      'Available from the dropdown menu in the header.',
+      configObject: {
+          filters: true
+      },
+      dependencies: [
+          'dropdown-menu'
+        ]
+    },
+    {
+      name: 'dropdown-menu',
+      label: 'Dropdown Menu',
+      description: 'Allows creating a dropdown menu, available in the column headers.',
+      configObject: {
+          dropdownMenu: true
+      }
+    },
+    {
+      name: 'csv-export',
+      label: 'Export to CSV',
+      description: 'Adds a possibility to export the data as comma-separated values. ' +
+      'In the demo above, just click a button to download the flat file.',
+      configObject: {}
+    },
+      {
       name: 'fixed-bottom',
       label: 'Fixed bottom rows',
       description: 'Keeps the bottom rows visible while scrolling down or across the table.',
@@ -197,33 +224,6 @@ document.addEventListener("DOMContentLoaded", function() {
       configObject: {
         trimRows: [1, 2, 5]
       }
-    },
-    {
-      name: 'dropdown-menu',
-      label: 'Dropdown Menu',
-      description: 'Allows creating a dropdown menu, available in the column headers.',
-      configObject: {
-        dropdownMenu: true
-      }
-    },
-    {
-      name: 'filters',
-      label: 'Filters',
-      description: 'Allows to define the criteria to display only specific rows while hiding the others. ' +
-      'Available from the dropdown menu in the header.',
-      configObject: {
-        filters: true
-      },
-      dependencies: [
-        'dropdown-menu'
-      ]
-    },
-    {
-      name: 'csv-export',
-      label: 'Export to CSV',
-      description: 'Adds a possibility to export the data as comma-separated values. ' +
-      'In the demo above, just click a button to download the flat file.',
-      configObject: {}
     }
   ]);
 

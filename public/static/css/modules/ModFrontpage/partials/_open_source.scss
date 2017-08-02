@@ -33,7 +33,7 @@
     position: relative;
 
     .cloud {
-      @include rectangle(108px, 60px);
+      @include rectangle(108px, 56px);
       display: none;
 
       @media only screen and (min-width: $largeWidth) {

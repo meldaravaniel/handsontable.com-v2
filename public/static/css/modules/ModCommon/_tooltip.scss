@@ -4,17 +4,17 @@
  */
 
 .tooltip-btn {
-  @include relative-top-left (-1px, 4px);
+  @include relative-top-left (-2px, 4px);
   @include square (15px, false);
 
   display: inline-block;
-  color: $darkGray;
+  color: $gray;
   line-height: 1.2;
   text-align: center;
   cursor: pointer;
   font-size: 11px;
   border-radius: 100%;
-  border: 1px solid $darkGray;
+  border: 1px solid $gray;
 
   &:hover {
     background-color: $brandBlue;
