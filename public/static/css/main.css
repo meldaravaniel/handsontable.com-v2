@@ -3034,6 +3034,10 @@ header {
   header.header-white svg, header.header-white .news svg {
     fill: #fff; }
 
+/* Hack for Headwayapp */
+@media only screen and (max-width: 40.0625em) {
+  #HW_frame_cont {
+    display: none; } }
 /*
   @author: Handsoncode
  */
