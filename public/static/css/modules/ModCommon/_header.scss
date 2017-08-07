@@ -190,3 +190,11 @@ header {
     }
   }
 }
+
+/* Hack for Headwayapp */
+@media only screen and (max-width: $mediumWidth) {
+
+  #HW_frame_cont {
+    display: none;
+  }
+}
