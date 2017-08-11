@@ -4204,6 +4204,21 @@ header {
 /**
  * @author: Handsoncode
  */
+.labs .tabs .tab {
+  border-top: 1px solid #CFCFCF;
+  background-color: #f7f7f7; }
+  .labs .tabs .tab li {
+    padding: 7px 20px;
+    border: 1px solid #CFCFCF;
+    border-top: none;
+    background-color: #f7f7f7; }
+    .labs .tabs .tab li.active {
+      border-bottom: 2px solid #039be5;
+      background-color: #fff; }
+
+/**
+ * @author: Handsoncode
+ */
 .knowledge-base h2 {
   text-align: left;
   line-height: 1.1em;
@@ -4235,24 +4250,25 @@ header {
   text-align: center; }
   .knowledge-base .bottom-section h2 {
     color: #f7f7f7; }
-.knowledge-base .answers ul, .knowledge-base .answers li {
-  font-weight: 400; }
-.knowledge-base .answers li {
-  list-style-type: disc;
-  list-style-position: inside; }
+.knowledge-base .answers ul {
+  margin-left: 20px; }
+  .knowledge-base .answers ul li {
+    font-weight: 400;
+    list-style-type: disc;
+    list-style-position: inside; }
 .knowledge-base .answers > div {
   -webkit-transition: max-height 1.5s ease-in-out;
   -moz-transition: max-height 1.5s ease-in-out;
   transition: max-height 1.5s ease-in-out;
   height: auto;
-  margin: 5px 0;
+  margin: 5px 0 5px 20px;
   padding-left: 20px;
   overflow: hidden;
   border-left: 10px solid #f7f7f7; }
-  .knowledge-base .answers > div p {
-    padding: 10px 0; }
   .knowledge-base .answers > div.opened {
     max-height: 1050px; }
+  .knowledge-base .answers > div p {
+    padding: 10px 0; }
 .knowledge-base .answers img {
   margin: 10px 0; }
 
@@ -5193,7 +5209,7 @@ header {
 .labs .subscribe-form .btn {
   padding: 10px 24px; }
 .labs .actions {
-  padding-top: 10px; }
+  padding-bottom: 10px; }
   .labs .actions a {
     margin: 0 6px;
     font-size: 13px; }
@@ -5217,7 +5233,10 @@ header {
   @media only screen and (min-width: 64.0625em) {
     .labs .uploader.drop {
       background-color: #e7f3ff;
-      border-color: #039be5; } }
+      border-color: #039be5; }
+      .labs .uploader.drop.error {
+        background-color: #f7f7f7;
+        border-color: #E87677; } }
   .labs .uploader.drop > * {
     opacity: 0.5; }
   .labs .uploader .svg {
@@ -5235,7 +5254,7 @@ header {
  */
 .labs .tabs-sheets > div {
   display: none; }
-  .labs .tabs-sheets > div:first-child, .labs .tabs-sheets > div.active {
+  .labs .tabs-sheets > div:last-child, .labs .tabs-sheets > div.active {
     display: block; }
 .labs .tabs-sheets .plugin-preview {
   background-color: #f7f7f7; }

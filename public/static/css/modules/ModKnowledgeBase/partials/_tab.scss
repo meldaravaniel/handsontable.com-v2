@@ -1,0 +1,26 @@
+/**
+ * @author: Handsoncode
+ */
+
+.labs {
+
+  .tabs {
+
+    .tab {
+      border-top: 1px solid $gray;
+      background-color: $darkWhite;
+
+      li {
+        padding: 7px 20px;
+        border: 1px solid $gray;
+        border-top: none;
+        background-color: $darkWhite;
+
+        &.active {
+          border-bottom: 2px solid $brandBlue;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
