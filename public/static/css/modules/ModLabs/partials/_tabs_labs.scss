@@ -7,7 +7,7 @@
   & > div {
     display: none;
 
-    &:first-child, &.active {
+    &:last-child, &.active {
       display: block;
     }
   }

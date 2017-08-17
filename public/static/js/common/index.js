@@ -1,79 +1,83 @@
 (function() {
   var d = document;
   var w = window;
-  var signedInBar = lazyQuerySelector('#login_menu_signed_on');
-  var signedOffBar = lazyQuerySelector('#login_menu_signed_off');
-  var logoutButton = lazyQuerySelector('#logout');
-  var nameHolder = lazyQuerySelector('#login_menu_name');
-  var data = {
-    loaded: false,
-    logged: false
+  var $ = function(id) {
+    return d.getElementById(id);
   };
-  var markedAsUpdated = false;
-
-  function init() {
-    axios('//my.handsontable.com/api/identity-checker', {withCredentials: true, method: 'get'})
-        .then(onIdentitySuccess);
-  }
-
-  function onIdentitySuccess(response) {
-    data = response.data;
-    data.loaded = true;
-
-    if (markedAsUpdated) {
-      update();
-    }
-  }
-
-  function onLogoutClick(event) {
-    event.preventDefault();
-    axios('//my.handsontable.com/api/sign-out', {withCredentials: true, method: 'get'});
-    data.logged = false;
-    update();
-  }
-
-  function update() {
-    if (data.loaded) {
-      nameHolder().textContent = data.firstName;
-
-      if (data.logged) {
-        signedOffBar().classList.add('hide');
-        signedInBar().classList.remove('hide');
-      } else {
-        signedOffBar().classList.remove('hide');
-        signedInBar().classList.add('hide');
-      }
-    }
-    markedAsUpdated = true;
-  }
-
-  function lazyQuerySelector(selector) {
-    return function() {
-      return d.querySelector(selector);
-    }
-  }
-
-  init();
-  w.LoginBar = {update: update};
+  var $$ = function(selector) {
+    return d.querySelectorAll(selector);
+  };
 
   d.addEventListener('DOMContentLoaded', function() {
-    logoutButton().addEventListener('click', onLogoutClick);
-
     // click on external iframe snippet (https://gist.github.com/jaydson/1780598)
     var iframeMouseOver = false;
 
-    window.addEventListener('blur', function() {
+    w.addEventListener('blur', function() {
       if (iframeMouseOver) {
         dataLayer.push({'event': 'Github iframe click'});
       }
     });
 
-    document.getElementById('github-star').addEventListener('mouseover', function() {
+    $('mobile-nav-menu').addEventListener('mouseover', function() {
       iframeMouseOver = true;
     });
-    document.getElementById('github-star').addEventListener('mouseout', function() {
+    $('mobile-nav-menu').addEventListener('mouseout', function() {
       iframeMouseOver = false;
     });
     // end
-  })
+    
+    // mobile hamburger
+    $('mobile-nav-menu').addEventListener('ontouchstart' in w ? 'touchstart' : 'click', function(event) {
+      var element = $('mobile-nav-menu').parentElement;
+      
+      element.classList.toggle('mobile-active');
+      element.classList.toggle('mobile-inactive');
+    });
+    // end
+    
+    // Tabs
+    d.addEventListener('click', function(event) {
+      var target = event.target;
+      
+      if (target.id && /^tab\-./.test(target.id)) {
+        var tabGroups = $$('.tabs');
+        
+        for (var i = 0; i < tabGroups.length; i++) {
+          if (tabGroups[i].contains(target)) {
+            var tabs = tabGroups[i].querySelectorAll('[id^=tab-]');
+            
+            for (var j = 0; j < tabs.length; j++) {
+              if (tabs[j].classList.contains('active')) {
+                tabs[j].classList.remove('active');
+              }
+            }
+            break;
+          }
+        }
+        
+        var contentId = 'tab-content-' + target.id.replace('tab-', '');
+        
+        target.classList.add('active');
+        $(contentId).classList.add('active');
+      }
+    });
+    // end
+  });
+  
+  // dynamic stats
+  axios({
+    url: 'https://stats.handsontable.com/stats'
+  }).then(function(resp) {
+    var data = resp.data;
+    var elements = d.querySelectorAll('[data-bind]');
+    
+    for (var i = 0, len = elements.length; i < len; i++) {
+      var prop = elements[i].dataset.bind;
+      
+      if (data[prop] !== void 0) {
+        elements[i].innerText = data[prop];
+      }
+    }
+  });
+  // end
 }());

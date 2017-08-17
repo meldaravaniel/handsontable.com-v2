@@ -19,7 +19,7 @@
     "highlightjs": "^9.0.0",
     "history.js": "^1.8.0",
     "prism": "^1.4.1",
-    "numbro": "^1.8.1",
+    "numbro": "^1.11.0",
     "promise-polyfill": "^6.0.2"
   },
   "ignore": [
