@@ -14,79 +14,70 @@
                     <ul>
                         <li id="tab-npm" class="active">NPM</li>
                         <li id="tab-yarn">Yarn</li>
-                        <li id="tab-commonjs">CommonJS</li>
                         <li id="tab-amd">AMD</li>
                         <li id="tab-nuget">NuGet</li>
                         <li id="tab-bower">Bower</li>
                         <li id="tab-jspm">jspm</li>
                     </ul>
                 </div>
-                <div id="npm" class="active">
+                <div id="tab-content-npm" class="active">
                     <div class="row">
                         <div class="medium-12 large-7 columns">
                             <p>Handsontable Pro can be installed from
                                 <a href="//www.npmjs.com/package/handsontable-pro" target="_blank">NPM</a>.
                                 It includes all the files, along with the complete source code.</p>
-                            <code>npm install handsontable-pro --save;</code>
+                            <code>npm install handsontable-pro</code>
                         </div>
                     </div>
                 </div>
-                <div id="yarn">
+                <div id="tab-content-yarn">
                     <div class="row">
                         <div class="medium-12 large-7 columns">
-                            <p>To install Handsontable Pro, just run the following command in the
-                                <a href="//yarnpkg.com/en/" target="_blank">Yarn</a> Package Manager Console.</p>
-                            <code class="installation">$ yarn add handsontable-pro</code>
+                            <p>To install Handsontable Pro, just run the following command using the
+                                <a href="http://yarnpkg.com/en/" target="_blank">Yarn</a> Package Manager Console.</p>
+                            <code class="installation">yarn add handsontable-pro</code>
                         </div>
                     </div>
                 </div>
-                <div id="commonjs">
-                    <div class="row">
-                        <div class="medium-12 large-7 columns">
-                            <p>You can install Handsontable Pro using common JS.</p>
-                            <code>var handsontable = require('handsontable-pro');</code>
-                        </div>
-                    </div>
-                </div>
-                <div id="amd">
+                <div id="tab-content-amd">
                     <div class="row">
                         <div class="medium-12 large-8 columns">
                             <p>If you use a modular script loader, then you can require Handsontable Pro just like any other
                                 module:</p>
                             <code>
                                 require(['handsontable-pro'], function(Handsontable) { <br/>
-                                var hot = new Handsontable(document.getElementById('example'), {<br/>
-                                data: [[1, 2, 3, 4], [1, 2, 3, 4]]<br/>
-                                });<br/>
+                                &nbsp;&nbsp;var hot = new Handsontable(document.getElementById('example'), {<br/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;data: [[1, 2, 3, 4], [1, 2, 3, 4]]<br/>
+                                &nbsp;&nbsp;});<br/>
                                 });<br/>
                             </code>
                         </div>
                     </div>
                 </div>
-                <div id="nuget">
+                <div id="tab-content-nuget">
                     <div class="row">
                         <div class="medium-12 large-7 columns">
                             <p>To install Handsontable Pro, just run the following command in the
-                                <a href="//docs.microsoft.com/en-us/nuget/tools/package-manager-console"
+                                <a href="http://docs.microsoft.com/en-us/nuget/tools/package-manager-console"
                                    target="_blank">NuGet</a> package manager console.</p>
                             <code>PM> Install-Package Handsontable-pro</code>
                         </div>
                     </div>
                 </div>
-                <div id="bower">
+                <div id="tab-content-bower">
                     <div class="row">
                         <div class="medium-12 large-7 columns">
                             <p>Although it is no longer recommended, Handsontable Pro can be still installed via
-                                <a href="//bower.io/search/" target="_blank">bower</a> package manager.</p>
-                            <code>bower install handsontable-pro --save;</code>
+                                <a href="http://bower.io/search/" target="_blank">bower</a> package manager.</p>
+                            <code>bower install handsontable-pro</code>
                         </div>
                     </div>
                 </div>
-                <div id="jspm">
+                <div id="tab-content-jspm">
                     <div class="row">
                         <div class="medium-12 large-7 columns">
                             <p>To install Handsontable Pro on
-                                <a href="//github.com/jspm/jspm-cli/blob/master/docs/installing-packages.md"
+                                <a href="https://github.com/jspm/jspm-cli/blob/master/docs/installing-packages.md"
                                    target="_blank">JSPM</a> run the following command.</p>
                             <code>jspm install npm:handsontable-pro</code>
                         </div>
@@ -106,14 +97,14 @@
                         Download the ZIP archive, which contains all the files, demos,
                         and the full source code of the latest version of Handsontable Pro.
                     </p>
-                    <a href="//github.com/handsontable/handsontable-pro/archive/master.zip"
+                    <a href="https://github.com/handsontable/handsontable-pro/archive/master.zip"
                        class="btn size-medium bg-green bg-lighten text-white hover-moveup shadow">
                         Download v<%= hot_pro_version %>
                     </a>
                     <br/><br/>
                     <p>
                         If you are looking for a nightly build, see the
-                        <a href="//github.com/handsontable/handsontable-pro/tree/develop"
+                        <a href="https://github.com/handsontable/handsontable-pro/tree/develop"
                            target="_blank">develop branch</a>.
                     </p>
                 </div>
@@ -134,15 +125,15 @@
                                 <li id="tab-ssh">SSH</li>
                             </ul>
                         </div>
-                        <div id="https" class="active">
+                        <div id="tab-content-https" class="active">
                             <div class="row collapse">
                                 <div class="small-12 columns">
                                     <code>https://github.com/handsontable/handsontable-pro.git</code>
                                 </div>
                             </div>
                         </div>
-                        <div id="ssh">
-                            <div class="row">
+                        <div id="tab-content-ssh">
+                            <div class="row collapse">
                                 <div class="small-12 columns">
                                     <code>git@github.com:handsontable/handsontable-pro.git</code>
                                 </div>
@@ -167,16 +158,16 @@
                     <div class="row wrappers text-center">
                         <ul class="large-block-grid-5 small-block-grid-3 small-centered">
                             <li>
-                                <a href="//github.com/handsontable/react-handsontable" target="_blank"
+                                <a href="https://github.com/handsontable/react-handsontable" target="_blank"
                                    class="btn hover-moveup">
                                     <svg>
                                         <use xlink:href="#react-js"></use>
                                     </svg>
-                                    <p>ReactJS</p>
+                                    <p>React</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="//github.com/handsontable/ngHandsontable" target="_blank"
+                                <a href="https://github.com/handsontable/ngHandsontable" target="_blank"
                                    class="btn hover-moveup">
                                     <svg>
                                         <use xlink:href="#angular-l"></use>
@@ -185,13 +176,16 @@
                                 </a>
                             </li>
                             <li>
-                                <svg class="in-progress">
-                                    <use xlink:href="#angular-2"></use>
-                                </svg>
-                                <p>Angular 2</p>
+                                <a href="https://github.com/handsontable/angular-handsontable" target="_blank"
+                                 class="btn hover-moveup">
+                                    <svg>
+                                        <use xlink:href="#angular-2"></use>
+                                    </svg>
+                                    <p>Angular 2</p>
+                                </a>
                             </li>
                             <li>
-                                <a href="//github.com/handsontable/hot-table" target="_blank" class="btn hover-moveup">
+                                <a href="https://github.com/handsontable/hot-table" target="_blank" class="btn hover-moveup">
                                     <svg>
                                         <use xlink:href="#polymer-l"></use>
                                     </svg>
@@ -199,7 +193,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="//github.com/handsontable/vue-handsontable-official" target="_blank"
+                                <a href="https://github.com/handsontable/vue-handsontable-official" target="_blank"
                                    class="btn hover-moveup">
                                     <svg>
                                         <use xlink:href="#vue-l"></use>
@@ -225,24 +219,35 @@
                             <ul>
                                 <li id="tab-minified" class="active">Minified</li>
                                 <li id="tab-uncompressed">Uncompressed</li>
+                                <li id="tab-minified-deps">Minified (with included dependencies)</li>
                             </ul>
                         </div>
-                        <div id="minified" class="active">
+                        <div id="tab-content-minified" class="active">
                             <div class="row collapse">
                                 <div class="small-12 columns">
                                     <code>
-                                        https://cdnjs.cloudflare.com/ajax/libs/handsontable-pro/<%= hot_pro_version %>/handsontable.full.js<br/>
+                                        https://cdnjs.cloudflare.com/ajax/libs/handsontable-pro/<%= hot_pro_version %>/handsontable.min.js<br/>
+                                        https://cdnjs.cloudflare.com/ajax/libs/handsontable-pro/<%= hot_pro_version %>/handsontable.min.css
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-content-uncompressed">
+                            <div class="row collapse">
+                                <div class="small-12 columns">
+                                    <code>
+                                        https://cdnjs.cloudflare.com/ajax/libs/handsontable-pro/<%= hot_pro_version %>/handsontable.js<br/>
                                         https://cdnjs.cloudflare.com/ajax/libs/handsontable-pro/<%= hot_pro_version %>/handsontable.css
                                     </code>
                                 </div>
                             </div>
                         </div>
-                        <div id="uncompressed">
-                            <div class="row">
+                        <div id="tab-content-minified-deps">
+                            <div class="row collapse">
                                 <div class="small-12 columns">
                                     <code>
-                                        https://cdnjs.cloudflare.com/ajax/libs/handsontable-pro/<%= hot_pro_version %>/handsontable.full.js<br/>
-                                        https://cdnjs.cloudflare.com/ajax/libs/handsontable-pro/<%= hot_pro_version %>/handsontable.css
+                                        https://cdnjs.cloudflare.com/ajax/libs/handsontable-pro/<%= hot_pro_version %>/handsontable.full.min.js<br/>
+                                        https://cdnjs.cloudflare.com/ajax/libs/handsontable-pro/<%= hot_pro_version %>/handsontable.full.min.css
                                     </code>
                                 </div>
                             </div>
