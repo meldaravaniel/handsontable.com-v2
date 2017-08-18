@@ -139,6 +139,10 @@ samp {
   font-size: 1em;
 }
 
+code {
+  font-size: 13px !important;
+}
+
 button,
 input,
 optgroup,
@@ -246,6 +250,5 @@ select {
 }
 
 .token {
-    font-family: Consolas,"Liberation Mono",Courier,monospace !important;
-    font-size: 0.9em;
+    font-size: 13px;
 }

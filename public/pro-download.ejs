@@ -26,7 +26,7 @@
                             <p>Handsontable Pro can be installed from
                                 <a href="//www.npmjs.com/package/handsontable-pro" target="_blank">NPM</a>.
                                 It includes all the files, along with the complete source code.</p>
-                            <code>npm install handsontable-pro</code>
+                            <code class="language-bash">npm install handsontable-pro</code>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
                         <div class="medium-12 large-7 columns">
                             <p>To install Handsontable Pro, just run the following command using the
                                 <a href="http://yarnpkg.com/en/" target="_blank">Yarn</a> Package Manager Console.</p>
-                            <code class="installation">yarn add handsontable-pro</code>
+                            <code class="language-bash">yarn add handsontable-pro</code>
                         </div>
                     </div>
                 </div>
@@ -44,13 +44,11 @@
                         <div class="medium-12 large-8 columns">
                             <p>If you use a modular script loader, then you can require Handsontable Pro just like any other
                                 module:</p>
-                            <code>
-                                require(['handsontable-pro'], function(Handsontable) { <br/>
-                                &nbsp;&nbsp;var hot = new Handsontable(document.getElementById('example'), {<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;data: [[1, 2, 3, 4], [1, 2, 3, 4]]<br/>
-                                &nbsp;&nbsp;});<br/>
-                                });<br/>
-                            </code>
+                                <code class="language-javascript">require(['handsontable-pro'], function(Handsontable) {
+  var hot = new Handsontable(document.getElementById('example'), {
+    data: [[1, 2, 3, 4], [1, 2, 3, 4]]
+  });
+});</code>
                         </div>
                     </div>
                 </div>
@@ -60,7 +58,7 @@
                             <p>To install Handsontable Pro, just run the following command in the
                                 <a href="http://docs.microsoft.com/en-us/nuget/tools/package-manager-console"
                                    target="_blank">NuGet</a> package manager console.</p>
-                            <code>PM> Install-Package Handsontable-pro</code>
+                            <code class="language-bash">PM> Install-Package Handsontable-pro</code>
                         </div>
                     </div>
                 </div>
@@ -69,7 +67,7 @@
                         <div class="medium-12 large-7 columns">
                             <p>Although it is no longer recommended, Handsontable Pro can be still installed via
                                 <a href="http://bower.io/search/" target="_blank">bower</a> package manager.</p>
-                            <code>bower install handsontable-pro</code>
+                            <code class="language-bash">bower install handsontable-pro</code>
                         </div>
                     </div>
                 </div>
@@ -79,7 +77,7 @@
                             <p>To install Handsontable Pro on
                                 <a href="https://github.com/jspm/jspm-cli/blob/master/docs/installing-packages.md"
                                    target="_blank">JSPM</a> run the following command.</p>
-                            <code>jspm install npm:handsontable-pro</code>
+                            <code class="language-bash">jspm install npm:handsontable-pro</code>
                         </div>
                     </div>
                 </div>
