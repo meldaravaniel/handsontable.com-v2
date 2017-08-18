@@ -26,7 +26,6 @@
 /**
  * @author: Handsoncode
  */
-/*$optionalFont: 'Lato', Helvetica, Arial, sans-serif;*/
 /**
  * @author: Handsoncode
  */
@@ -4711,7 +4710,6 @@ header {
       position: relative;
       display: block;
       font-weight: 300;
-      font-size: 15px;
       border-radius: 6px;
       box-shadow: 0 3px 14px rgba(0, 0, 0, 0.04), 0 4px 14px rgba(0, 0, 0, 0.04);
       background-color: #fff; }
