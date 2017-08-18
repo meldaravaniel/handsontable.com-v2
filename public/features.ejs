@@ -12,9 +12,7 @@
             </div>
         </div>
     </div>
-
     <%- partial("_partials/_brands") %>
-
     <div class="row fast">
         <h2 class="text-center size-large gap-top-xsmall gap-bottom-xsmall">
             Fast and easy development
@@ -26,7 +24,7 @@
             </svg>
             <h3>Multiple frameworks</h3>
             <p class="p-icon">Handsontable is available in a variety of technologies,
-                including React, Angular, Polymer, Vue and includes a TypeScript definition file.</p>
+                including React, Angular, Polymer, Vue.js and includes a TypeScript definition file.</p>
         </div>
         <div class="small-12 medium-4 columns">
             <svg class="svg-icon">
@@ -79,18 +77,361 @@
         <h2 class="text-center size-large gap-top-small gap-bottom-xsmall">
             Simple and familiar UI
         </h2>
-        <div class="large-9 columns">
-            <p>Result</p>
-            <div class="plugin-preview">
-                <div id="hot"></div>
+        <div class="large-5 columns">
+            <div class="tabs tabs-code">
+                <div class="tab">
+                    <ul>
+                        <li id="tab-source" class="active">Source</li>
+                        <li id="tab-data">Data</li>
+                    </ul>
+                </div>
+                <div id="tab-content-source" class="active">
+                    <div class="row collapse">
+                        <div class="small-12 columns">
+                            <div class="code-holder" data-type="source"></div>
+                            <script data-source-type="source" type="text/handsontable">
+var hot = new Handsontable(document.getElementById('example'), {
+  width: 891,
+  data: getData(),
+  columns: [
+    {
+      data: 'task',
+    },
+    {
+      data: 'owner',
+      type: 'dropdown',
+      source: [
+        'Ben', 
+        'Chris', 
+        'Jessica', 
+        'Kate', 
+        'Michael', 
+        'Monica', 
+        'Omar', 
+        'Paul',
+        'Samuel', 
+      ],
+    },
+    {
+      data: 'team',
+      readOnly: true,
+      renderer: function(hotInstance, TD, row, col, prop, value, cellProperties) {
+        var owner = hotInstance.getDataAtRowProp(row, 'owner');
+        var ownerTeam = getOwnerTeam(owner);
+        var colors = {
+          Red: '#e87677',
+          Green: '#66e100',
+          Blue: '#00a7fe',
+          Purple: '#6623e2',
+          Orange: '#ffad24',
+          Yellow: '#ffe300',
+        };
+        
+        TD.style.color = colors[ownerTeam];
+        TD.textContent = ownerTeam;
+      }
+    },
+    {
+      data: 'status',
+      type: 'dropdown',
+      source: [
+        'New', 
+        'Accepted', 
+        'Rejected',
+        'In progress', 
+        'Completed', 
+      ],
+    },
+    {
+      data: 'startDate',
+      type: 'date',
+      dateFormat: 'DD/MM/YYYY',
+    },
+    {
+      data: 'endDate',
+      type: 'date',
+      dateFormat: 'DD/MM/YYYY',
+    },
+    {
+      data: 'atRisk',
+      type: 'checkbox',
+      className: 'htCenter',
+    },
+    {
+      data: 'progress',
+      width: 110,
+      renderer: function(hotInstance, TD, row, col, prop, value, cellProperties) {
+        var progressBar = document.createElement('progress');
+        
+        value = parseInt(value, 10);
+        
+        progressBar.max = 100;
+        progressBar.value = isNaN(value) ? 0 : value;
+        
+        TD.textContent = '';
+        TD.appendChild(progressBar);
+      }
+    },
+    {
+      data: 'notes',
+    },
+  ],
+  colHeaders: [
+    'Task', 
+    'Owner', 
+    'Team', 
+    'Status', 
+    'Start date', 
+    'End date', 
+    'At risk', 
+    '% complete', 
+    'Notes',
+  ],
+  columnSorting: true,
+  filters: true,
+  dropdownMenu: true,
+  contextMenu: true,
+  autoRowSize: true,
+  autoColumnSize: true,
+  manualColumnMove: true,
+  manualRowMove: true,
+  fillHandle: {
+    autoInsertRow: false,
+  },
+});
+
+function getOwnerTeam(owner) {
+  var teamOwners = {
+    Red: ['Michael', 'Ben'],
+    Green: ['Omar', 'Samuel'],
+    Blue: ['Kate', 'Monica'],
+    Purple: ['Chris'],
+    Orange: ['Paul'],
+    Yellow: ['Jessica'],
+  };
+  
+  return Object.keys(teamOwners).reduce(function(acc, team) {
+    return teamOwners[team].indexOf(owner) !== -1 ? team : acc;
+  }, null);
+}
+                            </script>
+                            <script data-source-type="data" type="text/handsontable">
+function getData() {
+  return [
+    {
+      task: 'Task 33', 
+      owner: 'Michael', 
+      status: 'New', 
+      startDate: '', 
+      endDate: '', 
+      atRisk: false, 
+      progress: 0, 
+      notes: 'To be consulted',
+    },
+    {
+      task: 'Task 12', 
+      owner: 'Samuel', 
+      status: 'New', 
+      startDate: '', 
+      endDate: '', 
+      atRisk: false, 
+      progress: 0, 
+      notes: 'Great idea!',
+    },
+    {
+      task: 'Task 96', 
+      owner: 'Kate', 
+      status: 'Accepted', 
+      startDate: '', 
+      endDate: '', 
+      atRisk: false, 
+      progress: 0, 
+      notes: '',
+    },
+    {
+      task: 'Task 16', 
+      owner: 'Chris', 
+      status: 'Accepted', 
+      startDate: '', 
+      endDate: '', 
+      atRisk: false, 
+      progress: 0, 
+      notes: 'We need to discuss our options',
+    },
+    {
+      task: 'Task 19', 
+      owner: 'Samuel', 
+      status: 'In progress', 
+      startDate: '24/01/2017', 
+      endDate: '15/05/2017', 
+      atRisk: false, 
+      progress: 10, 
+      notes: '',
+    },
+    {
+      task: 'Task 29', 
+      owner: 'Omar', 
+      status: 'In progress', 
+      startDate: '24/01/2017', 
+      endDate: '13/06/2017', 
+      atRisk: true, 
+      progress: 10, 
+      notes: 'Mike should take a look at it',
+    },
+    {
+      task: 'Task 92', 
+      owner: 'Ben', 
+      status: 'In progress', 
+      startDate: '26/01/2017', 
+      endDate: '20/04/2017', 
+      atRisk: false, 
+      progress: 40, 
+      notes: '',
+    },
+    {
+      task: 'Task 02', 
+      owner: 'Omar', 
+      status: 'In progress', 
+      startDate: '26/01/2017', 
+      endDate: '05/02/2017', 
+      atRisk: false, 
+      progress: 50, 
+      notes: '',
+    },
+    {
+      task: 'Task 88', 
+      owner: 'Monica', 
+      status: 'In progress', 
+      startDate: '26/01/2017', 
+      endDate: '15/02/2017', 
+      atRisk: false, 
+      progress: 70, 
+      notes: '',
+    },
+    {
+      task: 'Task 89', 
+      owner: 'Samuel', 
+      status: 'In progress', 
+      startDate: '01/02/2017', 
+      endDate: '07/03/2017', 
+      atRisk: false, 
+      progress: 40, 
+      notes: 'Needs a better research',
+    },
+    {
+      task: 'Task 26', 
+      owner: 'Paul', 
+      status: 'In progress', 
+      startDate: '01/02/2017', 
+      endDate: '22/04/2017', 
+      atRisk: true, 
+      progress: 20, 
+      notes: '',
+    },
+    {
+      task: 'Task 56', 
+      owner: 'Jessica', 
+      status: 'In progress', 
+      startDate: '01/02/2017', 
+      endDate: '11/05/2017', 
+      atRisk: true, 
+      progress: 30, 
+      notes: '',
+    },
+    {
+      task: 'Task 06', 
+      owner: 'Michael', 
+      status: 'In progress', 
+      startDate: '01/02/2017', 
+      endDate: '06/06/2017', 
+      atRisk: true, 
+      progress: 7, 
+      notes: '',
+    },
+    {
+      task: 'Task 01', 
+      owner: 'Chris', 
+      status: 'Completed', 
+      startDate: '05/02/2017', 
+      endDate: '12/02/2017', 
+      atRisk: false, 
+      progress: 100, 
+      notes: 'Well done!',
+    },
+    {
+      task: 'Task 09', 
+      owner: 'Samuel', 
+      status: 'Completed', 
+      startDate: '06/02/2017', 
+      endDate: '20/02/2017', 
+      atRisk: false, 
+      progress: 100, 
+      notes: '',
+    },
+    {
+      task: 'Task 14', 
+      owner: 'Michael', 
+      status: 'Completed', 
+      startDate: '06/02/2017', 
+      endDate: '30/03/2017', 
+      atRisk: false, 
+      progress: 100, 
+      notes: '',
+    },
+    {
+      task: 'Task 20', 
+      owner: 'Paul', 
+      status: 'Completed', 
+      startDate: '07/02/2017', 
+      endDate: '09/02/2017', 
+      atRisk: false, 
+      progress: 100, 
+      notes: '',
+    },
+    {
+      task: 'Task 04', 
+      owner: 'Ben', 
+      status: 'Completed', 
+      startDate: '08/02/2017', 
+      endDate: '04/04/2017', 
+      atRisk: false, 
+      progress: 100, 
+      notes: '',
+    },
+    {
+      task: 'Task 33', 
+      owner: 'Samuel', 
+      status: 'Rejected', 
+      startDate: '', 
+      endDate: '', 
+      atRisk: false, 
+      progress: 0, 
+      notes: 'Ask Mark for details',
+    },
+    {
+      task: 'Task 79', 
+      owner: 'Kate', 
+      status: 'Rejected', 
+      startDate: '', 
+      endDate: '', 
+      atRisk: false, 
+      progress: 0, 
+      notes: '',
+     },
+  ];
+};
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-content-data" data-tab-forward="source"></div>
             </div>
         </div>
-        <div class="large-3 columns">
-            <div class="code-holder">
-                <p>Live Editor</p>
-                <div class="code-box">
-                    Code goes here
-                </div>
+        <div class="large-7 columns">
+            <p>Result</p>
+            <div class="plugin-preview">
+                <div id="example"></div>
+                <div id="example-error">An error was cought (<span></span>).</div>
             </div>
         </div>
     </div>
@@ -104,7 +445,7 @@
                 "Handsontable was a perfect fit because it looks and feels just like Excel,
                 a tool teachers are already familiar with."
             </blockquote>
-            <h5>David Wolever, CTO at <a href="//akindi.com" target="_blank">Akindi</a></h5>
+            <h5>David Wolever, CTO at <a href="http://akindi.com" target="_blank">Akindi</a></h5>
         </div>
     </div>
 
@@ -178,13 +519,12 @@
                     <li>
                         <h4 class="size-small">Wrappers</h4>
                         <ul>
-                            <li><a href="//github.com/handsontable/react-handsontable" target="_blank">ReactJS</a></li>
-                            <li><a href="//github.com/handsontable/vue-handsontable-official" target="_blank">VueJS</a></li>
-                            <li><a href="//github.com/handsontable/angular2-handsontable" target="_blank">AngularJS (2)</a>
+                            <li><a href="https://github.com/handsontable/react-handsontable" target="_blank">React</a></li>
+                            <li><a href="https://github.com/handsontable/vue-handsontable-official" target="_blank">Vue.js</a></li>
+                            <li><a href="https://github.com/handsontable/angular-handsontable" target="_blank">Angular</a>
                             </li>
-                            <li><a href="//github.com/handsontable/ngHandsontable" target="_blank">Angular</a></li>
-                            <li><a href="//github.com/handsontable/hot-table" target="_blank">Polymer</a></li>
-                            <li><a href="//www.npmjs.com/package/ts-handsontable" target="_blank">Typescript</a></li>
+                            <li><a href="https://github.com/handsontable/ngHandsontable" target="_blank">AngularJS</a></li>
+                            <li><a href="https://github.com/handsontable/hot-table" target="_blank">Polymer</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -216,286 +556,3 @@
         </div>
     </div>
 </section>
-
-<script data-jsfiddle>
-    var dataObject = [
-        {
-            id: 1,
-            something: 'ABC',
-            flag: 'EUR',
-            currencyCode: 'EUR',
-            currency: 'Euro',
-            level: 0.9033,
-            units: 'EUR / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0026
-        },
-        {
-            id: 2,
-            flag: 'JPY',
-            currencyCode: 'JPY',
-            currency: 'Japanese Yen',
-            level: 124.3870,
-            units: 'JPY / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0001
-        },
-        {
-            id: 3,
-            flag: 'GBP',
-            currencyCode: 'GBP',
-            currency: 'Pound Sterling',
-            level: 0.6396,
-            units: 'GBP / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.00
-        },
-        {
-            id: 4,
-            flag: 'CHF',
-            currencyCode: 'CHF',
-            currency: 'Swiss Franc',
-            level: 0.9775,
-            units: 'CHF / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0008
-        },
-        {
-            id: 5,
-            flag: 'CAD',
-            currencyCode: 'CAD',
-            currency: 'Canadian Dollar',
-            level: 1.3097,
-            units: 'CAD / USD',
-            asOf: '08/19/2015',
-            onedChng: -0.0005
-        },
-        {
-            id: 6,
-            flag: 'AUD',
-            currencyCode: 'AUD',
-            currency: 'Australian Dollar',
-            level: 1.3589,
-            units: 'AUD / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0020
-        },
-        {
-            id: 7,
-            flag: 'NZD',
-            currencyCode: 'NZD',
-            currency: 'New Zealand Dollar',
-            level: 1.5218,
-            units: 'NZD / USD',
-            asOf: '08/19/2015',
-            onedChng: -0.0036
-        },
-        {
-            id: 8,
-            flag: 'SEK',
-            currencyCode: 'SEK',
-            currency: 'Swedish Krona',
-            level: 8.5280,
-            units: 'SEK / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0016
-        },
-        {
-            id: 9,
-            flag: 'NOK',
-            currencyCode: 'NOK',
-            currency: 'Norwegian Krone',
-            level: 8.2433,
-            units: 'NOK / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0008
-        },
-        {
-            id: 10,
-            flag: 'BRL',
-            currencyCode: 'BRL',
-            currency: 'Brazilian Real',
-            level: 3.4806,
-            units: 'BRL / USD',
-            asOf: '08/19/2015',
-            onedChng: -0.0009
-        },
-        {
-            id: 11,
-            flag: 'CNY',
-            currencyCode: 'CNY',
-            currency: 'Chinese Yuan',
-            level: 6.3961,
-            units: 'CNY / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0004
-        },
-        {
-            id: 12,
-            flag: 'RUB',
-            currencyCode: 'RUB',
-            currency: 'Russian Rouble',
-            level: 65.5980,
-            units: 'RUB / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0059
-        },
-        {
-            id: 13,
-            flag: 'INR',
-            currencyCode: 'INR',
-            currency: 'Indian Rupee',
-            level: 65.3724,
-            units: 'INR / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0026
-        },
-        {
-            id: 14,
-            flag: 'TRY',
-            currencyCode: 'TRY',
-            currency: 'New Turkish Lira',
-            level: 2.8689,
-            units: 'TRY / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0092
-        },
-        {
-            id: 15,
-            flag: 'THB',
-            currencyCode: 'THB',
-            currency: 'Thai Baht',
-            level: 35.5029,
-            units: 'THB / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0044
-        },
-        {
-            id: 16,
-            flag: 'IDR',
-            currencyCode: 'IDR',
-            currency: 'Indonesian Rupiah',
-            level: 13.83,
-            units: 'IDR / USD',
-            asOf: '08/19/2015',
-            onedChng: -0.0009
-        },
-        {
-            id: 17,
-            flag: 'MYR',
-            currencyCode: 'MYR',
-            currency: 'Malaysian Ringgit',
-            level: 4.0949,
-            units: 'MYR / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0010
-        },
-        {
-            id: 18,
-            flag: 'MXN',
-            currencyCode: 'MXN',
-            currency: 'Mexican New Peso',
-            level: 16.4309,
-            units: 'MXN / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0017
-        },
-        {
-            id: 19,
-            flag: 'ARS',
-            currencyCode: 'ARS',
-            currency: 'Argentinian Peso',
-            level: 9.2534,
-            units: 'ARS / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0011
-        },
-        {
-            id: 20,
-            flag: 'DKK',
-            currencyCode: 'DKK',
-            currency: 'Danish Krone',
-            level: 6.7417,
-            units: 'DKK / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0025
-        },
-        {
-            id: 21,
-            flag: 'ILS',
-            currencyCode: 'ILS',
-            currency: 'Israeli New Sheqel',
-            level: 3.8262,
-            units: 'ILS / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0084
-        },
-        {
-            id: 22,
-            flag: 'PHP',
-            currencyCode: 'PHP',
-            currency: 'Philippine Peso',
-            level: 46.3108,
-            units: 'PHP / USD',
-            asOf: '08/19/2015',
-            onedChng: 0.0012
-        }
-    ];
-
-    var hotElement = document.querySelector('#hot');
-    var hotElementContainer = hotElement.parentNode;
-    var hotSettings = {
-        data: dataObject,
-        columns: [
-            {
-                data: 'id',
-                type: 'numeric',
-                width: 40
-            },
-            {
-                data: 'something',
-                type: 'numeric',
-                width: 40
-            },
-            {
-                data: 'flag'
-            },
-            {
-                data: 'currencyCode',
-                type: 'text'
-            },
-            {
-                data: 'currency',
-                type: 'text'
-            },
-            {
-                data: 'level',
-                type: 'numeric',
-                format: '0.0000'
-            },
-            {
-                data: 'units',
-                type: 'text'
-            },
-            {
-                data: 'asOf',
-                type: 'date',
-                dateFormat: 'MM/DD/YYYY'
-            },
-            {
-                data: 'onedChng',
-                type: 'numeric',
-                format: '0.00%'
-            }
-        ],
-        stretchH: 'all',
-        width: parseInt(hotElementContainer.offsetWidth, 10),
-        autoWrapRow: true,
-        height: 441,
-        maxRows: 22,
-        rowHeaders: true,
-        colHeaders: true
-    };
-
-    var hot = new Handsontable(hotElement, hotSettings);
-</script>

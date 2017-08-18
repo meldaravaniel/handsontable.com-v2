@@ -23,11 +23,9 @@
     }
   }
 
-  .code-box {
-    height: 440px;
-    padding: 20px;
-    overflow: auto;
-    color: #fff;
+  .CodeMirror {
+    height: 600px;
+    padding: 0;
     border: 2px solid $darkGray;
     background-color: $baseGray;
   }

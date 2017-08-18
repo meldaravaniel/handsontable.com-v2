@@ -7,13 +7,13 @@
                         <use xlink:href="#handsontable-logo"></use>
                     </svg>
                 </a>
-                <a href="//github.com/handsontable/handsontable" class="star-counter" target="_blank">
+                <a href="//github.com/handsontable/handsontable" id="github-star" class="star-counter" target="_blank">
                     <svg>
                         <use xlink:href="#github-squid"></use>
                     </svg>
                     <div class="github-star">
                         <div class="triangle"></div>
-                        8560
+                        <div data-bind="starsCount">-</div>
                     </div>
                 </a>
             </div>
@@ -21,7 +21,7 @@
 
         <div class="small-9 columns text-right">
             <nav class="mobile-inactive">
-                <a href="#">
+                <a href="#" id="mobile-nav-menu">
                     <svg>
                         <use xlink:href="#open-mobile-nav"></use>
                     </svg>

@@ -2293,6 +2293,9 @@ video {
   display: inline-block;
   vertical-align: baseline; }
 
+progress {
+  width: 100px; }
+
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -2365,6 +2368,9 @@ pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em; }
+
+code {
+  font-size: 13px !important; }
 
 button,
 input,
@@ -2450,6 +2456,9 @@ li, ul {
 select {
   -webkit-appearance: none;
   -moz-appearance: none; }
+
+.token {
+  font-size: 13px; }
 
 /**
  * @author: Handsoncode
@@ -3537,7 +3546,7 @@ header {
   padding: 11px 15px;
   margin-top: 20px;
   overflow: auto;
-  white-space: nowrap;
+  white-space: pre;
   background-color: #fff;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   border: 2px solid #CFCFCF; }
@@ -4256,16 +4265,14 @@ header {
     list-style-type: disc;
     list-style-position: inside; }
 .knowledge-base .answers > div {
-  -webkit-transition: max-height 1.5s ease-in-out;
-  -moz-transition: max-height 1.5s ease-in-out;
-  transition: max-height 1.5s ease-in-out;
-  height: auto;
+  -webkit-transition: height 0.5s ease-in-out;
+  -moz-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+  height: 0;
   margin: 5px 0 5px 20px;
   padding-left: 20px;
   overflow: hidden;
   border-left: 10px solid #f7f7f7; }
-  .knowledge-base .answers > div.opened {
-    max-height: 1050px; }
   .knowledge-base .answers > div p {
     padding: 10px 0; }
 .knowledge-base .answers img {
@@ -4390,11 +4397,9 @@ header {
     .features .simple h2.divider:before {
       top: 50px;
       left: 49%; } }
-.features .simple .code-box {
-  height: 440px;
-  padding: 20px;
-  overflow: auto;
-  color: #fff;
+.features .simple .CodeMirror {
+  height: 600px;
+  padding: 0;
   border: 2px solid #8D8D8D;
   background-color: #363636; }
 .features .simple ol {
@@ -4414,6 +4419,10 @@ header {
 /**
  * @author: Handsoncode
  */
+.features .tabs-code > div {
+  display: none; }
+  .features .tabs-code > div:first-child, .features .tabs-code > div.active {
+    display: block; }
 .features .main-background {
   background: #1addef;
   background: -webkit-linear-gradient(145deg, #1addef 0%, #2443fe 60%, #2443fe 40%, #4508c1 100%);

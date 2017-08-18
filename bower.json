@@ -15,11 +15,11 @@
   "dependencies": {
     "axios": "^0.11.0",
     "flag-icon": "0.11.1",
-    "handsontable": "0.32.0",
+    "handsontable-pro": "git@git.handsontable.com:handsontable/handsontable-pro.git#1.13.0",
     "highlightjs": "^9.0.0",
     "history.js": "^1.8.0",
     "prism": "^1.4.1",
-    "numbro": "^1.8.1",
+    "numbro": "^1.11.0",
     "promise-polyfill": "^6.0.2"
   },
   "ignore": [
