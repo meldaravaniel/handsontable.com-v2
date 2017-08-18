@@ -6,6 +6,17 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        
+        copy: {
+            main: {
+                files: [
+                  {expand: true, cwd: 'node_modules/codemirror/lib', src: ['**'], dest: 'public/static/node_components/codemirror'},
+                  {expand: true, cwd: 'node_modules/codemirror/mode/javascript', src: ['**'], dest: 'public/static/node_components/codemirror/mode/javascript'},
+                  {expand: true, cwd: 'node_modules/codemirror/theme', src: ['**'], dest: 'public/static/node_components/codemirror/theme'},
+                  {expand: true, cwd: 'node_modules/classlist-polyfill/src', src: ['**'], dest: 'public/static/node_components/classlist-polyfill'},
+                ],
+            },
+        },
 
         cssmin: {
             options: {
@@ -32,11 +43,12 @@ module.exports = function(grunt) {
         },
     });
     
-    grunt.loadNpmTasks('grunt-unused');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-unused');
 
     grunt.registerTask('default', 'build');
-    grunt.registerTask('build',  ['unused', 'cssmin', 'clean']);
+    grunt.registerTask('build',  ['copy', 'unused', 'cssmin', 'clean']);
     
 };

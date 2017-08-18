@@ -42,6 +42,10 @@ video {
   vertical-align: baseline; 
 }
 
+progress {
+  width: 100px;
+}
+
 audio:not([controls]) {
   display: none;
   height: 0;

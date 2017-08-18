@@ -39,7 +39,7 @@
     d.addEventListener('click', function(event) {
       var target = event.target;
       
-      if (target.id && /^tab\-./.test(target.id)) {
+      if (target.id && /^tab\-./.test(target.id) && !/^tab\-content\-./.test(target.id)) {
         var tabGroups = $$('.tabs');
         
         for (var i = 0; i < tabGroups.length; i++) {
@@ -56,9 +56,21 @@
         }
         
         var contentId = 'tab-content-' + target.id.replace('tab-', '');
+        var contentElement = $(contentId);
+        var contentToActivate = contentElement.dataset.tabForward ? $('tab-content-' + contentElement.dataset.tabForward) : contentElement;
         
         target.classList.add('active');
-        $(contentId).classList.add('active');
+        contentToActivate.classList.add('active');
+        
+        var event;
+        
+        try {
+          event = new Event('tab-content-active');
+        } catch (ex) {
+          event = document.createEvent('Event');
+          event.initEvent('tab-content-active', true, true);
+        }
+        contentElement.dispatchEvent(event);
       }
     });
     // end
