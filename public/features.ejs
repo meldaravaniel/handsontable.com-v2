@@ -90,17 +90,21 @@
                         <div class="small-12 columns">
                             <div class="code-holder" data-type="source"></div>
                             <script data-source-type="source" type="text/handsontable">
+var data = getData();
+var rowsCount = data.length;
+
 var hot = new Handsontable(document.getElementById('example'), {
-  width: 891,
-  data: getData(),
-  columns: [
-    {
-      data: 'task',
-    },
-    {
-      data: 'owner',
-      type: 'dropdown',
-      source: [
+  data: data,
+  cells: function(row, column) {
+    var cellMeta = {};
+    
+    if (row >= rowsCount) {
+      return cellMeta;
+    }
+    
+    if (column === 1) {
+      cellMeta.type = 'dropdown';
+      cellMeta.source = [
         'Ben', 
         'Chris', 
         'Jessica', 
@@ -110,13 +114,12 @@ var hot = new Handsontable(document.getElementById('example'), {
         'Omar', 
         'Paul',
         'Samuel', 
-      ],
-    },
-    {
-      data: 'team',
-      readOnly: true,
-      renderer: function(hotInstance, TD, row, col, prop, value, cellProperties) {
-        var owner = hotInstance.getDataAtRowProp(row, 'owner');
+      ];
+      
+    } else if (column === 2) {
+      cellMeta.readOnly = true;
+      cellMeta.renderer = function(hotInstance, TD, row, col, prop, value, cellProperties) {
+        var owner = hotInstance.getDataAtCell(row, 1);
         var ownerTeam = getOwnerTeam(owner);
         var colors = {
           Red: '#e87677',
@@ -129,38 +132,29 @@ var hot = new Handsontable(document.getElementById('example'), {
         
         TD.style.color = colors[ownerTeam];
         TD.textContent = ownerTeam;
-      }
-    },
-    {
-      data: 'status',
-      type: 'dropdown',
-      source: [
+      };
+      
+    } else if (column === 3) {
+      cellMeta.type = 'dropdown';
+      cellMeta.source = [
         'New', 
         'Accepted', 
         'Rejected',
         'In progress', 
         'Completed', 
-      ],
-    },
-    {
-      data: 'startDate',
-      type: 'date',
-      dateFormat: 'DD/MM/YYYY',
-    },
-    {
-      data: 'endDate',
-      type: 'date',
-      dateFormat: 'DD/MM/YYYY',
-    },
-    {
-      data: 'atRisk',
-      type: 'checkbox',
-      className: 'htCenter',
-    },
-    {
-      data: 'progress',
-      width: 110,
-      renderer: function(hotInstance, TD, row, col, prop, value, cellProperties) {
+      ];
+      
+    } else if (column === 4 || column === 5) {
+      cellMeta.type = 'date';
+      cellMeta.dateFormat = 'DD/MM/YYYY';
+      
+    } else if (column === 6) {
+      cellMeta.type = 'checkbox';
+      cellMeta.className = 'htCenter';
+      
+    } else if (column === 7) {
+      cellMeta.width = 110;
+      cellMeta.renderer = function(hotInstance, TD, row, col, prop, value, cellProperties) {
         var progressBar = document.createElement('progress');
         
         value = parseInt(value, 10);
@@ -170,12 +164,16 @@ var hot = new Handsontable(document.getElementById('example'), {
         
         TD.textContent = '';
         TD.appendChild(progressBar);
-      }
-    },
-    {
-      data: 'notes',
-    },
-  ],
+      };
+    }
+    
+    return cellMeta;
+  },
+  width: 800,
+  height: 622,
+  minSpareCols: 17,
+  minSpareRows: 80,
+  rowHeaders: true,
   colHeaders: [
     'Task', 
     'Owner', 
@@ -218,206 +216,226 @@ function getOwnerTeam(owner) {
                             <script data-source-type="data" type="text/handsontable">
 function getData() {
   return [
-    {
-      task: 'Task 33', 
-      owner: 'Michael', 
-      status: 'New', 
-      startDate: '', 
-      endDate: '', 
-      atRisk: false, 
-      progress: 0, 
-      notes: 'To be consulted',
-    },
-    {
-      task: 'Task 12', 
-      owner: 'Samuel', 
-      status: 'New', 
-      startDate: '', 
-      endDate: '', 
-      atRisk: false, 
-      progress: 0, 
-      notes: 'Great idea!',
-    },
-    {
-      task: 'Task 96', 
-      owner: 'Kate', 
-      status: 'Accepted', 
-      startDate: '', 
-      endDate: '', 
-      atRisk: false, 
-      progress: 0, 
-      notes: '',
-    },
-    {
-      task: 'Task 16', 
-      owner: 'Chris', 
-      status: 'Accepted', 
-      startDate: '', 
-      endDate: '', 
-      atRisk: false, 
-      progress: 0, 
-      notes: 'We need to discuss our options',
-    },
-    {
-      task: 'Task 19', 
-      owner: 'Samuel', 
-      status: 'In progress', 
-      startDate: '24/01/2017', 
-      endDate: '15/05/2017', 
-      atRisk: false, 
-      progress: 10, 
-      notes: '',
-    },
-    {
-      task: 'Task 29', 
-      owner: 'Omar', 
-      status: 'In progress', 
-      startDate: '24/01/2017', 
-      endDate: '13/06/2017', 
-      atRisk: true, 
-      progress: 10, 
-      notes: 'Mike should take a look at it',
-    },
-    {
-      task: 'Task 92', 
-      owner: 'Ben', 
-      status: 'In progress', 
-      startDate: '26/01/2017', 
-      endDate: '20/04/2017', 
-      atRisk: false, 
-      progress: 40, 
-      notes: '',
-    },
-    {
-      task: 'Task 02', 
-      owner: 'Omar', 
-      status: 'In progress', 
-      startDate: '26/01/2017', 
-      endDate: '05/02/2017', 
-      atRisk: false, 
-      progress: 50, 
-      notes: '',
-    },
-    {
-      task: 'Task 88', 
-      owner: 'Monica', 
-      status: 'In progress', 
-      startDate: '26/01/2017', 
-      endDate: '15/02/2017', 
-      atRisk: false, 
-      progress: 70, 
-      notes: '',
-    },
-    {
-      task: 'Task 89', 
-      owner: 'Samuel', 
-      status: 'In progress', 
-      startDate: '01/02/2017', 
-      endDate: '07/03/2017', 
-      atRisk: false, 
-      progress: 40, 
-      notes: 'Needs a better research',
-    },
-    {
-      task: 'Task 26', 
-      owner: 'Paul', 
-      status: 'In progress', 
-      startDate: '01/02/2017', 
-      endDate: '22/04/2017', 
-      atRisk: true, 
-      progress: 20, 
-      notes: '',
-    },
-    {
-      task: 'Task 56', 
-      owner: 'Jessica', 
-      status: 'In progress', 
-      startDate: '01/02/2017', 
-      endDate: '11/05/2017', 
-      atRisk: true, 
-      progress: 30, 
-      notes: '',
-    },
-    {
-      task: 'Task 06', 
-      owner: 'Michael', 
-      status: 'In progress', 
-      startDate: '01/02/2017', 
-      endDate: '06/06/2017', 
-      atRisk: true, 
-      progress: 7, 
-      notes: '',
-    },
-    {
-      task: 'Task 01', 
-      owner: 'Chris', 
-      status: 'Completed', 
-      startDate: '05/02/2017', 
-      endDate: '12/02/2017', 
-      atRisk: false, 
-      progress: 100, 
-      notes: 'Well done!',
-    },
-    {
-      task: 'Task 09', 
-      owner: 'Samuel', 
-      status: 'Completed', 
-      startDate: '06/02/2017', 
-      endDate: '20/02/2017', 
-      atRisk: false, 
-      progress: 100, 
-      notes: '',
-    },
-    {
-      task: 'Task 14', 
-      owner: 'Michael', 
-      status: 'Completed', 
-      startDate: '06/02/2017', 
-      endDate: '30/03/2017', 
-      atRisk: false, 
-      progress: 100, 
-      notes: '',
-    },
-    {
-      task: 'Task 20', 
-      owner: 'Paul', 
-      status: 'Completed', 
-      startDate: '07/02/2017', 
-      endDate: '09/02/2017', 
-      atRisk: false, 
-      progress: 100, 
-      notes: '',
-    },
-    {
-      task: 'Task 04', 
-      owner: 'Ben', 
-      status: 'Completed', 
-      startDate: '08/02/2017', 
-      endDate: '04/04/2017', 
-      atRisk: false, 
-      progress: 100, 
-      notes: '',
-    },
-    {
-      task: 'Task 33', 
-      owner: 'Samuel', 
-      status: 'Rejected', 
-      startDate: '', 
-      endDate: '', 
-      atRisk: false, 
-      progress: 0, 
-      notes: 'Ask Mark for details',
-    },
-    {
-      task: 'Task 79', 
-      owner: 'Kate', 
-      status: 'Rejected', 
-      startDate: '', 
-      endDate: '', 
-      atRisk: false, 
-      progress: 0, 
-      notes: '',
-     },
+    [
+      'Task 33', 
+      'Michael', 
+      '', 
+      'New', 
+      '', 
+      '', 
+      false, 
+      0, 
+      'To be consulted',
+    ],
+    [
+      'Task 12', 
+      'Samuel', 
+      '', 
+      'New', 
+      '', 
+      '', 
+      false, 
+      0, 
+      'Great idea!',
+    ],
+    [
+      'Task 96', 
+      'Kate', 
+      '', 
+      'Accepted', 
+      '', 
+      '', 
+      false, 
+      0, 
+      '',
+    ],
+    [
+      'Task 16', 
+      'Chris', 
+      '', 
+      'Accepted', 
+      '', 
+      '', 
+      false, 
+      0, 
+      'We need to discuss our options',
+    ],
+    [
+      'Task 19', 
+      'Samuel', 
+      '', 
+      'In progress', 
+      '24/01/2017', 
+      '15/05/2017', 
+      false, 
+      0, 
+      '',
+    ],
+    [
+      'Task 29', 
+      'Omar', 
+      '', 
+      'In progress', 
+      '24/01/2017', 
+      '13/06/2017', 
+      true, 
+      10, 
+      'Mike should take a look at it',
+    ],
+    [
+      'Task 92', 
+      'Ben', 
+      '', 
+      'In progress', 
+      '26/01/2017', 
+      '20/04/2017', 
+      false, 
+      40, 
+      '',
+    ],
+    [
+      'Task 02', 
+      'Omar', 
+      '', 
+      'In progress', 
+      '26/01/2017', 
+      '05/02/2017', 
+      false, 
+      50, 
+      '',
+    ],
+    [
+      'Task 88', 
+      'Monica', 
+      '', 
+      'In progress', 
+      '26/01/2017', 
+      '15/02/2017', 
+      false, 
+      70, 
+      '',
+    ],
+    [
+      'Task 89', 
+      'Samuel', 
+      '', 
+      'In progress', 
+      '01/02/2017', 
+      '07/03/2017', 
+      false, 
+      40, 
+      'Needs a better research',
+    ],
+    [
+      'Task 26', 
+      'Paul', 
+      '', 
+      'In progress', 
+      '01/02/2017', 
+      '22/04/2017', 
+      true, 
+      20, 
+      '',
+    ],
+    [
+      'Task 56', 
+      'Jessica', 
+      '', 
+      'In progress', 
+      '01/02/2017', 
+      '11/05/2017', 
+      true, 
+      30, 
+      '',
+    ],
+    [
+      'Task 06', 
+      'Michael', 
+      '', 
+      'In progress', 
+      '01/02/2017', 
+      '06/06/2017', 
+      true, 
+      7, 
+      '',
+    ],
+    [
+      'Task 01', 
+      'Chris', 
+      '', 
+      'Completed', 
+      '05/02/2017', 
+      '12/02/2017', 
+      false, 
+      100, 
+      'Well done!',
+    ],
+    [
+      'Task 09', 
+      'Samuel', 
+      '', 
+      'Completed', 
+      '06/02/2017', 
+      '20/02/2017', 
+      false, 
+      100, 
+      '',
+    ],
+    [
+      'Task 14', 
+      'Michael', 
+      '', 
+      'Completed', 
+      '06/02/2017', 
+      '30/03/2017', 
+      false, 
+      100, 
+      '',
+    ],
+    [
+      'Task 20', 
+      'Paul', 
+      '', 
+      'Completed', 
+      '07/02/2017', 
+      '09/02/2017', 
+      false, 
+      100, 
+      '',
+    ],
+    [
+      'Task 04', 
+      'Ben', 
+      '', 
+      'Completed', 
+      '08/02/2017', 
+      '04/04/2017', 
+      false, 
+      100, 
+      '',
+    ],
+    [
+      'Task 33', 
+      'Samuel', 
+      '', 
+      'Rejected', 
+      '', 
+      '', 
+      false, 
+      0, 
+      'Ask Mark for details',
+    ],
+    [
+      'Task 79', 
+      'Kate', 
+      '', 
+      'Rejected', 
+      '', 
+      '', 
+      false, 
+      0, 
+      '',
+    ],
   ];
 };
                             </script>
