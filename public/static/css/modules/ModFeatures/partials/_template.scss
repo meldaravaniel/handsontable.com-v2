@@ -4,6 +4,16 @@
 
  .features  {
 
+   & .tabs-code {
+     & > div {
+       display: none;
+
+       &:first-child, &.active {
+         display: block;
+       }
+     }
+   }
+
    .main-background {
      @include linear-gradient(-55deg, #1addef 0%, #2443fe 60%, #2443fe 40%, #4508c1 100%);
    }

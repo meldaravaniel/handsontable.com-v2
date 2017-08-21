@@ -29,7 +29,7 @@
                             <p>Handsontable CE can be installed from
                                 <a href="https://www.npmjs.com/package/handsontable" target="_blank">NPM</a>.
                                 It includes all the files, along with the complete source code.</p>
-                            <code>npm install handsontable</code>
+                            <code class="language-bash">npm install handsontable</code>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         <div class="medium-12 large-7 columns">
                             <p>To install Handsontable CE, run the following command using the
                                 <a href="https://yarnpkg.com/en/" target="_blank">Yarn</a> Package Manager Console.</p>
-                            <code class="installation">yarn add handsontable</code>
+                            <code class="language-bash">yarn add handsontable</code>
                         </div>
                     </div>
                 </div>
@@ -47,13 +47,11 @@
                         <div class="medium-12 large-8 columns">
                             <p>If you use a modular script loader then you can require Handsontable CE just like any other
                                 module:</p>
-                            <code>
-                                require(['handsontable'], function(Handsontable) { <br/>
-                                &nbsp;&nbsp;var hot = new Handsontable(document.getElementById('example'), {<br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;data: [[1, 2, 3, 4], [1, 2, 3, 4]]<br/>
-                                &nbsp;&nbsp;});<br/>
-                                });<br/>
-                            </code>
+                              <code class="language-javascript">require(['handsontable'], function(Handsontable) {
+  var hot = new Handsontable(document.getElementById('example'), {
+    data: [[1, 2, 3, 4], [1, 2, 3, 4]]
+  });
+});</code>
                         </div>
                     </div>
                 </div>
@@ -63,7 +61,7 @@
                             <p>To install Handsontable CE, just run the following command in the
                                 <a href="https://docs.microsoft.com/en-us/nuget/tools/package-manager-console"
                                    target="_blank">NuGet</a> package manager console.</p>
-                            <code>PM> Install-Package Handsontable</code>
+                            <code class="language-bash">PM> Install-Package Handsontable</code>
                         </div>
                     </div>
                 </div>
@@ -72,7 +70,7 @@
                         <div class="medium-12 large-7 columns">
                             <p>Although it is no longer recommended, Handsontable CE can be still installed via
                                 <a href="https://bower.io/" target="_blank">bower</a> package manager.</p>
-                            <code>bower install handsontable</code>
+                            <code class="language-bash">bower install handsontable</code>
                         </div>
                     </div>
                 </div>
@@ -82,7 +80,7 @@
                             <p>To install Handsontable CE on
                                 <a href="https://github.com/jspm/jspm-cli/blob/master/docs/installing-packages.md"
                                    target="_blank">JSPM</a> run the following command.</p>
-                            <code>jspm install npm:handsontable</code>
+                            <code class="language-bash">jspm install npm:handsontable</code>
                         </div>
                     </div>
                 </div>
@@ -183,7 +181,7 @@
                                     <svg>
                                         <use xlink:href="#angular-2"></use>
                                     </svg>
-                                    <p>Angular 2</p>
+                                    <p>Angular</p>
                                 </a>
                             </li>
                             <li>
@@ -200,7 +198,7 @@
                                     <svg>
                                         <use xlink:href="#vue-l"></use>
                                     </svg>
-                                    <p>Vue</p>
+                                    <p>Vue.js</p>
                                 </a>
                             </li>
                         </ul>
