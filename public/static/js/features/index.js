@@ -73,11 +73,11 @@
       }, {
         value: codeHolder[activeTab + 'Value'],
         indentUnit: 2,
+        lineWrapping: true,
         tabSize: 2,
         lineNumbers: true,
-        viewportMargin: 0,
-        theme: 'lesser-dark',
-        mode: 'javascript',
+        theme: 'dracula',
+        mode: 'javascript'
       });
     }
     

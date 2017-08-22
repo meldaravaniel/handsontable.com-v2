@@ -5,51 +5,33 @@
 .features .simple {
 
   h5 {
-    margin: 20px 0 5px 0;
+    margin: 20px 0 5px;
     padding:0;
     text-align: left;
 
     @media only screen and (min-width: $mediumWidth) {
-      margin: 0 0 5px 0;
+      margin: 0 0 5px;
     }
   }
 
-  h2.divider:before {
-    top: 85%;
+  .tabs {
+    height: 600px;
 
-    @media only screen and (min-width: $mediumWidth) {
-      top: 50px;
-      left: 49%;
+    & > div:not(.tab) {
+      padding: 0;
     }
+  }
+
+  .plugin-preview {
+    padding: 44px 12px 0;
   }
 
   .CodeMirror {
-    height: 600px;
-    padding: 0;
-    border: 2px solid $darkGray;
-    background-color: $baseGray;
-  }
+    height: 620px;
+    font-size: 12px;
 
-  ol {
-    margin: 0;
-    padding: 0;
-  }
-
-  .left {
-    margin-top: 5px;
-    float: left;
-
-    a {
-      margin-left: 5px;
-    }
-  }
-
-  .right {
-    margin-top: 5px;
-    float: right;
-
-    a {
-      margin-right: 5px;
+    span {
+      font-size: 12px;
     }
   }
 }

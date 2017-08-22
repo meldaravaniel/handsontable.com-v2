@@ -81,7 +81,7 @@
             <div class="tabs tabs-code">
                 <div class="tab">
                     <ul>
-                        <li id="tab-source" class="active">Source</li>
+                        <li id="tab-source" class="active">Code editor</li>
                         <li id="tab-data">Data</li>
                     </ul>
                 </div>
@@ -95,6 +95,32 @@ var rowsCount = data.length;
 
 var hot = new Handsontable(document.getElementById('example'), {
   data: data,
+  width: 800,
+  height: 622,
+  colWidths: 100,
+  minCols: 26,
+  minRows: 100,
+  rowHeaders: true,
+  colHeaders: [
+    'Task',
+    'Owner',
+    'Team',
+    'Status',
+    'Start date',
+    'End date',
+    'At risk',
+    '% complete'
+  ],
+  columnSorting: true,
+  filters: true,
+  dropdownMenu: true,
+  contextMenu: true,
+  autoRowSize: true,
+  manualRowMove: true,
+  manualColumnMove: true,
+  fillHandle: {
+    autoInsertRow: false,
+  },
   cells: function(row, column) {
     var cellMeta = {};
     
@@ -168,34 +194,7 @@ var hot = new Handsontable(document.getElementById('example'), {
     }
     
     return cellMeta;
-  },
-  width: 800,
-  height: 622,
-  minSpareCols: 17,
-  minSpareRows: 80,
-  rowHeaders: true,
-  colHeaders: [
-    'Task', 
-    'Owner', 
-    'Team', 
-    'Status', 
-    'Start date', 
-    'End date', 
-    'At risk', 
-    '% complete', 
-    'Notes',
-  ],
-  columnSorting: true,
-  filters: true,
-  dropdownMenu: true,
-  contextMenu: true,
-  autoRowSize: true,
-  autoColumnSize: true,
-  manualColumnMove: true,
-  manualRowMove: true,
-  fillHandle: {
-    autoInsertRow: false,
-  },
+  }
 });
 
 function getOwnerTeam(owner) {
@@ -224,8 +223,7 @@ function getData() {
       '', 
       '', 
       false, 
-      0, 
-      'To be consulted',
+      0
     ],
     [
       'Task 12', 
@@ -235,8 +233,7 @@ function getData() {
       '', 
       '', 
       false, 
-      0, 
-      'Great idea!',
+      0
     ],
     [
       'Task 96', 
@@ -246,8 +243,7 @@ function getData() {
       '', 
       '', 
       false, 
-      0, 
-      '',
+      0
     ],
     [
       'Task 16', 
@@ -257,8 +253,7 @@ function getData() {
       '', 
       '', 
       false, 
-      0, 
-      'We need to discuss our options',
+      0
     ],
     [
       'Task 19', 
@@ -268,8 +263,7 @@ function getData() {
       '24/01/2017', 
       '15/05/2017', 
       false, 
-      0, 
-      '',
+      0
     ],
     [
       'Task 29', 
@@ -279,8 +273,7 @@ function getData() {
       '24/01/2017', 
       '13/06/2017', 
       true, 
-      10, 
-      'Mike should take a look at it',
+      10
     ],
     [
       'Task 92', 
@@ -290,8 +283,7 @@ function getData() {
       '26/01/2017', 
       '20/04/2017', 
       false, 
-      40, 
-      '',
+      40
     ],
     [
       'Task 02', 
@@ -301,8 +293,7 @@ function getData() {
       '26/01/2017', 
       '05/02/2017', 
       false, 
-      50, 
-      '',
+      50
     ],
     [
       'Task 88', 
@@ -312,8 +303,7 @@ function getData() {
       '26/01/2017', 
       '15/02/2017', 
       false, 
-      70, 
-      '',
+      70
     ],
     [
       'Task 89', 
@@ -323,8 +313,7 @@ function getData() {
       '01/02/2017', 
       '07/03/2017', 
       false, 
-      40, 
-      'Needs a better research',
+      40
     ],
     [
       'Task 26', 
@@ -334,8 +323,7 @@ function getData() {
       '01/02/2017', 
       '22/04/2017', 
       true, 
-      20, 
-      '',
+      20
     ],
     [
       'Task 56', 
@@ -345,8 +333,7 @@ function getData() {
       '01/02/2017', 
       '11/05/2017', 
       true, 
-      30, 
-      '',
+      30
     ],
     [
       'Task 06', 
@@ -356,8 +343,7 @@ function getData() {
       '01/02/2017', 
       '06/06/2017', 
       true, 
-      7, 
-      '',
+      7
     ],
     [
       'Task 01', 
@@ -367,8 +353,7 @@ function getData() {
       '05/02/2017', 
       '12/02/2017', 
       false, 
-      100, 
-      'Well done!',
+      100
     ],
     [
       'Task 09', 
@@ -378,8 +363,7 @@ function getData() {
       '06/02/2017', 
       '20/02/2017', 
       false, 
-      100, 
-      '',
+      100
     ],
     [
       'Task 14', 
@@ -389,8 +373,7 @@ function getData() {
       '06/02/2017', 
       '30/03/2017', 
       false, 
-      100, 
-      '',
+      100
     ],
     [
       'Task 20', 
@@ -400,8 +383,7 @@ function getData() {
       '07/02/2017', 
       '09/02/2017', 
       false, 
-      100, 
-      '',
+      100
     ],
     [
       'Task 04', 
@@ -411,8 +393,7 @@ function getData() {
       '08/02/2017', 
       '04/04/2017', 
       false, 
-      100, 
-      '',
+      100
     ],
     [
       'Task 33', 
@@ -422,8 +403,7 @@ function getData() {
       '', 
       '', 
       false, 
-      0, 
-      'Ask Mark for details',
+      0
     ],
     [
       'Task 79', 
@@ -433,8 +413,7 @@ function getData() {
       '', 
       '', 
       false, 
-      0, 
-      '',
+      0
     ],
   ];
 };
@@ -446,7 +425,6 @@ function getData() {
             </div>
         </div>
         <div class="large-7 columns">
-            <p>Result</p>
             <div class="plugin-preview">
                 <div id="example"></div>
                 <div id="example-error">An error was cought (<span></span>).</div>
