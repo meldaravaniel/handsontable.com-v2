@@ -65,6 +65,10 @@
       background-image: url($images + 'template/ModCustomers/amcharts/amcharts-el.png');
     }
 
+    &.slicingdice:after {
+      background-image: url($images + 'template/ModCustomers/slicingdice/slicingdice-el.png');
+    }
+
     &.coming-soon {
       cursor: default;
       background-color: $lightGray;
