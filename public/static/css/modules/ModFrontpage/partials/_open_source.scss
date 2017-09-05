@@ -37,7 +37,7 @@
     position: relative;
 
     .cloud {
-      @include rectangle(108px, 56px);
+      @include rectangle(128px, 64px);
       display: none;
 
       @media only screen and (min-width: $largeWidth) {
@@ -52,13 +52,13 @@
       color: #fff;
 
       strong {
-        font-size: 20px;
+        font-size: 28px;
         font-weight: 400;
       }
 
       span {
         display: block;
-        font-size: 13px;
+        font-size: 15px;
       }
 
       &.issues {
