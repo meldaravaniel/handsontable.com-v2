@@ -93,7 +93,7 @@
 var data = getData();
 var rowsCount = data.length;
 
-var hot = new Handsontable(document.getElementById('example'), {
+var hot = Handsontable(document.getElementById('example'), {
   data: data,
   height: 456,
   colWidths: 100,
@@ -115,8 +115,8 @@ var hot = new Handsontable(document.getElementById('example'), {
   dropdownMenu: true,
   contextMenu: true,
   autoRowSize: true,
-  manualRowMove: true,
   manualColumnMove: true,
+  manualRowMove: true,
   fillHandle: {
     autoInsertRow: false,
   },
@@ -143,9 +143,8 @@ var hot = new Handsontable(document.getElementById('example'), {
       
     } else if (column === 2) {
       cellMeta.readOnly = true;
-      cellMeta.renderer = function(hotInstance, TD, row, col, prop, value, cellProperties) {
-        var owner = hotInstance.getDataAtCell(row, 1);
-        var ownerTeam = getOwnerTeam(owner);
+      cellMeta.type = 'text';
+      cellMeta.renderer = function(hotInstance, TD, row, col, prop, value) {
         var colors = {
           Red: '#e87677',
           Green: '#66e100',
@@ -155,8 +154,8 @@ var hot = new Handsontable(document.getElementById('example'), {
           Yellow: '#ffe300',
         };
         
-        TD.style.color = colors[ownerTeam];
-        TD.textContent = ownerTeam;
+        TD.style.color = colors[value];
+        TD.textContent = value;
       };
       
     } else if (column === 3) {
@@ -174,8 +173,10 @@ var hot = new Handsontable(document.getElementById('example'), {
       cellMeta.dateFormat = 'DD/MM/YYYY';
       
     } else if (column === 6) {
+      var isChecked = this.instance.getDataAtCell(row, column);
+      
       cellMeta.type = 'checkbox';
-      cellMeta.className = 'htCenter';
+      cellMeta.className = 'htCenter' + (isChecked ? ' at-risk-checked' : '');
       
     } else if (column === 7) {
       cellMeta.width = 110;
@@ -193,6 +194,12 @@ var hot = new Handsontable(document.getElementById('example'), {
     }
     
     return cellMeta;
+  },
+  // Create virtual column data ("Team" column)
+  modifyData: function(row, column, valueHolder, ioMode) {
+    if (this.toPhysicalColumn(column) === 2 && ioMode === 'get') {
+      valueHolder.value = getOwnerTeam(this.getDataAtCell(this.toVisualRow(row), this.toVisualColumn(1)));
+    }
   }
 });
 
