@@ -173,7 +173,7 @@ var hot = Handsontable(document.getElementById('example'), {
       cellMeta.dateFormat = 'DD/MM/YYYY';
       
     } else if (column === 6) {
-      var isChecked = this.instance.getDataAtCell(row, column);
+      var isChecked = this.instance.getDataAtCell(this.instance.toVisualRow(row), column);
       
       cellMeta.type = 'checkbox';
       cellMeta.className = 'htCenter' + (isChecked ? ' at-risk-checked' : '');
