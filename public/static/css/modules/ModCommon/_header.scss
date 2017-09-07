@@ -59,6 +59,10 @@ header {
         padding: 0 19px;
         display: inline-block;
 
+        &:last-child {
+          padding-right: 0;
+        }
+
         &.mobile-only {
           display: none;
         }
