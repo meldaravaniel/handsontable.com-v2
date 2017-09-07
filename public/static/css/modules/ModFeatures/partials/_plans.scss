@@ -3,10 +3,9 @@
  */
 
 .features .plans {
-  display: inline;
-
   @media only screen and (min-width: $largeWidth) {
     display: flex;
+    margin-bottom: -40px;
   }
 
   .ce-background-green {
