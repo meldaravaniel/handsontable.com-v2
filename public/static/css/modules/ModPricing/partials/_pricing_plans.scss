@@ -1,7 +1,6 @@
 /**
  * @author: Handsoncode
  */
-
 .pricing .pricing-plans {
   border-radius: 4px;
   border: 1px solid $accentBorderColor;
@@ -76,3 +75,11 @@
     }
   }
 }
+
+.gray-padding {
+  @extend .stripe-gray;
+  padding-bottom: 60px;
+}
+
+
+
