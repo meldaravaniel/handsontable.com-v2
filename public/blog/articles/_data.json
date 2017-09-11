@@ -1,4 +1,13 @@
 {
+  "exciting-news-for-handsontable-pro-users": {
+    "directory": "2017/9/",
+    "title": "Exciting News For Handsontable Pro Users!",
+    "category": "News",
+    "date": "September 12, 2017",
+    "pubDate": "Mon, 12 Sep 2017 13:00:00 EST",
+    "image_file": "exciting-news-for-handsontable-pro-users/exciting-news-for-handsontable-pro-users.png",
+    "description": "We're excited to introduce several changes to our website, documentation and user accounts."
+  },
   "1.14.0-0.34.2": {
     "directory": "2017/9/",
     "title": "Handsontable Pro 1.14.0 (CE 0.34.2) released",
@@ -104,7 +113,7 @@
     "date": "March 15, 2017",
     "pubDate": "Wed, 15 Mar 2017 13:00:00 EST",
     "image_file": "best-resources-to-learn-javascript.png",
-    "description": "Let’s say you want to start working with Handsontable but you don’t know JavaScript. You will soon face the obvious question – where do (...)"
+    "description": "Let's say you want to start working with Handsontable but you don't know JavaScript. You will soon face the obvious question – where do (...)"
   },
   "most-interesting-open-data-sources": {
     "title": "Most Interesting Open Data Sources",
@@ -112,7 +121,7 @@
     "date": "March 07, 2017",
     "pubDate": "Tue, 07 Mar 2017 13:00:00 EST",
     "image_file": "most-interesting-open-data-sources.png",
-    "description": "In this post I wanted to introduce you to some of the most interesting open data sources available online.  And I’m hoping it is going (...)"
+    "description": "In this post I wanted to introduce you to some of the most interesting open data sources available online.  And I'm hoping it is going (...)"
   },
   "best-chart-libraries-for-2017": {
     "title": "Best Chart Libraries for 2017",
@@ -240,7 +249,7 @@
     "date": "April 18, 2016",
     "pubDate": "Mon, 18 Apr 2016 13:00:00 EST",
     "image_file": "expand-your-app-with-cell-dependencies.png",
-    "description": "Data entered into the spreadsheet may often contain some cell dependencies. For example, you might want to make one cell’s value dependant on another (...)"
+    "description": "Data entered into the spreadsheet may often contain some cell dependencies. For example, you might want to make one cell's value dependant on another (...)"
   },
   "a-complete-guide-to-changing-size-of-handsontable": {
     "title": "A Complete Guide to Changing Size of Handsontable",

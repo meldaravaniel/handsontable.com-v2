@@ -30,45 +30,43 @@
 
             <p>
                 Today we released a new version of Handsontable Pro (1.14.0) and Community Edition (0.34.2).
-                Among others, we fixed a bug causing a misalignment of an indicator when moving fixed size columns.
-                Also, as we transferred Handsontable Pro to GitHub, it now require passing a license key in
-                the configuration object (<a href="/">read more</a> the latest changes).
+                Among others things, we fixed a bug causing a misalignment of an indicator when moving fixed size columns.
             </p>
 
             <h3>
                 Breaking changes:
             </h3>
-
+            <ul>
+                <li>
+                    It is required to pass a valid license key in the settings object under the 'licenseKey' property.
+                    If a valid key is not provided, Handsontable Pro will display a small notification right below the table.
+                    Please review your implementation to make sure your setup is correct.
+                    <a href="/blog/articles/2017/9/exciting-news-for-handsontable-pro-users">Learn more</a>
+                </li>
+            </ul>
             <h3>
                 Changes:
             </h3>
             <ul>
                 <li>
-                    Fixed a problem with the Filters plugin improperly trimming the table rows.
+                    Fixed a problem with incorrect usage of the <code class="inline">test</code>
+                    method in the <code class="inline">hasClass</code> polyfill
+                    (<a href="https://github.com/handsontable/handsontable/issues/4508" target="_blank">#4508</a>).
                 </li>
                 <li>
-                    Updated documentation for the Trim Rows plugin.
+                    Fixed a bug, where zoomed-out Chrome made the table impossible to scroll
+                    (<a href="https://github.com/handsontable/handsontable/issues/4502" target="_blank">#4502</a>).
                 </li>
                 <li>
-                    Fixed a problem with the Filters plugin dropdown components not updating properly.
+                    Fixed a problem with misaligned indicator in the Manual Column Move plugin
+                    (<a href="https://github.com/handsontable/handsontable/issues/4496" target="_blank">#4496</a>).
                 </li>
                 <li>
-                    Fixed a problem with <code class="inline">hot-table</code> not initializing properly.
-                    (<a href="https://github.com/handsontable/handsontable/issues/4494" target="_blank">#4494</a>)
-                </li>
-                <li>
-                    Fixed a problem with Handsontable throwing an error when moving a cursor outside the table.
-                    (<a href="https://github.com/handsontable/handsontable/issues/4443" target="_blank">#4443</a>)
-                </li>
-                <li>
-                    Updated the <code class="inline">setDataAtCell</code> TypeScript definition.
-                    (<a href="https://github.com/handsontable/handsontable/issues/4481" target="_blank">#4481</a>)
-                </li>
-                <li>
-                    Updated the Bootstrap <code class="inline">CSS</code> files.
-                    (<a href="https://github.com/handsontable/handsontable/issues/4337" target="_blank">#4337</a>)
+                    Fixed an issue with Handsontable's default export property
+                    (<a href="https://github.com/handsontable/handsontable/issues/4495" target="_blank">#4495</a>).
                 </li>
             </ul>
+
             <p>
                 Follow us on <a href="//twitter.com/handsontable" target="_blank">Twitter</a> to be up-to-date
                 with all updates to Handsontable.
@@ -76,7 +74,7 @@
             <p>
                 We appreciate all of your suggestions and bug reports that helps us fix issues faster.
                 You may want to leave a comment or
-                <a href="/contact.html" target="_blank">contact us</a>
+                <a href="/contact.html">contact us</a>
                 to help us make Handsontable even better.
             </p>
             <div class="addthis_native_toolbox toolbox"></div>

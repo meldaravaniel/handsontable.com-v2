@@ -1,0 +1,123 @@
+<section class="post" itemid="https://handsontable.com/2017/5/<%= current.source %>" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+        <div class="large-6 large-centered columns">
+            <h2 class="headline" itemprop="headline">
+                Exciting News For Handsontable Pro Users!
+            </h2>
+            <div class="meta-details">
+                <span>
+                    <img src="../../../attachments/authors/chris-spilka.jpg" alt="Chris Spilka" />
+                    <label>Chris Spilka</label>
+                </span>
+                <span><a href="/blog/categories/news">News</a> / September 12, 2017</span>
+                <meta itemprop="datePublished" content="2017-09-126T12:00:00+01:00"/>
+                <meta itemprop="dateModified" content="2017-09-012T12:00:00+01:00"/>
+                <span><a href="#disqus_thread"></a></span>
+            </div>
+        </div>
+    </div>
+    <article class="row body">
+        <div class="large-8 medium-12 large-centered columns">
+            <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <img src="../../../attachments/images/2017/9/exciting-news-for-handsontable-pro-users/exciting-news-for-handsontable-pro-users.png"
+                     alt="Exciting News For Handsontable Pro Users" />
+                <meta itemprop="url"
+                      content="https://handsontable.com/blog/attachments/images/2017/9/exciting-news-for-handsontable-pro-users/exciting-news-for-handsontable-pro-users.png">
+                <meta itemprop="width" content="757">
+                <meta itemprop="height" content="504">
+            </p>
+
+            <p>
+                We're excited to introduce several changes to our website, documentation and user accounts.
+                At the same time, we'll be moving Handsontable Pro from our internal GitLab to a publicly available
+                repository on GitHub. This is something we have planned to do for a long time, and we hope that it
+                will simplify the process of downloading and installing Handsontable Pro.
+            </p>
+            <p>
+                To ensure a smooth transition for our users, we are going to maintain the repository on GitLab
+                until the end of 2017.
+            </p>
+
+            <h3>License Keys</h3>
+            <p>
+                Starting with Handsontable Pro version 1.14.0, you will now need to pass a valid license key via
+                the configuration object. You will receive the license key for your copy of the software immediately
+                after purchase at <a href="//my.handsontable.com">my.handsontable.com</a>.
+            </p>
+            <p>
+                To install the license key, you will need to pass it properly in the settings object,
+                as shown in the following example:
+            </p>
+            <p>
+<pre><code lang="js">
+hot = new Handsontable(example,{
+    data: data,
+    rowHeaders: true,
+    colHeaders: true,
+    licenseKey: '00000-00000-00000-00000-00000' // wrap it in quotes
+});
+</code></pre>
+            </p>
+
+            <h3>Pricing</h3>
+            <p>
+                As we grow Handsontable, adding new features and expanding to new platforms, we also need to grow
+                our team to help secure future growth and stability.
+            </p>
+            <ul>
+                <li>Developer License pricing is now 590 USD / developer,</li>
+                <li>Developer Plus License pricing is now 1290 USD / developer.</li>
+            </ul>
+            <p><strong>Developer Plus</strong> is the new name for a license with extended support and a maintenance plan.</p>
+
+            <h3>Trial Plans</h3>
+            <p>
+                We have also decided to shutter the existing 30-day trial plan. From now on, Handsontable Pro will
+                be available for an unlimited evaluation period on its new
+                <a href="//github.com/handsontable/handsontable-pro" target="_blank">GitHub repository</a>.
+                No sign-up for a trial is required.
+            </p>
+
+            <h3>Support</h3>
+            <p>
+                Support is still provided for all Pro users through
+                <a href="mailto:support@handsontable.com">support@handsontable.com</a> and via the
+                <a href="//forum.handsontable.com">developers' forum</a>.
+            </p>
+
+            <h3>Other Exciting News</h3>
+            <p>
+                The changes mentioned above aren't all that we have been busy with, and the full list of recently
+                introduced updates to our website and products includes:
+            </p>
+            <ul>
+                <li>Major, minor, and patch releases will be available for every type of Pro license,</li>
+                <li>A refreshed layout of the handsontable.com website, documentation and user dashboards,</li>
+                <li>A brand new Handsontable logo,</li>
+                <li>Beta 1: <a href="//github.com/handsontable/angular-handsontable" target="_blank">
+                        Handsontable for Angular (2+)</a>,</li>
+            </ul>
+
+            <p>If you have any questions regarding the latest changes, please
+                <a href="/contact.html">contact our support team</a>.
+            </p>
+
+            <p>
+                Thank you for your ongoing support, we wouldn't be where we are today without you.
+            </p>
+
+            <div class="addthis_native_toolbox toolbox"></div>
+        </div>
+    </article>
+
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://handsoncode.net/images/logos/logo.png">
+            <meta itemprop="width" content="175">
+            <meta itemprop="height" content="25">
+        </div>
+        <meta itemprop="name" content="Handsoncode">
+    </div>
+
+    <%- partial("../../../authors/_cspilka") %>
+</section>
