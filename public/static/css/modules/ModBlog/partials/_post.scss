@@ -48,6 +48,11 @@
       font-size: 1em;
       line-height: 1.68;
       letter-spacing: -0.003em;
+
+      &:first-child {
+        margin-bottom: 60px;
+      }
+
       @media only screen and (min-width: $mediumWidth) {
         font-size: 1.313em;
       }
@@ -147,7 +152,7 @@
         margin: 0 2px;
         padding: 3px 6px;
         display: inline;
-        font-size: 18px;
+        font-size: 18px!important;
         white-space: nowrap;
       }
     }

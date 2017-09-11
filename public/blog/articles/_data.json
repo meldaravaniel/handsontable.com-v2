@@ -1,4 +1,22 @@
 {
+  "1.14.0-0.34.2": {
+    "directory": "2017/9/",
+    "title": "Handsontable Pro 1.14.0 (CE 0.34.2) released",
+    "category": "Release",
+    "date": "September 12, 2017",
+    "pubDate": "Mon, 12 Sep 2017 13:00:00 EST",
+    "image_file": "1.14.0-0.34.2/new-release.png",
+    "description": "Today we released a new version of Handsontable Pro (1.14.0) and Community Edition (0.34.2). We fixed (...)"
+  },
+  "1.13.1-0.34.1": {
+    "directory": "2017/9/",
+    "title": "Handsontable Pro 1.13.1 (CE 0.34.1) released",
+    "category": "Release",
+    "date": "September 6, 2017",
+    "pubDate": "Wed, 6 Sep 2017 13:00:00 EST",
+    "image_file": "1.13.1-0.34.1/new-release.png",
+    "description": "We are happy to announce that Handsontable Pro 1.13.1 (Community Edition 0.34.1) is now released. In this version we have fixed (...)"
+  },
   "11-best-rich-text-editors": {
     "directory": "2017/8/",
     "title": " 11 Best Rich-Text Editors",

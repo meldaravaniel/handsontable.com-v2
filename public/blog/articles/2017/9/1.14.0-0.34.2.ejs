@@ -1,0 +1,96 @@
+<section class="post" itemid="https://handsontable.com/2017/5/<%= current.source %>" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+        <div class="large-6 large-centered columns">
+            <h2 class="headline" itemprop="headline">
+                Handsontable Pro 1.14.0<br/>
+                (CE 0.34.2) now released
+            </h2>
+            <div class="meta-details">
+                <span>
+                    <img src="../../../attachments/authors/chris-spilka.jpg" alt="Chris Spilka" />
+                    <label>Chris Spilka</label>
+                </span>
+                <span><a href="/blog/categories/release">Release</a> / September 12, 2017</span>
+                <meta itemprop="datePublished" content="2017-09-126T12:00:00+01:00"/>
+                <meta itemprop="dateModified" content="2017-09-012T12:00:00+01:00"/>
+                <span><a href="#disqus_thread"></a></span>
+            </div>
+        </div>
+    </div>
+    <article class="row body">
+        <div class="large-8 medium-12 large-centered columns">
+            <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <img src="../../../attachments/images/2017/9/1.14.0-0.34.2/new-release.png"
+                     alt="Handsontable Pro 1.14.0 (CE 0.34.2) released" />
+                <meta itemprop="url"
+                      content="https://handsontable.com/blog/attachments/images/2017/9/1.14.0-0.34.2/new-release.png">
+                <meta itemprop="width" content="757">
+                <meta itemprop="height" content="504">
+            </p>
+
+            <p>
+                Today we released a new version of Handsontable Pro (1.14.0) and Community Edition (0.34.2).
+                Among others, we fixed a bug causing a misalignment of an indicator when moving fixed size columns.
+                Also, as we transferred Handsontable Pro to GitHub, it now require passing a license key in
+                the configuration object (<a href="/">read more</a> the latest changes).
+            </p>
+
+            <h3>
+                Breaking changes:
+            </h3>
+
+            <h3>
+                Changes:
+            </h3>
+            <ul>
+                <li>
+                    Fixed a problem with the Filters plugin improperly trimming the table rows.
+                </li>
+                <li>
+                    Updated documentation for the Trim Rows plugin.
+                </li>
+                <li>
+                    Fixed a problem with the Filters plugin dropdown components not updating properly.
+                </li>
+                <li>
+                    Fixed a problem with <code class="inline">hot-table</code> not initializing properly.
+                    (<a href="https://github.com/handsontable/handsontable/issues/4494" target="_blank">#4494</a>)
+                </li>
+                <li>
+                    Fixed a problem with Handsontable throwing an error when moving a cursor outside the table.
+                    (<a href="https://github.com/handsontable/handsontable/issues/4443" target="_blank">#4443</a>)
+                </li>
+                <li>
+                    Updated the <code class="inline">setDataAtCell</code> TypeScript definition.
+                    (<a href="https://github.com/handsontable/handsontable/issues/4481" target="_blank">#4481</a>)
+                </li>
+                <li>
+                    Updated the Bootstrap <code class="inline">CSS</code> files.
+                    (<a href="https://github.com/handsontable/handsontable/issues/4337" target="_blank">#4337</a>)
+                </li>
+            </ul>
+            <p>
+                Follow us on <a href="//twitter.com/handsontable" target="_blank">Twitter</a> to be up-to-date
+                with all updates to Handsontable.
+            </p>
+            <p>
+                We appreciate all of your suggestions and bug reports that helps us fix issues faster.
+                You may want to leave a comment or
+                <a href="/contact.html" target="_blank">contact us</a>
+                to help us make Handsontable even better.
+            </p>
+            <div class="addthis_native_toolbox toolbox"></div>
+        </div>
+    </article>
+
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://handsoncode.net/images/logos/logo.png">
+            <meta itemprop="width" content="175">
+            <meta itemprop="height" content="25">
+        </div>
+        <meta itemprop="name" content="Handsoncode">
+    </div>
+
+    <%- partial("../../../authors/_cspilka") %>
+</section>
