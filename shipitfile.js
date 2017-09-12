@@ -34,16 +34,16 @@ module.exports = function(shipit) {
 
   shipit.on('updated', function() {
     var current = shipit.releasePath;
-
+  
     shipit.remote('cd ' + current + ' && npm set progress=false && npm install --production').then(function() {
       return shipit.remote('cd ' + current + ' && bower install --config.interactive=false -F');
-
+  
     }).then(function() {
       return shipit.remote('cd ' + current + ' && harp compile');
-
+  
     }).then(function() {
       return shipit.remote('cd ' + current + ' && grunt build');
-
+  
     }).then(function() {
       shipit.start(['deploy:publish', 'deploy:clean']);
     });
