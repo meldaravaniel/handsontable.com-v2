@@ -8,7 +8,7 @@ module.exports = function(shipit) {
       deployTo: '/home/httpd/handsontable.com',
       repositoryUrl: 'https://github.com/handsontable/handsontable.com-v2.git',
       branch: 'master',
-      ignores: ['.git', 'node_modules'],
+      ignores: ['.git', 'node_modules', 'www'],
       rsync: ['--force', '--delete', '--delete-excluded', '-I', '--stats', '--chmod=ug=rwX'],
       keepReleases: 5,
       shallowClone: false
@@ -19,7 +19,7 @@ module.exports = function(shipit) {
       deployTo: '/home/httpd/dev/handsontable.com',
       repositoryUrl: 'https://github.com/handsontable/handsontable.com-v2.git',
       branch: 'develop',
-      ignores: ['.git', 'node_modules'],
+      ignores: ['.git', 'node_modules', 'www'],
       rsync: ['--force', '--delete', '--delete-excluded', '-I', '--stats', '--chmod=ug=rwX'],
       keepReleases: 1,
       shallowClone: false
