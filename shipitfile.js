@@ -33,19 +33,15 @@ module.exports = function(shipit) {
   shipit.blTask('deploy', ['deploy:init', 'deploy:fetch', 'deploy:update']);
 
   shipit.on('updated', function() {
-    var current = shipit.releasePath;
-  
-    shipit.remote('cd ' + current + ' && npm set progress=false && npm install --production').then(function() {
-      return shipit.remote('cd ' + current + ' && bower install --config.interactive=false -F');
-  
-    }).then(function() {
-      return shipit.remote('cd ' + current + ' && harp compile');
-  
-    }).then(function() {
-      return shipit.remote('cd ' + current + ' && grunt build');
-  
-    }).then(function() {
+    const path = shipit.releasePath;
+    const dirname = shipit.releaseDirname;
+
+    shipit.remote(`cd ${shipit.config.deployTo} && ./build.sh ${dirname}`).then(function() {
       shipit.start(['deploy:publish', 'deploy:clean']);
     });
+  });
+  
+  shipit.on('published', function() {
+    shipit.remote(`cd ${shipit.config.deployTo} && ./up.sh`);
   });
 };
