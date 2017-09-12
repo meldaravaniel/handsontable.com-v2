@@ -1,6 +1,6 @@
 {
   "name": "Handsontable",
-  "version": "4.0.9",
+  "version": "4.0.10",
   "scripts": {
     "start": "harp server",
     "build": "harp compile && grunt build",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "generate-release": "^0.10.2",
-    "shipit-deploy": "^2.1.2"
+    "shipit-cli": "^3.0.0",
+    "shipit-deploy": "^2.5.1"
   }
 }
