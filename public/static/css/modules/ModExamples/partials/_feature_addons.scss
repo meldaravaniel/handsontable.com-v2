@@ -17,3 +17,8 @@
     display: block;
   }
 }
+
+// Overwrite default prism padding
+pre[class*=language-] {
+  padding: 0 !important;
+}
