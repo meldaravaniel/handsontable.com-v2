@@ -11,7 +11,7 @@ module.exports = function(shipit) {
       ignores: ['.git', 'node_modules', 'www'],
       rsync: ['--force', '--delete', '--delete-excluded', '-I', '--stats', '--chmod=ug=rwX'],
       keepReleases: 5,
-      shallowClone: false
+      shallowClone: true
     },
     development: {
       servers: 'deploy@142.4.202.189:22022',
@@ -22,7 +22,7 @@ module.exports = function(shipit) {
       ignores: ['.git', 'node_modules', 'www'],
       rsync: ['--force', '--delete', '--delete-excluded', '-I', '--stats', '--chmod=ug=rwX'],
       keepReleases: 1,
-      shallowClone: false
+      shallowClone: true
     }
   });
 
