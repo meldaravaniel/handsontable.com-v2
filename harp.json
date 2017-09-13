@@ -7,9 +7,9 @@
         "static_path": "/static",
         "img_path": "/static/images/",
         "tag_manager": "GTM-55L5D3",
-        "hot_ce_version": "0.34.3",
-        "hot_ce_date": "September 12, 2017",
-        "hot_pro_version": "1.14.1",
-        "hot_pro_date": "September 12, 2017"
+        "hot_ce_version": "0.34.4",
+        "hot_ce_date": "September 13, 2017",
+        "hot_pro_version": "1.14.2",
+        "hot_pro_date": "September 13, 2017"
     }
 }
