@@ -25,6 +25,18 @@
     padding: 46px 12px 0;
   }
 
+  #example-error {
+    @include square(26px);
+    @include absolute-top-right(6px,22px);
+    color: #fff;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 4px;
+    z-index: 10;
+    background: $brandRedActive;
+  }
+
   .CodeMirror {
     height: 456px;
     font-size: 12px;
