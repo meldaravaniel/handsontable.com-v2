@@ -3,7 +3,7 @@
   "version": "4.0.14",
   "scripts": {
     "start": "harp server",
-    "build": "harp compile && grunt build",
+    "build": "grunt copy && harp compile && grunt build",
     "release": "generate-release",
     "deploy": "shipit production deploy"
   },
