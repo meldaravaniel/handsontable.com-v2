@@ -49,6 +49,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-unused');
 
     grunt.registerTask('default', 'build');
-    grunt.registerTask('build',  ['copy', 'unused', 'cssmin', 'clean']);
+    grunt.registerTask('build',  ['unused', 'cssmin', 'clean']);
     
 };
