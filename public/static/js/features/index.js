@@ -29,26 +29,26 @@
   }
   
   var hotInstance;
+  var validScript;
   
   function evaluate(scripts) {
     scripts.unshift('(function() { document.getElementById("example").textContent = "";');
     scripts.push('return hot }())');
-    
-    if (hotInstance) {
-      try {
-        hotInstance.destroy();
-      } catch (ex) {}
-    }
     
     var errorHolder = $('example-error');
     
     errorHolder.style.display = 'none';
     
     try {
+      if (hotInstance) {
+        hotInstance.destroy();
+      }
+      
       hotInstance = eval(scripts.join(''));
+      validScript = scripts.join('');
     } catch (ex) {
+      hotInstance = eval(validScript);
       errorHolder.style.display = '';
-      errorHolder.firstElementChild.textContent = ex.message;
     }
   }
   
