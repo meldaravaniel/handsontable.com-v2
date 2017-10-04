@@ -79,6 +79,10 @@
       background-image: url($images + 'template/ModCustomers/amcharts/amcharts-bg.png');
     }
 
+    &.slicingdice:after {
+      background-image: url($images + 'template/ModCustomers/slicingdice/slicingdice-bg.png');
+    }
+
     img, h1, h2 {
       margin: 0;
       position: relative;
