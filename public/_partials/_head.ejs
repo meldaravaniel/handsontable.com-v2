@@ -12,8 +12,6 @@
 
 <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 <link href="/static/css/main.css" type="text/css" rel="stylesheet">
-<script src="/static/bower_components/axios/dist/axios.min.js"></script>
-<script src="/static/bower_components/numbro/dist/numbro.min.js"></script>
 
 <script>
     (function(d) {
@@ -27,6 +25,9 @@
 </script>
 
 <script>
+  if (typeof fetch === 'undefined') {
+      document.write('<scr'+'ipt src="/static/bower_components/fetch/fetch.js"></scr'+'ipt>');
+  }
   if (typeof Promise === 'undefined') {
       document.write('<scr'+'ipt src="/static/bower_components/promise-polyfill/promise.min.js"></scr'+'ipt>');
   }
@@ -38,26 +39,15 @@
   }
 </script>
 
-<script src="/static/js/common/index.js"></script>
+<script src="/static/js/common/svgGetter.js"></script>
 
 <% if (current.source === 'examples'|| current.path[1] == 'articles' || current.source === 'features' || current.source === 'labs-result' || current.source === 'community-download' || current.source === 'pro-download') {  %>
-    <link href="/static/bower_components/handsontable-pro/dist/handsontable.full.css" type="text/css" rel="stylesheet">
+    <link href="/static/bower_components/handsontable-pro/dist/handsontable.full.min.css" type="text/css" rel="stylesheet">
     <link href="/static/bower_components/highlightjs/styles/github.css" type="text/css" rel="stylesheet">
     <link href="/static/js/lib/prism.min.css" type="text/css" rel="stylesheet">
-
-    <script src="/static/bower_components/handsontable-pro/dist/handsontable.full.js"></script>
-    <script src="/static/bower_components/history.js/scripts/bundled/html4+html5/native.history.js"></script>
-    <script src="/static/bower_components/highlightjs/highlight.pack.min.js"></script>
 
     <% if (current.source === 'features') {  %>
       <link href="/static/node_components/codemirror/codemirror.css" type="text/css" rel="stylesheet">
       <link href="/static/node_components/codemirror/theme/dracula.css" type="text/css" rel="stylesheet">
-      <script src="/static/node_components/codemirror/codemirror.js"></script>
-      <script src="/static/node_components/codemirror/mode/javascript/javascript.js"></script>
-      <script src="/static/js/features/index.js"></script>
     <% } %>
-<% } else if (current.source === 'contact') {  %>
-    <script src="/static/js/contact/index.js"></script>
-<% } else if (current.source === 'knowledge-base') {  %>
-    <script src="/static/js/knowledgeBase/index.js"></script>
 <% } %>

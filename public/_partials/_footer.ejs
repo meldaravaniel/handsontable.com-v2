@@ -57,6 +57,25 @@
         </div>
     </div>
 </footer>
+
+<script async src="/static/js/common/index.js"></script>
+
+<% if (current.source === 'examples'|| current.path[1] == 'articles' || current.source === 'features' || current.source === 'labs-result' || current.source === 'community-download' || current.source === 'pro-download') {  %>
+    <script src="/static/bower_components/handsontable-pro/dist/handsontable.full.min.js"></script>
+    <script src="/static/bower_components/history.js/scripts/bundled/html4+html5/native.history.js"></script>
+    <script src="/static/bower_components/highlightjs/highlight.pack.min.js"></script>
+
+    <% if (current.source === 'features') {  %>
+      <script src="/static/node_components/codemirror/codemirror.js"></script>
+      <script src="/static/node_components/codemirror/mode/javascript/javascript.js"></script>
+      <script async src="/static/js/features/index.js"></script>
+    <% } %>
+<% } else if (current.source === 'contact') {  %>
+    <script async src="/static/js/contact/index.js"></script>
+<% } else if (current.source === 'knowledge-base') {  %>
+    <script async src="/static/js/knowledgeBase/index.js"></script>
+<% } %>
+
 <% if (current.source === 'examples' || current.source === 'community-download' || current.source === 'pro-download') {  %>
   <script src="/static/js/lib/prism.min.js"></script>
 <% } %>

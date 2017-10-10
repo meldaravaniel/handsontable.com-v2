@@ -2,7 +2,7 @@
   var d = document;
   var w = window;
   
-  d.addEventListener('DOMContentLoaded', function() {
+  function init() {
     var root = d.querySelector('.knowledge-base');
 
     root.addEventListener('click', function(event) {
@@ -30,6 +30,12 @@
         content.style.height = (content.firstElementChild.getBoundingClientRect().height + 25) + 'px';
         target.dataset.opened = 'true';
       }
-    });    
-  });
+    });  
+  }
+  
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    init();
+  } else {
+    d.addEventListener('DOMContentLoaded', init);
+  }
 }());

@@ -50,5 +50,9 @@
     });
   }
 
-  document.addEventListener("DOMContentLoaded", init);
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    init();
+  } else {
+    d.addEventListener('DOMContentLoaded', init);
+  }
 }());

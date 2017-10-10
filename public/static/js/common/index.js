@@ -8,7 +8,7 @@
     return d.querySelectorAll(selector);
   };
 
-  d.addEventListener('DOMContentLoaded', function() {
+  function init() {
     // click on external iframe snippet (https://gist.github.com/jaydson/1780598)
     var iframeMouseOver = false;
 
@@ -25,7 +25,7 @@
       iframeMouseOver = false;
     });
     // end
-    
+
     // mobile hamburger
     $('mobile-nav-menu').addEventListener('ontouchstart' in w ? 'touchstart' : 'click', function(event) {
       var element = $('mobile-nav-menu').parentElement;
@@ -34,7 +34,7 @@
       element.classList.toggle('mobile-inactive');
     });
     // end
-    
+
     // Tabs
     d.addEventListener('click', function(event) {
       var target = event.target;
@@ -74,7 +74,7 @@
       }
     });
     // end
-    
+
     // dynamic stats
     function updateElements(data) {
       var elements = d.querySelectorAll('[data-bind]');
@@ -87,23 +87,21 @@
         }
       }
     }
-    
+
     function updateVariables(callback) {
-      axios({
-        url: 'https://stats.handsontable.com/stats'
-      }).then(function(resp) {
-        var data = resp.data;
-        
+      fetch('https://stats.handsontable.com/stats').then(function(response) {
+        return response.json();
+      }).then(function(data) {
         data.lastUpdate = Date.now();
         
         localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
         callback(data);
-      });
+      })
     }
-    
+
     var STORAGE_KEY = 'dynamic-variables';
     var variables = localStorage.getItem(STORAGE_KEY);
-    
+
     if (typeof variables === 'string' && variables) {
       var data = null;
       
@@ -134,5 +132,61 @@
       });
     }
     // end
-  });
+
+    // lazy images
+    var elements = $$('[data-lazy-image]');
+
+    function replaceElementWithImg(target) {
+      if (!target.parentNode) {
+        return;
+      }
+      var img = document.createElement('img');
+      
+      if (target.dataset.className) {
+        img.classList.add(target.dataset.className);
+      }
+      img.src = target.dataset.src;
+      
+      if (target.dataset.alt) {
+        img.setAttribute('alt', target.dataset.alt);
+      }
+      img.style.width = target.style.width;
+      img.style.height = target.style.height;
+      
+      target.parentNode.replaceChild(img, target);
+    }
+
+    if (typeof IntersectionObserver === 'undefined') {
+      for (var i = 0; i < elements.length; i++) {
+        replaceElementWithImg(elements[i]);
+      }
+      
+    } else {
+      var options = {
+        rootMargin: '30px',
+        threshold: 0,
+      }
+      
+      var observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          var target = entry.target;
+          
+          if (entry.isIntersecting) {
+            replaceElementWithImg(target);
+          }
+          console.log('entry', entry);
+        });
+      }, options);
+      
+      for (var i = 0; i < elements.length; i++) {
+        observer.observe(elements[i]);
+      }
+    }
+  }
+  
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    init();
+  } else {
+    d.addEventListener('DOMContentLoaded', init);
+  }
 }());
