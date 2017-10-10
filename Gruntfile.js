@@ -29,6 +29,21 @@ module.exports = function(grunt) {
                 }
             }
         },
+        
+        htmlmin: {
+          dist: {
+            options: {
+              removeComments: true,
+              collapseWhitespace: true,
+            },
+            files: [{
+              expand: true,
+              cwd: 'www',
+              src: ['**/*.html', '*.html'],
+              dest: 'www',
+            }]
+          }
+        },
 
         unused: {
             options: {
@@ -46,9 +61,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-unused');
 
     grunt.registerTask('default', 'build');
-    grunt.registerTask('build',  ['unused', 'cssmin', 'clean']);
+    grunt.registerTask('build',  ['unused', 'cssmin', 'htmlmin', 'clean']);
     
 };
