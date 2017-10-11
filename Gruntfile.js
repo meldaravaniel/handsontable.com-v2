@@ -44,6 +44,35 @@ module.exports = function(grunt) {
             }]
           }
         },
+        
+        svgmin: {
+          options: {
+            plugins: [
+              {removeViewBox: false},
+              {removeUselessStrokeAndFill: false},
+              {removeEmptyAttrs: false},
+            ]
+          },
+          dist: {
+            files: {
+              // brands/
+              'www/static/images/brands/amazonaws.svg': 'public/static/images/brands/amazonaws.svg',
+              'www/static/images/brands/fujitsu.svg': 'public/static/images/brands/fujitsu.svg',
+              'www/static/images/brands/intel-logo.svg': 'public/static/images/brands/intel-logo.svg',
+              'www/static/images/brands/onekingslane.svg': 'public/static/images/brands/onekingslane.svg',
+              'www/static/images/brands/profitbase.svg': 'public/static/images/brands/profitbase.svg',
+              'www/static/images/brands/seagate.svg': 'public/static/images/brands/seagate.svg',
+              'www/static/images/brands/sony.svg': 'public/static/images/brands/sony.svg',
+              'www/static/images/brands/t-mobile.svg': 'public/static/images/brands/t-mobile.svg',
+              // svg/
+              'www/static/images/svg/header-background-pattern-rez.svg': 'public/static/images/svg/header-background-pattern-rez.svg',
+              'www/static/images/svg/header-laptop.svg': 'public/static/images/svg/header-laptop.svg',
+              'www/static/images/svg/icons-index.svg': 'public/static/images/svg/icons-index.svg',
+              'www/static/images/svg/icons-pricing.svg': 'public/static/images/svg/icons-pricing.svg',
+              'www/static/images/svg/icons.svg': 'public/static/images/svg/icons.svg',
+            }
+          }
+        },
 
         unused: {
             options: {
@@ -62,9 +91,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-svgmin');
     grunt.loadNpmTasks('grunt-unused');
 
     grunt.registerTask('default', 'build');
-    grunt.registerTask('build',  ['unused', 'cssmin', 'htmlmin', 'clean']);
+    grunt.registerTask('build',  ['unused', 'cssmin', 'htmlmin', 'svgmin', 'clean']);
     
 };

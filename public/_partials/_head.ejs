@@ -25,6 +25,8 @@
 </script>
 
 <script>
+  var PAGE_NAME = '<%= current.source %>';
+  
   if (typeof fetch === 'undefined') {
       document.write('<scr'+'ipt src="/static/bower_components/fetch/fetch.js"></scr'+'ipt>');
   }
