@@ -76,60 +76,62 @@
     // end
 
     // dynamic stats
-    function updateElements(data) {
-      var elements = d.querySelectorAll('[data-bind]');
-      
-      for (var i = 0, len = elements.length; i < len; i++) {
-        var prop = elements[i].dataset.bind;
+    if (typeof localStorage !== 'undefined') {
+      function updateElements(data) {
+        var elements = d.querySelectorAll('[data-bind]');
         
-        if (data[prop] !== void 0) {
-          elements[i].innerText = data[prop];
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var prop = elements[i].dataset.bind;
+          
+          if (data[prop] !== void 0) {
+            elements[i].innerText = data[prop];
+          }
         }
       }
-    }
-
-    function updateVariables(callback) {
-      fetch('https://stats.handsontable.com/stats').then(function(response) {
-        return response.json();
-      }).then(function(data) {
-        data.lastUpdate = Date.now();
-        
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-        callback(data);
-      })
-    }
-
-    var STORAGE_KEY = 'dynamic-variables';
-    var variables = localStorage.getItem(STORAGE_KEY);
-
-    if (typeof variables === 'string' && variables) {
-      var data = null;
       
-      try {
-        data = JSON.parse(variables);
-      } catch(ex) {}
-      
-      if (data === null) { // JSON is broken - get data from backend.
-        localStorage.removeItem(STORAGE_KEY);
-        
-        updateVariables(function(data) {
-          updateElements(data);
-        });
-        
-      } else if (Date.now() - data.lastUpdate > 3600 * 8 * 1000) { // Cached data are to old - get data from backend
-        updateVariables(function(data) {
-          updateElements(data);
-        });
-        
-      } else { // Update elements based on cached values
-        updateElements(data);
+      function updateVariables(callback) {
+        fetch('https://stats.handsontable.com/stats').then(function(response) {
+          return response.json();
+        }).then(function(data) {
+          data.lastUpdate = Date.now();
+          
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+          callback(data);
+        })
       }
       
-    } else {
-      // Variables are not exist in the cached - get data from backend.
-      updateVariables(function(data) {
-        updateElements(data);
-      });
+      var STORAGE_KEY = 'dynamic-variables';
+      var variables = localStorage.getItem(STORAGE_KEY);
+      
+      if (typeof variables === 'string' && variables) {
+        var data = null;
+        
+        try {
+          data = JSON.parse(variables);
+        } catch(ex) {}
+        
+        if (data === null) { // JSON is broken - get data from backend.
+          localStorage.removeItem(STORAGE_KEY);
+          
+          updateVariables(function(data) {
+            updateElements(data);
+          });
+          
+        } else if (Date.now() - data.lastUpdate > 3600 * 8 * 1000) { // Cached data are to old - get data from backend
+          updateVariables(function(data) {
+            updateElements(data);
+          });
+          
+        } else { // Update elements based on cached values
+          updateElements(data);
+        }
+        
+      } else {
+        // Variables are not exist in the cached - get data from backend.
+        updateVariables(function(data) {
+          updateElements(data);
+        });
+      }
     }
     // end
 
@@ -142,12 +144,16 @@
       }
       var img = document.createElement('img');
       
-      if (target.dataset.className) {
+      if (!img) { // for grunt task - uncss (jsdom)
+        return;
+      }
+      
+      if (target.dataset && target.dataset.className) {
         img.classList.add(target.dataset.className);
       }
       img.src = target.dataset.src;
       
-      if (target.dataset.alt) {
+      if (target.dataset && target.dataset.alt) {
         img.setAttribute('alt', target.dataset.alt);
       }
       img.style.width = target.style.width;

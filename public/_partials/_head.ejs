@@ -7,11 +7,19 @@
     <meta name="robots" content="noindex" />
 <% } %>
 
-<link rel="preload" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" as="style">
-<link rel="preload" href="/static/css/main.css" type="text/css" as="style">
-
 <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-<link href="/static/css/main.css" type="text/css" rel="stylesheet">
+
+<% if (current.source === 'index') {  %>
+  <!-- build:css /static/css/optimized-index.css -->
+  <link href="/static/css/main.css" type="text/css" rel="stylesheet">
+  <!-- /build -->
+<% } else if (current.source === 'pricing') {  %>
+  <!-- build:css /static/css/optimized-pricing.css -->
+  <link href="/static/css/main.css" type="text/css" rel="stylesheet">
+  <!-- /build -->
+<% } else { %>
+  <link href="/static/css/main.css" type="text/css" rel="stylesheet">
+<% } %>
 
 <script>
     (function(d) {
