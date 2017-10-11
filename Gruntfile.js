@@ -84,6 +84,14 @@ module.exports = function(grunt) {
       
       uncss: {
         index: {
+          options: {
+            ignore: [
+              'header nav ul li.news #HW_badge_cont',
+              'header nav ul li.news #HW_badge_cont #HW_badge',
+              '.brands img',
+              '.frontpage .header-laptop',
+            ],
+          },
           files: [{
             nonull: true,
             src: ['http://localhost:9001/index.html'],
@@ -91,6 +99,12 @@ module.exports = function(grunt) {
           }],
         },
         pricing: {
+          options: {
+            ignore: [
+              'header nav ul li.news #HW_badge_cont',
+              'header nav ul li.news #HW_badge_cont #HW_badge',
+            ],
+          },
           files: [{
             nonull: true,
             src: ['http://localhost:9001/pricing.html'],

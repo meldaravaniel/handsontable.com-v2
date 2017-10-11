@@ -144,15 +144,12 @@
       }
       var img = document.createElement('img');
       
-      if (!img) { // for grunt task - uncss (jsdom)
-        return;
-      }
-      
       if (target.dataset && target.dataset.className) {
         img.classList.add(target.dataset.className);
       }
-      img.src = target.dataset.src;
-      
+      if (target.dataset && target.dataset.src) {
+        img.src = target.dataset.src;
+      }
       if (target.dataset && target.dataset.alt) {
         img.setAttribute('alt', target.dataset.alt);
       }
@@ -180,7 +177,6 @@
           if (entry.isIntersecting) {
             replaceElementWithImg(target);
           }
-          console.log('entry', entry);
         });
       }, options);
       
