@@ -142,21 +142,36 @@
       if (!target.parentNode) {
         return;
       }
-      var img = document.createElement('img');
+      var asBackground;
+      var src;
       
-      if (target.dataset && target.dataset.className) {
-        img.classList.add(target.dataset.className);
+      if (target.dataset && target.dataset.asBackground) {
+        asBackground = target.dataset.asBackground;
       }
       if (target.dataset && target.dataset.src) {
-        img.src = target.dataset.src;
+        src = target.dataset.src;
       }
-      if (target.dataset && target.dataset.alt) {
-        img.setAttribute('alt', target.dataset.alt);
-      }
-      img.style.width = target.style.width;
-      img.style.height = target.style.height;
       
-      target.parentNode.replaceChild(img, target);
+      if (asBackground) {
+        $$(asBackground)[0].style.backgroundImage = 'url(' + src + ')';
+        target.parentNode.removeChild(target);
+      } else {
+        var img = document.createElement('img');
+        
+        if (target.dataset && target.dataset.className) {
+          img.classList.add(target.dataset.className);
+        }
+        if (src) {
+          img.src = src;
+        }
+        if (target.dataset && target.dataset.alt) {
+          img.setAttribute('alt', target.dataset.alt);
+        }
+        img.style.width = target.style.width;
+        img.style.height = target.style.height;
+        
+        target.parentNode.replaceChild(img, target);
+      }
     }
 
     if (typeof IntersectionObserver === 'undefined') {
