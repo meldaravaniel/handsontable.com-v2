@@ -207,7 +207,7 @@
       var observer = new IntersectionObserver(function(entries, observer) {
         entries.forEach(function(entry) {
           var target = entry.target;
-          
+      
           if (entry.isIntersecting) {
             replaceElementWithImg(target);
           }
