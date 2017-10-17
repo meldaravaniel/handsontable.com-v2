@@ -33,8 +33,8 @@
   <link href="/static/css/main.css" type="text/css" rel="stylesheet">
   <!-- /build -->
 <% } else { %>
-  <link rel="preload" href="/static/css/main.css" type="text/css" as="style">
-  <link href="/static/css/main.css" type="text/css" rel="stylesheet">
+  <link rel="preload" href="/static/css/main.css?v=<%= static_rev %>" type="text/css" as="style">
+  <link href="/static/css/main.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
 <% } %>
 
 <script>
@@ -54,28 +54,28 @@
   var PAGE_NAME = '<%= current.source %>';
   
   if (typeof fetch === 'undefined') {
-      document.write('<scr'+'ipt src="/static/bower_components/fetch/fetch.js"></scr'+'ipt>');
+      document.write('<scr'+'ipt src="/static/bower_components/fetch/fetch.js?v=<%= static_rev %>"></scr'+'ipt>');
   }
   if (typeof Promise === 'undefined') {
-      document.write('<scr'+'ipt src="/static/bower_components/promise-polyfill/promise.min.js"></scr'+'ipt>');
+      document.write('<scr'+'ipt src="/static/bower_components/promise-polyfill/promise.min.js?v=<%= static_rev %>"></scr'+'ipt>');
   }
   if (!document.createElement('div').dataset) {
-    document.write('<scr'+'ipt src="/static/js/lib/html5-dataset.js"></scr'+'ipt>');
+    document.write('<scr'+'ipt src="/static/js/lib/html5-dataset.js?v=<%= static_rev %>"></scr'+'ipt>');
   }
   if (!document.createElement('div').classList) {
-    document.write('<scr'+'ipt src="/static/node_components/classlist-polyfill/index.js"></scr'+'ipt>');
+    document.write('<scr'+'ipt src="/static/node_components/classlist-polyfill/index.js?v=<%= static_rev %>"></scr'+'ipt>');
   }
 </script>
 
-<script async defer src="/static/js/common/svgGetter.js"></script>
+<script async defer src="/static/js/common/svgGetter.js?v=<%= static_rev %>"></script>
 
 <% if (current.source === 'examples'|| current.path[1] == 'articles' || current.source === 'features' || current.source === 'labs-result' || current.source === 'community-download' || current.source === 'pro-download') {  %>
-    <link href="/static/bower_components/handsontable-pro/dist/handsontable.full.min.css" type="text/css" rel="stylesheet">
-    <link href="/static/bower_components/highlightjs/styles/github.css" type="text/css" rel="stylesheet">
-    <link href="/static/js/lib/prism.min.css" type="text/css" rel="stylesheet">
+    <link href="/static/bower_components/handsontable-pro/dist/handsontable.full.min.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
+    <link href="/static/bower_components/highlightjs/styles/github.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
+    <link href="/static/js/lib/prism.min.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
 
     <% if (current.source === 'features') {  %>
-      <link href="/static/node_components/codemirror/codemirror.css" type="text/css" rel="stylesheet">
-      <link href="/static/node_components/codemirror/theme/dracula.css" type="text/css" rel="stylesheet">
+      <link href="/static/node_components/codemirror/codemirror.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
+      <link href="/static/node_components/codemirror/theme/dracula.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
     <% } %>
 <% } %>
