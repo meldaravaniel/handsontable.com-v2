@@ -4,47 +4,62 @@
 
 .customers {
 
+
   .header-background {
     background-image: url($images + 'template/ModCustomers/houseMark/houseMark-video-bg.png');
     background-repeat: no-repeat;
-    background-position: center bottom -60px;
-    height: 50vh;
-    min-height: 540px;
+    background-position: center bottom -120px;
+    height: 40vh;
+    min-height: 440px;
     color: $darkWhite;
     font-size: small;
+    margin-bottom: 120px;
+    overflow: hidden;
 
     @media only screen and (min-width: $largeWidth) {
+      background-position: center bottom -90px;
       height: 60vh;
     }
-  }
 
-  h4 {
-    font-size: 1.4em;
-    margin-bottom: 5px;
+    h2 {
+      width: 600px;
+      margin-bottom: 5px;
+      word-wrap: break-word;
+      line-height: 1.2em;
+      font-size: 20px;
 
-    @media only screen and (min-width: $largeWidth) {
-      font-size: 2em;
+      @media only screen and (min-width: $largeWidth) {
+        font-size: 30px;
+      }
+    }
+
+    .quotation {
+      @include absolute-bottom-left(80px, -50px);
+      display: none;
+      @media only screen and (min-width: $largeWidth) {
+        display: block;
+      }
+    }
+
+    .svg-icon {
+      @include transition(opacity .3s ease);
+
+      max-height: 90px;
+      max-width: 90px;
+      opacity: .55;
+
+      &.svg-icon:hover {
+        opacity: .30;
+      }
+    }
+
+    .housemark {
+      max-height: 18px;
+      max-width: 20px;
+      margin-bottom: -5px;
     }
   }
 
-  .svg-icon {
-    @include transition(opacity .3s ease);
-
-    max-height: 90px;
-    max-width: 90px;
-    opacity: .55;
-
-
-    &.svg-icon:hover {
-      opacity: .30;
-    }
-  }
-
-  .housemark {
-    max-height: 18px;
-    max-width: 20px;
-    margin-bottom: -5px;
-  }
 
   .customer-excerpt {
     @include square(340px, true);
