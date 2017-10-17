@@ -83,32 +83,24 @@ module.exports = function(grunt) {
       },
       
       uncss: {
+        options: {
+          banner: false,
+          media: [
+            'only screen and (min-width: 40.0625em)',
+            'only screen and (min-width: 50em)',
+            'only screen and (min-width: 64.0625em)',
+          ],
+          ignore: [
+            'header nav ul li.news #HW_badge_cont',
+            'header nav ul li.news #HW_badge_cont #HW_badge',
+            '.brands img',
+            '.frontpage .header-laptop',
+            '#content #full-view-button',
+            '#content-container.new-mobile #content',
+            /header nav\.mobile-active+./,
+          ],
+        },
         index: {
-          options: {
-            banner: false,
-            media: [
-              'only screen and (min-width: 40.0625em)',
-              'only screen and (min-width: 50em)',
-              'only screen and (min-width: 64.0625em)',
-            ],
-            ignore: [
-              'header nav ul li.news #HW_badge_cont',
-              'header nav ul li.news #HW_badge_cont #HW_badge',
-              '.brands img',
-              '.frontpage .header-laptop',
-              '#content #full-view-button',
-              '#content-container.new-mobile #content',
-              /header nav\.mobile-active+./,
-              // 'header nav.mobile-active ul',
-              // 'header nav.mobile-active ul li',
-              // 'header nav.mobile-active ul li.mobile-only',
-              // 'header nav.mobile-active ul li a',
-              // 'header nav.mobile-active ul li a.btn',
-              // 'header nav.mobile-active ul li.news',
-              // 'header nav.mobile-active>a svg',
-              // 'header nav.mobile-active ul li:last-child',
-            ],
-          },
           files: [{
             nonull: true,
             src: ['http://localhost:9001/index.html'],
@@ -116,12 +108,6 @@ module.exports = function(grunt) {
           }],
         },
         pricing: {
-          options: {
-            ignore: [
-              'header nav ul li.news #HW_badge_cont',
-              'header nav ul li.news #HW_badge_cont #HW_badge',
-            ],
-          },
           files: [{
             nonull: true,
             src: ['http://localhost:9001/pricing.html'],
