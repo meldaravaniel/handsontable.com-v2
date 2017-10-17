@@ -3,11 +3,12 @@
         <div class="row top-banner">
             <div class="small-12 large-5 columns">
                 <div class="background-header-pattern">
-                    <h1>
+                    <div data-lazy-image data-src="/static/images/svg/header-background-pattern-rez.svg" data-as-background=".background-header-pattern"></div>
+                    <h1 class="wait-for-font">
                         <strong>JavaScript Spreadsheet</strong><br/>
                         <span>Most popular UI component for web apps</span>
                     </h1>
-                    <h2>
+                    <h2 class="wait-for-font">
                         A fast, secure, and reliable solution.<br/>
                         Available for React, Angular and Vue.
                     </h2>
@@ -16,7 +17,7 @@
                 </div>
             </div>
             <div class="small-12 large-5 columns">
-                <img src="/static/images/svg/header-laptop.svg" class="header-laptop" alt="A laptop with Handsontable Spreadsheet Component"/>
+                <div data-lazy-image data-src="/static/images/svg/header-laptop.svg" data-class-name="header-laptop" style="width: 720px; height: 720px;"></div>
             </div>
         </div>
     </div>
@@ -37,7 +38,7 @@
                 <div class="benefits-testimonial">
                     <div class="row">
                         <div class="small-2 columns">
-                            <img src="<%= img_path %>template/ModCustomers/nuxeo/nuxeo-avatar42x42.png">
+                            <div data-lazy-image data-src="<%= img_path %>template/ModCustomers/nuxeo/nuxeo-avatar42x42.png" style="width: 31px; height: 31px;"></div>
                         </div>
                         <div class="small-10 columns">
                             <p>„Handsontable had the greatest documentation, and an impressive feature set”</p>
@@ -100,8 +101,7 @@
                     <div class="benefits-testimonial">
                         <div class="row large-collapse">
                             <div class="small-3 columns text-center">
-                                <img src="<%= img_path %>template/ModCustomers/socialpoint/socialpoint-avatar42x42.png"
-                                     alt="Julio de la Calle" />
+                                <div data-lazy-image data-src="<%= img_path %>template/ModCustomers/socialpoint/socialpoint-avatar42x42.png" data-alt="Julio de la Calle" style="width: 42px; height: 42px;"></div>
                             </div>
                             <div class="small-9 columns">
                                 <p>Julio de la Calle</p>
@@ -121,8 +121,7 @@
                     <div class="benefits-testimonial">
                         <div class="row large-collapse">
                             <div class="small-3 columns text-center">
-                                <img src="<%= img_path %>template/ModCustomers/akindi/akindi-avatar42x42.png"
-                                     alt="David Wolever"/>
+                                <div data-lazy-image data-src="<%= img_path %>template/ModCustomers/akindi/akindi-avatar42x42.png" data-alt="David Wolever" style="width: 42px; height: 42px;"></div>
                             </div>
                             <div class="small-9 columns">
                                 <p>David Wolever</p>
@@ -142,8 +141,7 @@
                     <div class="benefits-testimonial">
                         <div class="row large-collapse">
                             <div class="small-3 columns text-center">
-                                <img src="<%= img_path %>template/ModCustomers/trackingfirst/trackingfirst-avatar42x42.png"
-                                alt="Craig Scribner" />
+                                <div data-lazy-image data-src="<%= img_path %>template/ModCustomers/trackingfirst/trackingfirst-avatar42x42.png" data-alt="Craig Scribner" style="width: 42px; height: 42px;"></div>
                             </div>
                             <div class="small-9 columns">
                                 <p>Craig Scribner</p>
@@ -174,7 +172,7 @@
                     <strong data-bind="starsCount">-</strong>
                     <span>stars</span>
                 </div>
-                <img src="/static/images/svg/social-diagram.png" alt="GitHub statistics"/>
+                <div data-lazy-image data-src="/static/images/svg/social-diagram.png" data-alt="GitHub statistics" style="max-width: 441px; height: 420px;"></div>
             </div>
         </div>
         <div class="small-12 medium-5 columns">

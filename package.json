@@ -1,6 +1,6 @@
 {
   "name": "Handsontable",
-  "version": "4.0.24",
+  "version": "4.0.25",
   "scripts": {
     "start": "harp server",
     "build": "grunt copy && harp compile && grunt build",
@@ -13,9 +13,14 @@
     "grunt": "^0.4.5",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-htmlmin": "^2.4.0",
     "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt-processhtml": "^0.4.1",
+    "grunt-svgmin": "^4.0.0",
+    "grunt-uncss": "^0.7.1",
     "grunt-unused": "^0.2.0",
     "harp": "^0.24.0"
   },

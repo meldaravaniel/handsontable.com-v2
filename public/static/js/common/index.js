@@ -8,7 +8,7 @@
     return d.querySelectorAll(selector);
   };
 
-  d.addEventListener('DOMContentLoaded', function() {
+  function init() {
     // click on external iframe snippet (https://gist.github.com/jaydson/1780598)
     var iframeMouseOver = false;
 
@@ -25,16 +25,37 @@
       iframeMouseOver = false;
     });
     // end
-    
+
     // mobile hamburger
+    function eventListenerOptionsSupported() {
+      var supported = false;
+      try {
+        var opts = Object.defineProperty({}, 'passive', {
+          get: function() {
+            supported = true;
+          }
+        });
+        window.addEventListener("test", null, opts);
+      } catch (e) {}
+
+      return supported;
+    }
+    var eventOptions;
+    
+    if (eventListenerOptionsSupported()) {
+      eventOptions = {passive: true};
+    }
+  
     $('mobile-nav-menu').addEventListener('ontouchstart' in w ? 'touchstart' : 'click', function(event) {
       var element = $('mobile-nav-menu').parentElement;
       
+      console.log('dewdewdewdewdew', element);
+      
       element.classList.toggle('mobile-active');
       element.classList.toggle('mobile-inactive');
-    });
+    }, eventOptions);
     // end
-    
+
     // Tabs
     d.addEventListener('click', function(event) {
       var target = event.target;
@@ -74,65 +95,136 @@
       }
     });
     // end
-    
+
     // dynamic stats
-    function updateElements(data) {
-      var elements = d.querySelectorAll('[data-bind]');
-      
-      for (var i = 0, len = elements.length; i < len; i++) {
-        var prop = elements[i].dataset.bind;
+    if (typeof localStorage !== 'undefined') {
+      function updateElements(data) {
+        var elements = d.querySelectorAll('[data-bind]');
         
-        if (data[prop] !== void 0) {
-          elements[i].innerText = data[prop];
+        for (var i = 0, len = elements.length; i < len; i++) {
+          var prop = elements[i].dataset.bind;
+          
+          if (data[prop] !== void 0) {
+            elements[i].innerText = data[prop];
+          }
         }
       }
-    }
-    
-    function updateVariables(callback) {
-      axios({
-        url: 'https://stats.handsontable.com/stats'
-      }).then(function(resp) {
-        var data = resp.data;
-        
-        data.lastUpdate = Date.now();
-        
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-        callback(data);
-      });
-    }
-    
-    var STORAGE_KEY = 'dynamic-variables';
-    var variables = localStorage.getItem(STORAGE_KEY);
-    
-    if (typeof variables === 'string' && variables) {
-      var data = null;
       
-      try {
-        data = JSON.parse(variables);
-      } catch(ex) {}
+      function updateVariables(callback) {
+        fetch('https://stats.handsontable.com/stats').then(function(response) {
+          return response.json();
+        }).then(function(data) {
+          data.lastUpdate = Date.now();
+          
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+          callback(data);
+        })
+      }
       
-      if (data === null) { // JSON is broken - get data from backend.
-        localStorage.removeItem(STORAGE_KEY);
+      var STORAGE_KEY = 'dynamic-variables';
+      var variables = localStorage.getItem(STORAGE_KEY);
+      
+      if (typeof variables === 'string' && variables) {
+        var data = null;
         
+        try {
+          data = JSON.parse(variables);
+        } catch(ex) {}
+        
+        if (data === null) { // JSON is broken - get data from backend.
+          localStorage.removeItem(STORAGE_KEY);
+          
+          updateVariables(function(data) {
+            updateElements(data);
+          });
+          
+        } else if (Date.now() - data.lastUpdate > 3600 * 8 * 1000) { // Cached data are to old - get data from backend
+          updateVariables(function(data) {
+            updateElements(data);
+          });
+          
+        } else { // Update elements based on cached values
+          updateElements(data);
+        }
+        
+      } else {
+        // Variables are not exist in the cached - get data from backend.
         updateVariables(function(data) {
           updateElements(data);
         });
+      }
+    }
+    // end
+
+    // lazy images
+    var elements = $$('[data-lazy-image]');
+
+    function replaceElementWithImg(target) {
+      if (!target.parentNode) {
+        return;
+      }
+      var asBackground;
+      var src;
+      
+      if (target.dataset && target.dataset.asBackground) {
+        asBackground = target.dataset.asBackground;
+      }
+      if (target.dataset && target.dataset.src) {
+        src = target.dataset.src;
+      }
+      
+      if (asBackground) {
+        $$(asBackground)[0].style.backgroundImage = 'url(' + src + ')';
+        target.parentNode.removeChild(target);
+      } else {
+        var img = document.createElement('img');
         
-      } else if (Date.now() - data.lastUpdate > 3600 * 8 * 1000) { // Cached data are to old - get data from backend
-        updateVariables(function(data) {
-          updateElements(data);
-        });
+        if (target.dataset && target.dataset.className) {
+          img.classList.add(target.dataset.className);
+        }
+        if (src) {
+          img.src = src;
+        }
+        if (target.dataset && target.dataset.alt) {
+          img.setAttribute('alt', target.dataset.alt);
+        }
+        img.style.width = target.style.width;
+        img.style.height = target.style.height;
         
-      } else { // Update elements based on cached values
-        updateElements(data);
+        target.parentNode.replaceChild(img, target);
+      }
+    }
+
+    if (typeof IntersectionObserver === 'undefined') {
+      for (var i = 0; i < elements.length; i++) {
+        replaceElementWithImg(elements[i]);
       }
       
     } else {
-      // Variables are not exist in the cached - get data from backend.
-      updateVariables(function(data) {
-        updateElements(data);
-      });
+      var options = {
+        rootMargin: '30px',
+        threshold: 0,
+      }
+      
+      var observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          var target = entry.target;
+      
+          if (entry.isIntersecting) {
+            replaceElementWithImg(target);
+          }
+        });
+      }, options);
+      
+      for (var i = 0; i < elements.length; i++) {
+        observer.observe(elements[i]);
+      }
     }
-    // end
-  });
+  }
+  
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    init();
+  } else {
+    d.addEventListener('DOMContentLoaded', init);
+  }
 }());

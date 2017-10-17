@@ -5,7 +5,7 @@
                 <use xlink:href="#handsontable-logo"></use>
             </svg>
             <p>Handsontable is a JavaScript spreadsheet component for web applications.</p>
-            <p>&copy; 2012 - <script>document.write(new Date().getFullYear());</script> Handsoncode</p>
+            <p>&copy; 2012 -&nbsp;<script>document.write(new Date().getFullYear());</script>&nbsp;Handsoncode</p>
             <p>All trademarks belong to their respective owners.</p>
             <ul class="legal-links">
                 <li><a href="/terms-of-use.html">Terms of use</a></li>
@@ -15,8 +15,8 @@
         <div class="small-6 medium-2 medium-offset-1 columns">
             <h4>WRAPPERS</h4>
             <ul>
-                <li><a href="//github.com/handsontable/react-handsontable" target="_blank">React</a></li>
-                <li><a href="//github.com/handsontable/vue-handsontable-official" target="_blank">Vue</a></li>
+                <li><a href="//github.com/handsontable/react-handsontable" target="_blank" rel="noopener">React</a></li>
+                <li><a href="//github.com/handsontable/vue-handsontable-official" target="_blank" rel="noopener">Vue</a></li>
                 <li><a href="//github.com/handsontable/ngHandsontable" target="blank">Angular 1</a></li>
                 <li><a href="//github.com/handsontable/angular-handsontable" target="blank">Angular</a></li>
                 <li><a href="//github.com/handsontable/hot-table" target="blank">Polymer</a></li>
@@ -29,8 +29,8 @@
                 <li><a href="//docs.handsontable.com/pro/tutorial-quick-start.html">Tutorials</a></li>
                 <li><a href="//docs.handsontable.com/pro/demo-scrolling.html">Examples</a></li>
                 <li><a href="//trello.com/b/PztR4hpj"
-                       target="_blank">Roadmap</a></li>
-                <li><a href="//twitter.com/handsontable" target="_blank">Twitter</a></li>
+                       target="_blank" rel="noopener">Roadmap</a></li>
+                <li><a href="//twitter.com/handsontable" target="_blank" rel="noopener">Twitter</a></li>
 
             </ul>
         </div>
@@ -40,7 +40,7 @@
                 <li><a href="/knowledge-base.html">Knowledge base</a></li>
                 <li><a href="//github.com/handsontable/handsontable/issues" target="blank">Github</a></li>
                 <li><a href="//forum.handsontable.com">Forum</a></li>
-                <li><a href="//stackoverflow.com/questions/tagged/handsontable" target="_blank">Stackoverflow</a></li>
+                <li><a href="//stackoverflow.com/questions/tagged/handsontable" target="_blank" rel="noopener">Stackoverflow</a></li>
             </ul>
         </div>
         <div class="small-6 medium-2 columns">
@@ -52,11 +52,30 @@
                 <li><a href="/resellers.html">Resellers</a></li>
                 <li><a href="/branding.html">Branding</a></li>
                 <li><a href="/contact.html">Contact</a></li>
-                <li><a href="http://status.handsontable.com" target="_blank">Uptime status</a></li>
+                <li><a href="http://status.handsontable.com" target="_blank" rel="noopener">Uptime status</a></li>
             </ul>
         </div>
     </div>
 </footer>
+
+<script async src="/static/js/common/index.js?v=<%= static_rev %>"></script>
+
+<% if (current.source === 'examples'|| current.path[1] == 'articles' || current.source === 'features' || current.source === 'labs-result' || current.source === 'community-download' || current.source === 'pro-download') {  %>
+    <script src="/static/bower_components/handsontable-pro/dist/handsontable.full.min.js?v=<%= static_rev %>"></script>
+    <script src="/static/bower_components/history.js/scripts/bundled/html4+html5/native.history.js?v=<%= static_rev %>"></script>
+    <script src="/static/bower_components/highlightjs/highlight.pack.min.js?v=<%= static_rev %>"></script>
+
+    <% if (current.source === 'features') {  %>
+      <script src="/static/node_components/codemirror/codemirror.js?v=<%= static_rev %>"></script>
+      <script src="/static/node_components/codemirror/mode/javascript/javascript.js?v=<%= static_rev %>"></script>
+      <script async src="/static/js/features/index.js?v=<%= static_rev %>"></script>
+    <% } %>
+<% } else if (current.source === 'contact') {  %>
+    <script async src="/static/js/contact/index.js?v=<%= static_rev %>"></script>
+<% } else if (current.source === 'knowledge-base') {  %>
+    <script async src="/static/js/knowledgeBase/index.js?v=<%= static_rev %>"></script>
+<% } %>
+
 <% if (current.source === 'examples' || current.source === 'community-download' || current.source === 'pro-download') {  %>
-  <script src="/static/js/lib/prism.min.js"></script>
+  <script src="/static/js/lib/prism.min.js?v=<%= static_rev %>"></script>
 <% } %>

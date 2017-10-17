@@ -1,20 +1,17 @@
 /**
  * @author: Handsoncode
  */
-
-/* Begin: Workaround for TypeKit */
-.wf-loading {
-  visibility: hidden;
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $optionalFont;
-  }
-}
-
-.wf-active {
-  visibility: visible;
-}
-/* End */
+ /* Begin: Workaround for TypeKit */
+ .wf-loading {
+   h1, h2, h3, h4, h5, h6 {
+     font-family: $optionalFont;
+   }
+   
+   .wait-for-font, .blog h3, .post .headline {
+     visibility: hidden;
+   }
+ }
+ /* End */
 
 html, body {
   font-family: $regularFont;

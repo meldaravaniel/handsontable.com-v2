@@ -3,61 +3,79 @@
 <meta name=viewport content="width=device-width, initial-scale=1">
 <meta name="description" content="<%= description %>">
 
-<% if (current.source === 'pricing-maintenance') {  %>
+<% if (current.source === 'pricing-maintenance') { %>
     <meta name="robots" content="noindex" />
 <% } %>
 
-<link rel="preload" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" as="style">
-<link rel="preload" href="/static/css/main.css" type="text/css" as="style">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto:400,300&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!%40%23%24%25%5E%26*()_%2B-%3D%2C.%2F%5C%E2%80%9E%E2%80%9D%22%3A%3B'">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://cdn.livechatinc.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://use.typekit.net">
+<link rel="dns-prefetch" href="https://cdn.headwayapp.co">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://use.typekit.net">
+<link rel="preconnect" href="https://cdn.headwayapp.co">
 
-<link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-<link href="/static/css/main.css" type="text/css" rel="stylesheet">
-<script src="/static/bower_components/axios/dist/axios.min.js"></script>
-<script src="/static/bower_components/numbro/dist/numbro.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!%40%23%24%25%5E%26*()_%2B-%3D%2C.%2F%5C%E2%80%9E%E2%80%9D%22%3A%3B'" media="all">
+
+<% if (current.source === 'index') { %>
+  <link rel="prerender" href="//handsontable.com/pricing.html">
+  <link rel="prerender" href="//handsontable.com/features.html">
+  <link rel="prerender" href="//handsontable.com/download.html">
+  <link rel="prerender" href="//handsontable.com/developers.html">
+  
+  <!-- build:css inline /static/css/optimized-index.css -->
+  <link href="/static/css/main.css" type="text/css" rel="stylesheet">
+  <!-- /build -->
+<% } else if (current.source === 'pricing') { %>
+  <!-- build:css inline /static/css/optimized-pricing.css -->
+  <link href="/static/css/main.css" type="text/css" rel="stylesheet">
+  <!-- /build -->
+<% } else { %>
+  <link rel="preload" href="/static/css/main.css?v=<%= static_rev %>" type="text/css" as="style">
+  <link href="/static/css/main.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
+<% } %>
 
 <script>
     (function(d) {
         var config = {
-                kitId: 'koz1efc',
-                scriptTimeout: 3000,
-                async: false
-            },
-            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            kitId: 'koz1efc',
+            scriptTimeout: 3000,
+            async: true,
+            events: false,
+            classes: true,
+        },
+          h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
     })(document);
 </script>
 
 <script>
+  var PAGE_NAME = '<%= current.source %>';
+  
+  if (typeof fetch === 'undefined') {
+      document.write('<scr'+'ipt src="/static/bower_components/fetch/fetch.js?v=<%= static_rev %>"></scr'+'ipt>');
+  }
   if (typeof Promise === 'undefined') {
-      document.write('<scr'+'ipt src="/static/bower_components/promise-polyfill/promise.min.js"></scr'+'ipt>');
+      document.write('<scr'+'ipt src="/static/bower_components/promise-polyfill/promise.min.js?v=<%= static_rev %>"></scr'+'ipt>');
   }
   if (!document.createElement('div').dataset) {
-    document.write('<scr'+'ipt src="/static/js/lib/html5-dataset.js"></scr'+'ipt>');
+    document.write('<scr'+'ipt src="/static/js/lib/html5-dataset.js?v=<%= static_rev %>"></scr'+'ipt>');
   }
   if (!document.createElement('div').classList) {
-    document.write('<scr'+'ipt src="/static/node_components/classlist-polyfill/index.js"></scr'+'ipt>');
+    document.write('<scr'+'ipt src="/static/node_components/classlist-polyfill/index.js?v=<%= static_rev %>"></scr'+'ipt>');
   }
 </script>
 
-<script src="/static/js/common/index.js"></script>
+<script async defer src="/static/js/common/svgGetter.js?v=<%= static_rev %>"></script>
 
 <% if (current.source === 'examples'|| current.path[1] == 'articles' || current.source === 'features' || current.source === 'labs-result' || current.source === 'community-download' || current.source === 'pro-download') {  %>
-    <link href="/static/bower_components/handsontable-pro/dist/handsontable.full.css" type="text/css" rel="stylesheet">
-    <link href="/static/bower_components/highlightjs/styles/github.css" type="text/css" rel="stylesheet">
-    <link href="/static/js/lib/prism.min.css" type="text/css" rel="stylesheet">
-
-    <script src="/static/bower_components/handsontable-pro/dist/handsontable.full.js"></script>
-    <script src="/static/bower_components/history.js/scripts/bundled/html4+html5/native.history.js"></script>
-    <script src="/static/bower_components/highlightjs/highlight.pack.min.js"></script>
+    <link href="/static/bower_components/handsontable-pro/dist/handsontable.full.min.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
+    <link href="/static/bower_components/highlightjs/styles/github.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
+    <link href="/static/js/lib/prism.min.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
 
     <% if (current.source === 'features') {  %>
-      <link href="/static/node_components/codemirror/codemirror.css" type="text/css" rel="stylesheet">
-      <link href="/static/node_components/codemirror/theme/dracula.css" type="text/css" rel="stylesheet">
-      <script src="/static/node_components/codemirror/codemirror.js"></script>
-      <script src="/static/node_components/codemirror/mode/javascript/javascript.js"></script>
-      <script src="/static/js/features/index.js"></script>
+      <link href="/static/node_components/codemirror/codemirror.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
+      <link href="/static/node_components/codemirror/theme/dracula.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
     <% } %>
-<% } else if (current.source === 'contact') {  %>
-    <script src="/static/js/contact/index.js"></script>
-<% } else if (current.source === 'knowledge-base') {  %>
-    <script src="/static/js/knowledgeBase/index.js"></script>
 <% } %>
