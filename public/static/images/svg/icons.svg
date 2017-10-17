@@ -2885,4 +2885,19 @@
 	C193,162.6,186.9,156.3,179.4,156.3z M179.4,182.7c-6.9,0-12.6-5.6-12.6-12.6s5.6-12.6,12.6-12.6c6.9,0,12.6,5.6,12.6,12.6
 	S186.3,182.7,179.4,182.7z"/>
     </symbol>
+    <symbol viewBox="0 0 124.3 124.2" id="video-play">
+        <style type="text/css">
+            .vd0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;fill-opacity:0.4;}
+        </style>
+        <circle class="vd0" cx="62.2" cy="62.1" r="61"/>
+        <path class="vd0" d="M92.5,59.4L47.7,33.5c-2.1-1.2-4.7,0.3-4.7,2.7V88c0,2.4,2.6,4,4.7,2.7l44.9-25.9
+	C94.6,63.6,94.6,60.6,92.5,59.4z"/>
+    </symbol>
+    <symbol viewBox="0 0 332.7 385.7" id="housemark-logo">
+        <style type="text/css">
+            .hm0{fill:#FFFFFF;}
+        </style>
+            <path class="hm0" d="M166.7,0L0,97v192.7l166.7,96l166.3-97V97L166.7,0z M282.7,254.4l-24.7,15v-93.3l-38,39.7l-49.7-81v189.7
+		l-29-18.3V203.7L79,203.4v67.3l-26.7-16v-111L79,126.4l-0.7,52l64,0.7l0.7-89.3l23.7-13.3l57,93.7l38.3-38.3l20.7,11V254.4z"/>
+    </symbol>
 </svg>

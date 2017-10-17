@@ -4,6 +4,48 @@
 
 .customers {
 
+  .header-background {
+    background-image: url($images + 'template/ModCustomers/houseMark/houseMark-video-bg.png');
+    background-repeat: no-repeat;
+    background-position: center bottom -60px;
+    height: 50vh;
+    min-height: 540px;
+    color: $darkWhite;
+    font-size: small;
+
+    @media only screen and (min-width: $largeWidth) {
+      height: 60vh;
+    }
+  }
+
+  h4 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+
+    @media only screen and (min-width: $largeWidth) {
+      font-size: 2em;
+    }
+  }
+
+  .svg-icon {
+    @include transition(opacity .3s ease);
+
+    max-height: 90px;
+    max-width: 90px;
+    opacity: .55;
+
+
+    &.svg-icon:hover {
+      opacity: .30;
+    }
+  }
+
+  .housemark {
+    max-height: 18px;
+    max-width: 20px;
+    margin-bottom: -5px;
+  }
+
   .customer-excerpt {
     @include square(340px, true);
     margin: 0 auto 50px;
@@ -86,18 +128,6 @@
       @include absolute-bottom-left(20px, 30px);
       padding-right: 20px;
       line-height: 1.2em;
-    }
-
-    .header-background {
-      @include linear-gradient(-55deg, #1addef 0%, #2443fe 60%, #2443fe 40%, #4508c1 100%);
-      height: 50vh;
-      min-height: 540px;
-      position: relative;
-      overflow: hidden;
-
-      @media only screen and (min-width: $largeWidth) {
-        height: 86vh;
-      }
     }
   }
 }
