@@ -162,6 +162,11 @@ header {
       }
     }
   }
+  nav.mobile-inactive {
+    .btn {
+      white-space: nowrap;
+    }
+  }
 
   &.header-white {
 
@@ -192,6 +197,10 @@ header {
 
     svg, .news svg {
       fill: #fff;
+    }
+    
+    .btn {
+      white-space: nowrap;
     }
   }
 }

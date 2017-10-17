@@ -25,6 +25,10 @@
   .repositories-module {
     padding: 14px 20px 16px;
     background-color: $darkWhite;
+
+    .btn {
+      white-space: nowrap;
+    }
   }
 
   .svg-icon {

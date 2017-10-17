@@ -52,7 +52,7 @@
     }
   }
   
-  d.addEventListener('DOMContentLoaded', function() {
+  function init() {
     var dataInitialScript = $$('[data-source-type=data]')[0].textContent.trim();
     var sourceInitialScript = $$('[data-source-type=source]')[0].textContent.trim();
     
@@ -99,5 +99,11 @@
       codeHolder.sourceValue = codeHolder.editor.getValue();
       codeHolder.editor.setValue(codeHolder.dataValue);
     });
-  });
+  }
+  
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    init();
+  } else {
+    d.addEventListener('DOMContentLoaded', init);
+  }
 }());
