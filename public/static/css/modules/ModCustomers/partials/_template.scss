@@ -4,7 +4,6 @@
 
 .customers {
 
-
   .header-background {
     background-image: url($images + 'template/ModCustomers/houseMark/houseMark-video-bg.png');
     background-repeat: no-repeat;
@@ -59,10 +58,31 @@
       margin-bottom: -5px;
     }
   }
+  .infogram-excerpt {
+    @include square(340px, true);
 
+    @media only screen and (min-width: $largeWidth) {
+      @include rectangle(98%, 340px, true);
+    }
+
+    &:after {
+      @include square(100%);
+
+      @media only screen and (min-width: $largeWidth) {
+        @include rectangle(98%, 340px);
+      }
+    }
+  }
 
   .customer-excerpt {
     @include square(340px, true);
+
+    &:after {
+      @include square(100%);
+    }
+  }
+
+  .customer {
     margin: 0 auto 50px;
     padding: 20px;
     position: relative;
@@ -75,7 +95,6 @@
 
     &:after {
       @include set-pseudo-element(0, 0, auto, auto);
-      @include square(100%);
       @include transition(opacity .3s ease);
       opacity: .30;
       z-index: 2;
@@ -90,8 +109,8 @@
       background-image: url($images + 'template/ModCustomers/bittitan/bittitan-el.png');
     }
 
-    &.infogram:after {
-      background-image: url($images + 'template/ModCustomers/infogram/infogram-el.png');
+    &.infogram {
+      background-image: url($images + 'template/ModCustomers/infogram/Infogram-wide-bg.png');
     }
 
     &.nuxeo:after {

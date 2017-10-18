@@ -20,7 +20,7 @@
     "history.js": "^1.8.0",
     "prism": "^1.7.0",
     "numbro": "^1.11.0",
-    "promise-polyfill": "^6.0.2"
+    "promise-polyfill": "^6.0.2",
   },
   "ignore": [
     "**/.*",

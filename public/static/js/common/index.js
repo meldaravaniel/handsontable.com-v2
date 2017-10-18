@@ -9,6 +9,7 @@
   };
 
   d.addEventListener('DOMContentLoaded', function() {
+
     // click on external iframe snippet (https://gist.github.com/jaydson/1780598)
     var iframeMouseOver = false;
 
