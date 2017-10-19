@@ -58,19 +58,42 @@
       margin-bottom: -5px;
     }
   }
+
   .infogram-excerpt {
     @include square(340px, true);
+    display: block;
 
     @media only screen and (min-width: $largeWidth) {
-      @include rectangle(98%, 340px, true);
+      @include rectangle(1128px, 340px, true);
     }
 
     &:after {
       @include square(100%);
 
       @media only screen and (min-width: $largeWidth) {
-        @include rectangle(98%, 340px);
+        @include rectangle(1128px, 340px);
       }
+    }
+    .mikko {
+      float: left;
+      margin-top: -68px;
+      margin-right: 62%;
+    }
+
+    .infogram-heading {
+      width: 320px;
+      float: left;
+      margin: 0 0 60px 40%;
+
+    }
+
+    .signature {
+      font-size: 0.6em;
+      margin-top: 20px;
+    }
+
+    .quotation {
+      margin-right: 620px;
     }
   }
 
@@ -109,16 +132,16 @@
       background-image: url($images + 'template/ModCustomers/bittitan/bittitan-el.png');
     }
 
-    &.infogram {
-      background-image: url($images + 'template/ModCustomers/infogram/Infogram-wide-bg.png');
-    }
-
     &.nuxeo:after {
       background-image: url($images + 'template/ModCustomers/nuxeo/nuxeo-el.png');
     }
 
     &.trackingfirst:after {
       background-image: url($images + 'template/ModCustomers/trackingfirst/trackingfirst-el.png');
+    }
+
+    &.infogram:after {
+      background-image: url($images + 'template/ModCustomers/infogram/Infogram-wide-bg.png');
     }
 
     &.datawrapper:after {
