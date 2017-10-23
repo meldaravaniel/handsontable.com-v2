@@ -4,8 +4,117 @@
 
 .customers {
 
+  .header-background {
+    background-image: url($images + 'template/ModCustomers/houseMark/houseMark-video-bg.png');
+    background-repeat: no-repeat;
+    background-position: center bottom -120px;
+    height: 40vh;
+    min-height: 440px;
+    color: $darkWhite;
+    font-size: small;
+    margin-bottom: 120px;
+    overflow: hidden;
+
+    @media only screen and (min-width: $largeWidth) {
+      background-position: center bottom -90px;
+      height: 60vh;
+    }
+
+    h2 {
+      width: 600px;
+      margin-bottom: 5px;
+      word-wrap: break-word;
+      line-height: 1.2em;
+      font-size: 20px;
+
+      @media only screen and (min-width: $largeWidth) {
+        font-size: 30px;
+      }
+    }
+
+    .quotation {
+      @include absolute-bottom-left(80px, -50px);
+      display: none;
+      @media only screen and (min-width: $largeWidth) {
+        display: block;
+      }
+    }
+
+    .svg-icon {
+      @include transition(opacity .3s ease);
+
+      max-height: 90px;
+      max-width: 90px;
+      opacity: .55;
+
+      &.svg-icon:hover {
+        opacity: .30;
+      }
+    }
+
+    .housemark {
+      max-height: 18px;
+      max-width: 20px;
+      margin-bottom: -5px;
+    }
+  }
+
+  .infogram-excerpt {
+    @include square(340px, true);
+    display: block;
+
+    @media only screen and (min-width: $largeWidth) {
+      @include rectangle(1128px, 340px, true);
+    }
+
+    &:after {
+      @include square(100%);
+
+      @media only screen and (min-width: $largeWidth) {
+        @include rectangle(1128px, 340px);
+      }
+    }
+    .mikko {
+      display: none;
+
+      @media only screen and (min-width: $largeWidth) {
+        display: block;
+        float: left;
+        margin-top: -68px;
+        margin-right: 62%;
+      }
+    }
+
+    .infogram-heading {
+
+      float: none;
+
+      @media only screen and (min-width: $largeWidth) {
+        width: 320px;
+        float: left;
+        margin: 0 0 60px 40%;
+      }
+    }
+
+    .signature {
+      margin-top: 20px;
+      font-size: 0.6em;
+    }
+
+    .quotation {
+      margin-right: 620px;
+    }
+  }
+
   .customer-excerpt {
     @include square(340px, true);
+
+    &:after {
+      @include square(100%);
+    }
+  }
+
+  .customer {
     margin: 0 auto 50px;
     padding: 20px;
     position: relative;
@@ -18,7 +127,6 @@
 
     &:after {
       @include set-pseudo-element(0, 0, auto, auto);
-      @include square(100%);
       @include transition(opacity .3s ease);
       opacity: .30;
       z-index: 2;
@@ -33,16 +141,20 @@
       background-image: url($images + 'template/ModCustomers/bittitan/bittitan-el.png');
     }
 
-    &.infogram:after {
-      background-image: url($images + 'template/ModCustomers/infogram/infogram-el.png');
-    }
-
     &.nuxeo:after {
       background-image: url($images + 'template/ModCustomers/nuxeo/nuxeo-el.png');
     }
 
     &.trackingfirst:after {
       background-image: url($images + 'template/ModCustomers/trackingfirst/trackingfirst-el.png');
+    }
+
+    &.infogram:after {
+      background-image: url($images + 'template/ModCustomers/infogram/infogram-el.png');
+
+      @media only screen and (min-width: $largeWidth) {
+        background-image: url($images + 'template/ModCustomers/infogram/Infogram-wide-bg.png');
+      }
     }
 
     &.datawrapper:after {
