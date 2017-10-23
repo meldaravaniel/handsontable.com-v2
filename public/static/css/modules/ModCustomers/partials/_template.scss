@@ -4,13 +4,6 @@
 
 .customers {
 
-  .fancybox-slide--video .fancybox-content {
-    width  : 800px;
-    height : 600px;
-    max-width  : 80%;
-    max-height : 80%;
-  }
-
   .header-background {
     background-image: url($images + 'template/ModCustomers/houseMark/houseMark-video-bg.png');
     background-repeat: no-repeat;
@@ -82,21 +75,30 @@
       }
     }
     .mikko {
-      float: left;
-      margin-top: -68px;
-      margin-right: 62%;
+      display: none;
+
+      @media only screen and (min-width: $largeWidth) {
+        display: block;
+        float: left;
+        margin-top: -68px;
+        margin-right: 62%;
+      }
     }
 
     .infogram-heading {
-      width: 320px;
-      float: left;
-      margin: 0 0 60px 40%;
 
+      float: none;
+
+      @media only screen and (min-width: $largeWidth) {
+        width: 320px;
+        float: left;
+        margin: 0 0 60px 40%;
+      }
     }
 
     .signature {
-      font-size: 0.6em;
       margin-top: 20px;
+      font-size: 0.6em;
     }
 
     .quotation {
@@ -148,7 +150,11 @@
     }
 
     &.infogram:after {
-      background-image: url($images + 'template/ModCustomers/infogram/Infogram-wide-bg.png');
+      background-image: url($images + 'template/ModCustomers/infogram/infogram-el.png');
+
+      @media only screen and (min-width: $largeWidth) {
+        background-image: url($images + 'template/ModCustomers/infogram/Infogram-wide-bg.png');
+      }
     }
 
     &.datawrapper:after {
