@@ -7,17 +7,17 @@
   .header-background {
     background-image: url($images + 'template/ModCustomers/houseMark/houseMark-video-bg.png');
     background-repeat: no-repeat;
-    background-position: center bottom -120px;
+    background-position: center top -120px;
     height: 40vh;
     min-height: 440px;
+    margin-bottom: 120px;
     color: $darkWhite;
     font-size: small;
-    margin-bottom: 120px;
     overflow: hidden;
 
     @media only screen and (min-width: $largeWidth) {
-      background-position: center bottom -90px;
-      height: 60vh;
+      background-position: center top 0;
+      height: 80vh;
     }
 
     h2 {
@@ -28,12 +28,12 @@
       font-size: 20px;
 
       @media only screen and (min-width: $largeWidth) {
-        font-size: 30px;
+        font-size: 40px;
       }
     }
 
     .quotation {
-      @include absolute-bottom-left(80px, -50px);
+      @include absolute-bottom-left(95px, -50px);
       display: none;
       @media only screen and (min-width: $largeWidth) {
         display: block;

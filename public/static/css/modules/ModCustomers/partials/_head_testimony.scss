@@ -4,6 +4,12 @@
 
 .head-testimony {
 
+  margin-top: 0px;
+
+  @media only screen and (min-width: $largeWidth) {
+    margin-top: 5%;
+  }
+
   h4 {
     padding: 0;
     position: relative;
