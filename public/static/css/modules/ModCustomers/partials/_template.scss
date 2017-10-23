@@ -4,6 +4,13 @@
 
 .customers {
 
+  .fancybox-slide--video .fancybox-content {
+    width  : 800px;
+    height : 600px;
+    max-width  : 80%;
+    max-height : 80%;
+  }
+
   .header-background {
     background-image: url($images + 'template/ModCustomers/houseMark/houseMark-video-bg.png');
     background-repeat: no-repeat;
