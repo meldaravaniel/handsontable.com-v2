@@ -5,9 +5,9 @@
 .customers {
 
   .header-background {
-    background-image: url($images + 'template/ModCustomers/houseMark/houseMark-video-bg.png');
+    background-image: url($images + 'template/ModCustomers/houseMark/housemark-arturo-mobile-bg.png');
     background-repeat: no-repeat;
-    background-position: center top -120px;
+    background-position: center top -20px;
     height: 40vh;
     min-height: 440px;
     margin-bottom: 120px;
@@ -16,6 +16,7 @@
     overflow: hidden;
 
     @media only screen and (min-width: $largeWidth) {
+      background-image: url($images + 'template/ModCustomers/houseMark/housemark-video-bg.png');
       background-position: center top 0;
       height: 80vh;
     }
