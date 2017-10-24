@@ -76,6 +76,11 @@
     <script async src="/static/js/knowledgeBase/index.js?v=<%= static_rev %>"></script>
 <% } %>
 
+<% if (current.path.join('/') == 'customers/index') { %>
+  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+<% } %>
 <% if (current.source === 'examples' || current.source === 'community-download' || current.source === 'pro-download') {  %>
   <script src="/static/js/lib/prism.min.js?v=<%= static_rev %>"></script>
 <% } %>

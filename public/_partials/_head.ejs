@@ -37,10 +37,6 @@
   <link href="/static/css/main.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
 <% } %>
 
-<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
-
 <script>
     (function(d) {
         var config = {
@@ -55,7 +51,7 @@
 </script>
 
 <script>
-  var PAGE_NAME = '<%= current.source %>';
+  var PAGE_NAME = '<%= current.path.join('/') %>';
   
   if (typeof fetch === 'undefined') {
       document.write('<scr'+'ipt src="/static/bower_components/fetch/fetch.js?v=<%= static_rev %>"></scr'+'ipt>');
