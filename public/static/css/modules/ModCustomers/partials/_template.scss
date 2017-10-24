@@ -5,8 +5,8 @@
 .customers {
 
   .header-background {
-    background-image: url($images + 'template/ModCustomers/housemark/housemark-video-bg.jpg');
-    background-repeat: no-repeat;
+    background-image: url($images + 'template/ModCustomers/housemark/housemark-video-bg-blurred.jpg');
+    background-repeat: no-repeat;gut
     background-position: center top -20px;
     height: 40vh;
     min-height: 440px;
@@ -16,6 +16,7 @@
     overflow: hidden;
 
     @media only screen and (min-width: $largeWidth) {
+      background-image: url($images + 'template/ModCustomers/housemark/housemark-video-bg.jpg');
       background-position: center top 0;
       height: 80vh;
     }
