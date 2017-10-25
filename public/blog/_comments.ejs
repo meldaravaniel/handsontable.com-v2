@@ -2,10 +2,10 @@
     <div class="large-8 medium-12 large-centered columns">
         <div id="disqus_thread"></div>
         <script>
-             var disqus_config = function () {
-             this.page.url = handsontable.com;
-             this.page.identifier = handsontable;
-             };
+            var disqus_config = function() {
+              this.page.url = 'https://handsontable.com/<%= current.path.join('/') %>';
+              this.page.identifier = 'https://handsontable.com/<%= current.path.join('/') %>';
+            };
             (function() { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
 

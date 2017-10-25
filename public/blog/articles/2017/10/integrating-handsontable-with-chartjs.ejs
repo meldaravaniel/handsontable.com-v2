@@ -1,0 +1,146 @@
+<section class="post" itemid="https://handsontable.com/2017/10/<%= current.source %>" itemscope
+         itemtype="http://schema.org/BlogPosting" xmlns="http://www.w3.org/1999/html">
+    <div class="row">
+        <div class="large-6 large-centered columns">
+            <h2 class="headline" itemprop="headline">
+                Integrating Handsontable with Chart.js
+            </h2>
+            <div class="meta-details">
+                <span>
+                    <img src="../../../attachments/authors/aleksandra-budnik.png" alt="Aleksandra Budnik" />
+                    <label>Aleksandra Budnik</label>
+                </span>
+                <span><a href="/blog/categories/tools">Tools</a> / October 24, 2017</span>
+                <meta itemprop="datePublished" content="2017-10-24T12:00:00+01:00"/>
+                <meta itemprop="dateModified" content="2017-10-24T12:00:00+01:00"/>
+                <span><a href="#disqus_thread"></a></span>
+            </div>
+        </div>
+    </div>
+    <article class="row body">
+        <div class="large-8 medium-12 large-centered columns">
+            <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <img src="../../../attachments/images/2017/10/integrating-handsontable-with-chartjs/integrating-handsontable-with-chartjs.png"
+                     alt="Integrating Handsontable with Chart.js" />
+                <meta itemprop="url"
+                      content="https://handsontable.com/blog/attachments/images/2017/10/integrating-handsontable-with-chartjs/integrating-handsontable-with-chartjs.png">
+                <meta itemprop="width" content="757">
+                <meta itemprop="height" content="504">
+            </p>
+
+            <h3>Introduction</h3>
+            <p>
+                Chart.js is one of those libraries that are truly transparent, and it allows you to build your first
+                functioning chart without first having to spend hours reading through the detailed documentation on the
+                <a href="http://www.chartjs.org/" target="_blank">Chart.js website</a>.
+            </p>
+            <p>
+                We have previously written about Chart.js in our summary of the
+                <a href="https://handsontable.com/blog/articles/best-chart-libraries-for-2017" target="_blank">
+                    best chart libraries</a>. This time,
+                I have decided to show you how to integrate Handsontable with Chart.js, and how to keep the chart
+                updated while modifying data in the spreadsheet.
+            </p>
+            <h3>How to Bind Data</h3>
+            <p>
+                The data that creates bar charts is passed via the <code class="inline">datasets</code> attribute, where
+                we can specify <code class="inline">label</code>, <code class="inline">data</code>, and a few other
+                additional properties like border width or background color. I have created three
+                objects for the datasets property that correspond to the three data sources.
+            </p>
+<pre>
+<code lang="js">
+    data: {
+        labels: headers,
+        datasets: [
+            {
+            label: colheaders[0],
+            data: myData[0],
+            borderWidth: 1,
+            backgroundColor: 'rgb(255, 236, 217)'
+            }, {
+            label: colheaders[1],
+            data: myData[1],
+            borderWidth: 1,
+            backgroundColor: 'rgb(235, 224, 255)'
+            }, {
+            label: colheaders[2],
+            data: myData[2],
+            borderWidth: 1,
+            backgroundColor: 'rgb(219, 242, 242)'
+            }
+        ]
+    }
+</code>
+</pre>
+            <p>
+                where <code class="inline">myData</code></code> is an array used by Handsontable as a data source.
+            </p>
+            <p>
+                You can test the result in the demo below.
+            </p>
+            <iframe width="100%" height="550" src="//jsfiddle.net/handsoncode/eyLrdm1c/2/embedded/result,js,html/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <p>
+                As you can see, each object represents one row of data from the <code class="inline">myData</code> array.
+            </p>
+            <h3>How to Update Data</h3>
+            <p>
+                Allowing the chart to track modifications made in Handsontable is as simple as adding a few lines of code.
+            </p>
+            <p>
+                Data can be tracked using the <code class="inline">afterChange</code> hook. Each change in Handsontable
+                triggers the method that updates the chart. See how it works in the following example:
+            </p>
+            <iframe width="100%" height="550" src="//jsfiddle.net/handsoncode/fk690aj1/embedded/result,js,html/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <p>
+                Here I have added the <code class="inline">afterChange</code> callback inside the
+                <code class="inline">updateSettings</code> method to call the
+                <code class="inline">update method</code> from the Chart.js API.
+            </p>
+            <h3>Creating Sparklines in a cell</h3>
+            <p>
+                Sparklines are those tiny charts that give you a notion of the trend in series of values. It can be
+                very useful in day-to-day operations if you put it near the actual data.
+            </p>
+            <p>
+                In this example I will show you how to put a sparkline inside Handsontable’s cell.
+            </p>
+            <iframe width="100%" height="800" src="//jsfiddle.net/handsoncode/Lvygn67b/embedded/result,js,html/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <p>
+                As Handsontable doesn’t handle charts inside cells out-of-the-box, we need to create a custom renderer
+                which serves as a container for our Chart.js instance. All renderers in Handsontable are updated after
+                each change in the dataset, so we don’t have to worry about updating our charts when we enter a new
+                value. It automatically reflects all the changes made to a dataset.
+            </p>
+            <h3>More Charts</h3>
+            <p>
+                Chart.js allows us to use more chart types that just the bar chart shown in the first example. It
+                offers a wide range of various types of charts, including line charts, pie charts, radar,
+                <a href="http://www.chartjs.org/docs/latest/charts/" target="_blank">and many more</a>.
+            </p>
+            <h3>Conclusion</h3>
+            <p>
+                A visual representation of data lies at the root of almost all business applications, across various
+                industries and scientific disciplines. Each CRM, CMS, ERP etc. I have used in the past included at
+                least one view with the data and charts combined. Integrating a versatile charting library - such as
+                Chart.js - with a spreadsheet module, can add great value to your web-based products.
+            </p>
+
+            <div class="addthis_native_toolbox toolbox"></div>
+        </div>
+    </article>
+
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://handsoncode.net/images/logos/logo.png">
+            <meta itemprop="width" content="175">
+            <meta itemprop="height" content="25">
+        </div>
+        <meta itemprop="name" content="Handsoncode">
+    </div>
+
+    <%- partial("../../../authors/_abudnik") %>
+</section>
