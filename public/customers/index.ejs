@@ -1,25 +1,27 @@
 <section class="customers">
-    <div class="header-background">
-        <div class="row head-testimony gap-top-large gap-bottom-medium">
-            <div class="medium-12 large-10 columns">
-                <a href="https://www.youtube.com/watch?v=kbuyKzf-vY8" data-fancybox>
-                    <svg class="svg-icon">
+    <div class="header-background gap-top-large">
+        <div class="row head-testimony">
+            <div class="medium-11 large-7 columns">
+                <a href="//www.youtube.com/watch?v=kbuyKzf-vY8" data-fancybox>
+                    <svg class="video-play">
                         <use xlink:href="#video-play"></use>
                     </svg>
                 </a>
                 <h2 class="size-large weight-light">
-                    <img src="<%= img_path %>template/ModCustomers/quotation-mark-white.png" alt="Quote" class="quotation" />
-                    We have done a really big change,<br/>
-                    for our customers.
+                    <img src="<%= img_path %>template/ModCustomers/quotation-mark-white.png" alt="Quotation mark" />
+                    We have done a really big change for our customers.
                 </h2>
-                <svg class="housemark">
-                    <use xlink:href="#housemark-logo"></use>
-                </svg>
-                Housemark.
+                <p class="testimony-brand">
+                    <svg class="housemark">
+                        <use xlink:href="#housemark-logo"></use>
+                    </svg>
+                    <span>HouseMark</span>
+                </p>
             </div>
         </div>
     </div>
-    <div class="row">
+
+    <div class="row gap-top-small">
         <div class="medium-6 large-4 columns post-element">
             <a href="/customers/akindi" class="customer customer-excerpt akindi">
                 <img src="<%= img_path %>template/ModCustomers/akindi/akindi-logo.png" alt="Akindi" />
@@ -58,13 +60,22 @@
             </a>
         </div>
         <div class="medium-6 large-12 columns post-element">
-            <a href="/customers/infogram" class="customer infogram-excerpt infogram">
-                <img src="<%= img_path %>template/ModCustomers/infogram/infogram-logo.svg" alt="Infogram" width="120" />
-                <img src="<%= img_path %>template/ModCustomers/infogram/infogram-mikko-jarvenppa-2.png" alt="Infogram" width="355" class="mikko" />
-                <img src="<%= img_path %>template/ModCustomers/quotation-mark-white.png" alt="Quote" class="quotation" />
+            <a href="/customers/infogram" class="customer customer-excerpt excerpt-wide infogram">
+                <img src="<%= img_path %>template/ModCustomers/infogram/infogram-mikko-jarvenppa-2.png"
+                     alt="Mikko Järvenpää, CEO at Infogram" class="customer-photo" />
+
+                <img src="<%= img_path %>template/ModCustomers/infogram/infogram-logo.svg"
+                     alt="Infogram logo" class="customer-logo" />
+
+                <img src="<%= img_path %>template/ModCustomers/quotation-mark-white.png"
+                     alt="Quote" class="quotation" />
+
                 <h3 class="infogram-heading">
-                    There's no need to reinvent the wheel, especially
-                    when someone provides an extremely well-engineered wheel for you to use.
+                    <span class="title title-long">
+                        There's no need to reinvent the wheel, especially
+                        when someone provides an extremely well-engineered wheel for you to use.
+                    </span>
+                    <span class="title title-short">How Infogram combines simple solutions with stunning results</span>
                     <span class="signature">Mikko Järvenpää, CEO at Infogram</span>
                 </h3>
             </a>

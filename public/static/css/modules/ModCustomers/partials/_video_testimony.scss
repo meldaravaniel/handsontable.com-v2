@@ -1,0 +1,58 @@
+/**
+ * @author: Handsoncode
+ */
+
+.header-background {
+  height: 70vh;
+  color: $darkWhite;
+  background: #000 url($images + 'template/ModCustomers/housemark/housemark-video-bg.jpg') no-repeat 50% 0;
+
+  @media only screen and (min-width: $largeWidth) {
+    height: 85vh;
+    min-height: 570px;
+    max-height: 730px;
+  }
+
+  .video-play {
+    @include transition(opacity .3s ease);
+    max-height: 90px;
+    max-width: 90px;
+    opacity: .55;
+
+    &.svg-icon:hover {
+      opacity: .30;
+    }
+  }
+
+  h2 {
+    line-height: 1.1em;
+    position: relative;
+
+    @media only screen and (min-width: $largeWidth) {
+      font-size: 43px;
+    }
+
+    img {
+      @include absolute-top-left(-20px, -50px);
+      display: none;
+
+      @media only screen and (min-width: $largeWidth) {
+        display: block;
+      }
+    }
+  }
+
+  .testimony-brand {
+    font-size: 18px;
+
+    svg {
+      max-height: 38px;
+      max-width: 40px;
+    }
+
+    span {
+      @include relative-top-left(-11px, 10px);
+      font-size: 20px;
+    }
+  }
+}
