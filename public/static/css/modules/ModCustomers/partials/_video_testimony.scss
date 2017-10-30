@@ -19,7 +19,7 @@
     max-width: 90px;
     opacity: .55;
 
-    &.svg-icon:hover {
+    &:hover {
       opacity: .30;
     }
   }
@@ -44,6 +44,7 @@
 
   .testimony-brand {
     font-size: 18px;
+    color: #fff;
 
     svg {
       max-height: 38px;
