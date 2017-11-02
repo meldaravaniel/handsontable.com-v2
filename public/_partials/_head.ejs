@@ -19,7 +19,7 @@
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300&text=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!%40%23%24%25%5E%26*()_%2B-%3D%2C.%2F%5C%E2%80%9E%E2%80%9D%22%3A%3B'" media="all">
 
-<% if (current.source === 'index') { %>
+<% if (current.path.join('/') === 'index') { %>
   <link rel="prerender" href="//handsontable.com/pricing.html">
   <link rel="prerender" href="//handsontable.com/features.html">
   <link rel="prerender" href="//handsontable.com/download.html">
@@ -28,7 +28,7 @@
   <!-- build:css inline /static/css/optimized-index.css -->
   <link href="/static/css/main.css" type="text/css" rel="stylesheet">
   <!-- /build -->
-<% } else if (current.source === 'pricing') { %>
+<% } else if (current.path.join('/') === 'pricing') { %>
   <!-- build:css inline /static/css/optimized-pricing.css -->
   <link href="/static/css/main.css" type="text/css" rel="stylesheet">
   <!-- /build -->
