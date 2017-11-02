@@ -1,0 +1,171 @@
+/**
+ * @author: Handsoncode
+ */
+
+.customers {
+
+  .customer-excerpt {
+    max-width: 340px;
+    height: 340px;
+    display: block;
+
+    &:after {
+      @include square(100%);
+    }
+  }
+
+  .customer {
+    margin: 0 auto 50px;
+    position: relative;
+    color: #fff;
+    background-color: $brandDarkNavy;
+
+    &:hover:after {
+      opacity: .35;
+    }
+
+    &:after {
+      @include set-pseudo-element(0, 0, auto, auto);
+      @include transition(opacity .3s ease);
+      opacity: .20;
+      z-index: 2;
+      background-size: cover;
+    }
+
+    &.akindi:after {
+      background-image: url($images + 'template/ModCustomers/akindi/akindi-el.png');
+    }
+
+    &.bittitan:after {
+      background-image: url($images + 'template/ModCustomers/bittitan/bittitan-el.png');
+    }
+
+    &.nuxeo:after {
+      background-image: url($images + 'template/ModCustomers/nuxeo/nuxeo-el.png');
+    }
+
+    &.trackingfirst:after {
+      background-image: url($images + 'template/ModCustomers/trackingfirst/trackingfirst-el.png');
+    }
+
+    &.infogram:after {
+      background-image: url($images + 'template/ModCustomers/infogram/infogram-el.png');
+
+      @media only screen and (min-width: $largeWidth) {
+        background-image: url($images + 'template/ModCustomers/infogram/Infogram-wide-bg.png');
+      }
+    }
+
+    &.datawrapper:after {
+      background-image: url($images + 'template/ModCustomers/datawrapper/datawrapper-el.png');
+    }
+
+    &.socialpoint:after {
+      background-image: url($images + 'template/ModCustomers/socialpoint/socialpoint-el.png');
+    }
+
+    &.omnidb:after {
+      background-image: url($images + 'template/ModCustomers/omnidb/omnidb-el.png');
+    }
+
+    &.visible:after {
+      background-image: url($images + 'template/ModCustomers/visible/visible-el.png');
+    }
+
+    &.amcharts:after {
+      background-image: url($images + 'template/ModCustomers/amcharts/amcharts-el.png');
+    }
+
+    &.slicingdice:after {
+      background-image: url($images + 'template/ModCustomers/slicingdice/slicingdice-el.png');
+    }
+
+    &.coming-soon {
+      cursor: default;
+      background-color: $lightGray;
+    }
+
+    img, h3 {
+      z-index: 3;
+    }
+
+    img {
+      @include absolute-top-right(40px, 40px);
+    }
+
+    h3 {
+      @include absolute-bottom-left(20px, 30px);
+      padding-right: 20px;
+      line-height: 1.2em;
+    }
+  }
+
+  .excerpt-wide {
+
+    @media only screen and (min-width: $largeWidth) {
+      max-width: 100%;
+    }
+
+    .customer-photo {
+      display: none;
+
+      @media only screen and (min-width: $largeWidth) {
+        @include absolute-top-left(-28px, 50px);
+        display: block;
+      }
+    }
+
+    .customer-logo {
+      width: 120px;
+    }
+
+    .quotation {
+      @include absolute-top-left(74px, 460px);
+      display: none;
+
+      @media only screen and (min-width: $largeWidth) {
+        display: block;
+      }
+    }
+
+    .infogram-heading {
+
+      @media only screen and (min-width: $largeWidth) {
+        @include absolute-top-left(72px, 510px);
+        width: 41%;
+
+      }
+
+      .title {
+        font-size: 28px;
+
+        &.title-long {
+          display: none;
+        }
+
+        @media only screen and (min-width: $largeWidth) {
+
+          &.title-short {
+            display: none;
+          }
+
+          &.title-long {
+            display: block;
+          }
+        }
+      }
+
+      .signature {
+        margin-top: 20px;
+        font-size: 16px;
+        display: none;
+
+        @media only screen and (min-width: $largeWidth) {
+          display: block;
+        }
+      }
+    }
+
+
+  }
+}

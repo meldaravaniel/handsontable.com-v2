@@ -51,7 +51,7 @@
 </script>
 
 <script>
-  var PAGE_NAME = '<%= current.source %>';
+  var PAGE_NAME = '<%= current.path.join('/') %>';
   
   if (typeof fetch === 'undefined') {
       document.write('<scr'+'ipt src="/static/bower_components/fetch/fetch.js?v=<%= static_rev %>"></scr'+'ipt>');
