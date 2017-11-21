@@ -1,0 +1,138 @@
+<section class="post" itemid="https://handsontable.com/2017/11/<%= current.source %>" itemscope
+         itemtype="http://schema.org/BlogPosting" xmlns="http://www.w3.org/1999/html">
+    <div class="row">
+        <div class="large-6 large-centered columns">
+            <h2 class="headline" itemprop="headline">
+                Keyboard shortcuts in Handsontable
+            </h2>
+            <div class="meta-details">
+                <span>
+                    <img src="../../../attachments/authors/aleksandra-budnik.png" alt="Aleksandra Budnik" />
+                    <label>Aleksandra Budnik</label>
+                </span>
+                <span><a href="/blog/categories/recipes">Recipes</a> / November 22, 2017</span>
+                <meta itemprop="datePublished" content="2017-11-22T12:00:00+01:00"/>
+                <meta itemprop="dateModified" content="2017-11-22T12:00:00+01:00"/>
+                <span><a href="#disqus_thread"></a></span>
+            </div>
+        </div>
+    </div>
+    <article class="row body">
+        <div class="large-8 medium-12 large-centered columns">
+            <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <img src="../../../attachments/images/2017/11/keyboard-shortcuts-in-handsontable/keyboard-shortcuts-in-handsontable.png"
+                     alt="Keyboard shortcuts in Handsontable" />
+                <meta itemprop="url"
+                      content="https://handsontable.com/blog/attachments/images/2017/11/keyboard-shortcuts-in-handsontable/keyboard-shortcuts-in-handsontable.png">
+                <meta itemprop="width" content="757">
+                <meta itemprop="height" content="504">
+                <label class="photo-label">Illustration credit:
+                <a href="http://ded.com.pl/" target="_blank" rel="noopener">Marcin Kordacki</a></label>
+            </p>
+
+            <p>
+                We all love keyboard shortcuts as they boost our productivity and save lots of time. It’s easy to get
+                used to working with them, but it’s painful when we cannot use them anymore. Handsontable, as a
+                web-based spreadsheet, also allows you to use the most popular keyboard shortcuts. This provides
+                users with an experience they’re already familiar with from industry behemoths such as Microsoft
+                Excel and Open Office Calc.
+            </p>
+            <p>
+                In this article I will focus mainly on showing how Handsontable’s shortcuts can be extended and
+                customized beyond what’s available in Excel and Calc.
+            </p>
+            <h3>Custom shortcuts</h3>
+            <p>
+                Each of us use a different set of shortcuts, depending on what we do in a spreadsheet. For instance,
+                if you do a comparison of products in your e-commerce website it might be handy to be able to
+                automatically fill the adjacent cells with the names of product categories or labels. Accountants,
+                on the other hand, more often use formulas in their spreadsheet, hence the extensive use of related
+                keyboard shortcuts such as show all formulas (Ctrl+~), or show formula help (Shift+Fn+F1).
+            </p>
+            <p>
+                Handsontable gives you a fair amount of flexibility here. Since it’s a JavaScript library with open API,
+                you can bind any function to custom shortcuts. Below I have created four different examples of this that
+                can be used to modify the content of a cell or add a comment.
+            </p>
+            <h3>Convert text into a hyperlink</h3>
+            <p>
+                In this example I use custom shortcuts to turn text inside a cell into a hyperlink leading to
+                Google search results. You can use either CTRL+M to affect one cell, or CTRL+Q to change all
+                cells in a sheet into links.
+            </p>
+            <p>
+                To do this, I use the <code class="inline">keydown</code>
+                event listener. I’m listening to events fired when particular keys
+                are pressed, and then call <code class="inline">setCellsMeta</code>
+                to use the right renderer. To change all cells at once
+                I use the
+                <a href="https://docs.handsontable.com/pro/Core.html#updateSettings" target="_blank">
+                    <code class="inline">updateSettings</code></a>
+                method for the entire spreadsheet instance.
+            </p>
+            <iframe width="100%" height="170" src="//jsfiddle.net/handsoncode/grfabL0h/embedded/result,css,js,html/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <p>
+                The <a href="https://docs.handsontable.com/pro/Core.html#getSelected" target="_blank">
+                    <code class="inline">getSelected</code>
+                </a>method that we use to track which cells have been selected allows us to track the
+                selection direction. To simplify the process, I am using the Math function to normalize the
+                coordinates that are then used in the
+                <a href="https://docs.handsontable.com/pro/Core.html#setCellMeta" target="_blank">
+                <code class="inline">setCellMeta</code>
+                </a>of the
+                <code class="inline">FOR</code> loop.
+            </p>
+            <h3>Change the color of text</h3>
+            <p>
+                Using the same method as described in the previous example, I bound CTRL+M/Q to a function that allows
+                me to change the color of the text inside a cell. I call the
+                <a href="https://docs.handsontable.com/pro/Core.html#render" target="_blank">
+                    <code class="inline">render</code>
+                </a>method to refresh the table each
+                time the combination of keys is pressed.
+            </p>
+            <iframe width="100%" height="170" src="//jsfiddle.net/handsoncode/oypsodyu/embedded/result,css,js,html/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>Apply validation to a cell</h3>
+            <p>
+                In cases where you need to validate your data on demand (read more about
+                <a href="https://docs.handsontable.com/pro/demo-data-validation.html" target="_blank">
+                    validation rules</a>), use the
+                <a href="https://docs.handsontable.com/pro/Core.html#validateCells" target="_blank">
+                    <code class="inline">validateCells</code>
+                </a>method to achieve that. In this example, we check all the rendered cells against a pre-defined validation rule. When you hit CTRL+M you should see how all the non-numeric values turn red.
+            </p>
+            <iframe width="100%" height="170" src="//jsfiddle.net/handsoncode/9ayjaL1s/embedded/result,css,js,html/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>Add a comment with pre-defined text inside</h3>
+            <p>
+                Here I use the CTRL+M shortcut to call the
+                <a href="https://docs.handsontable.com/pro/Comments.html#setCommentAtCell" target="_blank">
+                    <code class="inline">setCommentAtCell</code>
+                </a>method, which adds a comment with pre-defined text inside (“Accepted”).
+            </p>
+            <iframe width="100%" height="170" src="//jsfiddle.net/handsoncode/hhtgc40u/embedded/result,css,js,html/"
+                    allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>Conclusion</h3>
+            <p>
+                Handsontable gives you the ability to boost your productivity with custom key combinations bound to
+                JavaScript functions. However, remember that it is good practice to not overwrite the default shortcuts
+                of a browser, at least not without giving it some thought.
+            </p>
+
+            <div class="addthis_native_toolbox toolbox"></div>
+        </div>
+    </article>
+
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://handsoncode.net/images/logos/logo.png">
+            <meta itemprop="width" content="175">
+            <meta itemprop="height" content="25">
+        </div>
+        <meta itemprop="name" content="Handsoncode">
+    </div>
+
+    <%- partial("../../../authors/_abudnik") %>
+</section>

@@ -1,4 +1,13 @@
 {
+  "keyboard-shortcuts-in-handsontable": {
+    "directory": "2017/11/",
+    "title": "Keyboard shortcuts in Handsontable",
+    "category": "Recipes",
+    "date": "November 22, 2017",
+    "pubDate": "Wed, 22 Nov 2017 13:00:00 EST",
+    "image_file": "keyboard-shortcuts-in-handsontable/keyboard-shortcuts-in-handsontable.png",
+    "description": "We all love keyboard shortcuts as they boost our productivity and save lots of time. It’s easy to get (...)"
+  },
   "integrating-handsontable-with-chartjs": {
     "directory": "2017/10/",
     "title": "Integrating Handsontable with Chart.js",
