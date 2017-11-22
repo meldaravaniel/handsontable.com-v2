@@ -136,13 +136,10 @@
           font-size: 20px;
 
           &.old-price {
+            margin-right: 8px;
             color: $darkGray;
             font-weight: 400;
             text-decoration: line-through;
-          }
-
-          &.new-price {
-            margin-right: 8px;
           }
         }
       }
