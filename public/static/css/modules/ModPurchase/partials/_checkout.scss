@@ -84,14 +84,17 @@
         }
 
         .tooltip-inner {
-          @include absolute-top-left (35px, 130px);
-          width: 240px;
-          font-size: 14px;
+          @include absolute-top-left (35px, 124px);
+          width: 256px;
           color: $baseGray;
           visibility: visible;
           opacity: 1;
           box-shadow: none;
           background-color: $brandFeatherBlue;
+
+          span {
+            font-size: 14px;
+          }
 
           .tooltip-angle {
             top: 13px;
@@ -122,6 +125,19 @@
         input {
           @include relative-top-left (-1px, 0);
           margin-right: 5px;
+        }
+      }
+    }
+
+    .config-subscription {
+
+      label {
+        display: block;
+        line-height: 18px;
+
+        small {
+          margin-top: 10px;
+          display: block;
         }
       }
     }
