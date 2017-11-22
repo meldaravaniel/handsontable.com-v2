@@ -1,2 +1,5 @@
 User-agent: *
 Disallow: /static/bower_components/
+Disallow: /labs-upload
+Disallow: /labs-result
+Disallow: /purchase/

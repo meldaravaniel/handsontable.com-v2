@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- partial("../_partials/_tagmanager_head") %>
+    <%- partial(".._partials/_favicon") %>
+    <%- partial("../_partials/_head") %>
+</head>
+<body>
+    <%- partial("../_partials/_common_svg") %>
+    <%- partial("../_partials/_tagmanager_body") %>
+
+    <header>
+        <div class="row">
+            <div class="small-3 columns">
+                <div class="logo">
+                    <a href="/">
+                        <svg class="handsontable-logo">
+                            <use xlink:href="#handsontable-logo"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <%- yield %>
+    <%- partial("../_partials/_footer") %>
+    <%- partial("../_partials/_scripts") %>
+</body>
+</html>
+
+
+

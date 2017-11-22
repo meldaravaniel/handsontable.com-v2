@@ -1,0 +1,168 @@
+<section class="purchase">
+
+    <div class="row">
+        <div class="columns">
+
+            <h1 class="text-center size-large gap-bottom-xsmall wait-for-font">
+                <span>Step 1 of 2</span><br/>
+                Your Purchase Configuration
+            </h1>
+        </div>
+    </div>
+
+    <div class="row gap-bottom-xsmall">
+        <div class="small-12 large-11 small-centered columns">
+            <div class="checkout">
+                <div class="row">
+                    <div class="small-12 medium-6 columns">
+                        <div class="purchase">
+                            <div class="purchase-name">
+                                <h2 class="wait-for-font">Handsontable Pro Developer License</h2>
+                                <p>
+                                    <a href="<%= static_path %>/licenses/v3/handsontable-pro-general-terms.pdf"
+                                       target="_blank" rel="noopener">License Agreement</a>
+                                </p>
+                            </div>
+                            <div class="purchase-features">
+                                <h3 class="wait-for-font">Features included:</h3>
+                                <ul>
+                                    <li>
+                                        <svg class="svg">
+                                            <use xlink:href="#check"></use>
+                                        </svg>
+                                        Lifetime, royalty free license
+                                    </li>
+                                    <li>
+                                        <svg class="svg">
+                                            <use xlink:href="#check"></use>
+                                        </svg>
+                                        All premium features
+                                    </li>
+                                    <li>
+                                        <svg class="svg">
+                                            <use xlink:href="#check"></use>
+                                        </svg>
+                                        Full source code
+                                    </li>
+                                </ul>
+                                <h3 class="wait-for-font">Support included:</h3>
+                                <ul>
+                                    <li>
+                                        <svg class="svg">
+                                            <use xlink:href="#check"></use>
+                                        </svg>
+                                        Free updates for 12 months
+                                    </li>
+                                    <li>
+                                        <svg class="svg">
+                                            <use xlink:href="#check"></use>
+                                        </svg>
+                                        10 hours of free support time
+                                    </li>
+                                    <li>
+                                        <svg class="svg">
+                                            <use xlink:href="#check"></use>
+                                        </svg>
+                                        48 hours initial response time
+                                    </li>
+                                    <li>
+                                        <svg class="svg">
+                                            <use xlink:href="#check"></use>
+                                        </svg>
+                                        Something more
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-12 medium-6 columns">
+                        <div class="configuration">
+                            <div class="config-amount gap-bottom-xxsmall">
+                                <h3 class="wait-for-font">Number of developers</h3>
+                                <div class="incremental-form">
+                                    <button class="decrement btn bg-blue bg-lighten text-white">-</button>
+                                    <input type="text" name="amount-field" id="amount-field" value="2" disabled="disabled" />
+                                    <button class="increment btn bg-blue bg-lighten text-white">+</button>
+                                </div>
+                                <div class="tooltip-right">
+                                    <div class="tooltip-inner">
+                                        <span class="tooltip-text">Bigger discounts at 5 licenses!</span>
+                                        <div class="tooltip-angle">
+                                            <div class="tooltip-right"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--
+                                    .tooltip-text, content:
+
+                                    Scope: 0 - 10
+                                    1:     Discounts start at 2 licenses!  / 10%
+                                    2 - 5: Bigger discounts at 5 licenses! / 15%
+                                    6+    <a href="/contact">Contact us</a> for bigger discount
+                                -->
+                            </div>
+                            <div class="config-support gap-bottom-xxsmall">
+                                <h3 class="wait-for-font">Choose support plan</h3>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="standard-support" checked="checked" />
+                                        <label for="standard-support">Standard support ($0)</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="extended-support" />
+                                        <label for="extended-support">Extended support ($700)</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="config-subscription gap-bottom-xxsmall">
+                                <h3 class="wait-for-font">Subscribe to updates</h3>
+                                <div class="row commitment">
+                                    <div class="small-1 columns">
+                                        <input type="checkbox" id="accept-subscription" />
+                                    </div>
+                                    <div class="small-11 columns">
+                                        <label for="accept-subscription">
+                                            Renew my product after first year and bill me automatically.
+                                            <br/>
+                                            <small>By selecting this option, you sign up to support renewal plan.
+                                                After first year you will be billed $390 / developer / year.
+                                            </small>
+                                        </label>
+                                        <!--
+                                        Pricing of renewals:
+                                           $390 for Standard Support
+                                           $790 for Extended Support
+                                        -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="config-summary">
+                                <ul class="small-block-grid-2 small-centered">
+                                    <li>
+                                        <h3 class="total">
+                                            <strong>
+                                                Total:
+                                                <span class="new-price">$1062</span>
+                                                <span class="old-price">$1180</span>
+
+                                            </strong>
+                                        </h3>
+                                        <p class="discount">10% volume discount</p>
+                                    </li>
+                                    <li>
+                                        <button class="btn size-large bg-green bg-lighten text-white right">Checkout</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="disclaimer">
+                            By clicking 'Checkout' button you confirm that you have read and agreed
+                            to the License Agreement(s) of the products listed above.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
