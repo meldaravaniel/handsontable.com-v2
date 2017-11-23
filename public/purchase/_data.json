@@ -1,6 +1,15 @@
 {
   "index": {
     "title": "Purchase configuration"
+  },
+  "complete": {
+    "title": "Thank you for your purchase!"
+  },
+  "error": {
+    "title": "Your purchase couldn't be completed"
+  },
+  "maintenance": {
+    "title": "This page is currently under scheduled maintenance."
   }
 }
 

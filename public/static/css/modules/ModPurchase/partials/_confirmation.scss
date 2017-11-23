@@ -1,0 +1,39 @@
+/**
+* @author: Handsoncode
+*/
+
+.confirmation {
+
+  .status-icon {
+    @include square (90px);
+    padding: 16px;
+    border: 8px solid transparent;
+    border-radius: 100%;
+  }
+
+  &.complete {
+
+    .status-icon {
+      border-color: $brandGreen;
+      fill: $brandGreen;
+    }
+  }
+
+  &.error {
+
+    .status-icon {
+      border-color: $brandRed;
+      fill: $brandRed;
+    }
+  }
+
+  &.maintenance {
+
+    .status-icon {
+      border-color: $darkGray;
+      fill: $darkGray;
+      border-radius: 20%;
+    }
+  }
+
+}
