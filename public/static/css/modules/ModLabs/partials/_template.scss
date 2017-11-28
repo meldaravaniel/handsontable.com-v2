@@ -12,15 +12,8 @@
       white-space: nowrap;
     }
 
-    .experimental {
-      width: 120px;
-      margin: 0 auto 20px;
-      padding: 6px 0;
-      color: #fff;
-      display: block;
-      font-size: 16px;
-      font-weight: 400;
-      background-color: $brandPurple;
+    .beta small {
+      font-size: 13px;
     }
   }
 
@@ -28,6 +21,11 @@
 
     p {
       text-align: justify;
+    }
+
+    ul li {
+      margin-left: 20px;
+      list-style: square;
     }
   }
 

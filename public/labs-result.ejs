@@ -2,17 +2,28 @@
 
     <div class="row headline">
         <div class="columns">
-            <h1 class="text-center size-large gap-top-medium gap-bottom-small">
-                timesheet.xlsx<br/>
-                <span>Your Handsontable spreadsheet from an Excel file</span>
+            <h1 class="size-large gap-top-medium gap-bottom-xgit stxsmall">
+                Timesheet.xlsx
             </h1>
         </div>
     </div>
 
     <div class="row">
         <div class="small-12 columns">
+            <a href="/download" class="btn size-medium bg-blue bg-lighten text-white shadow">
+                Copy configuration
+            </a>
+            &nbsp;
+            <a href="/download" class="btn size-medium bg-green bg-lighten text-white shadow">
+                Edit in JSFiddle
+            </a>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="small-12 columns">
             <div class="actions text-right">
-                <a href="#" target="_blank" rel="noopener">Copy HTML</a>
                 <a href="/labs-upload.html" target="_blank" rel="noopener" class="new">Create new</a>
                 <a href="#" target="_blank" rel="noopener" class="remove">Delete</a>
             </div>
@@ -55,95 +66,29 @@
     <div class="row gap-top-xsmall">
         <div class="small-12 medium-3 columns">
             <div class="stats">
-                <h3>Statistics</h3>
-                <p>Created at: <strong>May 16, 2017</strong></p>
-                <p>Worksheets: <strong>4</strong></p>
-                <p>Non-blank cells: <strong>25</strong></p>
-                <p>Formulas: <strong>25</strong></p>
+                <h3>Overview</h3>
+                <p>Created on May 16, 2017</p>
+                <p>Worksheets: 4</p>
+                <p>Non-blank cells: 25</p>
+                <p>Formulas: 25</p>
             </div>
         </div>
         <div class="small-12 medium-3 end columns">
             <div class="report">
                 <h3>Help us improve</h3>
-                <a href="#" target="_blank" rel="noopener">Give feedback</a>
+                <a href="//handsoncode.typeform.com/to/NeUbrn" target="_blank" rel="noopener noreferrer">
+                    Fill out this quick survey</a>
             </div>
         </div>
-        <div class="small-12 medium-6 end columns">
+        <div class="small-12 medium-5 end columns">
             <div class="share">
-                <h3>Share it</h3>
+                <h3>Share link</h3>
                 <input type="text" id="share-url" value="https://labs.handsontable.com/convert/013081380180"
                        onclick="this.select();" readonly />
-                <p>
-                    <a href="#" target="_blank" rel="noopener" title="Share on Facebook">
-                        <svg class="svg">
-                            <use xlink:href="#facebook"></use>
-                        </svg>
-                    </a>
-                    <a href="#" target="_blank" rel="noopener" title="Share on Twitter">
-                        <svg class="svg">
-                            <use xlink:href="#twitter"></use>
-                        </svg>
-                    </a>
-                </p>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="large-5 columns project-description">
-            <h3 class="gap-top-small">About this project</h3>
-            <p>This is an experimental playground which we created to better develop Excel-like features in Handsontable.
-                However, it turned out that some of you found this project useful so we decided to make it available for
-                a wider audience.
-                Now, how it works - we use a microservice on the back-end side based on
-                <a href="https://github.com/PHPOffice/PHPExcel" target="_blank" rel="noopener">PHP Excel</a> to parse and serialize the
-                binary file and then save it to the database. The saved data is then bind with Handsontable
-                which has a built-in parser to extract the configuration entries such as colors, sizes etc.
-            </p>
-            <p>At this stage this app can only handle formulas, values, and styles. Unfortunately, all
-                cross-sheet formulas will be calculated and turned into static values. Also, after the file is
-                uploaded you can modify the content, but all changes will be lost after the page reloads.</p>
-            <p>By using this app you agree to be bound by our <a href="/terms-of-use.html">terms of use</a>.</p>
-        </div>
-
-        <div class="large-6 columns">
-            <div class="subscribe-form">
-                <h3 class="gap-top-small">Subscribe to updates</h3>
-                <div id="mc_embed_signup">
-                    <form action="//handsontable.us9.list-manage.com/subscribe/post?u=47073b08d03ebee16188c1687&amp;id=0a640d7654"
-                          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                          class="validate" target="_blank" rel="noopener" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                            <div class="mc-field-group">
-                                <input placeholder="Email Address" type="email" value="" name="EMAIL"
-                                       class="required email" id="mce-EMAIL">
-                                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                                       class="btn bg-blue text-white bg-ligthen">
-                            </div>
-                            <div id="mce-responses">
-                                <div class="response" id="mce-error-response" style="display:none"></div>
-                                <div class="response" id="mce-success-response" style="display:none"></div>
-                            </div>
-                            <span>We never spam. Opt-out any time.</span>
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                              name="b_47073b08d03ebee16188c1687_0a640d7654"
-                              tabindex="-1"
-                              value=""></div>
-                        </div>
-                    </form>
-                </div>
-                <script type='text/javascript'
-                        src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-                <script type='text/javascript'>(function ($) {
-                        window.fnames = new Array();
-                        window.ftypes = new Array();
-                        fnames[0] = 'EMAIL';
-                        ftypes[0] = 'email';
-                    }(jQuery));
-                    var $mcj = jQuery.noConflict(true);</script>
-            </div>
-        </div>
-    </div>
     <div class="row comments gap-top-small" id="comments">
         <div class="large-8 medium-12 large-centered columns">
             <!-- START EMBED CODE -->
@@ -206,7 +151,10 @@
     </div>
     <div class="modal-backdrop bg-light-transparent"></div>
 </div>
-
+<script src="/static/bower_components/handsontable-pro/dist/handsontable.full.min.js"></script>
+<link href="/static/bower_components/handsontable-pro/dist/handsontable.full.min.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
+<link href="/static/bower_components/highlightjs/styles/github.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
+<link href="/static/js/lib/prism.min.css?v=<%= static_rev %>" type="text/css" rel="stylesheet">
 <script data-jsfiddle>
     var dataObject = [
         {

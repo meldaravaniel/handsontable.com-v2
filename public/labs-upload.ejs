@@ -3,24 +3,19 @@
     <div class="row headline">
         <div class="columns">
             <h1 class="text-center size-large gap-top-medium gap-bottom-small">
-                <span class="experimental">Experimental</span>
-                Excel to Handsontable<br/>
-                <span>Create Handsontable from an Excel file</span>
+                Convert Excel to Handsontable
+                <sup class="beta"><small>BETA</small></sup><br/>
+                <span>The easiest way to create a configuration file</span>
             </h1>
         </div>
     </div>
 
     <div class="row">
-        <div class="large-9 large-centered columns">
+        <div class="large-8 large-centered columns">
             <div class="uploader text-center">
-
-                <svg class="svg">
-                    <use xlink:href="#upload"></use>
-                </svg>
-
-                <p><strong>Drop your file here</strong></p>
+                <p>Drop your spreadsheet here</p>
                 <p>or</p>
-                <a href="#" class="btn size-medium bg-blue bg-lighten text-white shadow hover-moveup">Select a file</a>
+                <a href="#" class="btn size-medium bg-blue bg-lighten text-white shadow">Choose file</a>
                 <p>XLSX, XLS, CSV. Max. 2MB</p>
             </div>
         </div>
@@ -28,37 +23,40 @@
 
     <div class="row spreadsheet-samples gap-top-small">
         <div class="columns">
-            <h2 class="gap-bottom-xxsmall">Try sample spreadsheets</h2>
-            <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-6">
-                <li><a href="/labs-result.html" class="btn bg-purple bg-lighten text-white shadow hover-moveup">Simple timesheet</a></li>
-                <li><a href="/labs-result.html" class="btn bg-blue bg-lighten text-white shadow hover-moveup">Simple timesheet</a></li>
-                <li><a href="/labs-result.html" class="btn bg-navy bg-lighten text-white shadow hover-moveup">Simple timesheet</a></li>
-                <li><a href="/labs-result.html" class="btn bg-green bg-lighten text-white shadow hover-moveup">Simple timesheet</a></li>
-                <li><a href="/labs-result.html" class="btn bg-red bg-lighten text-white shadow hover-moveup">Simple timesheet</a></li>
-                <li><a href="/labs-result.html" class="btn bg-yellow bg-lighten text-white shadow hover-moveup">Simple timesheet</a></li>
-            </ul>
+            <h2 class="gap-bottom-xxsmall text-center">Need a sample spreadsheet?<br/>
+                <a href="<%= static_path %>/resources/ModLabs/excel-to-handsontable.xlsx">Download test file</a>
+            </h2>
         </div>
     </div>
 
     <div class="row">
         <div class="large-5 columns project-description">
-            <h3 class="gap-top-xsmall">About this project</h3>
-            <p>This is an experimental playground which we created to better develop Excel-like features in Handsontable.
-                However, it turned out that some of you found this project useful so we decided to make it available for
-                a wider audience.
-                Now, how it works - we use a microservice on the back-end side based on
-                <a href="https://github.com/PHPOffice/PHPExcel" target="_blank" rel="noopener">PHP Excel</a> to parse and serialize the
-                binary file and then save it to the database. The saved data is then bind with Handsontable
-                which has a built-in parser to extract the configuration entries such as colors, sizes etc.
-            </p>
-            <p>At this stage this app can only handle formulas, values, and styles. Unfortunately, all
-                cross-sheet formulas will be calculated and turned into static values. Also, after the file is
-                uploaded you can modify the content, but all changes will be lost after the page reloads.</p>
-            <p>By using this app you agree to be bound by our <a href="/terms-of-use.html">terms of use</a>.</p>
+            <h3 class="gap-top-xsmall">About project</h3>
+
+            <p>This app enables you to create a Handsontable instance from your existing Excel file. This project
+                is nowhere near ready so consider it as a beta version. There are still a lot of limitations of
+                what we can read from your spreadsheet file to be represented in Handsontable.</p>
+            <p>At this stage it handles formulas, values, and styles.</p>
+            <p class="gap-top-xxsmall"><strong>The most important constrains are
+                    as following:</strong></p>
+
+            <ul>
+                <li>Saving changes (changes will be lost after page reloads)</li>
+                <li>Cross-sheet functions</li>
+                <li>Special functions: lookup, vlookup, today() and similar</li>
+                <li>Named ranges</li>
+                <li>Borders width (borders will be converted into 1px)</li>
+                <li>Clockwise/counterwise text rotation</li>
+                <li>Macros</li>
+                <li>Indentation</li>
+                <li>Invisible borders</li>
+                <li>Toolbar and formula bar</li>
+                <li>Filters control within cells</li>
+            </ul>
         </div>
 
         <div class="large-6 columns">
-            <div class="subscribe-form">
+            <div class="row subscribe-form">
                 <h3 class="gap-top-xsmall">Subscribe to updates</h3>
                 <div id="mc_embed_signup">
                     <form action="//handsontable.us9.list-manage.com/subscribe/post?u=47073b08d03ebee16188c1687&amp;id=0a640d7654"
@@ -93,35 +91,23 @@
                     }(jQuery));
                     var $mcj = jQuery.noConflict(true);</script>
             </div>
-        </div>
-    </div>
-    <div class="row comments gap-top-small" id="comments">
-        <div class="large-8 medium-12 large-centered columns">
-            <!-- START EMBED CODE -->
-            <div id="disqus_thread"></div>
-            <script>
-                var disqus_config = function () {
-                    this.page.url = handsontable.com;
-                    this.page.identifier = handsontable-labs;
-                };
-                (function () { // DON'T EDIT BELOW THIS LINE
-                    var d = document, s = d.createElement('script');
 
-                    s.src = '//handsontable.disqus.com/embed.js';
-
-                    s.setAttribute('data-timestamp', +new Date());
-                    (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">
-                    comments powered by Disqus.</a></noscript>
-            <!-- END EMBED CODE -->
+            <div class="row feedback">
+                <h3 class="gap-top-xsmall">Give feedback</h3>
+                <p>
+                    Can we steal 2 minutes of your time to learn your opinion about this app?
+                </p>
+                <p>
+                    <a href="//handsoncode.typeform.com/to/NeUbrn" target="_blank" rel="nofollow noreferrer">
+                        Fill out this quick survey
+                    </a>
+                </p>
+            </div>
         </div>
     </div>
 </section>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56b33be61739fd7f"
         async="async"></script>
-<script id="dsq-count-scr" src="//handsontable.disqus.com/count.js" async></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 <!-- Loader -->
@@ -133,11 +119,14 @@
                     <use xlink:href="#lab-bottles"></use>
                 </svg>
             </div>
-            <p><strong>"Scientist believe in things, not in person"</strong></p>
-            <p>~Marie Curie</p>
-            <br/>
-            <p>Uploading <span class="filename">timesheet.xlsx</span></p>
-            <p class="hidden">Nothing happens? <a href="#" class="filename">Refresh the page</a></p>
+            <div class="row">
+                <div class="small-12 large-10 columns large-centered">
+                    <p>Uploading <span class="filename">timesheet.xlsx...</span></p>
+                    <p class="hidden">Nothing happens? <a href="#" class="filename">Refresh the page</a></p>
+                    <p class="gap-top-xsmall"><strong>"Scientist believe in things, not in person"</strong></p>
+                    <p>~Marie Curie</p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="modal-backdrop bg-light-transparent"></div>
