@@ -1,4 +1,13 @@
 {
+  "1.15.0-0.35.0": {
+    "directory": "2017/12/",
+    "title": "Handsontable Pro 1.15.0 (CE 0.35.0) released",
+    "category": "Release",
+    "date": "December 5, 2017",
+    "pubDate": "Tue, 5 Dec 2017 13:00:00 EST",
+    "image_file": "1.15.0-0.35.0/new-release.png",
+    "description": "Today we released a new version of Handsontable Pro (1.15.0) and Community Edition (0.35.0). We fixed (...)"
+  },
   "custom-keyboard-shortcuts-in-handsontable": {
     "directory": "2017/11/",
     "title": "Custom Keyboard Shortcuts in Handsontable",

@@ -1,0 +1,141 @@
+<section class="post" itemid="https://handsontable.com/2017/12/<%= current.source %>" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+        <div class="large-6 large-centered columns">
+            <h2 class="headline" itemprop="headline">
+                Handsontable Pro 1.15.0<br/>
+                (CE 0.35.0) now released
+            </h2>
+            <div class="meta-details">
+                <span>
+                    <img src="../../../attachments/authors/aleksandra-budnik.png" alt="Aleksandra Budnik" />
+                    <label>Aleksandra Budnik</label>
+                </span>
+                <span><a href="/blog/categories/release">Release</a> / December 5, 2017</span>
+                <meta itemprop="datePublished" content="2017-12-05T12:00:00+01:00"/>
+                <meta itemprop="dateModified" content="2017-12-05T12:00:00+01:00"/>
+                <span><a href="#disqus_thread"></a></span>
+            </div>
+        </div>
+    </div>
+    <article class="row body">
+        <div class="large-8 medium-12 large-centered columns">
+            <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <img src="../../../attachments/images/2017/12/1.15.0-0.35.0/new-release.png"
+                     alt="Handsontable Pro 1.15.0 (CE 0.35.0) released" />
+                <meta itemprop="url"
+                      content="https://handsontable.com/blog/attachments/images/2017/12/1.15.0-0.35.0/new-release.png">
+                <meta itemprop="width" content="757">
+                <meta itemprop="height" content="504">
+            </p>
+
+            <p>
+                Today we are happy to announce that Handsontable Pro 1.15.0 (Community Edition 0.35.0) is now released.
+                In this version we have fixed a few minor issues related to Filters plugin.
+            </p>
+
+            <h3>Breaking change:</h3>
+            <ul>
+                <li>
+                    We’ve renamed our locale and language-related configuration options to free the namespace
+                    required for multi-language support in Handsontable.
+
+                    What used to be defined as:
+<pre>
+<code lang="js">
+{
+  format: '0,0.00 $',
+  language: 'de-DE'
+}
+</code>
+</pre>
+                    will now look like this:
+<pre>
+<code lang="js">
+{
+  numericFormat: {
+    pattern: '0,0.00 $',
+    culture: 'de-DE'
+  }
+}
+</code>
+</pre>
+                    Take a look at our documentation for more insight:
+                    <ul>
+                        <li>
+                            <a href="https://docs.handsontable.com/0.34.5/demo-numeric.html" target="_blank">
+                             to version 0.34.5
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://docs.handsontable.com/0.35.0/demo-numeric.html" target="_blank">
+                                from version 0.35.0
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Changes</h3>
+            <ul>
+                <li>
+                    Removed unwanted dependencies.
+                </li>
+                <li>
+                    Fixed problems in test cases for the <code class="inline">Filters</code> plugin.
+                </li>
+                <li>
+                    Added a <code class="inline">weekHeaderGenerator</code> option for the
+                    <code class="inline">GanttChart</code> plugin.
+                </li>
+                <li>
+                    Fixed a problem, where updating the <code class="inline">contextMenu</code> entries using
+                    <code class="inline">updateSettings</code> was not working properly.
+                    (<a href="https://github.com/handsontable/handsontable/issues/4614" target="_blank">#4614</a>).
+                </li>
+                <li>
+                    Fixed a bug, where copied <code class="inline">checkbox</code>-typed cells were no longer functional.
+                    (<a href="https://github.com/handsontable/handsontable/issues/4580" target="_blank">#4580</a>).
+                </li>
+                <li>
+                    Fixed a problem, where declaring a multi-leveled
+                    <code class="inline">contextMenu</code> with the <code class="inline">name</code>
+                    property declared as a function would crash.
+                    (<a href="https://github.com/handsontable/handsontable/issues/4550" target="_blank">#4550</a>).
+                </li>
+                <li>
+                    Added multi-language support for the table. Please, take a look at
+                    <a href="https://docs.handsontable.com/tutorial-internationalization.html" target="_blank">
+                     https://docs.handsontable.com/tutorial-internationalization.html</a> for more information.
+                    (<a href="https://github.com/handsontable/handsontable/issues/4457" target="_blank">#4457</a>).
+                </li>
+                <li>
+                    Fixed a problem with scrolling the table using the keyboard, when
+                    <code class="inline">renderAllRows: true</code> was set.
+                    (<a href="https://github.com/handsontable/handsontable/issues/4205" target="_blank">#4205</a>).
+                </li>
+            </ul>
+
+            <p>
+                Follow us on <a href="//twitter.com/handsontable" target="_blank">Twitter</a> to be up-to-date
+                with all updates to Handsontable.
+            </p>
+            <p>
+                We appreciate all of your suggestions and bug reports that helps us fix issues faster.
+                You may want to leave a comment or
+                <a href="/contact.html">contact us</a>
+                to help us make Handsontable even better.
+            </p>
+            <div class="addthis_native_toolbox toolbox"></div>
+        </div>
+    </article>
+
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://handsoncode.net/images/logos/logo.png">
+            <meta itemprop="width" content="175">
+            <meta itemprop="height" content="25">
+        </div>
+        <meta itemprop="name" content="Handsoncode">
+    </div>
+
+    <%- partial("../../../authors/_abudnik") %>
+</section>
