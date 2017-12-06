@@ -5,12 +5,12 @@
         "url": "https://handsontable.com",
         "description": "Handsontable is a JavaScript Spreadsheet Component available for React, Angular and Vue.",
         "static_path": "/static",
-        "static_rev": "4",
+        "static_rev": "5",
         "img_path": "/static/images/",
         "tag_manager": "GTM-55L5D3",
-        "hot_ce_version": "0.34.5",
-        "hot_ce_date": "October 12, 2017",
-        "hot_pro_version": "1.14.3",
-        "hot_pro_date": "October 12, 2017"
+        "hot_ce_version": "0.35.0",
+        "hot_ce_date": "December 6, 2017",
+        "hot_pro_version": "1.15.0",
+        "hot_pro_date": "December 6, 2017"
     }
 }
