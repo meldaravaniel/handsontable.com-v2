@@ -1,4 +1,13 @@
 {
+  "1.15.0-0.35.0": {
+    "directory": "2017/12/",
+    "title": "Handsontable Pro 1.15.0 (CE 0.35.0) released",
+    "category": "Release",
+    "date": "December 6, 2017",
+    "pubDate": "Wed, 6 Dec 2017 13:00:00 EST",
+    "image_file": "1.15.0-0.35.0/new-release.png",
+    "description": "Handsontable, by default, displays all the messages in English (US). We are happy to announce that (...)"
+  },
   "custom-keyboard-shortcuts-in-handsontable": {
     "directory": "2017/11/",
     "title": "Custom Keyboard Shortcuts in Handsontable",
