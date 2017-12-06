@@ -1,0 +1,161 @@
+<section class="post" itemid="https://handsontable.com/2017/12/<%= current.source %>" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+        <div class="large-6 large-centered columns">
+            <h2 class="headline" itemprop="headline">
+                Handsontable Pro 1.15.0<br/>
+                (CE 0.35.0) now released
+            </h2>
+            <div class="meta-details">
+                <span>
+                    <img src="../../../attachments/authors/aleksandra-budnik.png" alt="Aleksandra Budnik" />
+                    <label>Aleksandra Budnik</label>
+                </span>
+                <span><a href="/blog/categories/release">Release</a> / December 6, 2017</span>
+                <meta itemprop="datePublished" content="2017-12-06T12:00:00+01:00"/>
+                <meta itemprop="dateModified" content="2017-12-06T12:00:00+01:00"/>
+                <span><a href="#disqus_thread"></a></span>
+            </div>
+        </div>
+    </div>
+    <article class="row body">
+        <div class="large-8 medium-12 large-centered columns">
+            <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <img src="../../../attachments/images/2017/12/1.15.0-0.35.0/new-release.png"
+                     alt="Handsontable Pro 1.15.0 (CE 0.35.0) released" />
+                <meta itemprop="url"
+                      content="https://handsontable.com/blog/attachments/images/2017/12/1.15.0-0.35.0/new-release.png">
+                <meta itemprop="width" content="757">
+                <meta itemprop="height" content="504">
+            </p>
+            <p>
+                Handsontable, by default, displays all the messages in English (US).
+                We are happy to announce that from now on you will be able to translate these messages
+                to any given language across all the plugins, namely:
+            </p>
+
+            <ul>
+                <li>Context menu (including custom borders, freezing, merge cells, comments etc.)</li>
+                <li>Dropdown menu (Pro)</li>
+                <li>Filtering (Pro)</li>
+                <li>Hiding columns (Pro)</li>
+                <li>Hiding rows (Pro)</li>
+                <li>Nesting rows (Pro)</li>
+            </ul>
+
+            <p>
+                We are actively looking for contributors to this project to translate Handsontable
+                to as many languages as possible. Learn how to do that from
+                <a href="//docs.handsontable.com/tutorial-internationalization.html">this tutorial</a>
+                or jump right in to the
+                <a href="//github.com/handsontable/handsontable/blob/master/CONTRIBUTING.md" target="_blank"
+                   rel="noopener">
+                    contributors page</a>.
+            </p>
+            <p>
+                In this version, we have also fixed a few minor issues related to the Filters plugin.
+            </p>
+
+            <h3>Breaking change:</h3>
+            <p>We have renamed our locale and language-related configuration options to free up the namespace
+                required for multi-language support. What used to be defined as:</p>
+<pre>
+<code lang="js">
+// Deprecated since Pro 1.15.0 / CE 0.35.0
+{
+  format: '0,0.00 $',
+  language: 'de-DE'
+}
+</code>
+</pre>
+<p>
+    now looks like this:
+</p>
+<pre>
+<code lang="js">
+{
+  numericFormat: {
+    pattern: '0,0.00 $',
+    culture: 'de-DE'
+  }
+}
+</code>
+</pre>
+                    <p>Take a look at our documentation to compare the current approach to the previous one:</p>
+                    <ul>
+                        <li>
+                            <a href="//docs.handsontable.com/0.34.5/demo-numeric.html" target="_blank">
+                                to version 0.34.5
+                            </a>
+                        </li>
+                        <li>
+                            <a href="//docs.handsontable.com/0.35.0/demo-numeric.html" target="_blank">
+                                from version 0.35.0
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Other changes</h3>
+            <ul>
+                <li>
+                    Removed unwanted dependencies.
+                </li>
+                <li>
+                    Fixed problems in test cases for the <code class="inline">Filters</code> plugin.
+                </li>
+                <li>
+                    Added a <code class="inline">weekHeaderGenerator</code> option for the
+                    <code class="inline">GanttChart</code> plugin.
+                </li>
+                <li>
+                    Fixed a problem, where updating the <code class="inline">contextMenu</code> entries using
+                    <code class="inline">updateSettings</code> was not working properly.
+                    (<a href="//github.com/handsontable/handsontable/issues/4614" target="_blank" rel="noopener">#4614</a>).
+                </li>
+                <li>
+                    Fixed a bug, where pasted <code class="inline">checkbox</code>-typed cells were no longer functional.
+                    (<a href="//github.com/handsontable/handsontable/issues/4580" target="_blank" rel="noopener">#4580</a>).
+                </li>
+                <li>
+                    Fixed a problem, where declaring a multi-leveled
+                    <code class="inline">contextMenu</code> with the <code class="inline">name</code>
+                    property declared as a function would crash.
+                    (<a href="//github.com/handsontable/handsontable/issues/4550" target="_blank" rel="noopener">#4550</a>).
+                </li>
+                <li>
+                    Added multi-language support for the table. Take a look at
+                    <a href="https://docs.handsontable.com/tutorial-internationalization.html" target="_blank">
+                     https://docs.handsontable.com/tutorial-internationalization.html</a> for more information.
+                    (<a href="//github.com/handsontable/handsontable/issues/4457" target="_blank" rel="noopener">#4457</a>).
+                </li>
+                <li>
+                    Fixed a problem with scrolling the table using the keyboard, when
+                    <code class="inline">renderAllRows: true</code> was set.
+                    (<a href="//github.com/handsontable/handsontable/issues/4205" target="_blank" rel="noopener">#4205</a>).
+                </li>
+            </ul>
+
+            <p>
+                Follow us on <a href="//twitter.com/handsontable" target="_blank" rel="noopener">Twitter</a>
+                to keep up to date with all updates on Handsontable.
+            </p>
+            <p>
+                We appreciate all of your suggestions that help us improve Handsontable.
+                You can leave a comment or
+                <a href="/contact.html">contact us</a> directly.
+            </p>
+            <div class="addthis_native_toolbox toolbox"></div>
+        </div>
+    </article>
+
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://handsoncode.net/images/logos/logo.png">
+            <meta itemprop="width" content="175">
+            <meta itemprop="height" content="25">
+        </div>
+        <meta itemprop="name" content="Handsoncode">
+    </div>
+
+    <%- partial("../../../authors/_abudnik") %>
+</section>
