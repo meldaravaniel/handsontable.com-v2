@@ -358,7 +358,9 @@
             {
                 data: 'level',
                 type: 'numeric',
-                format: '0.0000'
+                numericFormat: {
+                  pattern: '0.0000'
+                }
             },
             {
                 data: 'units',
@@ -372,7 +374,9 @@
             {
                 data: 'onedChng',
                 type: 'numeric',
-                format: '0.00%'
+                numericFormat: {
+                  pattern: '0.00%'
+                }
             }
         ],
         stretchH: 'all',
