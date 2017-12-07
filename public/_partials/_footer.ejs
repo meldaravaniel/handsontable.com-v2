@@ -60,16 +60,20 @@
 
 <script async src="/static/js/common/index.js?v=<%= static_rev %>"></script>
 
-<% if (current.source === 'examples'|| current.path[1] == 'articles' || current.source === 'features' || current.source === 'labs-result' || current.source === 'community-download' || current.source === 'pro-download') {  %>
+<% if (current.path[1] == 'articles' || current.source === 'features' || current.source === 'labs-result') {  %>
     <script src="/static/bower_components/handsontable-pro/dist/handsontable.full.min.js?v=<%= static_rev %>"></script>
-    <script src="/static/bower_components/history.js/scripts/bundled/html4+html5/native.history.js?v=<%= static_rev %>"></script>
-    <script src="/static/bower_components/highlightjs/highlight.pack.min.js?v=<%= static_rev %>"></script>
-
+    
     <% if (current.source === 'features') {  %>
       <script src="/static/node_components/codemirror/codemirror.js?v=<%= static_rev %>"></script>
       <script src="/static/node_components/codemirror/mode/javascript/javascript.js?v=<%= static_rev %>"></script>
       <script async src="/static/js/features/index.js?v=<%= static_rev %>"></script>
     <% } %>
+<% } else if (current.source === 'examples') {  %>
+  <script src="/static/bower_components/handsontable-pro/dist/handsontable.full.min.js?v=<%= static_rev %>"></script>
+  <script async src="/static/bower_components/history.js/scripts/bundled/html4+html5/native.history.js?v=<%= static_rev %>"></script>
+  <script async src="/static/js/examples/code-generator.js?v=<%= static_rev %>"></script>
+  <script async src="/static/js/examples/jsfiddle-exporter.js?v=<%= static_rev %>"></script>
+  <script async src="/static/js/examples/index.js?v=<%= static_rev %>"></script>
 <% } else if (current.source === 'contact') {  %>
     <script async src="/static/js/contact/index.js?v=<%= static_rev %>"></script>
 <% } else if (current.source === 'knowledge-base') {  %>

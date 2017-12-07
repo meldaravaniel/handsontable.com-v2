@@ -93,6 +93,7 @@ module.exports = function(grunt) {
           ignore: [
             'header nav ul li.news #HW_badge_cont',
             'header nav ul li.news #HW_badge_cont #HW_badge',
+            'header nav ul li.news #HW_badge_cont #HW_badge.HW_softHidden',
             '.brands img',
             '.frontpage .header-laptop',
             '#content #full-view-button',
