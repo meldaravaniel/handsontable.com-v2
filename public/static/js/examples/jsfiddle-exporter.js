@@ -1,11 +1,9 @@
-function JsfiddleExporter(examplesObj) {
+function JsfiddleExporter(codeGenerator) {
   this.html = '';
   this.css = '';
   this.js = '';
   this.resources = '';
-
-  this.examples = examplesObj;
-  this.exampleCodeGenerator = examples.exampleCodeGenerator;
+  this.exampleCodeGenerator = codeGenerator;
 
   this.urlEndIndex = window.location.href.lastIndexOf("/");
   this.baseUrl = window.location.href.substr(0, this.urlEndIndex);

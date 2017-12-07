@@ -78,10 +78,10 @@ function ExampleCodeGenerator() {
    * Add all external dependencies.
    */
   this.addAllExternal = function() {
-    this.addExternalCss('http://docs.handsontable.com/pro/bower_components/handsontable-pro/dist/handsontable.full.min.css');
-    this.addExternalCss('http://handsontable.com/static/css/main.css');
+    this.addExternalCss('https://docs.handsontable.com/pro/bower_components/handsontable-pro/dist/handsontable.full.min.css');
+    this.addExternalCss('https://handsontable.com/static/css/main.css');
 
-    this.addExternalJs('http://docs.handsontable.com/pro/bower_components/handsontable-pro/dist/handsontable.full.min.js');
+    this.addExternalJs('https://docs.handsontable.com/pro/bower_components/handsontable-pro/dist/handsontable.full.min.js');
   };
 
   /**
@@ -101,9 +101,9 @@ function ExampleCodeGenerator() {
     var result = '';
 
     arrayEach(initScript, function(elem, i) {
-      result += new TagTemplate('<script>', elem.innerHTML, '</script>').getHtml() + '\n';
+      result += new TagTemplate('<script>', elem.innerHTML + '\nvar hot = new Handsontable(hotElement, hotSettings);\n', '</script>').getHtml() + '\n';
     });
-
+    
     if (this.latestSettingsJson !== '') {
       result = this.replaceWithNewSettings(result, this.latestSettingsJson);
     }
@@ -131,7 +131,7 @@ function ExampleCodeGenerator() {
     if (!newSettings) {
       newSettings = '';
     } else {
-      var stringifiedSettings = JSON.stringify(newSettings, null, 4);
+      var stringifiedSettings = JSON.stringify(newSettings, null, 2);
 
       // Add the data object
       stringifiedSettings = stringifiedSettings.replace('"getDataPlaceholder"', 'dataObject');
