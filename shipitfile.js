@@ -18,7 +18,7 @@ module.exports = function(shipit) {
       workspace: '/tmp/dev.handsontable.com',
       deployTo: '/home/httpd/dev/handsontable.com',
       repositoryUrl: 'https://github.com/handsontable/handsontable.com-v2.git',
-      branch: 'feature/examples-optimization',
+      branch: 'develop',
       ignores: ['.git', 'node_modules', 'www'],
       rsync: ['--force', '--delete', '--delete-excluded', '-I', '--stats', '--chmod=ug=rwX'],
       keepReleases: 1,

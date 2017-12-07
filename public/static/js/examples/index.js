@@ -155,8 +155,15 @@
   
   Handsontable.helper.deepExtend(HOT_SETTINGS_CLONE, window.hotSettings);
   
+  function getLocationOrigin() {
+    return location.protocol + '//' + location.host + location.pathname;
+  }
+  function getLocationSearch() {
+    return location.search.substr(1, location.search.length);
+  }
+  
   function addToURL(enabledFeatures) {
-    var features = window.location.search.substr(1, window.location.search.length)
+    var features = getLocationSearch();
     
     if (features) {
       features = features.split('&');
@@ -169,7 +176,7 @@
   }
   
   function removeFromURL(disabledFeatures) {
-    var features = window.location.search.substr(1, window.location.search.length).split('&');
+    var features = getLocationSearch().split('&');
     
     disabledFeatures.forEach(function(feature) {
       if (features.indexOf(feature) !== -1) {
@@ -248,7 +255,7 @@
     codeGenerator.updateHotSettings(settingsToDisplay);
     code[0].textContent = codeGenerator.getHtml();
     
-    if (Prism) {
+    if (typeof Prism !== 'undefined') {
       Prism.highlightAll();
     }
   }
@@ -302,7 +309,7 @@
         } else {
           History.pushState({
             enabledModules: url,
-          }, document.title, window.location.origin + window.location.pathname + '?' + url);
+          }, document.title, getLocationOrigin() + '?' + url);
         }
       });
     }
@@ -330,17 +337,21 @@
   }
   
   function init() {
-    var searchQuery = window.location.search.substr(1, window.location.search.length);
+    var searchQuery = getLocationSearch();
     
     if (!searchQuery) {
-      History.pushState({}, document.title, window.location.origin + window.location.pathname + '?headers');
+      History.pushState({
+        enabledModules: 'headers'
+      }, document.title, getLocationOrigin() + '?headers');
     }
     
     addListenersFeatureSwitchers();
-    toggleFeaturesBySearchQuery(window.location.search.substr(1, window.location.search.length));
+    toggleFeaturesBySearchQuery(getLocationSearch());
     
     History.Adapter.bind(window, 'statechange', function() {
-      toggleFeaturesBySearchQuery(History.getState().data.enabledModules);
+      var enabledModules = History.getState().data.enabledModules;
+      
+      toggleFeaturesBySearchQuery(enabledModules ? enabledModules : '');
     });
     
     $('jsfiddle-link').addEventListener('click', function(event) {
