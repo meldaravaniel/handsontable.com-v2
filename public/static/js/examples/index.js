@@ -209,6 +209,8 @@
       });
     });
     
+    $('export-buttons').classList[featuresIds.indexOf('csv-export') === -1 ? 'remove' : 'add']('visible');
+    
     updateHandsontableSettings(allFeatures);
     updateFeatureCheckboxes(allFeatures);
     updateEnabledFeaturesText(allFeatures);
@@ -346,6 +348,12 @@
       var jsFiddle = new JsfiddleExporter(codeGenerator);
       
       jsFiddle.export(true);
+    });
+    $('export-csv').addEventListener('click', function(event) {
+      hot.getPlugin('exportFile').downloadFile('csv', {filename: 'Handsontable CSV Export example'});
+    });
+    $('export-string').addEventListener('click', function(event) {
+      console.log(hot.getPlugin('exportFile').exportAsString('csv'));
     });
   }
   
