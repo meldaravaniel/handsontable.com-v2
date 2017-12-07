@@ -76,7 +76,7 @@
       }
     }
 
-    #enabled-features-tab {
+    #tab-content-features {
       li[data-enabled-feature="visible"] ~ li[data-enabled-placeholder] {
         display: none;
       }
@@ -85,9 +85,7 @@
         display: none;
       }
 
-      li[data-enabled-feature="visible"] {
-        display: block;
-
+      li[aria-hidden="false"] {
         h4, p {
           margin: 6px 0 24px;
           font-size: 1em;
