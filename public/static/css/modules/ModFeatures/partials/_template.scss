@@ -19,17 +19,17 @@
    }
 
    .header-features {
-     padding: 60px 10px 0 10px;
+     padding: 60px 10px 0;
      color: $darkWhite;
 
      @media only screen and (min-width: $mediumWidth) {
-       padding: 140px 10px 0 10px;
+       padding: 140px 10px 0;
      }
    }
 
    h3 {
-     padding: 0 10px 0 10px;
-     margin: 50px 0 2px 0;
+     padding: 0 10px;
+     margin: 50px 0 2px;
      font-weight: 500;
 
      @media only screen and (min-width: $mediumWidth) {
@@ -39,15 +39,20 @@
 
    .brands {
      margin-top: 170px;
+
+     ul {
+       margin: 0;
+     }
+
    }
 
    .border-bottom {
      width: 40px;
-     margin: 10px 0 20px 0;
+     margin: 10px 0 20px;
      border-bottom: solid 2px $brandBlue;
 
      @media only screen and (min-width: $mediumWidth) {
-       margin: 10px auto 20px auto;
+       margin: 10px auto 20px;
        display: block;
      }
    }
@@ -57,20 +62,20 @@
      display: block;
 
      @media only screen and (min-width: $mediumWidth) {
-        margin: 0 auto -150px auto;
+        margin: 0 auto -150px;
         display: block;
      }
    }
 
    .cta {
-     margin: 10px auto 20px auto;
+     margin: 10px auto 20px;
      padding: 60px 10px 0;
      text-align: center;
      clear: both;
      display: block;
 
      @media only screen and (min-width: $mediumWidth) {
-       margin: 20px auto 20px auto;
+       margin: 20px auto;
        padding: 0;
      }
    }
@@ -80,7 +85,7 @@
       }
 
     p {
-      padding: 0 10px 0 10px;
+      padding: 0 10px;
 
       @media only screen and (min-width: $mediumWidth) {
         padding: 0;
