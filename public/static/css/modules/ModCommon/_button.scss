@@ -60,6 +60,7 @@
     &-black {color: $baseGray}
     &-blue {color: $brandBlue}
     &-gray {color: $lightGray}
+    &-darkgray {color: $darkGray}
     &-green {color: $brandGreen}
     &-red {color: $brandRed}
     &-white {color: #fff}
@@ -71,6 +72,11 @@
     &-green {@include border($brandGreen)}
     &-red {@include border($brandRed)}
     &-white {border: 1px solid #fff}
+  }
+
+  &.border-width {
+    &-thick {border-width: 2px;}
+    &-xthick {border-width: 3px;}
   }
 
   &.bg {

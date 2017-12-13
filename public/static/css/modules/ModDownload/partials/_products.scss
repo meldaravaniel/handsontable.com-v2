@@ -10,7 +10,7 @@
     display: block;
     position: relative;
 
-    p.btn {
+    .btn {
       width: 100%;
       position: relative;
       padding-right: 50px;
@@ -30,11 +30,9 @@
     }
   }
 
-  &.coming-soon {
-
+  &.side-products {
     a {
       min-height: initial;
-      cursor: default;
     }
   }
 }
