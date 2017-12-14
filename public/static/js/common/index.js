@@ -49,8 +49,6 @@
     $('mobile-nav-menu').addEventListener('ontouchstart' in w ? 'touchstart' : 'click', function(event) {
       var element = $('mobile-nav-menu').parentElement;
       
-      console.log('dewdewdewdewdew', element);
-      
       element.classList.toggle('mobile-active');
       element.classList.toggle('mobile-inactive');
     }, eventOptions);
