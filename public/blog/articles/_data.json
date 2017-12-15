@@ -1,4 +1,13 @@
 {
+  "guide-to-basic-data-validation": {
+    "directory": "2017/12/",
+    "title": "Guide to Basic Data Validation",
+    "category": "Recipes",
+    "date": "December 15, 2017",
+    "pubDate": "Fri, 15 Dec 2017 13:00:00 EST",
+    "image_file": "guide-to-basic-data-validation/new-release.jpg",
+    "description": "Handsontable allows you to restrict any input entered into a cell similarly to Microsoft Excel. Cells (...)"
+  },
   "1.15.0-0.35.0": {
     "directory": "2017/12/",
     "title": "Handsontable Pro 1.15.0 (CE 0.35.0) released",
