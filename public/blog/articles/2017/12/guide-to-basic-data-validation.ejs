@@ -1,0 +1,176 @@
+<section class="post" itemid="https://handsontable.com/2017/12/<%= current.source %>" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+        <div class="large-7 large-centered columns">
+            <h2 class="headline" itemprop="headline">
+                Guide to Basic Data Validation
+            </h2>
+            <div class="meta-details">
+                <span>
+                    <img src="../../../attachments/authors/aleksandra-budnik.png" alt="Aleksandra Budnik" />
+                    <label>Aleksandra Budnik</label>
+                </span>
+                <span><a href="/blog/categories/recipes">Recipes</a> / December 15, 2017</span>
+                <meta itemprop="datePublished" content="2017-12-15T12:00:00+01:00"/>
+                <meta itemprop="dateModified" content="2017-12-15T12:00:00+01:00"/>
+                <span><a href="#disqus_thread"></a></span>
+            </div>
+        </div>
+    </div>
+    <article class="row body">
+        <div class="large-8 medium-12 large-centered columns">
+            <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <img src="../../../attachments/images/2017/12/guide-to-basic-data-validation/new-release.jpg"
+                     alt="Guide to Basic Data Validation" />
+                <meta itemprop="url"
+                      content="https://handsontable.com/blog/attachments/images/2017/12/guide-to-basic-data-validation/new-release.jpg">
+                <meta itemprop="width" content="757">
+                <meta itemprop="height" content="504">
+                <label class="photo-label">Illustration credit:
+                    <a href="https://www.behance.net/dedend" target="_blank" rel="noopener">Marcin Kordacki</a></label>
+            </p>
+            <p>
+                Handsontable allows you to restrict any input entered into a cell similarly to Microsoft Excel. Cells
+                can be validated against various rules. For example, we can check whether a value is between 10 and 20,
+                or if a date is valid one. We can make sure that the entered inputs are correct, thus keeping our data
+                set consistent.
+            </p>
+            <p>
+                Data validation is a process, not a single action. We need to set rules, then validate the entries and,
+                last but not least, let the user know what happens when the entry is not valid.
+            </p>
+            <p>
+                This process can be done in three simple steps:
+            </p>
+            <ul>
+                <li>
+                    Select target cells
+                </li>
+                <li>
+                    Set validation rules
+                </li>
+                <li>
+                    Define the result of validation:
+                    <ul>
+                        <li>
+                            Do nothing
+                        </li>
+                        <li>
+                            Allow invalid input, and
+                            <ul>
+                                <li>
+                                    Display an alert,
+                                </li>
+                                <li>
+                                    Add a comment to a cell,
+                                </li>
+                                <li>
+                                    Apply custom formatting.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Prevent from submitting an invalid value
+                        </li>
+                        <li>
+                            Reject an invalid value.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p>
+                In this post I will guide you through all these steps. I will also show you how to extend Handsontable
+                beyond the capabilities of desktop spreadsheet software.
+            </p>
+            <h3>Select target cells</h3>
+            <p>
+                First off, we have to choose which cells to validate. In Handsontable we can either select a single
+                cell or groups of cells, or even entire columns and rows.
+            </p>
+            <p>
+                In this example, I have decided to validate column A, which contains a mix of different cell types and
+                values. Column B holds only the description of the criteria used, while column C is an optional,
+                comment field. See how it’s done below:
+            </p>
+            <iframe width="100%" height="130" src="//jsfiddle.net/handsoncode/vuyLuers/embedded/result,js,html/"
+                    allowpaymentrequest allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>Set validation rules</h3>
+            <p>
+                I’m assuming that you want to use the exact same set of validation rules that you have in Excel. Well,
+                since you can define a rule as a custom function, the possibilities are endless. In the below examples
+                I will show you recipes on the most popular validation criteria, which are:
+            </p>
+            <ul>
+                <li>
+                    Allow value
+                    <ul>
+                        <li>Between</li>
+                        <li>Not between</li>
+                        <li>Equal to</li>
+                        <li>Not equal to</li>
+                        <li>Greater than</li>
+                        <li>Less than</li>
+                        <li>Greater than or equal to</li>
+                        <li>Less than or equal to</li>
+                    </ul>
+                </li>
+                <li>
+                    Allow type
+                    <ul>
+                        <li>Number</li>
+                        <li>Text
+                            <ul>
+                                <li>Text length</li>
+                                <li>Only lowercase</li>
+                                <li>Only uppercase</li>
+                            </ul>
+                        </li>
+                        <li>Date</li>
+                        <li>Time</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>
+                Let’s start from the grid we have created in the previous step. I’m going to validate only the values
+                in column A. If the value is not allowed, it will change the background color to pale red. I’m doing
+                this by adding a CSS class to each invalid cell - you can read more on this in the next paragraph.
+            </p>
+            <iframe width="100%" height="470" src="//jsfiddle.net/handsoncode/L7u49ngk/embedded/result,js,html/"
+                    allowpaymentrequest allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <h3>Define the result of validation</h3>
+            <p>
+                It’s very important to let users know what happens when the data is not valid. We can, for example,
+                ask them to correct data, and provide them with some hints on how to do that properly. In Handsontable,
+                we can do that in several ways, listed at the beginning of this article. Let’s get it to work then!
+            </p>
+            <p>
+                You can see the validation result by changing the value in the column A to anything above 20.
+            </p>
+            <iframe width="100%" height="240" src="//jsfiddle.net/handsoncode/g8auh9kg/embedded/result,js,html/"
+                    allowpaymentrequest allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <p>
+                The validation process is asynchronous, and for larger data sets it goes from the bottom right corner
+                to the top left. It is optimized to not slow down the app, but nevertheless, it certainly will have
+                some impact on the overall performance.
+            </p>
+            <p>
+                <strong>
+                    I hope you liked this article!
+                </strong>
+                    Let me know in the comments section if I should add something more to it.
+            </p>
+
+            <div class="addthis_native_toolbox toolbox"></div>
+        </div>
+    </article>
+
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://handsoncode.net/images/logos/logo.png">
+            <meta itemprop="width" content="175">
+            <meta itemprop="height" content="25">
+        </div>
+        <meta itemprop="name" content="Handsoncode">
+    </div>
+
+    <%- partial("../../../authors/_abudnik") %>
+</section>
