@@ -11,10 +11,6 @@
         "title": "Download Handsontable Community Edition"
     },
 
-    "developers": {
-        "title": "Developers Hub"
-    },
-
     "download": {
         "title": "Download Handsontable Spreadsheet"
     },
@@ -47,7 +43,7 @@
         "title": "Pricing plans"
     },
 
-    "pricing-maintenance": {
+    "maintenance": {
         "title": "Under maintenance"
     },
 

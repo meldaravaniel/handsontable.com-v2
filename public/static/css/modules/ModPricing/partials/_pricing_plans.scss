@@ -8,12 +8,12 @@
   background-color: #fff;
 
   .plan {
-    padding: 32px 0 98px;
+    padding: 42px 0 98px;
     position: relative;
     white-space: nowrap;
 
     @media only screen and (min-width: $largeWidth) {
-      min-height: 490px;
+      min-height: 470px;
       padding-bottom: 0;
     }
 
@@ -23,10 +23,21 @@
 
     p {
 
+      &.savings {
+        @include absolute-top-left (-46px, 0);
+        @include rectangle (100%, 40px);
+        line-height: 40px;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 4px 4px 0 0;
+        background-color: #43a047;
+      }
+
       &.price {
-        margin-bottom: 0;
+        margin-bottom: 20px;
         font-size: 24px;
       }
+
       &.unit {
         margin: 0 auto 20px;
         font-size: 11px;
@@ -85,6 +96,7 @@
             .tooltip-inner {
               visibility: visible;
               opacity: 1;
+              color: $baseGray;
             }
           }
         }
@@ -97,7 +109,7 @@
       margin-left: -30%;
     }
 
-    &.developer-plus {
+    &.team {
       width: 100%;
       color: #fff;
       border-radius: 4px;
@@ -106,16 +118,14 @@
 
       @media only screen and (min-width: $largeWidth) {
         @include absolute-top-left (-10px, 0);
-        min-height: 510px;
+        min-height: 490px;
       }
 
       h3 {
-        margin-top: 10px;
 
         span {
           font-size: inherit;
           font-weight: inherit;
-          color: $brandVibrantBlue;
         }
       }
 
