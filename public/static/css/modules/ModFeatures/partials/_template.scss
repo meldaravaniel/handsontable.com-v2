@@ -16,6 +16,7 @@
 
    .main-background {
      @include linear-gradient(-55deg, #1addef 0%, #2443fe 60%, #2443fe 40%, #4508c1 100%);
+     box-shadow: 0 3px 10px rgba(0,0,0,0.10), 0 3px 10px rgba(0,0,0,0.10);
    }
 
    .header-features {
@@ -38,7 +39,7 @@
    }
 
    .brands {
-     margin-top: 170px;
+     margin-top: 70px;
 
      ul {
        margin: 0;

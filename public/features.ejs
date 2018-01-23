@@ -1,108 +1,39 @@
+<style>
+    #hot-display-license-info {display: none}
+</style>
+
 <section class="features">
     <div class="main-background">
         <div class="row">
-            <div class="large-12 large-centered columns text-center">
-                <h1 class="text-white size-large gap-top-medium wait-for-font">
+            <div class="large-12 large-centered columns">
+                <h1 class="text-white size-large gap-top-medium wait-for-font text-center">
                     Spreadsheet data management<br/>
                     for your business web apps
                 </h1>
-                <img class="table-pad gap-top-small"
-                     src="<%= static_path %>/resources/ModFeatures/features-spreadsheet-demo.png"
-                     alt="Handsontable - Java Script spreadsheet library for developers">
-            </div>
-        </div>
-    </div>
-
-    <%- partial("_partials/_brands") %>
-
-    <div class="row fast">
-        <h2 class="text-center size-large gap-top-xsmall gap-bottom-xsmall">
-            Fast and easy development
-        </h2>
-
-        <div class="small-12 medium-4 columns">
-            <svg class="svg-icon">
-                <use xlink:href="#multiple-frameworks"></use>
-            </svg>
-            <h3>Multiple frameworks</h3>
-            <p class="p-icon">Handsontable is available in a variety of technologies,
-                including <a href="//github.com/handsontable/angular-handsontable">Angular</a>, <a href="//github.com/handsontable/react-handsontable">React</a>,
-                <a href="//github.com/handsontable/vue-handsontable-official">Vue</a> and it includes a TypeScript definition file.</p>
-        </div>
-        <div class="small-12 medium-4 columns">
-            <svg class="svg-icon">
-                <use xlink:href="#data-security"></use>
-            </svg>
-            <h3>Data security</h3>
-            <p class="p-icon">Handsontable lets you keep all your business
-                data on your own servers. Bind any given
-                data source by just passing data in a JSON format.</p>
-        </div>
-        <div class="small-12 medium-4 columns">
-            <svg class="svg-icon">
-                <use xlink:href="#easy-to-learn"></use>
-            </svg>
-            <h3>Easy to learn</h3>
-            <p class="p-icon">You can literally start your project within
-                minutes, not hours. Use cascade configuration
-                to adjust Handsontable to your business requirements.</p>
-        </div>
-    </div>
-
-    <div class="row fast">
-        <div class="small-12 medium-4 columns">
-            <svg class="svg-icon">
-                <use xlink:href="#cross-browser"></use>
-            </svg>
-            <h3>Cross-browser</h3>
-            <p class="p-icon">Handsontable works best in all modern browsers,
-                but also has backward compatibility for IE9+.</p>
-        </div>
-        <div class="small-12 medium-4 columns">
-            <svg class="svg-icon">
-                <use xlink:href="#high-performance"></use>
-            </svg>
-            <h3>High performance</h3>
-            <p class="p-icon">Handle hundreds of thousands of cells with peak performance.
-                Search, sort, or filter data without any delay.</p>
-        </div>
-        <div class="small-12 medium-4 columns">
-            <svg class="svg-icon">
-                <use xlink:href="#support-included"></use>
-            </svg>
-            <h3>Support included</h3>
-            <p class="p-icon">A large community of developers contribute to this project.
-                And professional support is available for all Handsontable Pro customers.</p>
-        </div>
-    </div>
-
-    <div class="row simple large-collapse">
-        <h2 class="text-center size-large gap-top-small gap-bottom-xsmall">
-            Simple and familiar UI
-        </h2>
-        <div class="large-5 columns">
-            <div class="tabs tabs-code">
-                <div class="tab">
-                    <ul>
-                        <li id="tab-source" class="active">Code editor</li>
-                        <li id="tab-data">Data</li>
-                    </ul>
-                </div>
-                <div id="tab-content-source" class="active">
-                    <div class="row collapse">
-                        <div class="small-12 columns">
-                            <div id="example-error">!</div>
-                            <div class="code-holder" data-type="source"></div>
-                            <script data-source-type="source" type="text/handsontable">
+                <div class="row live-demo large-collapse">
+                    <div class="large-3 columns">
+                        <div class="tabs tabs-code">
+                            <div class="tab">
+                                <ul>
+                                    <li id="tab-source" class="active">Live editor</li>
+                                    <li id="tab-data">Data</li>
+                                </ul>
+                            </div>
+                            <div id="tab-content-source" class="active">
+                                <div class="row collapse">
+                                    <div class="small-12 columns">
+                                        <div id="example-error">!</div>
+                                        <div class="code-holder" data-type="source"></div>
+                                        <script data-source-type="source" type="text/handsontable">
 var data = getData();
 var rowsCount = data.length;
 
 var hot = Handsontable(document.getElementById('example'), {
   data: data,
   height: 456,
-  colWidths: 100,
+  colWidths: 105,
   minCols: 26,
-  minRows: 100,
+  minRows: 500,
   rowHeaders: true,
   colHeaders: [
     'Task',
@@ -222,7 +153,7 @@ function getOwnerTeam(owner) {
   }, null);
 }
                             </script>
-                            <script data-source-type="data" type="text/handsontable">
+                                        <script data-source-type="data" type="text/handsontable">
 function getData() {
   return [
     [
@@ -428,16 +359,83 @@ function getData() {
   ];
 };
                             </script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab-content-data" data-tab-forward="source"></div>
+                        </div>
+                    </div>
+                    <div class="small-12 large-9 columns">
+                        <div class="plugin-preview">
+                            <div id="example"></div>
                         </div>
                     </div>
                 </div>
-                <div id="tab-content-data" data-tab-forward="source"></div>
+
             </div>
         </div>
-        <div class="large-7 columns">
-            <div class="plugin-preview">
-                <div id="example"></div>
-            </div>
+    </div>
+
+    <%- partial("_partials/_brands") %>
+
+    <div class="row fast">
+        <h2 class="text-center size-large gap-top-xsmall gap-bottom-xsmall">
+            Fast and easy development
+        </h2>
+
+        <div class="small-12 medium-4 columns">
+            <svg class="svg-icon">
+                <use xlink:href="#multiple-frameworks"></use>
+            </svg>
+            <h3>Multiple frameworks</h3>
+            <p class="p-icon">Handsontable is available in a variety of technologies,
+                including <a href="//github.com/handsontable/angular-handsontable">Angular</a>, <a href="//github.com/handsontable/react-handsontable">React</a>,
+                <a href="//github.com/handsontable/vue-handsontable-official">Vue</a> and it includes a TypeScript definition file.</p>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <svg class="svg-icon">
+                <use xlink:href="#data-security"></use>
+            </svg>
+            <h3>Data security</h3>
+            <p class="p-icon">Handsontable lets you keep all your business
+                data on your own servers. Bind any given
+                data source by just passing data in a JSON format.</p>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <svg class="svg-icon">
+                <use xlink:href="#easy-to-learn"></use>
+            </svg>
+            <h3>Easy to learn</h3>
+            <p class="p-icon">You can literally start your project within
+                minutes, not hours. Use cascade configuration
+                to adjust Handsontable to your business requirements.</p>
+        </div>
+    </div>
+
+    <div class="row fast">
+        <div class="small-12 medium-4 columns">
+            <svg class="svg-icon">
+                <use xlink:href="#cross-browser"></use>
+            </svg>
+            <h3>Cross-browser</h3>
+            <p class="p-icon">Handsontable works best in all modern browsers,
+                but also has backward compatibility for IE9+.</p>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <svg class="svg-icon">
+                <use xlink:href="#high-performance"></use>
+            </svg>
+            <h3>High performance</h3>
+            <p class="p-icon">Handle hundreds of thousands of cells with peak performance.
+                Search, sort, or filter data without any delay.</p>
+        </div>
+        <div class="small-12 medium-4 columns">
+            <svg class="svg-icon">
+                <use xlink:href="#support-included"></use>
+            </svg>
+            <h3>Support included</h3>
+            <p class="p-icon">A large community of developers contribute to this project.
+                And professional support is available for all Handsontable Pro customers.</p>
         </div>
     </div>
 
@@ -555,7 +553,7 @@ function getData() {
             </div>
             <div class="product-button-pro">
                 <a href="/pro-download"
-                   class="btn size-medium bg-white text-blue hover-moveup shadow gap-top-xsmall">Download</a>
+                   class="btn size-medium bg-white text-blue hover-moveup shadow gap-top-xsmall">Try now</a>
             </div>
 
         </div>

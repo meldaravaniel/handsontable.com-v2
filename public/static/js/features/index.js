@@ -48,7 +48,7 @@
       validScript = scripts.join('');
     } catch (ex) {
       hotInstance = eval(validScript);
-      errorHolder.style.display = '';
+      errorHolder.style.display = 'block';
     }
   }
   

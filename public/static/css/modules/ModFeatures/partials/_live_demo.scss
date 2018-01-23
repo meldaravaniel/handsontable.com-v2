@@ -2,7 +2,16 @@
  * @author: Handsoncode
  */
 
-.features .simple {
+.features .live-demo {
+  min-height: 502px;
+
+  & > div:first-child {
+    display: none;
+
+    @media only screen and (min-width: $largeWidth) {
+      display: block;
+    }
+  }
 
   h5 {
     margin: 20px 0 5px;
@@ -16,18 +25,21 @@
 
   .tabs {
 
+    color: #fff;
+
     & > div:not(.tab) {
       padding: 0;
     }
   }
 
   .plugin-preview {
-    padding: 46px 12px 0;
+    padding-top: 46px;
   }
 
   #example-error {
     @include square(26px);
     @include absolute-top-right(6px,22px);
+    display: none;
     color: #fff;
     font-weight: 600;
     line-height: 26px;
