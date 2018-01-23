@@ -1,4 +1,31 @@
 {
+  "guide-to-basic-data-validation": {
+    "directory": "2017/12/",
+    "title": "Guide to Basic Data Validation",
+    "category": "Recipes",
+    "date": "December 15, 2017",
+    "pubDate": "Fri, 15 Dec 2017 13:00:00 EST",
+    "image_file": "guide-to-basic-data-validation/new-release.jpg",
+    "description": "Handsontable allows you to restrict any input entered into a cell similarly to Microsoft Excel. Cells (...)"
+  },
+  "1.15.0-0.35.0": {
+    "directory": "2017/12/",
+    "title": "Handsontable Pro 1.15.0 (CE 0.35.0) released",
+    "category": "Release",
+    "date": "December 6, 2017",
+    "pubDate": "Wed, 6 Dec 2017 13:00:00 EST",
+    "image_file": "1.15.0-0.35.0/new-release.png",
+    "description": "Handsontable, by default, displays all the messages in English (US). We are happy to announce that (...)"
+  },
+  "custom-keyboard-shortcuts-in-handsontable": {
+    "directory": "2017/11/",
+    "title": "Custom Keyboard Shortcuts in Handsontable",
+    "category": "Recipes",
+    "date": "November 22, 2017",
+    "pubDate": "Wed, 22 Nov 2017 13:00:00 EST",
+    "image_file": "custom-keyboard-shortcuts-in-handsontable/custom-keyboard-shortcuts-in-handsontable.png",
+    "description": "We all love keyboard shortcuts as they boost our productivity and save lots of time. It’s easy to get (...)"
+  },
   "integrating-handsontable-with-chartjs": {
     "directory": "2017/10/",
     "title": "Integrating Handsontable with Chart.js",

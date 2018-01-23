@@ -49,8 +49,6 @@
     $('mobile-nav-menu').addEventListener('ontouchstart' in w ? 'touchstart' : 'click', function(event) {
       var element = $('mobile-nav-menu').parentElement;
       
-      console.log('dewdewdewdewdew', element);
-      
       element.classList.toggle('mobile-active');
       element.classList.toggle('mobile-inactive');
     }, eventOptions);
@@ -61,17 +59,32 @@
       var target = event.target;
       
       if (target.id && /^tab\-./.test(target.id) && !/^tab\-content\-./.test(target.id)) {
-        var tabGroups = $$('.tabs');
+        var tabGroups = $$('.tabs-alternative').length ? $$('.tabs-alternative') : $$('.tabs');
         
         for (var i = 0; i < tabGroups.length; i++) {
           if (tabGroups[i].contains(target)) {
+            var tabsContent = tabGroups[i].querySelectorAll('[id^=tab-content-]');
+            
+            for (var j = 0; j < tabsContent.length; j++) {
+              if (tabsContent[j].hasAttribute('aria-hidden')) {
+                tabsContent[j].setAttribute('aria-hidden', 'true');
+              }
+            }
+            
             var tabs = tabGroups[i].querySelectorAll('[id^=tab-]');
             
             for (var j = 0; j < tabs.length; j++) {
               if (tabs[j].classList.contains('active')) {
                 tabs[j].classList.remove('active');
               }
+              if (tabs[j].hasAttribute('aria-selected')) {
+                tabs[j].setAttribute('aria-selected', 'false');
+              }
+              if (tabs[j].hasAttribute('aria-hidden')) {
+                tabs[j].setAttribute('aria-hidden', 'true');
+              }
             }
+
             break;
           }
         }
@@ -82,6 +95,13 @@
         
         target.classList.add('active');
         contentToActivate.classList.add('active');
+        
+        if (target.hasAttribute('aria-selected')) {
+          target.setAttribute('aria-selected', 'true');
+        }
+        if (contentToActivate.hasAttribute('aria-hidden')) {
+          contentToActivate.setAttribute('aria-hidden', 'false');
+        }
         
         var event;
         

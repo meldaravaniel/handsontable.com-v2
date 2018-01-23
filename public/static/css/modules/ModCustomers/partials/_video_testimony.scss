@@ -3,7 +3,8 @@
  */
 
 .header-background {
-  height: 70vh;
+  height: 100vh;
+  max-height: 520px;
   color: $darkWhite;
   background: #000 url($images + 'template/ModCustomers/housemark/housemark-video-bg.jpg') no-repeat 50% 0;
 
