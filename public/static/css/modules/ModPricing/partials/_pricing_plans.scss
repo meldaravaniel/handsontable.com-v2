@@ -3,17 +3,24 @@
  */
 
 .pricing .pricing-plans {
+  width: 90%;
   border-radius: 4px;
   border: 1px solid $accentBorderColor;
   background-color: #fff;
 
+  @media only screen and (min-width: $largeWidth) {
+    width: auto;
+  }
+
   .plan {
+    margin-bottom: 20px;
     padding: 42px 0 98px;
     position: relative;
     white-space: nowrap;
 
     @media only screen and (min-width: $largeWidth) {
       min-height: 470px;
+      margin-bottom: 0;
       padding-bottom: 0;
     }
 
