@@ -1,0 +1,117 @@
+<section class="post" itemid="https://handsontable.com/2018/1/<%= current.source %>" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+        <div class="large-6 large-centered columns">
+            <h2 class="headline" itemprop="headline">
+                Handsontable Pro 1.15.1<br/>
+                (CE 0.35.1) now released
+            </h2>
+            <div class="meta-details">
+                <span>
+                    <img src="../../../attachments/authors/aleksandra-budnik.png" alt="Aleksandra Budnik" />
+                    <label>Aleksandra Budnik</label>
+                </span>
+                <span><a href="/blog/categories/release">Release</a> / January 25, 2018</span>
+                <meta itemprop="datePublished" content="2017-01-25T12:00:00+01:00"/>
+                <meta itemprop="dateModified" content="2017-01-25T12:00:00+01:00"/>
+                <span><a href="#disqus_thread"></a></span>
+            </div>
+        </div>
+    </div>
+    <article class="row body">
+        <div class="large-8 medium-12 large-centered columns">
+            <p itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                <img src="../../../attachments/images/2018/1/1.15.1-0.35.1/new-release.png"
+                     alt="Handsontable Pro 1.15.1 (CE 0.35.1) released" />
+                <meta itemprop="url"
+                      content="https://handsontable.com/blog/attachments/images/2018/1/1.15.1-0.35.1/new-release.png">
+                <meta itemprop="width" content="757">
+                <meta itemprop="height" content="504">
+            </p>
+            <p>
+                Today we have released a new version of Handsontable Pro/CE. This time we focused on fixing small bugs
+                and making enhancements. Also, thanks to
+                <a href="https://github.com/buggythepirate" target="blank" rel="noopener">@buggypirate</a>,
+                <a href="https://github.com/madoar" target="blank" rel="noopener">@madoar</a>,
+                <a href="https://github.com/ckruhs" target="blank" rel="noopener">@ckruhs</a>,
+                we have been able to add a new translation in German.
+            </p>
+            <p>
+                <strong>Changes:</strong>
+            </p>
+
+            <ul>
+                <li>
+                    Fixed an inconsistency with input formatting. The <code class="inline">numericFormat</code>
+                    should now be used only to format the <strong>output</strong>, not the <strong>input</strong> data.
+                    (<a href="//github.com/handsontable/handsontable/issues/4706" target="_blank" rel="noopener">#4706</a>)
+                </li>
+                <li>
+                    Fixed a bug, where the <code class="inline">language</code> property was not a part of the
+                    settings object prototype.
+                    (<a href="//github.com/handsontable/handsontable/issues/4686" target="_blank" rel="noopener">#4686</a>)
+                </li>
+                <li>
+                    Rewritten the <code class="inline">DragToScroll</code> plugin to ES6.
+                    (<a href="//github.com/handsontable/handsontable/issues/4626" target="_blank" rel="noopener">#4626</a>)
+                </li>
+                <li>
+                    The Context Menu was expanded horizontally by 15px.
+                    (<a href="//github.com/handsontable/handsontable/issues/4657" target="_blank" rel="noopener">#4657</a>)
+                </li>
+                <li>
+                    Fixed a bug, where pressing the ESC key did not close the Context Menu.
+                    (<a href="//github.com/handsontable/handsontable/issues/4585" target="_blank" rel="noopener">#4585</a>)
+                </li>
+                <li>
+                    Fixed a problem with the <code class="inline">afterValidate</code> hook's arguments with
+                    <code class="inline">trimRows</code> enabled.
+                    (<a href="//github.com/handsontable/handsontable/issues/4568" target="_blank" rel="noopener">#4568</a>
+                    and <a href="//github.com/handsontable/handsontable-pro/issues/23" target="_blank" rel="noopener">#23</a>)
+                </li>
+                <li>
+                    Added missing changes for the language support.
+                    (<a href="//github.com/handsontable/handsontable/issues/4709" target="_blank" rel="noopener">#4709</a>)
+                </li>
+                <li>
+                    Added a German language pack.
+                    (<a href="//github.com/handsontable/handsontable/issues/4669" target="_blank" rel="noopener">#4669</a>)
+                </li>
+                <li>
+                    Added the Code of Conduct file to the repo.
+                    (<a href="//github.com/handsontable/handsontable/issues/4718" target="_blank" rel="noopener">#4718</a>)
+                </li>
+                <li>
+                    Updated the <code class="inline">moment</code> version because of a ReDoS vulnerability.
+                    (<a href="//github.com/handsontable/handsontable/issues/4677" target="_blank" rel="noopener">#4677</a>)
+                </li>
+                <li>
+                    Handsontable Pro: Fixed a problem, where the language files were not generated properly
+                    in some specific cases.
+                    (<a href="//github.com/handsontable/handsontable-pro/issues/23" target="_blank" rel="noopener">#23</a>)
+                </li>
+            </ul>
+
+            <p>
+                Follow us on <a href="//twitter.com/handsontable" target="_blank" rel="noopener">Twitter</a>
+                to keep up to date with all updates on Handsontable.
+            </p>
+            <p>
+                We appreciate all of your suggestions that help us to improve Handsontable.
+                You can leave a comment or
+                <a href="/contact.html">contact us here</a>.
+            </p>
+            <div class="addthis_native_toolbox toolbox"></div>
+        </div>
+    </article>
+
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="http://handsoncode.net/images/logos/logo.png">
+            <meta itemprop="width" content="175">
+            <meta itemprop="height" content="25">
+        </div>
+        <meta itemprop="name" content="Handsoncode">
+    </div>
+
+    <%- partial("../../../authors/_abudnik") %>
+</section>
