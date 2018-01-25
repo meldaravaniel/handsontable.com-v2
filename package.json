@@ -1,6 +1,6 @@
 {
   "name": "Handsontable",
-  "version": "4.1.45",
+  "version": "4.1.46",
   "scripts": {
     "start": "harp server",
     "build": "grunt copy && harp compile && grunt build",
@@ -22,7 +22,7 @@
     "grunt-svgmin": "^4.0.0",
     "grunt-uncss": "^0.7.1",
     "grunt-unused": "^0.2.0",
-    "harp": "^0.24.0"
+    "harp": "^0.25.0"
   },
   "devDependencies": {
     "generate-release": "^0.10.2",
