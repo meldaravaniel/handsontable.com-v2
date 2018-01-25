@@ -22,7 +22,7 @@
     "grunt-svgmin": "^4.0.0",
     "grunt-uncss": "^0.7.1",
     "grunt-unused": "^0.2.0",
-    "harp": "^0.24.0"
+    "harp": "^0.25.0"
   },
   "devDependencies": {
     "generate-release": "^0.10.2",
