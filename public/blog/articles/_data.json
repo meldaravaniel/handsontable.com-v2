@@ -1,4 +1,13 @@
 {
+  "1.15.1-0.35.1": {
+    "directory": "2018/1/",
+    "title": "Handsontable Pro 1.15.1 (CE 0.35.1) released",
+    "category": "Release",
+    "date": "January 25, 2018",
+    "pubDate": "Thu, 25 Jan 2018 13:00:00 EST",
+    "image_file": "1.15.1-0.35.1/new-release.png",
+    "description": "Today we have released a new version of Handsontable Pro/CE. This time we focused on fixing small bugs and (...)"
+  },
   "guide-to-basic-data-validation": {
     "directory": "2017/12/",
     "title": "Guide to Basic Data Validation",
